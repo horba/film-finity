@@ -5,18 +5,20 @@
     <hello-world-one-file
       msg="Welcome to Your Vue.js App from HelloWorld one file component (OFC)"
     ></hello-world-one-file>
+    <actors-template/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import { HelloWorld, HelloWorldOneFile } from '@components';
+import { HelloWorld, ActorsTemplate, HelloWorldOneFile } from '@components';
 
 export default {
   name: 'Home',
   components: {
     HelloWorld,
-    HelloWorldOneFile
+    HelloWorldOneFile,
+    ActorsTemplate
   }
 };
 </script>
