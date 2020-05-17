@@ -1,0 +1,14 @@
+div.logo { 
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 138%;   
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+i.logo {
+  font-size: 32px;
+}
