@@ -1,0 +1,46 @@
+div.main {
+  width: 1440px;
+  height: 90px;
+  display: flex;
+  flex-direction: row;                        
+  align-items: center;
+  justify-content: space-between; 
+}
+
+div.logo {
+  margin-left: 80px;
+}
+
+div.buttons {
+  margin-right: 150px;
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+button {
+  color: #6663FF;
+}
+
+.el-menu-demo {
+  background-color: #6663FF;  
+}
+
+.el-menu.el-menu--horizontal {
+  border-bottom: 0px; 
+  height: 90px;   
+}
+
+.el-menu--horizontal>.el-menu-item {  
+  height: 90px;
+  padding: 15px 0px 0px;
+  margin: 0px 25px;
+  color: #FFFFFF;
+  font-size: 18px;   
+}
+
+.el-menu--horizontal>.el-menu-item.is-active {
+  border-bottom: 3px solid #FFFFFF;
+  color: #FFA21C;
+}

@@ -1,0 +1,79 @@
+div.body {
+  color: white;
+  width: 1440px;
+}
+
+div.main, div.lowerPart {  
+  display: flex;
+  flex-direction: row;                        
+  align-items: center;
+  justify-content: space-between; 
+}
+
+div.main {
+  height: 125px;
+}
+
+div.logo {
+  margin: 5px 0px 10px 80px;
+  padding: 5px 0px 10px;   
+}
+
+div.stores {
+  margin-left: 80px;   
+}
+
+div.lowerPart {
+  height: 57px;
+  background: #5956FF;
+}
+
+span.privicyPolice {
+  margin-right: 140px;
+  font-size: 14px;
+}
+
+button {
+  color: white;
+  border: 0px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button.menu { 
+  background: #6663FF;  
+}
+
+div.socialNetworks {
+  margin-right: 115px; 
+}
+
+i {
+  font-size: 22px;
+  padding: 10px;
+}
+
+button.lower {  
+  background:  #5956FF;  
+}
+
+span.allReles {
+  margin-left: 150px;
+  font-size: 11px;
+}
+
+a:hover {
+  cursor: pointer;  
+}
+
+a {
+  margin-right: 23px;
+}
+
+img {
+  height: 24px;
+}
+
+div.socialNetworks > div {
+  padding-bottom: 10px;  
+}
