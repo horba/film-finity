@@ -15,18 +15,6 @@ div.buttons {
   margin-right: 150px;
 }
 
-.white {
-  color: #FFFFFF;
-}
-
-button {
-  color: #6663FF;
-}
-
-.el-menu-demo {
-  background-color: #6663FF;  
-}
-
 .el-menu.el-menu--horizontal {
   border-bottom: 0px; 
   height: 90px;   

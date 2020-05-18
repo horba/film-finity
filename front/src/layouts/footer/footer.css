@@ -24,11 +24,10 @@ div.stores {
 }
 
 div.lowerPart {
-  height: 57px;
-  background: #5956FF;
+  height: 57px; 
 }
 
-span.privicyPolice {
+button.privicyPolice {
   margin-right: 140px;
   font-size: 14px;
 }
@@ -40,8 +39,8 @@ button {
   font-size: 16px;
 }
 
-button.menu { 
-  background: #6663FF;  
+button:hover {
+  cursor: pointer;
 }
 
 div.socialNetworks {
@@ -51,10 +50,6 @@ div.socialNetworks {
 i {
   font-size: 22px;
   padding: 10px;
-}
-
-button.lower {  
-  background:  #5956FF;  
 }
 
 span.allReles {
