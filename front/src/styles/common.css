@@ -1,7 +1,7 @@
 .commonMainColorBackground {
-    background: #6663FF;
+    background: #6663FF !important;
 }
 
-.commonSecondColor {
-    color: #FFA21C;
+.commonLowerPartFooterBackground {
+    background: #5956FF !important;
 }
