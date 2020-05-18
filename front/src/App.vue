@@ -4,6 +4,10 @@
   </div>
 </template>
 
+<style src="./styles/common.css"></style>
+
+<style src="./styles/variables.css"></style>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -11,5 +15,4 @@
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-
 </style>
