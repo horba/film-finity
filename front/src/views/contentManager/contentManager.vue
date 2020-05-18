@@ -3,5 +3,3 @@
 <script src="./contentManager.js"></script>
 
 <style scoped src="./contentManager.css"></style>
-
-<style src="../../styles/common.css"></style>
