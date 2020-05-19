@@ -23,12 +23,6 @@ div.buttons {
 .el-menu--horizontal>.el-menu-item {  
   height: 90px;
   padding: 15px 0px 0px;
-  margin: 0px 25px;
-  color: #FFFFFF;
+  margin: 0px 25px;  
   font-size: 18px;   
-}
-
-.el-menu--horizontal>.el-menu-item.is-active {
-  border-bottom: 3px solid #FFFFFF;
-  color: #FFA21C;
 }

@@ -1,5 +1,4 @@
-div.body {
-  color: white;
+div.body {  
   width: 1440px;
 }
 
@@ -27,20 +26,20 @@ div.lowerPart {
   height: 57px; 
 }
 
+div.lowerPart > span {
+  margin-left: 150px;
+  font-size: 11px;
+}
+
 button.privicyPolice {
   margin-right: 140px;
   font-size: 14px;
 }
 
-button {
-  color: white;
+button { 
   border: 0px;
   padding: 10px;
   font-size: 16px;
-}
-
-button:hover {
-  cursor: pointer;
 }
 
 div.socialNetworks {
@@ -50,15 +49,6 @@ div.socialNetworks {
 i {
   font-size: 22px;
   padding: 10px;
-}
-
-span.allReles {
-  margin-left: 150px;
-  font-size: 11px;
-}
-
-a:hover {
-  cursor: pointer;  
 }
 
 a {
