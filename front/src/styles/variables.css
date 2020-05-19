@@ -1,7 +1,28 @@
-.commonSecondColor {
-    color: #FFA21C !important;
+.second-color {
+    color: #FFA21C;
 }
 
-.commonMainColor {
-    color: #6663FF !important;
+.main-color, button.main-color {
+    color: white;
 }
+
+.color-background, button.color-background, ul.color-background {
+    background-color: #6663FF;
+}
+
+button.second-color {
+    color: #6663FF;
+}
+
+.footer-color-background, button.footer-color-background {
+    background-color: #5956FF;
+}
+
+ul.main-color > li.main-color {
+    color: white;
+}
+
+ul.main-color > li.main-color.is-active {
+    border-bottom: 3px solid white;
+    color: #FFA21C;
+  }
