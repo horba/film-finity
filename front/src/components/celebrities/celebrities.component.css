@@ -10,11 +10,11 @@
 .grid-col-wrap{
   border-radius: 5px;
 }
-.actor-name div{
+.person-name div{
   display: flex;
   justify-content: start;
 }
-.actor-name div span{
+.person-name div span{
 font-family: Artegra Sans;
 font-style: normal;
 font-weight: 600;
@@ -24,7 +24,7 @@ line-height: 138%;
 .el-icon-view{
   margin: 1px 0px;
 }
-.actor-jobs .el-col span{
+.person-jobs .el-col span{
   font-family: Artegra Sans;
   font-style: normal;
   font-weight: 300;
@@ -32,7 +32,7 @@ line-height: 138%;
   float: left;
   line-height: 125%;
 }
-.actor-views .el-col span{
+.person-views .el-col span{
   font-family: Artegra Sans;
   font-style: normal;
   font-weight: 500;
