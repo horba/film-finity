@@ -1,8 +1,5 @@
-div.body {  
-  width: 1440px;
-}
-
-div.main, div.lowerPart {  
+div.main,
+div.lower-part {  
   display: flex;
   flex-direction: row;                        
   align-items: center;
@@ -22,27 +19,26 @@ div.stores {
   margin-left: 80px;   
 }
 
-div.lowerPart {
+div.lower-part {
   height: 57px; 
 }
 
-div.lowerPart > span {
+span {
   margin-left: 150px;
   font-size: 11px;
 }
 
-button.privicyPolice {
-  margin-right: 140px;
-  font-size: 14px;
-}
-
-button { 
+button.footer { 
   border: 0px;
   padding: 10px;
   font-size: 16px;
 }
 
-div.socialNetworks {
+a.privicy-police {
+  margin-right: 140px;  
+}
+
+div.social-networks {
   margin-right: 115px; 
 }
 
@@ -59,6 +55,6 @@ img {
   height: 24px;
 }
 
-div.socialNetworks > div {
+div.social-networks > div {
   padding-bottom: 10px;  
 }
