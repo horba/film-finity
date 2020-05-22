@@ -3,7 +3,7 @@ import { Logo } from '@components';
 export default {
   name: 'menuMain',
   components: {
-    Logo
+    'ff-logo': Logo
   },
   data () {
     return {

@@ -1,5 +1,4 @@
-div.main {
-  width: 1440px;
+div.main {  
   height: 90px;
   display: flex;
   flex-direction: row;                        
