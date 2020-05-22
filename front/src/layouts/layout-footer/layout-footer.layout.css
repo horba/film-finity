@@ -1,5 +1,5 @@
 div.main,
-div.lower-part {  
+div.footer-color-background {  
   display: flex;
   flex-direction: row;                        
   align-items: center;
@@ -19,7 +19,7 @@ div.stores {
   margin-left: 80px;   
 }
 
-div.lower-part {
+div.footer-color-background {
   height: 57px; 
 }
 
