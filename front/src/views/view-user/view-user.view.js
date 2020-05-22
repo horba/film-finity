@@ -1,8 +1,8 @@
 import { Menu, Footer } from '@layouts';
 
 export default {
-  name: 'UnregisteredUser',
+  name: 'User',
   components: {
-    Menu, Footer
+    'ff-menu': Menu, 'ff-footer': Footer
   }
 };
