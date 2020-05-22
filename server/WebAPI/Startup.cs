@@ -47,7 +47,7 @@ namespace WebAPI
 
             services.AddDbContext<FilmFinityDbContext>(options =>
             {
-                options.UseSqlServer(Configuration.GetConnectionString("MyLocalMSSQL"));
+                options.UseSqlServer(Configuration.GetConnectionString("FilmFinityMSSQL"));
             });
             services.AddScoped<CelebrityRepository>();
         }
