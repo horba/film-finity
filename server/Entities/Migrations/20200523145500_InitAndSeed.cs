@@ -2,7 +2,7 @@
 
 namespace Entities.Migrations
 {
-    public partial class Init : Migration
+    public partial class InitAndSeed : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -28,7 +28,7 @@ namespace Entities.Migrations
                 {
                     JobTitleId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Job = table.Column<string>(nullable: true)
+                    JobName = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -64,23 +64,29 @@ namespace Entities.Migrations
                 columns: new[] { "CelebrityId", "CelebrityPicURL", "CountViews", "FirstName", "LastName" },
                 values: new object[,]
                 {
-                    { -1, "", 121000, "Уилл", "Смит" },
-                    { -2, "", 134000, "Хью", "Джекман" },
-                    { -3, "", 127000, "Райан", "Рейнольдс" },
-                    { -4, "", 126000, "Роберт", "Дауни (младший)" }
+                    { -1, "", 134000, "Хью", "Джекман" },
+                    { -2, "", 127000, "Райан", "Рейнольдс" },
+                    { -3, "", 126000, "Роберт", "Дауни (младший)" },
+                    { -4, "", 121000, "Уилл", "Смит" },
+                    { -5, "", 120500, "Брэд", "Питт" },
+                    { -6, "", 120000, "Леонардо", "Ди Каприо" },
+                    { -7, "", 91000, "Натали", "Портман" },
+                    { -8, "", 20000, "Роджер", "Дикинс" },
+                    { -9, "", 50000, "Ханс", "Циммер" },
+                    { -10, "", 95000, "Квентин", "Тарантино" }
                 });
 
             migrationBuilder.InsertData(
                 table: "JobTitles",
-                columns: new[] { "JobTitleId", "Job" },
+                columns: new[] { "JobTitleId", "JobName" },
                 values: new object[,]
                 {
-                    { 1, "Actor" },
-                    { 2, "Writer" },
-                    { 3, "Director" },
-                    { 4, "Composer" },
-                    { 5, "Cinematographer" },
-                    { 6, "Producer" }
+                    { 1, "актер" },
+                    { 2, "режиссер" },
+                    { 3, "сценарист" },
+                    { 4, "продюсер" },
+                    { 5, "оператор" },
+                    { 6, "композитор" }
                 });
 
             migrationBuilder.InsertData(
@@ -89,11 +95,27 @@ namespace Entities.Migrations
                 values: new object[,]
                 {
                     { -1, 1 },
-                    { -2, 1 },
+                    { -10, 4 },
+                    { -7, 4 },
+                    { -6, 4 },
+                    { -5, 4 },
+                    { -4, 4 },
+                    { -3, 4 },
+                    { -2, 4 },
+                    { -10, 3 },
+                    { -7, 3 },
+                    { -10, 2 },
+                    { -7, 2 },
+                    { -4, 2 },
+                    { -10, 1 },
+                    { -7, 1 },
+                    { -6, 1 },
+                    { -5, 1 },
+                    { -4, 1 },
                     { -3, 1 },
-                    { -1, 3 },
-                    { -1, 6 },
-                    { -3, 6 }
+                    { -2, 1 },
+                    { -8, 5 },
+                    { -9, 6 }
                 });
 
             migrationBuilder.CreateIndex(

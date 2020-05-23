@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Entities.Migrations
 {
     [DbContext(typeof(FilmFinityDbContext))]
-    [Migration("20200521143135_sec")]
-    partial class sec
+    [Migration("20200523145500_InitAndSeed")]
+    partial class InitAndSeed
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -260,7 +260,7 @@ namespace Entities.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Job")
+                    b.Property<string>("JobName")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("JobTitleId");
@@ -271,32 +271,32 @@ namespace Entities.Migrations
                         new
                         {
                             JobTitleId = 1,
-                            Job = "актер"
+                            JobName = "актер"
                         },
                         new
                         {
                             JobTitleId = 2,
-                            Job = "режиссер"
+                            JobName = "режиссер"
                         },
                         new
                         {
                             JobTitleId = 3,
-                            Job = "сценарист"
+                            JobName = "сценарист"
                         },
                         new
                         {
                             JobTitleId = 4,
-                            Job = "продюсер"
+                            JobName = "продюсер"
                         },
                         new
                         {
                             JobTitleId = 5,
-                            Job = "оператор"
+                            JobName = "оператор"
                         },
                         new
                         {
                             JobTitleId = 6,
-                            Job = "композитор"
+                            JobName = "композитор"
                         });
                 });
 

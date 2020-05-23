@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Entities.DataAccess;
-using Entities.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -49,7 +48,6 @@ namespace WebAPI
             {
                 options.UseSqlServer(Configuration.GetConnectionString("FilmFinityMSSQL"));
             });
-            services.AddScoped<CelebrityRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

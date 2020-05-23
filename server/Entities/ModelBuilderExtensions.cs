@@ -12,12 +12,12 @@ namespace Entities
         public static void Seed(this ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<JobTitle>().HasData(
-                new JobTitle { JobTitleId = 1, Job = "актер" },
-                new JobTitle { JobTitleId = 2, Job = "режиссер" },
-                new JobTitle { JobTitleId = 3, Job = "сценарист"},
-                new JobTitle { JobTitleId = 4, Job = "продюсер" },
-                new JobTitle { JobTitleId = 5, Job = "оператор" },
-                new JobTitle { JobTitleId = 6, Job = "композитор" });
+                new JobTitle { JobTitleId = 1, JobName = "актер" },
+                new JobTitle { JobTitleId = 2, JobName = "режиссер" },
+                new JobTitle { JobTitleId = 3, JobName = "сценарист"},
+                new JobTitle { JobTitleId = 4, JobName = "продюсер" },
+                new JobTitle { JobTitleId = 5, JobName = "оператор" },
+                new JobTitle { JobTitleId = 6, JobName = "композитор" });
 
             modelBuilder.Entity<Celebrity>().HasData(
                 

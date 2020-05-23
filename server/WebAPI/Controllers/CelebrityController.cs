@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Entities.DataAccess;
-using Entities.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebAPI.DTO;
 using WebAPI.Models;
 
 namespace WebAPI.Controllers
@@ -15,12 +15,10 @@ namespace WebAPI.Controllers
     [Route("api/[controller]")]
     public class CelebrityController : ControllerBase
     {
-        private readonly CelebrityRepository celebrityRepository;
         private readonly FilmFinityDbContext dbContext;
         
-        public CelebrityController(CelebrityRepository celebrityRepository, FilmFinityDbContext filmFinityDbContext)
+        public CelebrityController(FilmFinityDbContext filmFinityDbContext)
         {
-            this.celebrityRepository = celebrityRepository;
             this.dbContext = filmFinityDbContext;
         }
         
@@ -29,14 +27,15 @@ namespace WebAPI.Controllers
         //[Route("GetAllCelebrities")]
         public IActionResult GetListCelebrities()
         {
-            var objectList = dbContext.Celebrities.Select(o => new
+            List<CelebrityDTO> objectList = dbContext.Celebrities.Select(o => new CelebrityDTO
             {
-                o.CelebrityId,
-                o.FirstName,
-                o.LastName,
-                o.CountViews,
-
-                JobTitle = o.CelebrityJobTitles.Select(ot => new { ot.JobTitle.JobTitleId, ot.JobTitle.Job}).ToList()
+                CelebrityId = o.CelebrityId,
+                FirstName = o.FirstName,
+                LastName = o.LastName,
+                CountViews = o.CountViews,
+                CelebrityPicURL = o.CelebrityPicURL,
+                JobTitles = o.CelebrityJobTitles.Select(j => j.JobTitle).Select( j => new JobTitleDTO 
+                { JobTitleId = j.JobTitleId, JobName = j.JobName }).ToList()
             }).ToList();
 
             return Ok(objectList);
