@@ -7,6 +7,8 @@
   </div>
 </template>
 
+<style src="@styles/common.css"></style>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

@@ -6,7 +6,7 @@
 
 <script>
 // @ is an alias to /src
-import { FfCelebrities } from '@components';
+import { FfCelebrities } from '@views';
 
 export default {
   name: 'Home',
