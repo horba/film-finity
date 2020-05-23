@@ -12,7 +12,7 @@ namespace WebAPI.DTO
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int CountViews { get; set; }
-        public string CelebrityPicURL { get; set; }
+        public string ImageSource { get; set; }
 
         public List<JobTitleDTO> JobTitles { get; set; }
     }

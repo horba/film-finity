@@ -24,7 +24,7 @@ namespace WebAPI.Controllers
         
 
         [HttpGet]
-        //[Route("GetAllCelebrities")]
+        [Route("Celebrities")]
         public IActionResult GetListCelebrities()
         {
             List<CelebrityDTO> objectList = dbContext.Celebrities.Select(o => new CelebrityDTO
@@ -33,7 +33,7 @@ namespace WebAPI.Controllers
                 FirstName = o.FirstName,
                 LastName = o.LastName,
                 CountViews = o.CountViews,
-                CelebrityPicURL = o.CelebrityPicURL,
+                ImageSource = o.ImageSource,
                 JobTitles = o.CelebrityJobTitles.Select(j => j.JobTitle).Select( j => new JobTitleDTO 
                 { JobTitleId = j.JobTitleId, JobName = j.JobName }).ToList()
             }).ToList();

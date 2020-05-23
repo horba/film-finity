@@ -27,7 +27,7 @@ namespace Entities
                     FirstName = "Хью",
                     LastName = "Джекман",
                     CountViews = 134000,
-                    CelebrityPicURL = ""
+                    ImageSource = "StaticFiles/images/1.jpg"
                 },
                 new Celebrity
                 {
@@ -35,7 +35,7 @@ namespace Entities
                     FirstName = "Райан",
                     LastName = "Рейнольдс",
                     CountViews = 127000,
-                    CelebrityPicURL = ""
+                    ImageSource = "StaticFiles/images/2.jpg"
 
                 },new Celebrity
                 {
@@ -43,7 +43,7 @@ namespace Entities
                     FirstName = "Роберт",
                     LastName = "Дауни (младший)",
                     CountViews = 126000,
-                    CelebrityPicURL = ""
+                    ImageSource = "StaticFiles/images/3.jpg"
                 },
                 new Celebrity
                 {
@@ -51,7 +51,7 @@ namespace Entities
                     FirstName = "Уилл",
                     LastName = "Смит",
                     CountViews = 121000,
-                    CelebrityPicURL = "",
+                    ImageSource = "StaticFiles/images/4.jpg",
                 },
                 
                 new Celebrity
@@ -60,7 +60,7 @@ namespace Entities
                     FirstName = "Брэд",
                     LastName = "Питт",
                     CountViews = 120500,
-                    CelebrityPicURL = ""
+                    ImageSource = "StaticFiles/images/5.jpg"
                 },
                 new Celebrity
                 {
@@ -68,7 +68,7 @@ namespace Entities
                     FirstName = "Леонардо",
                     LastName = "Ди Каприо",
                     CountViews = 120000,
-                    CelebrityPicURL = ""
+                    ImageSource = "StaticFiles/images/6.jpg"
                 },
                 new Celebrity
                 {
@@ -76,7 +76,7 @@ namespace Entities
                     FirstName = "Натали",
                     LastName = "Портман",
                     CountViews = 91000,
-                    CelebrityPicURL = ""
+                    ImageSource = "StaticFiles/images/7.jpg"
                 },
                 new Celebrity
                 {
@@ -84,7 +84,7 @@ namespace Entities
                     FirstName = "Роджер",
                     LastName = "Дикинс",
                     CountViews = 20000,
-                    CelebrityPicURL = ""
+                    ImageSource = "StaticFiles/images/8.jpg"
                 },
                 new Celebrity
                 {
@@ -92,7 +92,7 @@ namespace Entities
                     FirstName = "Ханс",
                     LastName = "Циммер",
                     CountViews = 50000,
-                    CelebrityPicURL = ""
+                    ImageSource = "StaticFiles/images/9.jpg"
                 },
                 new Celebrity
                 {
@@ -100,7 +100,7 @@ namespace Entities
                     FirstName = "Квентин",
                     LastName = "Тарантино",
                     CountViews = 95000,
-                    CelebrityPicURL = ""
+                    ImageSource = "StaticFiles/images/10.jpg"
                 });
 
             modelBuilder.Entity<CelebrityJobTitles>().HasData(

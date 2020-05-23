@@ -152,13 +152,13 @@ namespace Entities.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CelebrityPicURL")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("CountViews")
                         .HasColumnType("int");
 
                     b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageSource")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
@@ -172,81 +172,81 @@ namespace Entities.Migrations
                         new
                         {
                             CelebrityId = -1,
-                            CelebrityPicURL = "",
                             CountViews = 134000,
                             FirstName = "Хью",
+                            ImageSource = "StaticFiles/images/1.jpg",
                             LastName = "Джекман"
                         },
                         new
                         {
                             CelebrityId = -2,
-                            CelebrityPicURL = "",
                             CountViews = 127000,
                             FirstName = "Райан",
+                            ImageSource = "StaticFiles/images/2.jpg",
                             LastName = "Рейнольдс"
                         },
                         new
                         {
                             CelebrityId = -3,
-                            CelebrityPicURL = "",
                             CountViews = 126000,
                             FirstName = "Роберт",
+                            ImageSource = "StaticFiles/images/3.jpg",
                             LastName = "Дауни (младший)"
                         },
                         new
                         {
                             CelebrityId = -4,
-                            CelebrityPicURL = "",
                             CountViews = 121000,
                             FirstName = "Уилл",
+                            ImageSource = "StaticFiles/images/4.jpg",
                             LastName = "Смит"
                         },
                         new
                         {
                             CelebrityId = -5,
-                            CelebrityPicURL = "",
                             CountViews = 120500,
                             FirstName = "Брэд",
+                            ImageSource = "StaticFiles/images/5.jpg",
                             LastName = "Питт"
                         },
                         new
                         {
                             CelebrityId = -6,
-                            CelebrityPicURL = "",
                             CountViews = 120000,
                             FirstName = "Леонардо",
+                            ImageSource = "StaticFiles/images/6.jpg",
                             LastName = "Ди Каприо"
                         },
                         new
                         {
                             CelebrityId = -7,
-                            CelebrityPicURL = "",
                             CountViews = 91000,
                             FirstName = "Натали",
+                            ImageSource = "StaticFiles/images/7.jpg",
                             LastName = "Портман"
                         },
                         new
                         {
                             CelebrityId = -8,
-                            CelebrityPicURL = "",
                             CountViews = 20000,
                             FirstName = "Роджер",
+                            ImageSource = "StaticFiles/images/8.jpg",
                             LastName = "Дикинс"
                         },
                         new
                         {
                             CelebrityId = -9,
-                            CelebrityPicURL = "",
                             CountViews = 50000,
                             FirstName = "Ханс",
+                            ImageSource = "StaticFiles/images/9.jpg",
                             LastName = "Циммер"
                         },
                         new
                         {
                             CelebrityId = -10,
-                            CelebrityPicURL = "",
                             CountViews = 95000,
                             FirstName = "Квентин",
+                            ImageSource = "StaticFiles/images/10.jpg",
                             LastName = "Тарантино"
                         });
                 });
