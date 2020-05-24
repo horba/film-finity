@@ -7,6 +7,8 @@
   </div>
 </template>
 
+<style src="./styles/common.css"></style>
+
 <script>
 export default {
   name: 'app',
