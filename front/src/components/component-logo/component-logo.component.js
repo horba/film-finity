@@ -1,3 +1,3 @@
 export default {
-  name: 'logo'
+  name: 'ff-logo'
 };

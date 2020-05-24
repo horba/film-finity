@@ -1,7 +1,7 @@
 import { Logo } from '@components';
 
 export default {
-  name: 'Footer',
+  name: 'ff-footer',
   components: {
     'ff-logo': Logo
   }

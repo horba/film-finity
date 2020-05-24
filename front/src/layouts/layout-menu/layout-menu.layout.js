@@ -1,7 +1,7 @@
 import { Logo } from '@components';
 
 export default {
-  name: 'menuMain',
+  name: 'ff-menu',
   components: {
     'ff-logo': Logo
   },
@@ -12,8 +12,6 @@ export default {
     };
   },
   methods: {
-    handleSelect (key, keyPath) {
-      console.log(key, keyPath);
-    }
+    handleSelect (key, keyPath) { }
   }
 };
