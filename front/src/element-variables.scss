@@ -1,0 +1,35 @@
+/* theme color */
+$--color-white: #fff !default;
+$--color-black: #000 !default;
+
+$--color-primary:#6663FF;
+$--color-success: #6FDB8D;
+$--color-warning: #9DA408 !default;
+$--color-danger: #EE4444;
+$--color-info: #0A76A4 !default;
+$--color-ff-accent-color:#FFA21C;
+
+$--color-success-light: mix($--color-white, $--color-success, 80%) !default;
+$--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
+$--color-danger-light: mix($--color-white, $--color-danger, 80%) !default;
+$--color-info-light: mix($--color-white, $--color-info, 80%) !default;
+
+$--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
+$--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
+$--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
+$--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
+
+$--color-text-primary: red !default;
+$--color-text-regular: #606266 !default;
+$--color-text-secondary: #909399 !default;
+$--color-text-placeholder: #c0c4cc !default;
+$--background-color: #f5f7fa !default; //фон disabled
+
+
+/* icon font path, required  */
+
+
+/* icon font path, required */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
