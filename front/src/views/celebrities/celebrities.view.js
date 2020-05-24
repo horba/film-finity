@@ -1,77 +1,26 @@
+import axios from 'axios';
 export default {
   name: 'ff-celebrities',
   data: function () {
     return {
-      celebrities: [
-        {
-          FirstName: 'Vlad',
-          LastName: 'Volkovskyi',
-          src: require('@assets/images/actorImg.png'),
-          CountViews: '1m',
-          JobTitle: ['producer', 'actor']
-        },
-        {
-          FirstName: 'Роберт',
-          LastName: 'Дауни (младший)',
-          src: require('@assets/images/actorImg.png'),
-          CountViews: '1000k',
-          JobTitle: ['producer', 'actor']
-        },
-        {
-          FirstName: 'Роберт',
-          LastName: 'Дауни (младший)',
-          src: require('@assets/images/actorImg.png'),
-          CountViews: '1000k',
-          JobTitle: ['producer', 'actor']
-        },
-        {
-          FirstName: 'Роберт',
-          LastName: 'Дауни (младший)',
-          src: require('@assets/images/actorImg.png'),
-          CountViews: '1000k',
-          JobTitle: ['producer', 'actor']
-        },
-        {
-          FirstName: 'Актер',
-          LastName: 'Известный',
-          src: require('@assets/images/actorImg.png'),
-          CountViews: '3.02m',
-          JobTitle: ['producer', 'actor', 'writer']
-        },
-        {
-          FirstName: 'Актер',
-          LastName: 'Известный',
-          src: require('@assets/images/actorImg.png'),
-          CountViews: '32000k',
-          JobTitle: ['producer', 'actor', 'writer']
-        },
-        {
-          FirstName: 'Актер',
-          LastName: 'Известный',
-          src: require('@assets/images/actorImg.png'),
-          CountViews: '3.5m',
-          JobTitle: ['producer', 'actor', 'writer']
-        },
-        {
-          FirstName: 'Актер',
-          LastName: 'Известный',
-          src: require('@assets/images/actorImg.png'),
-          CountViews: '3.5m',
-          JobTitle: ['producer', 'actor', 'writer']
-        },
-        {
-          FirstName: 'Актер',
-          LastName: 'Известный',
-          src: require('@assets/images/actorImg.png'),
-          CountViews: '3.5m',
-          JobTitle: ['producer', 'actor', 'writer']
-        }
-      ]
+      celebrities: [],
+      baseUrl: 'https://localhost:5001'
     };
   },
   filters: {
-    modifyJobTitles: function (titles) {
-      return titles.join(', ');
+    modifyJobTitles (titles) {
+      return titles.map(element => ' ' + element.jobName).join();
     }
+  },
+  methods: {
+    getimgSrc (imgPath) {
+      const context = this;
+      return `${context.baseUrl}/${imgPath}`;
+    }
+  },
+  created () {
+    axios
+      .get(`${this.baseUrl}/api/Celebrity/Celebrities`)
+      .then(response => { this.celebrities = response.data; });
   }
 };

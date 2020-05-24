@@ -18,7 +18,7 @@
 
 .person-name div {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .person-name div span {
