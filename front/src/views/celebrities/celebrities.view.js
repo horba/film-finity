@@ -14,8 +14,7 @@ export default {
   },
   methods: {
     getimgSrc (imgPath) {
-      const context = this;
-      return `${context.baseUrl}/${imgPath}`;
+      return `${this.baseUrl}/${imgPath}`;
     }
   },
   created () {
