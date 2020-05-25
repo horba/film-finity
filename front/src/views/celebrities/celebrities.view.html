@@ -2,7 +2,7 @@
   <el-row class = "el-row-wrap" :gutter = "20" type = "flex" justify="start">
     <el-col v-for="element in celebrities" class = "grid-col-wrap" :key = "element.CelebrityId">
       <div class="grid-content-wrap">
-        <el-image :src="getimgSrc(element.imageSource)"></el-image>
+        <el-image :fit = fit :src="getimgSrc(element.imageSource)"></el-image>
         <div class = "grid-content-main">
         <div class = "person-name">
           <div><span>{{element.firstName}} {{element.lastName}}</span></div>

@@ -10,10 +10,14 @@
   flex-flow: row wrap;
 }
 
+.el-image {
+  height: 339px;
+}
+
 .grid-col-wrap {
   margin-top: 20px;
   border-radius: 5px;
-  width: 290px;
+  width: 270px;
 }
 
 .person-name div {

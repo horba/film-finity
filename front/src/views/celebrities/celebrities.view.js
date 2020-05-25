@@ -4,7 +4,8 @@ export default {
   data: function () {
     return {
       celebrities: [],
-      baseUrl: 'https://localhost:5001'
+      baseUrl: 'https://localhost:5001',
+      fit: 'cover'
     };
   },
   filters: {
