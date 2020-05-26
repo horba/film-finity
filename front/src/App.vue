@@ -9,6 +9,8 @@
 
 <style src="./styles/common.css"></style>
 
+<style src="./styles/variables.css"></style>
+
 <script>
 export default {
   name: 'app',
