@@ -92,7 +92,7 @@ namespace Entities
                     FirstName = "Ханс",
                     LastName = "Циммер",
                     CountViews = 50000,
-                    ImageSource = "StaticFiles/images/9.jpg"
+                    ImageSource = "StaticFiles/images/9.png"
                 },
                 new Celebrity
                 {
