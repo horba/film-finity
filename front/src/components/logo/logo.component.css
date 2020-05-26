@@ -5,5 +5,14 @@ div.logo {
 }
 
 i.logo {
-  font-size: 32px;
+  font-size: 32px;  
+}
+
+.main-color {
+  color: var(--main-txt-color);
+}
+
+i.logo,
+.second-color {
+  color: var(--auxiliary-bg-color);
 }
