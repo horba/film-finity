@@ -23,7 +23,7 @@ div.footer-color-background {
   height: 57px; 
 }
 
-span {
+div.footer-color-background > div {
   margin-left: 150px;
   font-size: 11px;
 }
