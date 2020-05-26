@@ -1,1 +1,1 @@
-export { default as User } from './view-user/view-user.view.vue';
+export { default as User } from './user/user.view.vue';
