@@ -1,0 +1,38 @@
+:root {
+    --main-bg-color:  #6663FF;
+    --main-txt-color: white;
+    --auxiliary-bg-color:  #FFA21C;
+    --footer-bg-color:  #5956FF;
+    --menu-border-bottom-width: 3px;
+    --menu-border-bottom-style: solid;  
+  }
+
+.main-color,
+button.main-color,
+a.main-color.el-link--default {
+    color: var(--main-txt-color);
+}
+
+.color-background,
+button.color-background,
+ul.color-background {
+    background-color: var(--main-bg-color);
+}
+
+button.second-color {
+    color: var(--main-bg-color);
+}
+
+.footer-color-background,
+button.footer-color-background {
+    background-color: var(--footer-bg-color);
+}
+
+ul.main-color > li.main-color {
+    color: var(--main-txt-color);
+}
+
+ul.main-color > li.main-color.is-active {
+    border-bottom: var(--menu-border-bottom-width) var(--menu-border-bottom-style) var(--main-txt-color);
+    color: var(--auxiliary-bg-color);
+}
