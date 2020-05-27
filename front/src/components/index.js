@@ -1,1 +1,1 @@
-export { default as Logo } from './logo/logo.component.vue';
+export { default as FfLogo } from './logo/logo.component.vue';
