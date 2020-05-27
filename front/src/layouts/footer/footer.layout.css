@@ -1,4 +1,4 @@
-div.main,
+div.ff-footer,
 div.footer-color-background {  
   display: flex;
   flex-direction: row;                        
@@ -6,8 +6,8 @@ div.footer-color-background {
   justify-content: space-between; 
 }
 
-div.main {
-  height: 125px;
+div.ff-footer {
+  height: var(--footer-height);
 }
 
 div.logo {
@@ -25,7 +25,7 @@ button.footer-color-background {
 }
 
 div.footer-color-background {
-  height: 57px; 
+  height: var(--footer-bottom-height); 
 }
 
 div.footer-color-background > div {
@@ -33,7 +33,7 @@ div.footer-color-background > div {
   font-size: 11px;
 }
 
-button.footer { 
+button.footer-button { 
   border: 0px;
   padding: 10px;
   font-size: 16px;
