@@ -19,6 +19,11 @@ div.stores {
   margin-left: 80px;   
 }
 
+.footer-color-background,
+button.footer-color-background {
+    background-color: var(--footer-bg-color);
+}
+
 div.footer-color-background {
   height: 57px; 
 }

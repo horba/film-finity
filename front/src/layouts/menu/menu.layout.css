@@ -25,3 +25,8 @@ div.buttons {
   margin: 0px 25px;  
   font-size: 18px;   
 }
+
+ul.main-color > li.main-color.is-active {
+  border-bottom: 3px solid var(--main-txt-color);
+  color: var(--auxiliary-bg-color);
+}
