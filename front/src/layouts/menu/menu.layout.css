@@ -1,5 +1,4 @@
-div.main {  
-  height: 90px;
+div.ff-menu {  
   display: flex;
   flex-direction: row;                        
   align-items: center;
@@ -16,11 +15,11 @@ div.buttons {
 
 .el-menu.el-menu--horizontal {
   border-bottom: 0px; 
-  height: 90px;   
+  height: var(--header-height);   
 }
 
 .el-menu--horizontal>.el-menu-item {  
-  height: 90px;
+  height: var(--header-height);
   padding: 15px 0px 0px;
   margin: 0px 25px;  
   font-size: 18px;   
@@ -30,3 +29,7 @@ ul.main-color > li.main-color.is-active {
   border-bottom: 3px solid var(--main-txt-color);
   color: var(--auxiliary-bg-color);
 }
+
+.el-menu-item > a { 
+  text-decoration: none;
+} 

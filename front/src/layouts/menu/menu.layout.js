@@ -1,9 +1,9 @@
-import { Logo } from '@components';
+import { FfLogo } from '@components';
 
 export default {
   name: 'ff-menu',
   components: {
-    'ff-logo': Logo
+    FfLogo
   },
   data () {
     return {
