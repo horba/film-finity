@@ -4,8 +4,8 @@ export default {
     celebrities: []
   }),
   mutations: {
-    initCelebrities (state, ref) {
-      state.celebrities = ref;
+    initCelebrities (state, serverData) {
+      state.celebrities = serverData;
     }
   },
   getters: {

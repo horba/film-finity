@@ -1,26 +1,15 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-<<<<<<< HEAD
-import Home from '@views/Home.vue';
-import { FfCelebrities } from '@views';
-=======
-import { Movies, Serials, Cartoons, News, Actors } from '@views';
->>>>>>> dev
+import { Movies, Serials, Cartoons, News, FfCelebrities } from '@views';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-<<<<<<< HEAD
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: '/celebrities',
+    component: FfCelebrities
   },
   {
-    path: '/celebrities',
-    name: 'Celebrities',
-    component: FfCelebrities
-=======
     path: '/movies',
     component: Movies
   },
@@ -35,11 +24,6 @@ const routes = [
   {
     path: '/news',
     component: News
-  },
-  {
-    path: '/actors',
-    component: Actors
->>>>>>> dev
   }
 ],
 

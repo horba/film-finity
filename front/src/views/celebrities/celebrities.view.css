@@ -26,7 +26,8 @@
 }
 
 .person-name div span {
-  font-family: var(--celebrities-txt-font);
+
+  font-family: var(--txt-font);
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -37,7 +38,7 @@
 }
 
 .person-jobs .el-col span {
-  font-family: var(--celebrities-txt-font);
+  font-family: var(--txt-font);
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
@@ -45,7 +46,7 @@
 }
 
 .person-views .el-col span {
-  font-family: var(--celebrities-txt-font);
+  font-family: var(--txt-font);
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
