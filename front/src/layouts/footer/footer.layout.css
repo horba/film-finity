@@ -1,0 +1,79 @@
+div.ff-footer,
+div.footer-color-background {  
+  display: flex;
+  flex-direction: row;                        
+  align-items: center;
+  justify-content: space-between; 
+}
+
+div.ff-footer {
+  height: var(--footer-height);
+}
+
+div.logo {
+  margin: 5px 0px 10px 80px;
+  padding: 5px 0px 10px;   
+}
+
+div.stores {
+  margin-left: 80px;   
+}
+
+.footer-color-background,
+button.footer-color-background {
+  background-color: var(--footer-bg-color);
+}
+
+div.footer-color-background {
+  height: var(--footer-bottom-height); 
+}
+
+div.footer-color-background > div {
+  margin-left: 150px;
+  font-size: 11px;
+}
+
+button.footer-button { 
+  border: 0px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+a.footer-button {
+  color: var(--main-txt-color);
+  text-decoration: none;
+  margin: 0px;
+}
+
+a.footer-button:hover {
+  color: var(--main-bg-color);
+}
+
+div.footer-color-background > a:hover {
+  color: var(--main-txt-color);
+}
+
+a.privicy-police {
+  margin-right: 140px;  
+}
+
+div.social-networks {
+  margin-right: 115px; 
+}
+
+i {
+  font-size: 22px;
+  padding: 10px;
+}
+
+a {
+  margin-right: 23px;
+}
+
+img {
+  height: 24px;
+}
+
+div.social-networks > div {
+  padding-bottom: 10px;  
+}

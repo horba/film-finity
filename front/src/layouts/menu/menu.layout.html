@@ -1,0 +1,18 @@
+<div class="color-background ff-menu">  
+  <div class="logo">
+    <ff-logo/>
+  </div>
+  <div>
+    <el-menu :default-active="activeIndex" class="el-menu-demo color-background main-color" mode="horizontal" @select="handleSelect">
+      <el-menu-item index="1" class="main-color"><router-link to="/movies">Фильмы</router-link></el-menu-item>
+      <el-menu-item index="2" class="main-color"><router-link to="/serials">Сериалы</router-link></el-menu-item>
+      <el-menu-item index="3" class="main-color"><router-link to="/cartoons">Мультфильмы</router-link></el-menu-item>
+      <el-menu-item index="4" class="main-color"><router-link to="/news">Новости</router-link></el-menu-item>
+      <el-menu-item index="5" class="main-color"><router-link to="/actors">Актеры</router-link></el-menu-item>
+    </el-menu>
+  </div>
+    <div class="buttons">    
+      <el-button icon="el-icon-search" class="second-color"></el-button>
+      <el-button class="second-color">ВОЙТИ</el-button> 
+    </div> 
+</div>

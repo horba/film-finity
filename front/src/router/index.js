@@ -1,14 +1,29 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '@views/Home.vue';
+import { Movies, Serials, Cartoons, News, Actors } from '@views';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: '/movies',
+    component: Movies
+  },
+  {
+    path: '/serials',
+    component: Serials
+  },
+  {
+    path: '/cartoons',
+    component: Cartoons
+  },
+  {
+    path: '/news',
+    component: News
+  },
+  {
+    path: '/actors',
+    component: Actors
   }
 ],
 

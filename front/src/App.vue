@@ -1,19 +1,33 @@
 <template>
   <div id="app">
-    <div>
-      <router-link to="/">Home</router-link>
+    <ff-menu/>
+    <div class="main-content">
+      <router-view></router-view>
     </div>
-    <router-view />
+    <ff-footer/>
   </div>
 </template>
 
+<style src="./styles/common.css"></style>
+
+<style src="./styles/variables.css"></style>
+
 <script>
+import { FfMenu, FfFooter } from '@layouts';
+
 export default {
   name: 'app',
+  components: {
+    FfMenu, FfFooter
+  },
   data () {
     return {};
   }
 };
 </script>
 
-<style></style>
+<style>
+  body {
+    margin: 0px;
+  }
+</style>
