@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import сelebrities from './modules/moduleCelebrities';
+import сelebrities from './modules/celebrities.store.js';
 
 Vue.use(Vuex);
 
