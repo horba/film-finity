@@ -1,0 +1,9 @@
+:root {
+    --main-bg-color:  #6663FF;
+    --main-txt-color: white;
+    --auxiliary-bg-color:  #FFA21C;
+    --footer-bg-color:  #5956FF;
+    --header-height: 90px;
+    --footer-height: 125px;
+    --footer-bottom-height: 57px;    
+  }
