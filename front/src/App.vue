@@ -8,9 +8,9 @@
   </div>
 </template>
 
-<style src="./styles/common.css"></style>
+<style src="@styles/common.css"></style>
 
-<style src="./styles/variables.css"></style>
+<style src="@styles/variables.css"></style>
 
 <script>
 import { FfMenu, FfFooter } from '@layouts';

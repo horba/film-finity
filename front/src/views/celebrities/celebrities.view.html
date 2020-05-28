@@ -1,0 +1,21 @@
+<div id = "Wrap">
+  <el-row class = "el-row-wrap" :gutter = "20" type = "flex" justify="start">
+    <el-col v-for="element in getCelebritiesList" class = "grid-col-wrap" :key = "element.CelebrityId">
+      <div class="grid-content-wrap">
+        <el-image fit = 'cover' :src="getImgSrc(element.imageSource)"></el-image>
+        <div class = "grid-content-main">
+        <div class = "person-name">
+          <div><span>{{element.firstName}} {{element.lastName}}</span></div>
+        </div>
+        <el-row type="flex" justify="start" class = "person-jobs">
+          <el-col><span>{{element.jobTitles |modifyJobTitles}}</span></el-col>
+        </el-row>
+        <el-row type="flex" justify="end" class = "person-views">
+          <el-col :span="3"><i class="el-icon-view"></i></el-col>
+          <el-col :span="4"><span>{{element.countViews}}</span></el-col>
+        </el-row>
+        </div>
+      </div>
+    </el-col>
+  </el-row>
+</div>
