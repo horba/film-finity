@@ -14,3 +14,7 @@ ul.color-background {
 button.second-color {
     color: var(--main-bg-color);
 }
+
+.main-content {
+    min-height: calc(100vh - (var(--header-height) + var(--footer-height) + var(--footer-bottom-height)));
+  }
