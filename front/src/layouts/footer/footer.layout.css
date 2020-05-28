@@ -21,7 +21,7 @@ div.stores {
 
 .footer-color-background,
 button.footer-color-background {
-    background-color: var(--footer-bg-color);
+  background-color: var(--footer-bg-color);
 }
 
 div.footer-color-background {
@@ -37,6 +37,20 @@ button.footer-button {
   border: 0px;
   padding: 10px;
   font-size: 16px;
+}
+
+a.footer-button {
+  color: var(--main-txt-color);
+  text-decoration: none;
+  margin: 0px;
+}
+
+a.footer-button:hover {
+  color: var(--main-bg-color);
+}
+
+div.footer-color-background > a:hover {
+  color: var(--main-txt-color);
 }
 
 a.privicy-police {
