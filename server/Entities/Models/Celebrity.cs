@@ -14,7 +14,6 @@ namespace WebAPI.Models
         public int CountViews { get; set; }
         public string ImageSource { get; set; }
 
-        public ICollection<CelebrityJobTitles> CelebrityJobTitles { get; set; }
-        
+        public ICollection<CelebrityJobTitles> CelebrityJobTitles { get; set; }       
     }
 }
