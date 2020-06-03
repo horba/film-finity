@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Entities.Models
 {
-    class Genre
+    public class Genre
     {
         public int GenreId { get; set; }
         public string GenreName { get; set; }

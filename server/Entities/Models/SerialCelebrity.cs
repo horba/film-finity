@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using WebAPI.Models;
 
 namespace Entities.Models
 {
-    public class SerialGenreTitles
+    public class SerialCelebrity
     {
         public int SerialId { get; set; }
         public Serial Serial { get; set; }
-        public int GenreId { get; set; }
-        public Genre GenreTitle { get; set; }
+        public int CelebrityId { get; set; }
+        public Celebrity Celebrity { get; set; }
     }
 }

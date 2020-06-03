@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Entities.Models
 {
-    class Serial
+    public class Serial
     {
         public int SerialId { get; set; }
         public string Name { get; set; }
@@ -12,5 +12,6 @@ namespace Entities.Models
         public int Year { get; set; }
         public string ImageSource { get; set; }
         public ICollection<SerialGenreTitles> SerialGenreTitles { get; set; }
+        public ICollection<SerialCelebrity> SerialCelebrity { get; set; }
     }
 }
