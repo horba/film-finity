@@ -29,5 +29,6 @@ export default {
 <style>
   body {
     margin: 0px;
+    font-family: var(--txt-font);
   }
 </style>
