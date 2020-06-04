@@ -23,7 +23,11 @@ namespace WebAPI.Controllers
         {
             this.dbContext = filmFinityDbContext;
         }
-               
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<User>>> Get()
+        {
+            return await dbContext.Users.ToListAsync();
+        }
         [HttpPost]
         public async Task<ActionResult<int>> Post(User value)
         {

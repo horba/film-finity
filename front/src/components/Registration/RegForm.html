@@ -1,0 +1,82 @@
+<div class="font">
+    <a href="#registration">
+      <el-button type="primary">Зарегистрироваться</el-button>
+    </a>
+    <div id="registration" class="blackout">
+      <div class="window">
+        <div class="text">Создать аккаунт
+          <a href="#" class="close">
+            <el-button icon="el-icon-close" circle></el-button>
+          </a>
+        </div>
+        <div class="top-indent">
+          <el-form :model="ruleForm"
+                   :rules="rules"
+          >
+            <el-form-item class="item" prop="userName">
+              <el-input placeholder="Имя пользователя"
+                        @change='checkParams()'
+                        v-model="ruleForm.userName"
+              >
+              </el-input>
+            </el-form-item>
+            <div>
+              <el-form-item class="item" prop="email">
+                <el-input placeholder="Email"
+                          @change='checkParams()'
+                          @input="updateMailBusy()"
+                          v-model="ruleForm.email"
+                >
+                </el-input>
+                <el-alert v-show="MailboxBusy"
+                          title="Данный e-mail уже зарегистрирован"
+                          type="error"
+                          :closable="false"
+                          show-icon
+                >
+                </el-alert>
+              </el-form-item>
+            </div>
+            <el-form-item class="item" prop="password">
+              <el-input type="password"
+                        placeholder="Пароль"
+                        @change='checkParams()'
+                        v-model="ruleForm.password"
+              >
+              </el-input>
+            </el-form-item>
+          </el-form>
+        </div>
+        <div class="btn_padding">
+          <el-button
+            id='Registration'
+            type="primary"
+            @click="Registration()"
+            :disabled='isDisabled'
+          >Зарегистрироваться</el-button>
+        </div>
+        <div class="entrance">
+          Уже есть аккаунт?
+          <a href="#">Вход</a>
+        </div>
+      </div>
+    </div>
+    <div id="created" class="blackout">
+      <div class="window">
+        <div class="text">Создать аккаунт
+          <a href="#" class="close">
+            <el-button icon="el-icon-close" circle></el-button>
+          </a>
+        </div>
+        <div class="accountCreate font">
+          <el-button type="success" icon="el-icon-check" circle></el-button>
+          <p>Аккаунт создан!</p>
+          <p>Ты стал частью большого мира, где каждый может внести свою
+            лепту в то, чтобы процесс поиска фильма, сериала или мультфильма был проще и
+            увлекательней.
+          </p>
+          <p>Вперед за просмотрами, оценками и комментариями!</p>
+        </div>
+      </div>
+    </div>
+  </div>
