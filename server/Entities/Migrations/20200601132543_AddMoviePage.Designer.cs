@@ -3,14 +3,16 @@ using Entities.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Entities.Migrations
 {
     [DbContext(typeof(FilmFinityDbContext))]
-    partial class FilmFinityDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200601132543_AddMoviePage")]
+    partial class AddMoviePage
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,16 +57,6 @@ namespace Entities.Migrations
                         },
                         new
                         {
-                            MovieId = 1,
-                            ActorId = 37
-                        },
-                        new
-                        {
-                            MovieId = 1,
-                            ActorId = 38
-                        },
-                        new
-                        {
                             MovieId = 2,
                             ActorId = 5
                         },
@@ -85,11 +77,6 @@ namespace Entities.Migrations
                         },
                         new
                         {
-                            MovieId = 2,
-                            ActorId = 39
-                        },
-                        new
-                        {
                             MovieId = 3,
                             ActorId = 9
                         },
@@ -107,11 +94,6 @@ namespace Entities.Migrations
                         {
                             MovieId = 3,
                             ActorId = 12
-                        },
-                        new
-                        {
-                            MovieId = 3,
-                            ActorId = 40
                         },
                         new
                         {
@@ -140,11 +122,6 @@ namespace Entities.Migrations
                         },
                         new
                         {
-                            MovieId = 4,
-                            ActorId = 41
-                        },
-                        new
-                        {
                             MovieId = 5,
                             ActorId = 18
                         },
@@ -167,11 +144,6 @@ namespace Entities.Migrations
                         {
                             MovieId = 5,
                             ActorId = 22
-                        },
-                        new
-                        {
-                            MovieId = 5,
-                            ActorId = 42
                         },
                         new
                         {
@@ -217,11 +189,6 @@ namespace Entities.Migrations
                         {
                             MovieId = 7,
                             ActorId = 31
-                        },
-                        new
-                        {
-                            MovieId = 7,
-                            ActorId = 43
                         },
                         new
                         {
@@ -520,7 +487,7 @@ namespace Entities.Migrations
                         new
                         {
                             ActorId = 26,
-                            ActorName = "Мэри Элизабет Уинстэд"
+                            ActorName = "Мэри Элизабет"
                         },
                         new
                         {
@@ -570,42 +537,7 @@ namespace Entities.Migrations
                         new
                         {
                             ActorId = 36,
-                            ActorName = "Аружан Джазильбекова"
-                        },
-                        new
-                        {
-                            ActorId = 37,
-                            ActorName = "Фиби Фокс"
-                        },
-                        new
-                        {
-                            ActorId = 38,
-                            ActorName = "Левин Ллойд"
-                        },
-                        new
-                        {
-                            ActorId = 39,
-                            ActorName = "Бенедикт Камбербэтч"
-                        },
-                        new
-                        {
-                            ActorId = 40,
-                            ActorName = "Ник Джонас"
-                        },
-                        new
-                        {
-                            ActorId = 41,
-                            ActorName = "Николас Холт"
-                        },
-                        new
-                        {
-                            ActorId = 42,
-                            ActorName = "Наташа Ротуэлл"
-                        },
-                        new
-                        {
-                            ActorId = 43,
-                            ActorName = "Элайза Сканлен"
+                            ActorName = "Аружан Джазильбек"
                         });
                 });
 
