@@ -6,7 +6,7 @@
 
 <script>
 
-import RegForm from './components/Registration/RegForm';
+import RegForm from './components/Registration/RegForm.vue';
 export default {
   name: 'app',
   components: { RegForm }
