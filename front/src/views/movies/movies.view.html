@@ -1,3 +1,29 @@
-<div>    
-  This is a movie page.
+<div id="Content">
+  <el-row class="el-row-wrap" type="flex" justify="center">
+    <el-col :span="6" v-for="element in getMoviesList" class = "grid-col-wrap" :key = "element.MovieId">
+      <div class="grid-content-wrap">
+        <el-card :body-style="{ padding: '0px' }">
+          <el-image fit='cover' :src="getImgSrc(element.imageSource)"></el-image>
+          <div class="grid-content-main">
+            <div class="movie-title">
+              <span>{{element.movieTitle}}</span>
+            </div>
+            <el-row type="flex" justify="space-between">
+              <el-col :span="24">
+                <i class="el-icon-star-on stars" v-if="element.countStars >= 1"></i>
+                <i class="el-icon-star-on stars" v-if="element.countStars >= 2"></i>
+                <i class="el-icon-star-on stars" v-if="element.countStars >= 3"></i>
+                <i class="el-icon-star-on stars" v-if="element.countStars >= 4"></i>
+                <i class="el-icon-star-on stars" v-if="element.countStars >= 5"></i>                
+              </el-col>
+              <el-col :span="6"><span>{{element.releaseYear}}</span></el-col>
+            </el-row>
+            <div class="actors-list">
+              <span>{{element.actorsList | modifyActorsList}}</span>
+            </div>            
+          </div>
+        </el-card>
+      </div>
+    </el-col>
+  </el-row>
 </div>
