@@ -3,7 +3,14 @@
     --main-txt-color: white;
     --auxiliary-bg-color:  #FFA21C;
     --footer-bg-color:  #5956FF;
+    --color-black: #292C33;
+    --color-neutral-secondary-dark: #8F96A3;
+    --menu-button-height: 45px;
     --header-height: 90px;
     --footer-height: 125px;
-    --footer-bottom-height: 57px;    
+    --footer-bottom-height: 57px;
+    --movie-card-height: 440px;
+    --movie-card-width: 270px;
+    --context-margin-top-bottom: 30px;
+    --txt-font: Artegra Sans;     
   }
