@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Entities.Migrations
 {
     [DbContext(typeof(FilmFinityDbContext))]
-    [Migration("20200603094133_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20200606154510_CreateAndSeed")]
+    partial class CreateAndSeed
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -160,6 +160,48 @@ namespace Entities.Migrations
                     b.HasKey("GenreId");
 
                     b.ToTable("Genres");
+
+                    b.HasData(
+                        new
+                        {
+                            GenreId = 1,
+                            GenreName = "фантастика"
+                        },
+                        new
+                        {
+                            GenreId = 2,
+                            GenreName = "драма"
+                        },
+                        new
+                        {
+                            GenreId = 3,
+                            GenreName = "триллер"
+                        },
+                        new
+                        {
+                            GenreId = 4,
+                            GenreName = "боевик"
+                        },
+                        new
+                        {
+                            GenreId = 5,
+                            GenreName = "приключения"
+                        },
+                        new
+                        {
+                            GenreId = 6,
+                            GenreName = "детектив"
+                        },
+                        new
+                        {
+                            GenreId = 7,
+                            GenreName = "комедия"
+                        },
+                        new
+                        {
+                            GenreId = 8,
+                            GenreName = "ужасы"
+                        });
                 });
 
             modelBuilder.Entity("Entities.Models.Serial", b =>
@@ -184,6 +226,96 @@ namespace Entities.Migrations
                     b.HasKey("SerialId");
 
                     b.ToTable("Serials");
+
+                    b.HasData(
+                        new
+                        {
+                            SerialId = 1,
+                            ImageSource = "StaticFiles/images/11.jpg",
+                            Name = "Видоизменённый углерод (1-2 сезон)",
+                            Rating = 3.0,
+                            Year = 2018
+                        },
+                        new
+                        {
+                            SerialId = 2,
+                            ImageSource = "StaticFiles/images/12.jpg",
+                            Name = "Викинги (1-6 сезон)",
+                            Rating = 4.0,
+                            Year = 2013
+                        },
+                        new
+                        {
+                            SerialId = 3,
+                            ImageSource = "StaticFiles/images/13.jpg",
+                            Name = "Ведьмак (1 сезон)",
+                            Rating = 5.0,
+                            Year = 2019
+                        },
+                        new
+                        {
+                            SerialId = 4,
+                            ImageSource = "StaticFiles/images/14.jpg",
+                            Name = "Чужак (1 сезон)",
+                            Rating = 5.0,
+                            Year = 2020
+                        },
+                        new
+                        {
+                            SerialId = 5,
+                            ImageSource = "StaticFiles/images/15.jpg",
+                            Name = "Маленькая Америка (1 сезон)",
+                            Rating = 5.0,
+                            Year = 2020
+                        },
+                        new
+                        {
+                            SerialId = 6,
+                            ImageSource = "StaticFiles/images/16.jpg",
+                            Name = "Пятая авеню (1 сезон)",
+                            Rating = 5.0,
+                            Year = 2020
+                        },
+                        new
+                        {
+                            SerialId = 7,
+                            ImageSource = "StaticFiles/images/17.jpg",
+                            Name = "Звёздный путь: Пикар (1 сезон)",
+                            Rating = 5.0,
+                            Year = 2020
+                        },
+                        new
+                        {
+                            SerialId = 8,
+                            ImageSource = "StaticFiles/images/18.jpg",
+                            Name = "Замок и ключ (1 сезон)",
+                            Rating = 5.0,
+                            Year = 2020
+                        },
+                        new
+                        {
+                            SerialId = 9,
+                            ImageSource = "StaticFiles/images/19.jpg",
+                            Name = "Hi-Fi / Фанатик (1 сезон)",
+                            Rating = 5.0,
+                            Year = 2020
+                        },
+                        new
+                        {
+                            SerialId = 10,
+                            ImageSource = "StaticFiles/images/20.jpg",
+                            Name = "Разрабы (1 сезон)",
+                            Rating = 5.0,
+                            Year = 2020
+                        },
+                        new
+                        {
+                            SerialId = 11,
+                            ImageSource = "StaticFiles/images/21.jpg",
+                            Name = "Охотники (1 сезон)",
+                            Rating = 5.0,
+                            Year = 2020
+                        });
                 });
 
             modelBuilder.Entity("Entities.Models.SerialCelebrity", b =>
@@ -199,6 +331,128 @@ namespace Entities.Migrations
                     b.HasIndex("CelebrityId");
 
                     b.ToTable("SerialCelebrities");
+
+                    b.HasData(
+                        new
+                        {
+                            SerialId = 4,
+                            CelebrityId = -1
+                        },
+                        new
+                        {
+                            SerialId = 4,
+                            CelebrityId = -2
+                        },
+                        new
+                        {
+                            SerialId = 4,
+                            CelebrityId = -3
+                        },
+                        new
+                        {
+                            SerialId = 5,
+                            CelebrityId = -4
+                        },
+                        new
+                        {
+                            SerialId = 5,
+                            CelebrityId = -5
+                        },
+                        new
+                        {
+                            SerialId = 5,
+                            CelebrityId = -6
+                        },
+                        new
+                        {
+                            SerialId = 6,
+                            CelebrityId = -7
+                        },
+                        new
+                        {
+                            SerialId = 6,
+                            CelebrityId = -8
+                        },
+                        new
+                        {
+                            SerialId = 6,
+                            CelebrityId = -9
+                        },
+                        new
+                        {
+                            SerialId = 7,
+                            CelebrityId = -7
+                        },
+                        new
+                        {
+                            SerialId = 7,
+                            CelebrityId = -8
+                        },
+                        new
+                        {
+                            SerialId = 7,
+                            CelebrityId = -9
+                        },
+                        new
+                        {
+                            SerialId = 8,
+                            CelebrityId = -7
+                        },
+                        new
+                        {
+                            SerialId = 8,
+                            CelebrityId = -8
+                        },
+                        new
+                        {
+                            SerialId = 8,
+                            CelebrityId = -9
+                        },
+                        new
+                        {
+                            SerialId = 9,
+                            CelebrityId = -7
+                        },
+                        new
+                        {
+                            SerialId = 9,
+                            CelebrityId = -8
+                        },
+                        new
+                        {
+                            SerialId = 9,
+                            CelebrityId = -9
+                        },
+                        new
+                        {
+                            SerialId = 10,
+                            CelebrityId = -7
+                        },
+                        new
+                        {
+                            SerialId = 10,
+                            CelebrityId = -8
+                        },
+                        new
+                        {
+                            SerialId = 10,
+                            CelebrityId = -9
+                        },
+                        new
+                        {
+                            SerialId = 11,
+                            CelebrityId = -7
+                        },
+                        new
+                        {
+                            SerialId = 11,
+                            CelebrityId = -8
+                        },
+                        new
+                        {
+                            SerialId = 11,
+                            CelebrityId = -9
+                        });
                 });
 
             modelBuilder.Entity("Entities.Models.SerialGenreTitles", b =>
@@ -214,6 +468,173 @@ namespace Entities.Migrations
                     b.HasIndex("GenreId");
 
                     b.ToTable("SerialGenreTitles");
+
+                    b.HasData(
+                        new
+                        {
+                            SerialId = 1,
+                            GenreId = 1
+                        },
+                        new
+                        {
+                            SerialId = 1,
+                            GenreId = 2
+                        },
+                        new
+                        {
+                            SerialId = 1,
+                            GenreId = 3
+                        },
+                        new
+                        {
+                            SerialId = 2,
+                            GenreId = 2
+                        },
+                        new
+                        {
+                            SerialId = 2,
+                            GenreId = 4
+                        },
+                        new
+                        {
+                            SerialId = 2,
+                            GenreId = 5
+                        },
+                        new
+                        {
+                            SerialId = 3,
+                            GenreId = 2
+                        },
+                        new
+                        {
+                            SerialId = 3,
+                            GenreId = 4
+                        },
+                        new
+                        {
+                            SerialId = 3,
+                            GenreId = 5
+                        },
+                        new
+                        {
+                            SerialId = 4,
+                            GenreId = 2
+                        },
+                        new
+                        {
+                            SerialId = 4,
+                            GenreId = 4
+                        },
+                        new
+                        {
+                            SerialId = 4,
+                            GenreId = 5
+                        },
+                        new
+                        {
+                            SerialId = 5,
+                            GenreId = 2
+                        },
+                        new
+                        {
+                            SerialId = 5,
+                            GenreId = 4
+                        },
+                        new
+                        {
+                            SerialId = 5,
+                            GenreId = 5
+                        },
+                        new
+                        {
+                            SerialId = 6,
+                            GenreId = 2
+                        },
+                        new
+                        {
+                            SerialId = 6,
+                            GenreId = 4
+                        },
+                        new
+                        {
+                            SerialId = 6,
+                            GenreId = 5
+                        },
+                        new
+                        {
+                            SerialId = 7,
+                            GenreId = 2
+                        },
+                        new
+                        {
+                            SerialId = 7,
+                            GenreId = 4
+                        },
+                        new
+                        {
+                            SerialId = 7,
+                            GenreId = 5
+                        },
+                        new
+                        {
+                            SerialId = 8,
+                            GenreId = 2
+                        },
+                        new
+                        {
+                            SerialId = 8,
+                            GenreId = 4
+                        },
+                        new
+                        {
+                            SerialId = 8,
+                            GenreId = 5
+                        },
+                        new
+                        {
+                            SerialId = 9,
+                            GenreId = 2
+                        },
+                        new
+                        {
+                            SerialId = 9,
+                            GenreId = 4
+                        },
+                        new
+                        {
+                            SerialId = 9,
+                            GenreId = 5
+                        },
+                        new
+                        {
+                            SerialId = 10,
+                            GenreId = 2
+                        },
+                        new
+                        {
+                            SerialId = 10,
+                            GenreId = 4
+                        },
+                        new
+                        {
+                            SerialId = 10,
+                            GenreId = 5
+                        },
+                        new
+                        {
+                            SerialId = 11,
+                            GenreId = 2
+                        },
+                        new
+                        {
+                            SerialId = 11,
+                            GenreId = 4
+                        },
+                        new
+                        {
+                            SerialId = 11,
+                            GenreId = 5
+                        });
                 });
 
             modelBuilder.Entity("WebAPI.Models.Celebrity", b =>
