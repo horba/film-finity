@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using WebAPI.Models;
 
 namespace WebAPI
@@ -47,19 +48,31 @@ namespace WebAPI
             services.AddControllers();
             services.AddDirectoryBrowser();
 
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("FilmFinity", new OpenApiInfo { Title = "FilmFinity API", Version = "v1" });
+            });
             services.AddDbContext<FilmFinityDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("FilmFinityMSSQL"));
             });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+ 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/FilmFinity/swagger.json", "FilmFinity API");
+                c.RoutePrefix = string.Empty;
+            });
 
             app.UseHttpsRedirection();
 
