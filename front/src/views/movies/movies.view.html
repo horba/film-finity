@@ -14,12 +14,12 @@
                 <i class="el-icon-star-on stars" v-if="element.countStars >= 2"></i>
                 <i class="el-icon-star-on stars" v-if="element.countStars >= 3"></i>
                 <i class="el-icon-star-on stars" v-if="element.countStars >= 4"></i>
-                <i class="el-icon-star-on stars" v-if="element.countStars >= 5"></i>                
+                <i class="el-icon-star-on stars" v-if="element.countStars >= 5"></i>
               </el-col>
               <el-col :span="6"><span>{{element.releaseYear}}</span></el-col>
             </el-row>
             <div class="actors-list">
-              <span>{{element.actorsList | modifyActorsList}}</span>
+              <span>{{element.actorsList | spaceBeforeElement('actorName')}}</span>
             </div>            
           </div>
         </el-card>

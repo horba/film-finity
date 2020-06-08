@@ -9,6 +9,10 @@ Vue.use(ElementUI);
 
 Vue.config.productionTip = false;
 
+Vue.filter('spaceBeforeElement', function (list, name) {
+  return list.map(element => ' ' + element[name]).join();
+});
+
 new Vue({
   router,
   store,
