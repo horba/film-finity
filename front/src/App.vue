@@ -1,17 +1,36 @@
 <template>
   <div id="app">
-    <RegForm/>
+    <ff-registration-user/>
+    <ff-menu/>
+    <div class="main-content">
+      <router-view></router-view>
+    </div>
+    <ff-footer/>
   </div>
 </template>
 
+<style src="@styles/common.css"></style>
+
+<style src="@styles/variables.css"></style>
+
 <script>
 
-import RegForm from './components/Registration/RegForm.vue';
+import FfRegistrationUser from './components/RegistrationUser/RegistrationUser.component.vue';
+import { FfMenu, FfFooter } from '@layouts';
+
 export default {
   name: 'app',
-  components: { RegForm }
+  components: {
+    FfMenu, FfFooter, FfRegistrationUser
+  },
+  data () {
+    return {};
+  }
 };
 </script>
 
 <style>
+  body {
+    margin: 0px;
+  }
 </style>

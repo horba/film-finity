@@ -14,7 +14,8 @@ export default {
       }).then(response => {
         if (Number(response.data)) {
           commit('updateMailboxBusy', !response.data);
-          document.location.href = '#created';
+          commit('updateVisibleRegistrationForm', !response.data);
+          commit('updateVisibleRegistrationSuccess', response.data);
         } else {
           commit('updateMailboxBusy', !response.data);
         }
@@ -24,14 +25,28 @@ export default {
   mutations: {
     updateMailboxBusy (state, data) {
       state.mailboxBusy = data;
+    },
+    updateVisibleRegistrationForm (state, data) {
+      state.isVisibleRegistrationForm = data;
+    },
+    updateVisibleRegistrationSuccess (state, data) {
+      state.isVisibleRegistrationSuccess = data;
     }
   },
   state: {
-    mailboxBusy: false
+    mailboxBusy: false,
+    isVisibleRegistrationSuccess: false,
+    isVisibleRegistrationForm: false
   },
   getters: {
     getMailboxBusy (state) {
       return state.mailboxBusy;
+    },
+    getRegistrationSuccess (state) {
+      return state.isVisibleRegistrationSuccess;
+    },
+    getRegistrationForm (state) {
+      return state.isVisibleRegistrationForm;
     }
   }
 };

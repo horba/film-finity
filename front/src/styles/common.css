@@ -1,0 +1,23 @@
+:root {
+    --txt-font: Artegra Sans;
+}
+.main-color,
+button.main-color,
+a.main-color.el-link--default,
+ul.main-color > li.main-color {
+    color: var(--main-txt-color);
+}
+
+.color-background,
+button.color-background,
+ul.color-background {
+    background-color: var(--main-bg-color);
+}
+
+button.second-color {
+    color: var(--main-bg-color);
+}
+
+.main-content {
+    min-height: calc(100vh - (var(--header-height) + var(--footer-height) + var(--footer-bottom-height)));
+  }

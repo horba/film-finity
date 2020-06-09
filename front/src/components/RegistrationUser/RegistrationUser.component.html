@@ -1,0 +1,73 @@
+  <div>   
+    <el-button type="primary" @click="VisibleRegistrationForm(true)">Зарегистрироваться</el-button>
+    <el-dialog 
+    title="Создать аккаунт"
+    :visible.sync="isVisibleRegistrationForm" 
+    center
+    :show-close="false"
+    width= "464px"
+    >
+      <div class="close"><el-button icon="el-icon-close" circle @click="VisibleRegistrationForm(false)"></el-button> </div> 
+      <el-form :model="ruleForm"
+      :rules="rules"
+      >              
+        <el-form-item class="item" prop="userName">
+        <el-input placeholder="Имя пользователя"
+                  v-model="ruleForm.userName"
+        >
+        </el-input>
+        </el-form-item>
+        <el-form-item class="item" prop="email">
+        <el-input placeholder="Email"
+                  @input="updateMailBusy()"
+                  v-model="ruleForm.email"
+        >
+        </el-input>
+        <el-alert v-show="MailboxBusy"
+                  title="Данный e-mail уже зарегистрирован"
+                  type="error"
+                  :closable="false"
+                  show-icon
+        >
+        </el-alert>
+        </el-form-item>
+        <el-form-item class="item" prop="password">
+        <el-input type="password"
+                  placeholder="Пароль"
+                  v-model="ruleForm.password"
+        >
+        </el-input>
+        </el-form-item>
+      </el-form>
+      
+      <span slot="footer" class="dialog-footer">
+        <el-button
+            id='Registration'
+            type="primary"
+            @click="Registration()"
+            :disabled='isDisabled'
+          >Зарегистрироваться</el-button> 
+          <div class="entrance">
+            Уже есть аккаунт? Вход
+          </div>     
+      </span>
+    </el-dialog>
+    <el-dialog 
+      title="Создать аккаунт"
+      :visible.sync="isVisibleRegistrationSuccess" 
+      center
+      :show-close="false"
+      width= "464px"
+    >
+    <div class="close"><el-button icon="el-icon-close" circle @click="VisibleRegistrationSuccess(false)"></el-button> </div>
+    <div class="accountCreate">
+      <el-button type="success" icon="el-icon-check" circle></el-button>
+      <p>Аккаунт создан!</p>
+      <p>Ты стал частью большого мира, где каждый может внести свою
+        лепту в то, чтобы процесс поиска фильма, сериала или мультфильма был проще и
+        увлекательней.
+      </p>
+      <p>Вперед за просмотрами, оценками и комментариями!</p>
+    </div> 
+  </el-dialog>
+  </div>

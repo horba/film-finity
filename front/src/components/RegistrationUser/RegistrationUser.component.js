@@ -1,11 +1,12 @@
 export default {
+  name: 'ff-registration-user',
   data () {
     return {
       ruleForm: {
         userName: '',
         email: '',
         password: '',
-        actBtn: true
+        isDisabledBtn: true
       },
       rules: {
         email: [
@@ -30,10 +31,17 @@ export default {
         && this.ruleForm.email.length !== 0
         && this.ruleForm.password.length !== 0
         && this.ruleForm.email.indexOf('@') !== -1
-        && this.ruleForm.email.indexOf('.') !== -1) {
-        return this.actBtn;
+        && this.ruleForm.email.indexOf('.') !== -1
+        && this.ruleForm.email.slice(this.ruleForm.email.indexOf('.')).length > 2) {
+        return this.isDisabledBtn;
       }
-      return !this.actBtn;
+      return !this.isDisabledBtn;
+    },
+    isVisibleRegistrationForm () {
+      return this.$store.getters.getRegistrationForm;
+    },
+    isVisibleRegistrationSuccess () {
+      return this.$store.getters.getRegistrationSuccess;
     }
   },
   methods: {
@@ -44,8 +52,11 @@ export default {
         userPassword: this.ruleForm.email
       });
     },
-    updateMailBusy () {
-      this.$store.commit('updateMailboxBusy', false);
+    VisibleRegistrationForm (value) {
+      this.$store.commit('updateVisibleRegistrationForm', value);
+    },
+    VisibleRegistrationSuccess (value) {
+      this.$store.commit('updateVisibleRegistrationSuccess', value);
     }
   }
 };
