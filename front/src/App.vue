@@ -14,8 +14,7 @@
 <style src="@styles/variables.css"></style>
 
 <script>
-
-import FfRegistrationUser from './components/RegistrationUser/RegistrationUser.component.vue';
+import { FfRegistrationUser } from '@components';
 import { FfMenu, FfFooter } from '@layouts';
 
 export default {
