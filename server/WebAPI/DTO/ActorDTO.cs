@@ -7,6 +7,6 @@ namespace WebAPI.DTO
 {
     public class ActorDTO
     {
-        public string ActorName { get; set; }
+        public string FullName { get; set; }
     }
 }

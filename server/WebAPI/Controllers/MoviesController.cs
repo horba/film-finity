@@ -12,29 +12,28 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class MovieController : ControllerBase
+    public class MoviesController : ControllerBase
     {
         private readonly FilmFinityDbContext dbContext;
 
-        public MovieController(FilmFinityDbContext filmFinityDbContext)
+        public MoviesController(FilmFinityDbContext filmFinityDbContext)
         {
             this.dbContext = filmFinityDbContext;
         }
 
 
-        [HttpGet]
-        [Route("Movies")]
+        [HttpGet]        
         public IActionResult GetListMovies()
         {
             List<MovieDTO> objectList = dbContext.Movies.Select(o => new MovieDTO
             {
-                MovieId = o.MovieId,
-                MovieTitle = o.MovieTitle,
-                CountStars = o.CountStars,
+                Id = o.Id,
+                Title = o.Title,
+                Rate = o.Rate,
                 ReleaseYear = o.ReleaseYear,
                 ImageSource = o.ImageSource,
                 ActorsList = o.ActorsList.Select(j => j.Actor).Select(j => new ActorDTO
-                { ActorName = j.ActorName }).ToList()
+                { FullName = j.FullName }).ToList()
             }).ToList();
 
             return Ok(objectList);

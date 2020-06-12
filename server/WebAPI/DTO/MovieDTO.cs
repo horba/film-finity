@@ -8,9 +8,9 @@ namespace WebAPI.DTO
 {
     public class MovieDTO
     {
-        public int MovieId { get; set; }
-        public string MovieTitle { get; set; }
-        public int CountStars { get; set; }
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public int Rate { get; set; }
         public int ReleaseYear { get; set; }
         public string ImageSource { get; set; }
 
