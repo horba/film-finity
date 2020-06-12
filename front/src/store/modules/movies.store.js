@@ -1,22 +1,17 @@
 import axios from 'axios';
 export default {
-  state: () => ({
+  state: {
     movies: []
-  }),
+  },
   mutations: {
     initMovies (state, serverData) {
       state.movies = serverData;
     }
   },
-  getters: {
-    getMoviesList (state) {
-      return state.movies;
-    }
-  },
   actions: {
-    getMovies ({ state, commit, rootState }) {
+    getMovies ({ commit, rootState }) {
       axios
-        .get(`${rootState.baseUrl}/api/Movie/Movies`)
+        .get(`${rootState.baseUrl}/api/movies`)
         .then(response => { commit('initMovies', response.data); });
     }
   }

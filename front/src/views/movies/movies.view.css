@@ -34,14 +34,17 @@ div.movie-title {
   text-overflow: ellipsis;
 }
 
-i.stars {
-  font-size: 28px;
-  color: var(--main-bg-color);  
+i.el-rate__icon {
+  font-size: 28px;  
 }
 
 .actors-list {
   font-size: 12px;
   color: var(--color-neutral-secondary-dark); 
+}
+
+.actors-list :first-child {
+  color: var(--color-black);
 }
 
 div.el-col-6 {
@@ -55,6 +58,7 @@ div.el-col-6 > span {
   height: 18px;
 }
 
-#Content {
+.content {
   margin: var(--context-margin-top-bottom) auto;  
 }
+

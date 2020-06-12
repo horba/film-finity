@@ -14,8 +14,9 @@
               </el-col>
               <el-col :span="6"><span>{{movie.releaseYear}}</span></el-col>
             </el-row>
-            <div class="actors-list">              
-              <span>{{movie.actorsList | spaceBeforeElement('fullName')}}</span>
+            <div class="actors-list">
+              <span>{{movie.actorsList | firstElement}}</span>
+              <span>{{movie.actorsList | withoutFirstElement | spaceBeforeElement('fullName')}}</span>
             </div>            
           </div>
         </el-card>
