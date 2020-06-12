@@ -379,233 +379,233 @@ namespace Entities.Migrations
 
             modelBuilder.Entity("WebAPI.Models.Actor", b =>
                 {
-                    b.Property<int>("ActorId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ActorName")
+                    b.Property<string>("FullName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ActorId");
+                    b.HasKey("Id");
 
                     b.ToTable("Actors");
 
                     b.HasData(
                         new
                         {
-                            ActorId = 1,
-                            ActorName = "Том Харпер"
+                            Id = 1,
+                            FullName = "Том Харпер"
                         },
                         new
                         {
-                            ActorId = 2,
-                            ActorName = "Филисити Джонс"
+                            Id = 2,
+                            FullName = "Филисити Джонс"
                         },
                         new
                         {
-                            ActorId = 3,
-                            ActorName = "Эдди Редмейн"
+                            Id = 3,
+                            FullName = "Эдди Редмейн"
                         },
                         new
                         {
-                            ActorId = 4,
-                            ActorName = "Химет Патель"
+                            Id = 4,
+                            FullName = "Химет Патель"
                         },
                         new
                         {
-                            ActorId = 5,
-                            ActorName = "Режиссер"
+                            Id = 5,
+                            FullName = "Режиссер"
                         },
                         new
                         {
-                            ActorId = 6,
-                            ActorName = "Джордж Маккей"
+                            Id = 6,
+                            FullName = "Джордж Маккей"
                         },
                         new
                         {
-                            ActorId = 7,
-                            ActorName = "Дин-Чарльз Чакман"
+                            Id = 7,
+                            FullName = "Дин-Чарльз Чакман"
                         },
                         new
                         {
-                            ActorId = 8,
-                            ActorName = "Ричард Мэдден"
+                            Id = 8,
+                            FullName = "Ричард Мэдден"
                         },
                         new
                         {
-                            ActorId = 9,
-                            ActorName = "Джордж Нолфи"
+                            Id = 9,
+                            FullName = "Джордж Нолфи"
                         },
                         new
                         {
-                            ActorId = 10,
-                            ActorName = "Энтони Маки"
+                            Id = 10,
+                            FullName = "Энтони Маки"
                         },
                         new
                         {
-                            ActorId = 11,
-                            ActorName = "Сэмюел Лерой Джексон"
+                            Id = 11,
+                            FullName = "Сэмюел Лерой Джексон"
                         },
                         new
                         {
-                            ActorId = 12,
-                            ActorName = "Ниа Лонг"
+                            Id = 12,
+                            FullName = "Ниа Лонг"
                         },
                         new
                         {
-                            ActorId = 13,
-                            ActorName = "Джейк Кэздан"
+                            Id = 13,
+                            FullName = "Джейк Кэздан"
                         },
                         new
                         {
-                            ActorId = 14,
-                            ActorName = "Дуэйн Джонсон"
+                            Id = 14,
+                            FullName = "Дуэйн Джонсон"
                         },
                         new
                         {
-                            ActorId = 15,
-                            ActorName = "Карен Гиллан"
+                            Id = 15,
+                            FullName = "Карен Гиллан"
                         },
                         new
                         {
-                            ActorId = 16,
-                            ActorName = "Джейк Блэк"
+                            Id = 16,
+                            FullName = "Джейк Блэк"
                         },
                         new
                         {
-                            ActorId = 17,
-                            ActorName = "Кевин Харт"
+                            Id = 17,
+                            FullName = "Кевин Харт"
                         },
                         new
                         {
-                            ActorId = 18,
-                            ActorName = "Джефф Фаулер"
+                            Id = 18,
+                            FullName = "Джефф Фаулер"
                         },
                         new
                         {
-                            ActorId = 19,
-                            ActorName = "Джим Керри"
+                            Id = 19,
+                            FullName = "Джим Керри"
                         },
                         new
                         {
-                            ActorId = 20,
-                            ActorName = "Джеймс Марсден"
+                            Id = 20,
+                            FullName = "Джеймс Марсден"
                         },
                         new
                         {
-                            ActorId = 21,
-                            ActorName = "Тика Самптер"
+                            Id = 21,
+                            FullName = "Тика Самптер"
                         },
                         new
                         {
-                            ActorId = 22,
-                            ActorName = "Бен Шварц"
+                            Id = 22,
+                            FullName = "Бен Шварц"
                         },
                         new
                         {
-                            ActorId = 23,
-                            ActorName = "Мэти Янь"
+                            Id = 23,
+                            FullName = "Мэти Янь"
                         },
                         new
                         {
-                            ActorId = 24,
-                            ActorName = "Марго Робби"
+                            Id = 24,
+                            FullName = "Марго Робби"
                         },
                         new
                         {
-                            ActorId = 25,
-                            ActorName = "Джерни Смоллет-Белл"
+                            Id = 25,
+                            FullName = "Джерни Смоллет-Белл"
                         },
                         new
                         {
-                            ActorId = 26,
-                            ActorName = "Мэри Элизабет Уинстэд"
+                            Id = 26,
+                            FullName = "Мэри Элизабет Уинстэд"
                         },
                         new
                         {
-                            ActorId = 27,
-                            ActorName = "Грета Гервич"
+                            Id = 27,
+                            FullName = "Грета Гервич"
                         },
                         new
                         {
-                            ActorId = 28,
-                            ActorName = "Сирта Ронан"
+                            Id = 28,
+                            FullName = "Сирта Ронан"
                         },
                         new
                         {
-                            ActorId = 29,
-                            ActorName = "Тимоти Шаламе"
+                            Id = 29,
+                            FullName = "Тимоти Шаламе"
                         },
                         new
                         {
-                            ActorId = 30,
-                            ActorName = "Флоренс Пью"
+                            Id = 30,
+                            FullName = "Флоренс Пью"
                         },
                         new
                         {
-                            ActorId = 31,
-                            ActorName = "Эмма Уотсон"
+                            Id = 31,
+                            FullName = "Эмма Уотсон"
                         },
                         new
                         {
-                            ActorId = 32,
-                            ActorName = "Сирзат Яхуп"
+                            Id = 32,
+                            FullName = "Сирзат Яхуп"
                         },
                         new
                         {
-                            ActorId = 33,
-                            ActorName = "Ху Цзюнь"
+                            Id = 33,
+                            FullName = "Ху Цзюнь"
                         },
                         new
                         {
-                            ActorId = 34,
-                            ActorName = "Юань Цуань"
+                            Id = 34,
+                            FullName = "Юань Цуань"
                         },
                         new
                         {
-                            ActorId = 35,
-                            ActorName = "Берик Айтжанов"
+                            Id = 35,
+                            FullName = "Берик Айтжанов"
                         },
                         new
                         {
-                            ActorId = 36,
-                            ActorName = "Аружан Джазильбекова"
+                            Id = 36,
+                            FullName = "Аружан Джазильбекова"
                         },
                         new
                         {
-                            ActorId = 37,
-                            ActorName = "Фиби Фокс"
+                            Id = 37,
+                            FullName = "Фиби Фокс"
                         },
                         new
                         {
-                            ActorId = 38,
-                            ActorName = "Левин Ллойд"
+                            Id = 38,
+                            FullName = "Левин Ллойд"
                         },
                         new
                         {
-                            ActorId = 39,
-                            ActorName = "Бенедикт Камбербэтч"
+                            Id = 39,
+                            FullName = "Бенедикт Камбербэтч"
                         },
                         new
                         {
-                            ActorId = 40,
-                            ActorName = "Ник Джонас"
+                            Id = 40,
+                            FullName = "Ник Джонас"
                         },
                         new
                         {
-                            ActorId = 41,
-                            ActorName = "Николас Холт"
+                            Id = 41,
+                            FullName = "Николас Холт"
                         },
                         new
                         {
-                            ActorId = 42,
-                            ActorName = "Наташа Ротуэлл"
+                            Id = 42,
+                            FullName = "Наташа Ротуэлл"
                         },
                         new
                         {
-                            ActorId = 43,
-                            ActorName = "Элайза Сканлен"
+                            Id = 43,
+                            FullName = "Элайза Сканлен"
                         });
                 });
 
@@ -764,91 +764,91 @@ namespace Entities.Migrations
 
             modelBuilder.Entity("WebAPI.Models.Movie", b =>
                 {
-                    b.Property<int>("MovieId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CountStars")
-                        .HasColumnType("int");
-
                     b.Property<string>("ImageSource")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MovieTitle")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Rate")
+                        .HasColumnType("int");
 
                     b.Property<int>("ReleaseYear")
                         .HasColumnType("int");
 
-                    b.HasKey("MovieId");
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Movies");
 
                     b.HasData(
                         new
                         {
-                            MovieId = 1,
-                            CountStars = 5,
+                            Id = 1,
                             ImageSource = "StaticFiles/images/11.jpg",
-                            MovieTitle = "Аэронавты",
-                            ReleaseYear = 2019
+                            Rate = 5,
+                            ReleaseYear = 2019,
+                            Title = "Аэронавты"
                         },
                         new
                         {
-                            MovieId = 2,
-                            CountStars = 5,
+                            Id = 2,
                             ImageSource = "StaticFiles/images/12.jpg",
-                            MovieTitle = "1917",
-                            ReleaseYear = 2019
+                            Rate = 5,
+                            ReleaseYear = 2019,
+                            Title = "1917"
                         },
                         new
                         {
-                            MovieId = 3,
-                            CountStars = 5,
+                            Id = 3,
                             ImageSource = "StaticFiles/images/13.jpg",
-                            MovieTitle = "Джуманджи: Новый уровень",
-                            ReleaseYear = 2019
+                            Rate = 5,
+                            ReleaseYear = 2019,
+                            Title = "Джуманджи: Новый уровень"
                         },
                         new
                         {
-                            MovieId = 4,
-                            CountStars = 5,
+                            Id = 4,
                             ImageSource = "StaticFiles/images/14.jpg",
-                            MovieTitle = "Банкир",
-                            ReleaseYear = 2020
+                            Rate = 5,
+                            ReleaseYear = 2020,
+                            Title = "Банкир"
                         },
                         new
                         {
-                            MovieId = 5,
-                            CountStars = 5,
+                            Id = 5,
                             ImageSource = "StaticFiles/images/15.jpg",
-                            MovieTitle = "Соник в кино",
-                            ReleaseYear = 2020
+                            Rate = 5,
+                            ReleaseYear = 2020,
+                            Title = "Соник в кино"
                         },
                         new
                         {
-                            MovieId = 6,
-                            CountStars = 5,
+                            Id = 6,
                             ImageSource = "StaticFiles/images/16.jpg",
-                            MovieTitle = "Хищные птицы: Потрясающая история Харли Квинн",
-                            ReleaseYear = 2020
+                            Rate = 5,
+                            ReleaseYear = 2020,
+                            Title = "Хищные птицы: Потрясающая история Харли Квинн"
                         },
                         new
                         {
-                            MovieId = 7,
-                            CountStars = 5,
+                            Id = 7,
                             ImageSource = "StaticFiles/images/17.jpg",
-                            MovieTitle = "Маленькие женщины",
-                            ReleaseYear = 2019
+                            Rate = 5,
+                            ReleaseYear = 2019,
+                            Title = "Маленькие женщины"
                         },
                         new
                         {
-                            MovieId = 8,
-                            CountStars = 5,
+                            Id = 8,
                             ImageSource = "StaticFiles/images/18.jpg",
-                            MovieTitle = "Композитор",
-                            ReleaseYear = 2019
+                            Rate = 5,
+                            ReleaseYear = 2019,
+                            Title = "Композитор"
                         });
                 });
 

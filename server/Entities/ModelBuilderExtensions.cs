@@ -138,121 +138,121 @@ namespace Entities
                 );
 
             modelBuilder.Entity<Actor>().HasData(
-               new Actor { ActorId = 1, ActorName = "Том Харпер" },
-               new Actor { ActorId = 2, ActorName = "Филисити Джонс" },
-               new Actor { ActorId = 3, ActorName = "Эдди Редмейн" },
-               new Actor { ActorId = 4, ActorName = "Химет Патель" },
-               new Actor { ActorId = 5, ActorName = "Режиссер" },
-               new Actor { ActorId = 6, ActorName = "Джордж Маккей" },
-               new Actor { ActorId = 7, ActorName = "Дин-Чарльз Чакман" },
-               new Actor { ActorId = 8, ActorName = "Ричард Мэдден" },
-               new Actor { ActorId = 9, ActorName = "Джордж Нолфи" },
-               new Actor { ActorId = 10, ActorName = "Энтони Маки" },
-               new Actor { ActorId = 11, ActorName = "Сэмюел Лерой Джексон" },
-               new Actor { ActorId = 12, ActorName = "Ниа Лонг" },
-               new Actor { ActorId = 13, ActorName = "Джейк Кэздан" },
-               new Actor { ActorId = 14, ActorName = "Дуэйн Джонсон" },
-               new Actor { ActorId = 15, ActorName = "Карен Гиллан" },
-               new Actor { ActorId = 16, ActorName = "Джейк Блэк" },
-               new Actor { ActorId = 17, ActorName = "Кевин Харт" },
-               new Actor { ActorId = 18, ActorName = "Джефф Фаулер" },
-               new Actor { ActorId = 19, ActorName = "Джим Керри" },
-               new Actor { ActorId = 20, ActorName = "Джеймс Марсден" },
-               new Actor { ActorId = 21, ActorName = "Тика Самптер" },
-               new Actor { ActorId = 22, ActorName = "Бен Шварц" },
-               new Actor { ActorId = 23, ActorName = "Мэти Янь" },
-               new Actor { ActorId = 24, ActorName = "Марго Робби" },
-               new Actor { ActorId = 25, ActorName = "Джерни Смоллет-Белл" },
-               new Actor { ActorId = 26, ActorName = "Мэри Элизабет Уинстэд" },
-               new Actor { ActorId = 27, ActorName = "Грета Гервич" },
-               new Actor { ActorId = 28, ActorName = "Сирта Ронан" },
-               new Actor { ActorId = 29, ActorName = "Тимоти Шаламе" },
-               new Actor { ActorId = 30, ActorName = "Флоренс Пью" },
-               new Actor { ActorId = 31, ActorName = "Эмма Уотсон" },
-               new Actor { ActorId = 32, ActorName = "Сирзат Яхуп" },
-               new Actor { ActorId = 33, ActorName = "Ху Цзюнь" },
-               new Actor { ActorId = 34, ActorName = "Юань Цуань" },
-               new Actor { ActorId = 35, ActorName = "Берик Айтжанов" },
-               new Actor { ActorId = 36, ActorName = "Аружан Джазильбекова" },
-               new Actor { ActorId = 37, ActorName = "Фиби Фокс" },
-               new Actor { ActorId = 38, ActorName = "Левин Ллойд" },
-               new Actor { ActorId = 39, ActorName = "Бенедикт Камбербэтч" },
-               new Actor { ActorId = 40, ActorName = "Ник Джонас" },
-               new Actor { ActorId = 41, ActorName = "Николас Холт" },
-               new Actor { ActorId = 42, ActorName = "Наташа Ротуэлл" },
-               new Actor { ActorId = 43, ActorName = "Элайза Сканлен" }
+               new Actor { Id = 1, FullName = "Том Харпер" },
+               new Actor { Id = 2, FullName = "Филисити Джонс" },
+               new Actor { Id = 3, FullName = "Эдди Редмейн" },
+               new Actor { Id = 4, FullName = "Химет Патель" },
+               new Actor { Id = 5, FullName = "Режиссер" },
+               new Actor { Id = 6, FullName = "Джордж Маккей" },
+               new Actor { Id = 7, FullName = "Дин-Чарльз Чакман" },
+               new Actor { Id = 8, FullName = "Ричард Мэдден" },
+               new Actor { Id = 9, FullName = "Джордж Нолфи" },
+               new Actor { Id = 10, FullName = "Энтони Маки" },
+               new Actor { Id = 11, FullName = "Сэмюел Лерой Джексон" },
+               new Actor { Id = 12, FullName = "Ниа Лонг" },
+               new Actor { Id = 13, FullName = "Джейк Кэздан" },
+               new Actor { Id = 14, FullName = "Дуэйн Джонсон" },
+               new Actor { Id = 15, FullName = "Карен Гиллан" },
+               new Actor { Id = 16, FullName = "Джейк Блэк" },
+               new Actor { Id = 17, FullName = "Кевин Харт" },
+               new Actor { Id = 18, FullName = "Джефф Фаулер" },
+               new Actor { Id = 19, FullName = "Джим Керри" },
+               new Actor { Id = 20, FullName = "Джеймс Марсден" },
+               new Actor { Id = 21, FullName = "Тика Самптер" },
+               new Actor { Id = 22, FullName = "Бен Шварц" },
+               new Actor { Id = 23, FullName = "Мэти Янь" },
+               new Actor { Id = 24, FullName = "Марго Робби" },
+               new Actor { Id = 25, FullName = "Джерни Смоллет-Белл" },
+               new Actor { Id = 26, FullName = "Мэри Элизабет Уинстэд" },
+               new Actor { Id = 27, FullName = "Грета Гервич" },
+               new Actor { Id = 28, FullName = "Сирта Ронан" },
+               new Actor { Id = 29, FullName = "Тимоти Шаламе" },
+               new Actor { Id = 30, FullName = "Флоренс Пью" },
+               new Actor { Id = 31, FullName = "Эмма Уотсон" },
+               new Actor { Id = 32, FullName = "Сирзат Яхуп" },
+               new Actor { Id = 33, FullName = "Ху Цзюнь" },
+               new Actor { Id = 34, FullName = "Юань Цуань" },
+               new Actor { Id = 35, FullName = "Берик Айтжанов" },
+               new Actor { Id = 36, FullName = "Аружан Джазильбекова" },
+               new Actor { Id = 37, FullName = "Фиби Фокс" },
+               new Actor { Id = 38, FullName = "Левин Ллойд" },
+               new Actor { Id = 39, FullName = "Бенедикт Камбербэтч" },
+               new Actor { Id = 40, FullName = "Ник Джонас" },
+               new Actor { Id = 41, FullName = "Николас Холт" },
+               new Actor { Id = 42, FullName = "Наташа Ротуэлл" },
+               new Actor { Id = 43, FullName = "Элайза Сканлен" }
                );
 
             modelBuilder.Entity<Movie>().HasData(
 
                 new Movie
                 {
-                    MovieId = 1,
-                    MovieTitle = "Аэронавты",
-                    CountStars = 5,
+                    Id = 1,
+                    Title = "Аэронавты",
+                    Rate = 5,
                     ReleaseYear = 2019,
                     ImageSource = "StaticFiles/images/11.jpg"
                 },
 
                 new Movie
                 {
-                    MovieId = 2,
-                    MovieTitle = "1917",
-                    CountStars = 5,
+                    Id = 2,
+                    Title = "1917",
+                    Rate = 5,
                     ReleaseYear = 2019,
                     ImageSource = "StaticFiles/images/12.jpg"
                 },
 
                 new Movie
                 {
-                    MovieId = 3,
-                    MovieTitle = "Джуманджи: Новый уровень",
-                    CountStars = 5,
+                    Id = 3,
+                    Title = "Джуманджи: Новый уровень",
+                    Rate = 5,
                     ReleaseYear = 2019,
                     ImageSource = "StaticFiles/images/13.jpg"
                 },
 
                 new Movie
                 {
-                    MovieId = 4,
-                    MovieTitle = "Банкир",
-                    CountStars = 5,
+                    Id = 4,
+                    Title = "Банкир",
+                    Rate = 5,
                     ReleaseYear = 2020,
                     ImageSource = "StaticFiles/images/14.jpg"
                 },
 
                 new Movie
                 {
-                    MovieId = 5,
-                    MovieTitle = "Соник в кино",
-                    CountStars = 5,
+                    Id = 5,
+                    Title = "Соник в кино",
+                    Rate = 5,
                     ReleaseYear = 2020,
                     ImageSource = "StaticFiles/images/15.jpg"
                 },
 
                 new Movie
                 {
-                    MovieId = 6,
-                    MovieTitle = "Хищные птицы: Потрясающая история Харли Квинн",
-                    CountStars = 5,
+                    Id = 6,
+                    Title = "Хищные птицы: Потрясающая история Харли Квинн",
+                    Rate = 5,
                     ReleaseYear = 2020,
                     ImageSource = "StaticFiles/images/16.jpg"
                 },
 
                 new Movie
                 {
-                    MovieId = 7,
-                    MovieTitle = "Маленькие женщины",
-                    CountStars = 5,
+                    Id = 7,
+                    Title = "Маленькие женщины",
+                    Rate = 5,
                     ReleaseYear = 2019,
                     ImageSource = "StaticFiles/images/17.jpg"
                 },
 
                 new Movie
                 {
-                    MovieId = 8,
-                    MovieTitle = "Композитор",
-                    CountStars = 5,
+                    Id = 8,
+                    Title = "Композитор",
+                    Rate = 5,
                     ReleaseYear = 2019,
                     ImageSource = "StaticFiles/images/18.jpg"
                 });

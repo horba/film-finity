@@ -8,8 +8,8 @@ namespace WebAPI.Models
 {
     public class Actor
     {
-        public int ActorId { get; set; }
-        public string ActorName { get; set; }
+        public int Id { get; set; }
+        public string FullName { get; set; }
 
         public ICollection<ActorsList> ActorsList { get; set; }
     }
