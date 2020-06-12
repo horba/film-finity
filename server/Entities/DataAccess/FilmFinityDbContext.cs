@@ -16,6 +16,9 @@ namespace Entities.DataAccess
         public DbSet<JobTitle> JobTitles { get; set; }
         public DbSet<Celebrity> Celebrities { get; set; }
         public DbSet<CelebrityJobTitles> CelebrityJobTitles { get; set; }
+        public DbSet<News> News { get; set; }
+        public DbSet<NewsAuthor> NewsAuthor { get; set; }
+        public DbSet<NewsCategory> NewsCategory { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
