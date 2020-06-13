@@ -24,7 +24,7 @@ namespace WebAPI.Controllers
         
 
         [HttpGet]
-        [Route("Celebrities")]
+        [Route("Celebrity")]
         public IActionResult GetListCelebrities()
         {
             List<CelebrityDTO> objectList = dbContext.Celebrities.Select(o => new CelebrityDTO
