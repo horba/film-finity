@@ -15,5 +15,6 @@ namespace WebAPI.DTO
         public string ImageSource { get; set; }
 
         public List<JobTitleDTO> JobTitles { get; set; }
+        public Dictionary<string, float> Rates { get; set; }
     }
 }

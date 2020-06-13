@@ -18,8 +18,9 @@ namespace WebAPI.Models
         public DateTime Birthday { get; set; }
         public string PlaceOfBirthday { get; set; }
         public string StarSing { get; set; }
-        public int Height { get; set; }
+        public string Height { get; set; }
         public string FamilyStatus { get; set; }
+        public string Achievement { get; set; }
 
         public ICollection<CelebrityJobTitles> CelebrityJobTitles { get; set; }
         public CelebrityNetworkingSites CelebrityNetworkingSites { get; set; }
