@@ -12,11 +12,12 @@ namespace Entities.Models
         [Key]
         [ForeignKey("Celebrity")]
         public int CelebrityId { get; set; }
-        public string ShortDescription { get; set; }
         public string ChildhoodAndYouth { get; set; }
+        public string ChildhoodAndYouthImage { get; set; }
         public string PersonalLife { get; set; }
+        public string PersonalLifeImage { get; set; }
         public string CareerInCinema { get; set; }
-        public string AdditionalInfo { get; set; }
+        public string CareerInCinemaImage { get; set; }
 
         public Celebrity Celebrity { get; set; }
     }
