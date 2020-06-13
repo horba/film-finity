@@ -15,6 +15,14 @@ namespace WebAPI.DTO
         public string ImageSource { get; set; }
 
         public List<JobTitleDTO> JobTitles { get; set; }
+        public DateTime Birthday { get; set; }
+        public string PlaceOfBirthday { get; set; }
+        public string StarSing { get; set; }
+        public int Height { get; set; }
+        public string FamilyStatus { get; set; }
+        public string Achievement { get; set; }
         public Dictionary<string, float> Rates { get; set; }
+        public NetworkingSitesDTO NetworkingSites { get; set; }
+        public string Biography { get; set; }
     }
 }
