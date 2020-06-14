@@ -22,5 +22,10 @@ export default {
       }
       return res;
     }
+  },
+  filters: {
+    spaceBetweenElement (titles) {
+      return titles.map(element => ' ' + element.firstName + ' ' + element.lastName).join();
+    }
   }
 };
