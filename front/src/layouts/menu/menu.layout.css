@@ -44,11 +44,7 @@ ul.main-color > li.main-color:hover {
   text-decoration: none;
 }
 
-a#menu1:hover,
-a#menu2:hover,
-a#menu3:hover,
-a#menu4:hover,
-a#menu5:hover {
+.el-menu--horizontal > .el-menu-item > a:hover {
   background-color: var(--main-txt-color);
   color: var(--main-bg-color); 
 }
