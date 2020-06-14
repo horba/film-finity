@@ -32,12 +32,14 @@ namespace WebAPI.Controllers
                 GenreTitles = o.SerialGenreTitles.Select(j => j.GenreTitle).Select(j => new GenreDTO
                 { GenreId = j.GenreId, GenreName = j.GenreName }).ToList(),
                 Celebrities = o.SerialCelebrity.Select(j => j.Celebrity).Select(j => new CelebrityDTO
-                { 
+                {
                     CelebrityId = j.CelebrityId,
                     FirstName = j.FirstName,
                     CountViews = j.CountViews,
                     LastName = j.LastName,
-                    ImageSource = j.ImageSource
+                    ImageSource = j.ImageSource,
+                    JobTitles = j.CelebrityJobTitles.Select(g => g.JobTitle).Select(g => new JobTitleDTO
+                    { JobTitleId = g.JobTitleId, JobName = g.JobName }).ToList()
                 }).ToList()
             }).ToList();
             return Ok(objectList);
