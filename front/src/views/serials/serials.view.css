@@ -8,6 +8,7 @@
   
 .grid-col-wrap {
     margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 5px;
     width: 270px;
 }
@@ -40,10 +41,7 @@
     width: 100%;
 }
 .serial-rating {
-    margin-top: 30px;
-}
-.el-icon-star-on {
-    color: #6663FF;
+    margin-top: 7px;
 }
 
 .serial-rating span {
@@ -63,19 +61,20 @@
     bottom: 16.99px;  
     font-style: normal;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 12px;
     font-family: var(--txt-font);  
     color: #8F96A3;
 }
 
-#actors {
+.serial-list {
     width: 226.17px;
     height: 29px;
     left: 19px;
     bottom: 16.99px;  
     font-style: normal;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 12px;
     font-family: var(--txt-font);  
     color: #292C33;
+    padding-top: 5px;
 }
