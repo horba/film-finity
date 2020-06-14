@@ -1,34 +1,33 @@
-import { elSelect } from 'element-ui/lib/select';
+import { Select } from 'element-ui';
 
 export default {
-  name: 'ff-locale-selector',
+  name: 'ff-locale-select',
   components: {
-    elSelect
+    Select
   },
-  computed: {
-    language () {
-      return this.$store.state.language;
-    },
-    locales () {
-      return [
-        {
-          text: this.$t('locale.en'),
-          value: 'en'
-        },
-        {
-          text: this.$t('locale.ru'),
-          value: 'ru'
-        },
-        {
-          text: this.$t('locale.ua'),
-          value: 'ua'
-        }
-      ];
-    }
-  },
-  methods: {
-    changeLanguage (language) {
-      this.$store.commit('locale/CHANGE_LANGUAGE', language);
-    }
+  data () {
+    return {
+      options: [{
+        value: 'Option1',
+        label: 'Option1'
+      }, {
+        value: 'Option2',
+        label: 'Option2'
+      }, {
+        value: 'Option3',
+        label: 'Option3'
+      }, {
+        value: 'Option4',
+        label: 'Option4'
+      }],
+      value: this.$store.state.language
+    };
   }
+
+  // methods: {
+  //   changeLanguage (language) {
+  //     this.$store.commit('locale/CHANGE_LANGUAGE', language);
+  //   }
+  // }
+
 };

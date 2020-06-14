@@ -1,8 +1,10 @@
-<div class="locale-selector">
-  <el-select
-      :items="locales"
-      :label="$t('locale.language')"
-      :value="language"
-      @change="changeLanguage">
+<div class="locale-select">
+  <el-select v-model="value" placeholder="Select">
+    <el-option
+      v-for="item in options"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
   </el-select>
 </div>
