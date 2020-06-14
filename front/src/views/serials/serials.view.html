@@ -1,3 +1,24 @@
-<div>    
-  This is a serial page.
+<div id = "Wrap">    
+  <el-row class = "el-row-wrap" :gutter = "20" type = "flex" justify="start">
+    <el-col v-for="element in getSerialsList" class = "grid-col-wrap" :key = "element.serialId">
+      <div class="grid-content-wrap">
+        <el-image fit = 'cover' :src="getImgSrc(element.imageSource)"></el-image>
+        <div class="grid-content-main">
+          <div class="serial-name">
+            <div><span>{{element.name}}</span></div>
+          </div>
+            <el-row type="flex" justify="start" class ="serial-rating">
+              <el-col :span="3"><i class="el-icon-star-on"></i></el-col>
+              <el-col :span="4"><span>{{element.year}}</span></el-col>
+            </el-row>
+            <div class="celebrities-name" v-for="celebrity in element.celebrities" :key = "celebrity.celebrityId">
+              <span id="actors" v-if="actor(celebrity)">{{celebrity.firstName}} {{celebrity.lastName}},</span>
+            </div>
+            <div class="celebrities-name" v-for="celebrity in element.celebrities" :key = "celebrity.celebrityid">
+              <span v-if="!actor(celebrity)">{{celebrity.firstName}} {{celebrity.lastName}},</span>
+            </div>
+        </div>
+      </div>
+    </el-col>
+  </el-row>
 </div>

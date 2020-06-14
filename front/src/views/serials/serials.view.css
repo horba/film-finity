@@ -1,0 +1,81 @@
+#Wrap{
+    margin: 0 150px;
+}
+
+.el-row-wrap {
+    flex-flow: row wrap;
+}
+  
+.grid-col-wrap {
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 270px;
+}
+
+.grid-content-wrap {
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+}
+
+.grid-content-main {
+    padding: 20px;
+}
+
+.serial-name div {
+    display: flex;
+    justify-content: flex-start;
+    height: 46px;
+}
+
+.serial-name div span {
+
+    font-family: var(--txt-font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #292C33;
+}
+
+.el-image {
+    height: 339px;
+    width: 100%;
+}
+.serial-rating {
+    margin-top: 30px;
+}
+.el-icon-star-on {
+    color: #6663FF;
+}
+
+.serial-rating span {
+
+    font-family: var(--txt-font);
+    font-style: normal;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 300;
+    color: #8F96A3;
+}
+
+.celebrities-name span {
+    width: 226.17px;
+    height: 29px;
+    left: 19px;
+    bottom: 16.99px;  
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: var(--txt-font);  
+    color: #8F96A3;
+}
+
+#actors {
+    width: 226.17px;
+    height: 29px;
+    left: 19px;
+    bottom: 16.99px;  
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: var(--txt-font);  
+    color: #292C33;
+}
