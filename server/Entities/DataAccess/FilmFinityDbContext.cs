@@ -17,8 +17,9 @@ namespace Entities.DataAccess
         public DbSet<Celebrity> Celebrities { get; set; }
         public DbSet<CelebrityJobTitles> CelebrityJobTitles { get; set; }
         public DbSet<News> News { get; set; }
-        public DbSet<NewsAuthor> NewsAuthor { get; set; }
-        public DbSet<NewsCategory> NewsCategory { get; set; }
+        public DbSet<Author> Authors { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<NewsCategory> NewsCategories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -34,6 +35,24 @@ namespace Entities.DataAccess
                 .HasOne(cj => cj.Celebrity)
                 .WithMany(j => j.CelebrityJobTitles)
                 .HasForeignKey(cjt => cjt.CelebrityId);
+
+
+            modelBuilder.Entity<News>()
+                .HasOne(n => n.Author)
+                .WithMany(a => a.News);
+
+            modelBuilder.Entity<NewsCategory>()
+                .HasKey(nc => new { nc.CategoryId, nc.NewsId });
+
+            modelBuilder.Entity<NewsCategory>()
+                .HasOne(nc => nc.Category)
+                .WithMany(c => c.NewsCategories)
+                .HasForeignKey(nc => nc.CategoryId);
+
+            modelBuilder.Entity<NewsCategory>()
+                .HasOne(nc => nc.News)
+                .WithMany(n => n.NewsCategories)
+                .HasForeignKey(nc => nc.NewsId);
 
             modelBuilder.Seed();
         }
