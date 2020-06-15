@@ -188,6 +188,33 @@ namespace Entities
                     PublishTime = DateTime.Now,
                     AuthorId = 1,
                 });
+
+                modelBuilder.Entity<NewsCategory>().HasData(
+                new NewsCategory
+                {
+                    NewsId = 1,
+                    CategoryId = 1
+                },
+                new NewsCategory
+                {
+                    NewsId = 2,
+                    CategoryId = 2
+                },
+                new NewsCategory
+                {
+                    NewsId = 2,
+                    CategoryId = 1
+                },
+                new NewsCategory
+                {
+                    NewsId = 3,
+                    CategoryId = 2
+                },
+                new NewsCategory
+                {
+                    NewsId = 4,
+                    CategoryId = 1
+                });
         }
     }
 }

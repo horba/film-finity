@@ -218,7 +218,7 @@ namespace Entities.Migrations
                             ImageSource = "StaticFiles/images/News/1.jfif",
                             NewsContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea veritatis voluptates veniam sunt unde quibusdam modi laboriosam deleniti quod, minima vero nobis! Cumque natus ipsum ab incidunt qui corrupti quis, sit, voluptas, nisi reprehenderit itaque reiciendis. Quo optio itaque minima in numquam officiis odit minus tempora ut error cumque magni voluptate velit rem ullam quidem maiores esse, sint nostrum aliquid, explicabo at! Aspernatur quibusdam consequuntur officia quasi molestiae doloribus sed quaerat mollitia pariatur eius distinctio nesciunt ratione sunt vitae recusandae illum, voluptatibus sit atque consequatur facere aliquam. Itaque eos, atque excepturi illo soluta consectetur, amet minus reiciendis, ipsa velit dignissimos quidem quo doloremque adipisci sed ratione quae minima aut? Inventore est rerum libero, corrupti, id impedit molestiae excepturi omnis facere fugiat iste a amet, earum necessitatibus dolores delectus molestias voluptatem voluptates odio. Nulla, soluta! Quod ex veniam nihil nobis consequuntur repellendus expedita eligendi cumque rem, modi itaque asperiores incidunt eos velit placeat sint dolores. Incidunt cupiditate, alias dolor officia accusantium sed eius doloremque voluptatibus nesciunt nam, ipsum, soluta culpa quod quam possimus? Dolore quasi, dignissimos quam tenetur delectus unde velit, expedita excepturi laboriosam est, consectetur cumque reiciendis facilis nemo similique ea pariatur suscipit repellendus dolor? Pariatur libero cupiditate sint.",
                             NewsTitle = "Сиквел «Чудо-женщины» перенесли из-за коронавируса",
-                            PublishTime = new DateTime(2020, 6, 15, 13, 51, 47, 981, DateTimeKind.Local).AddTicks(9270)
+                            PublishTime = new DateTime(2020, 6, 15, 15, 56, 2, 552, DateTimeKind.Local).AddTicks(6130)
                         },
                         new
                         {
@@ -228,7 +228,7 @@ namespace Entities.Migrations
                             ImageSource = "StaticFiles/images/News/2.jfif",
                             NewsContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea veritatis voluptates veniam sunt unde quibusdam modi laboriosam deleniti quod, minima vero nobis! Cumque natus ipsum ab incidunt qui corrupti quis, sit, voluptas, nisi reprehenderit itaque reiciendis. Quo optio itaque minima in numquam officiis odit minus tempora ut error cumque magni voluptate velit rem ullam quidem maiores esse, sint nostrum aliquid, explicabo at! Aspernatur quibusdam consequuntur officia quasi molestiae doloribus sed quaerat mollitia pariatur eius distinctio nesciunt ratione sunt vitae recusandae illum, voluptatibus sit atque consequatur facere aliquam. Itaque eos, atque excepturi illo soluta consectetur, amet minus reiciendis, ipsa velit dignissimos quidem quo doloremque adipisci sed ratione quae minima aut? Inventore est rerum libero, corrupti, id impedit molestiae excepturi omnis facere fugiat iste a amet, earum necessitatibus dolores delectus molestias voluptatem voluptates odio. Nulla, soluta! Quod ex veniam nihil nobis consequuntur repellendus expedita eligendi cumque rem, modi itaque asperiores incidunt eos velit placeat sint dolores. Incidunt cupiditate, alias dolor officia accusantium sed eius doloremque voluptatibus nesciunt nam, ipsum, soluta culpa quod quam possimus? Dolore quasi, dignissimos quam tenetur delectus unde velit, expedita excepturi laboriosam est, consectetur cumque reiciendis facilis nemo similique ea pariatur suscipit repellendus dolor? Pariatur libero cupiditate sint.",
                             NewsTitle = "Childish Gambino официально опубликовал новый альбом",
-                            PublishTime = new DateTime(2020, 6, 15, 13, 51, 47, 984, DateTimeKind.Local).AddTicks(294)
+                            PublishTime = new DateTime(2020, 6, 15, 15, 56, 2, 555, DateTimeKind.Local).AddTicks(314)
                         },
                         new
                         {
@@ -238,7 +238,7 @@ namespace Entities.Migrations
                             ImageSource = "StaticFiles/images/News/3.jfif",
                             NewsContent = "В Сети появился трейлер второго сезона анимационного сериала DС «Харли Квинн». В центре сюжета вновь окажется Харли Квинн и её команда антигероев. После того, как героиня... расстаётся с Джокером, она становится самостоятельной единицей преступного мира и наводит.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea veritatis voluptates veniam sunt unde quibusdam modi laboriosam deleniti quod, minima vero nobis! Cumque natus ipsum ab incidunt qui corrupti quis, sit, voluptas, nisi reprehenderit itaque reiciendis. Quo optio itaque minima in numquam officiis odit minus tempora ut error cumque magni voluptate velit rem ullam quidem maiores esse, sint nostrum aliquid, explicabo at! Aspernatur quibusdam consequuntur officia quasi molestiae doloribus sed quaerat mollitia pariatur eius distinctio nesciunt ratione sunt vitae recusandae illum, voluptatibus sit atque consequatur facere aliquam. Itaque eos, atque excepturi illo soluta consectetur, amet minus reiciendis, ipsa velit dignissimos quidem quo doloremque adipisci sed ratione quae minima aut? Inventore est rerum libero, corrupti, id impedit molestiae excepturi omnis facere fugiat iste a amet, earum necessitatibus dolores delectus molestias voluptatem voluptates odio. Nulla, soluta! Quod ex veniam nihil nobis consequuntur repellendus expedita eligendi cumque rem, modi itaque asperiores incidunt eos velit placeat sint dolores. Incidunt cupiditate, alias dolor officia accusantium sed eius doloremque voluptatibus nesciunt nam, ipsum, soluta culpa quod quam possimus? Dolore quasi, dignissimos quam tenetur delectus unde velit, expedita excepturi laboriosam est, consectetur cumque reiciendis facilis nemo similique ea pariatur suscipit repellendus dolor? Pariatur libero cupiditate sint.",
                             NewsTitle = "Больше, жестче, грубее: Вышел трейлер второго сезона «Харли Квинн»",
-                            PublishTime = new DateTime(2020, 6, 15, 13, 51, 47, 984, DateTimeKind.Local).AddTicks(335)
+                            PublishTime = new DateTime(2020, 6, 15, 15, 56, 2, 555, DateTimeKind.Local).AddTicks(359)
                         },
                         new
                         {
@@ -248,7 +248,7 @@ namespace Entities.Migrations
                             ImageSource = "StaticFiles/images/News/4.jfif",
                             NewsContent = "«Фильм Про» впервые обнародовал Абсолютный топ продаж российских онлайн-кинотеатров и видеосервисов. В условиях, когда из-за коронавируса домашний просмотр набирает популярность, «Фильм Про» первым среди профессиональных киноизданий ",
                             NewsTitle = "Фильмы онлайн: Абсолютный топ «Фильм Про»",
-                            PublishTime = new DateTime(2020, 6, 15, 13, 51, 47, 984, DateTimeKind.Local).AddTicks(340)
+                            PublishTime = new DateTime(2020, 6, 15, 15, 56, 2, 555, DateTimeKind.Local).AddTicks(364)
                         });
                 });
 
@@ -265,6 +265,33 @@ namespace Entities.Migrations
                     b.HasIndex("NewsId");
 
                     b.ToTable("NewsCategories");
+
+                    b.HasData(
+                        new
+                        {
+                            CategoryId = 1,
+                            NewsId = 1
+                        },
+                        new
+                        {
+                            CategoryId = 2,
+                            NewsId = 2
+                        },
+                        new
+                        {
+                            CategoryId = 1,
+                            NewsId = 2
+                        },
+                        new
+                        {
+                            CategoryId = 2,
+                            NewsId = 3
+                        },
+                        new
+                        {
+                            CategoryId = 1,
+                            NewsId = 4
+                        });
                 });
 
             modelBuilder.Entity("WebAPI.Models.Category", b =>
