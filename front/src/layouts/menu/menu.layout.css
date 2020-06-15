@@ -18,7 +18,7 @@ div.buttons {
   height: var(--header-height);   
 }
 
-.el-menu--horizontal>.el-menu-item {  
+.el-menu--horizontal > .el-menu-item {  
   height: var(--header-height);
   padding: 15px 0px 0px;
   margin: 0px 0px;  
@@ -36,15 +36,11 @@ ul.main-color > li.main-color:hover {
   cursor: default;
 }
 
-.el-menu-item > a { 
-  color: var(--main-txt-color);
-  font-size: 16px;
-  padding: 10px 25px;
-  border-radius: 3px;
-  text-decoration: none;
+.el-menu--horizontal > .el-menu-item > a:hover {
+  color: var(--main-bg-color); 
 }
 
-.el-menu--horizontal > .el-menu-item > a:hover {
-  background-color: var(--main-txt-color);
-  color: var(--main-bg-color); 
+.header {
+  font-size: 18px;
+  padding: 10px 25px;
 }

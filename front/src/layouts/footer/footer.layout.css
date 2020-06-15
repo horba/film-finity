@@ -32,17 +32,9 @@ div.footer-color-background > div {
   font-size: 11px;
 }
 
-a.footer-menu {
-  color: var(--main-txt-color);
+.footer {
   font-size: 16px;
   padding: 10px 15px;
-  border-radius: 3px;
-  text-decoration: none; 
-}
-
-a.footer-menu:hover {
-  color: var(--main-bg-color);
-  background-color: var(--main-txt-color);
 }
 
 div.footer-color-background > a:hover {

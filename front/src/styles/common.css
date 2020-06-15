@@ -26,3 +26,14 @@ button.second-color {
     font-family: Artegra Sans;
     src: url(../fonts/ArtegraSans-Medium.otf);
    }
+
+.menu-item {
+    color: var(--main-txt-color);
+    border-radius: 3px;
+    text-decoration: none; 
+}
+  
+a.menu-item:hover {
+    color: var(--main-bg-color);
+    background-color: var(--main-txt-color);
+}
