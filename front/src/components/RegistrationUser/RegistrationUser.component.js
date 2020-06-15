@@ -10,7 +10,7 @@ export default {
       },
       isRegistration: false,
       isRegistrationDone: false,
-      isEmailExist: true,
+      isEmailExist: false,
       rules: {
         email: [
           { required: true, message: 'Введите email', trigger: 'blur' },
@@ -53,11 +53,15 @@ export default {
         })
         .catch(result => {
           this.isRegistrationDone = false;
-          this.isEmailExist = result.errors.isEmailExist;
+          this.isEmailExist = true;
         });
     },
     ShowModalWindow (value) {
       this.isRegistration = value;
+      if (!value) {
+        this.ruleForm.email = this.ruleForm.userName = this.ruleForm.password = '';
+        this.SetEmailExistFalse();
+      }
     },
     ClouseWindowRegDone () {
       this.isRegistrationDone = false;
