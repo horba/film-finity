@@ -1,30 +1,40 @@
 .close {
   position: absolute;
-  left: 88.50%;
-  top: 11px;
+  left: 413px;
+  top: 11px;  
 }
-.btn_padding {
-  letter-spacing: 1px;
+.btn-registration {
+  width: 235px;
+  height: 46px;
 }
-.item {
-height: 95px;
+.inp-login {  
+  margin: 0px; 
+  padding: 33px 27px 0px;
 }
-.text {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 144%;
-  align-items: flex-end;
-  text-align: center;
-  color: #292c33;
+.inp-email { 
+  margin: 0px; 
+  padding: 58px 27px 0px;
+}
+.inp-password { 
+  margin: 0px;  
+  padding: 44px 27px 0px;
 }
 .entrance {
-  font-weight: 600;
-  padding: 30px;
-  font-size: 18px;
+  padding: 40px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
 }
-.accountCreate{
+.account-create {
   text-align: center;
   margin: 15px;
   line-height: 2.0;
   height: 450px;
+}
+.color-massage-error {
+  color: #EE4444;
+  padding: 0px 27px 0px;
+  font-size: 12px;
+}
+.footer {
+  padding: 220px 0px 0px;
 }

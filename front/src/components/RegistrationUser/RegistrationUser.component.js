@@ -8,9 +8,12 @@ export default {
         password: '',
         isDisabledBtn: true
       },
+      isRegistration: false,
+      isRegistrationDone: false,
+      isEmailExist: true,
       rules: {
         email: [
-          { required: true, message: 'Пожалуйста введите email', trigger: 'blur' },
+          { required: true, message: 'Введите email', trigger: 'blur' },
           { type: 'email', message: 'Пожалуйста введите корректный email', trigger: 'blur' }
         ],
         userName: [
@@ -23,10 +26,7 @@ export default {
     };
   },
   computed: {
-    MailboxBusy () {
-      return this.$store.getters.getMailboxBusy;
-    },
-    isDisabled () {
+    isButton () {
       if (this.ruleForm.userName.length !== 0
         && this.ruleForm.email.length !== 0
         && this.ruleForm.password.length !== 0
@@ -36,12 +36,6 @@ export default {
         return this.isDisabledBtn;
       }
       return !this.isDisabledBtn;
-    },
-    isVisibleRegistrationForm () {
-      return this.$store.getters.getRegistrationForm;
-    },
-    isVisibleRegistrationSuccess () {
-      return this.$store.getters.getRegistrationSuccess;
     }
   },
   methods: {
@@ -50,13 +44,26 @@ export default {
         userName: this.ruleForm.userName,
         email: this.ruleForm.email,
         userPassword: this.ruleForm.email
-      });
+      })
+        .then(result => {
+          this.isRegistrationDone = true;
+          this.isEmailExist = false;
+          this.isRegistration = false;
+          this.ruleForm.email = this.ruleForm.userName = this.ruleForm.password = '';
+        })
+        .catch(result => {
+          this.isRegistrationDone = false;
+          this.isEmailExist = result.errors.isEmailExist;
+        });
     },
-    VisibleRegistrationForm (value) {
-      this.$store.commit('updateVisibleRegistrationForm', value);
+    ShowModalWindow (value) {
+      this.isRegistration = value;
     },
-    VisibleRegistrationSuccess (value) {
-      this.$store.commit('updateVisibleRegistrationSuccess', value);
+    ClouseWindowRegDone () {
+      this.isRegistrationDone = false;
+    },
+    SetEmailExistFalse () {
+      this.isEmailExist = false;
     }
   }
 };

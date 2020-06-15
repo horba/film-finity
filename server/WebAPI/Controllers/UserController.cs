@@ -29,16 +29,16 @@ namespace WebAPI.Controllers
             return await dbContext.Users.ToListAsync();
         }
         [HttpPost]
-        public async Task<ActionResult<int>> Post(User value)
+        public async Task<ActionResult<User>> Post(User value)
         {
             User user = await dbContext.Users.FirstOrDefaultAsync(x => x.Email == value.Email);
             if (user == null)
             {
                 dbContext.Users.Add(value);
                 await dbContext.SaveChangesAsync();
-                return 1;
+                return Ok(user);
             }
-            return 0;
+            return BadRequest();
         }        
     }
 }

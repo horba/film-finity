@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <ff-registration-user/>
     <ff-menu/>
     <div class="main-content">
       <router-view></router-view>
@@ -14,13 +13,12 @@
 <style src="@styles/variables.css"></style>
 
 <script>
-import { FfRegistrationUser } from '@components';
 import { FfMenu, FfFooter } from '@layouts';
 
 export default {
   name: 'app',
   components: {
-    FfMenu, FfFooter, FfRegistrationUser
+    FfMenu, FfFooter
   },
   data () {
     return {};
