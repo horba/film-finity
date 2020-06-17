@@ -16,6 +16,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using WebAPI.Models;
+using Entities.Models;
+using WebAPI.Services;
+using WebAPI.Repositories;
 
 namespace WebAPI
 {
@@ -45,6 +48,9 @@ namespace WebAPI
                                   });
             });
 
+            services.AddScoped<NewsRepository>();
+            services.AddScoped<NewsService>();
+
             services.AddControllers();
             services.AddDirectoryBrowser();
 
@@ -52,6 +58,7 @@ namespace WebAPI
             {
                 c.SwaggerDoc("FilmFinity", new OpenApiInfo { Title = "FilmFinity API", Version = "v1" });
             });
+
             services.AddDbContext<FilmFinityDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("FilmFinityMSSQL"));

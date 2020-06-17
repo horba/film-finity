@@ -37,22 +37,11 @@ namespace Entities.DataAccess
                 .HasForeignKey(cjt => cjt.CelebrityId);
 
 
-            modelBuilder.Entity<News>()
-                .HasOne(n => n.Author)
-                .WithMany(a => a.News);
+            modelBuilder
+             .ApplyConfiguration(new NewsConfiguration());
 
-            modelBuilder.Entity<NewsCategory>()
-                .HasKey(nc => new { nc.CategoryId, nc.NewsId });
-
-            modelBuilder.Entity<NewsCategory>()
-                .HasOne(nc => nc.Category)
-                .WithMany(c => c.NewsCategories)
-                .HasForeignKey(nc => nc.CategoryId);
-
-            modelBuilder.Entity<NewsCategory>()
-                .HasOne(nc => nc.News)
-                .WithMany(n => n.NewsCategories)
-                .HasForeignKey(nc => nc.NewsId);
+            modelBuilder
+             .ApplyConfiguration(new NewsCategoryConfiguration());
 
             modelBuilder.Seed();
         }
