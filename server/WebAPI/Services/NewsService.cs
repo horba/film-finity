@@ -5,22 +5,24 @@ using System.Threading.Tasks;
 using WebAPI.Repositories;
 using WebAPI.DTO;
 using Entities.Models;
-
+using AutoMapper;
 
 namespace WebAPI.Services
 {
     public class NewsService
     {
-        private readonly NewsRepository newsRepo;
+        private readonly NewsRepository _newsRepository;
+        private readonly IMapper _mapper;
 
-        public NewsService(NewsRepository newsRepo)
+        public NewsService(NewsRepository _newsRepository, IMapper _mapper)
         {
-            this.newsRepo = newsRepo;
+            this._newsRepository = _newsRepository;
+            this._mapper = _mapper;
         }
-        public List<NewsDTO> GetAllNews()
+        public IEnumerable<NewsDTO> GetAllNews()
         {
-            var news = newsRepo.GetAllNews().ToList();
-            return news;
+            var news = _newsRepository.GetAllNews();
+            return _mapper.Map<IEnumerable<NewsDTO>>(news.ToList());
         }
     }
 }

@@ -7,9 +7,9 @@ using Entities.Models;
 
 namespace Entities.DataAccess
 {
-    class NewsCategoryConfiguration : IEntityTypeConfiguration<NewsCategory>
+    class NewsCategoryConfiguration : IEntityTypeConfiguration<NewsCategories>
     {
-        public void Configure(EntityTypeBuilder<NewsCategory> modelBuilder)
+        public void Configure(EntityTypeBuilder<NewsCategories> modelBuilder)
         {
             modelBuilder
              .HasKey(nc => new { nc.CategoryId, nc.NewsId });

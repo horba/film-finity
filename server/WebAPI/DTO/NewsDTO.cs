@@ -8,13 +8,13 @@ namespace WebAPI.DTO
 {
     public class NewsDTO
     {
-        public int NewsId { get; set; }
-        public string NewsTitle { get; set; }
-        public string NewsContent { get; set; }
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Content { get; set; }
         public int CountViews { get; set; }
-        public string ImageSource { get; set; }
+        public string PreviewImage { get; set; }
         public DateTime PublishTime { get; set; } 
-        public AuthorDTO Author { get; set; }
-        public ICollection<CategoryDTO> CelebrityJobTitles { get; set; }
+        public NewsAuthorDTO Author { get; set; }
+        public List<NewsCategoryDTO> Categories { get; set; }
     }
 }

@@ -19,6 +19,8 @@ using WebAPI.Models;
 using Entities.Models;
 using WebAPI.Services;
 using WebAPI.Repositories;
+using WebAPI.Mapping;
+using AutoMapper;
 
 namespace WebAPI
 {
@@ -47,6 +49,13 @@ namespace WebAPI
                                         .WithOrigins("http://localhost:8080");
                                   });
             });
+
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
 
             services.AddScoped<NewsRepository>();
             services.AddScoped<NewsService>();

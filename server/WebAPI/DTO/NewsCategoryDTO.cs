@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace WebAPI.DTO
 {
-    public class AuthorDTO
+    public class NewsCategoryDTO
     {
-        public int AuthorId { get; set; }
-        public string AuthorName { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

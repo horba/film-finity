@@ -1,16 +1,15 @@
-﻿using System;
+using Entities.Models;
+using System;
 using System.Collections.Generic;
-using System.Text;
-using WebAPI.Models;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Entities.Models
 {
     public class NewsCategory
     {
-        public int NewsId { get; set; }
-        public News News { get; set; }
-
-        public int CategoryId { get; set; }
-        public Category Category { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public ICollection<NewsCategories> NewsCategories { get; set; }
     }
 }

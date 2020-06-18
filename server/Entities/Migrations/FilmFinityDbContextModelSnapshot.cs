@@ -19,38 +19,6 @@ namespace Entities.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Entities.Models.Author", b =>
-                {
-                    b.Property<int>("AuthorId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("AuthorName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("AuthorId");
-
-                    b.ToTable("Authors");
-
-                    b.HasData(
-                        new
-                        {
-                            AuthorId = 1,
-                            AuthorName = "Мария Колосова"
-                        },
-                        new
-                        {
-                            AuthorId = 2,
-                            AuthorName = "Пабло Мироненкл"
-                        },
-                        new
-                        {
-                            AuthorId = 3,
-                            AuthorName = "Мия Набу"
-                        });
-                });
-
             modelBuilder.Entity("Entities.Models.CelebrityJobTitles", b =>
                 {
                     b.Property<int>("CelebrityId")
@@ -180,7 +148,7 @@ namespace Entities.Migrations
 
             modelBuilder.Entity("Entities.Models.News", b =>
                 {
-                    b.Property<int>("NewsId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -188,22 +156,22 @@ namespace Entities.Migrations
                     b.Property<int>("AuthorId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("CountViews")
                         .HasColumnType("int");
 
-                    b.Property<string>("ImageSource")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NewsContent")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NewsTitle")
+                    b.Property<string>("PreviewImage")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("PublishTime")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("NewsId");
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("AuthorId");
 
@@ -212,47 +180,85 @@ namespace Entities.Migrations
                     b.HasData(
                         new
                         {
-                            NewsId = 1,
+                            Id = 1,
                             AuthorId = 1,
+                            Content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea veritatis voluptates veniam sunt unde quibusdam modi laboriosam deleniti quod, minima vero nobis! Cumque natus ipsum ab incidunt qui corrupti quis, sit, voluptas, nisi reprehenderit itaque reiciendis. Quo optio itaque minima in numquam officiis odit minus tempora ut error cumque magni voluptate velit rem ullam quidem maiores esse, sint nostrum aliquid, explicabo at! Aspernatur quibusdam consequuntur officia quasi molestiae doloribus sed quaerat mollitia pariatur eius distinctio nesciunt ratione sunt vitae recusandae illum, voluptatibus sit atque consequatur facere aliquam. Itaque eos, atque excepturi illo soluta consectetur, amet minus reiciendis, ipsa velit dignissimos quidem quo doloremque adipisci sed ratione quae minima aut? Inventore est rerum libero, corrupti, id impedit molestiae excepturi omnis facere fugiat iste a amet, earum necessitatibus dolores delectus molestias voluptatem voluptates odio. Nulla, soluta! Quod ex veniam nihil nobis consequuntur repellendus expedita eligendi cumque rem, modi itaque asperiores incidunt eos velit placeat sint dolores. Incidunt cupiditate, alias dolor officia accusantium sed eius doloremque voluptatibus nesciunt nam, ipsum, soluta culpa quod quam possimus? Dolore quasi, dignissimos quam tenetur delectus unde velit, expedita excepturi laboriosam est, consectetur cumque reiciendis facilis nemo similique ea pariatur suscipit repellendus dolor? Pariatur libero cupiditate sint.",
                             CountViews = 233,
-                            ImageSource = "StaticFiles/images/News/1.jfif",
-                            NewsContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea veritatis voluptates veniam sunt unde quibusdam modi laboriosam deleniti quod, minima vero nobis! Cumque natus ipsum ab incidunt qui corrupti quis, sit, voluptas, nisi reprehenderit itaque reiciendis. Quo optio itaque minima in numquam officiis odit minus tempora ut error cumque magni voluptate velit rem ullam quidem maiores esse, sint nostrum aliquid, explicabo at! Aspernatur quibusdam consequuntur officia quasi molestiae doloribus sed quaerat mollitia pariatur eius distinctio nesciunt ratione sunt vitae recusandae illum, voluptatibus sit atque consequatur facere aliquam. Itaque eos, atque excepturi illo soluta consectetur, amet minus reiciendis, ipsa velit dignissimos quidem quo doloremque adipisci sed ratione quae minima aut? Inventore est rerum libero, corrupti, id impedit molestiae excepturi omnis facere fugiat iste a amet, earum necessitatibus dolores delectus molestias voluptatem voluptates odio. Nulla, soluta! Quod ex veniam nihil nobis consequuntur repellendus expedita eligendi cumque rem, modi itaque asperiores incidunt eos velit placeat sint dolores. Incidunt cupiditate, alias dolor officia accusantium sed eius doloremque voluptatibus nesciunt nam, ipsum, soluta culpa quod quam possimus? Dolore quasi, dignissimos quam tenetur delectus unde velit, expedita excepturi laboriosam est, consectetur cumque reiciendis facilis nemo similique ea pariatur suscipit repellendus dolor? Pariatur libero cupiditate sint.",
-                            NewsTitle = "Сиквел «Чудо-женщины» перенесли из-за коронавируса",
-                            PublishTime = new DateTime(2020, 6, 15, 15, 56, 2, 552, DateTimeKind.Local).AddTicks(6130)
+                            PreviewImage = "StaticFiles/images/News/1.jfif",
+                            PublishTime = new DateTime(2020, 6, 18, 21, 20, 30, 668, DateTimeKind.Local).AddTicks(3052),
+                            Title = "Сиквел «Чудо-женщины» перенесли из-за коронавируса"
                         },
                         new
                         {
-                            NewsId = 2,
+                            Id = 2,
                             AuthorId = 2,
+                            Content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea veritatis voluptates veniam sunt unde quibusdam modi laboriosam deleniti quod, minima vero nobis! Cumque natus ipsum ab incidunt qui corrupti quis, sit, voluptas, nisi reprehenderit itaque reiciendis. Quo optio itaque minima in numquam officiis odit minus tempora ut error cumque magni voluptate velit rem ullam quidem maiores esse, sint nostrum aliquid, explicabo at! Aspernatur quibusdam consequuntur officia quasi molestiae doloribus sed quaerat mollitia pariatur eius distinctio nesciunt ratione sunt vitae recusandae illum, voluptatibus sit atque consequatur facere aliquam. Itaque eos, atque excepturi illo soluta consectetur, amet minus reiciendis, ipsa velit dignissimos quidem quo doloremque adipisci sed ratione quae minima aut? Inventore est rerum libero, corrupti, id impedit molestiae excepturi omnis facere fugiat iste a amet, earum necessitatibus dolores delectus molestias voluptatem voluptates odio. Nulla, soluta! Quod ex veniam nihil nobis consequuntur repellendus expedita eligendi cumque rem, modi itaque asperiores incidunt eos velit placeat sint dolores. Incidunt cupiditate, alias dolor officia accusantium sed eius doloremque voluptatibus nesciunt nam, ipsum, soluta culpa quod quam possimus? Dolore quasi, dignissimos quam tenetur delectus unde velit, expedita excepturi laboriosam est, consectetur cumque reiciendis facilis nemo similique ea pariatur suscipit repellendus dolor? Pariatur libero cupiditate sint.",
                             CountViews = 512,
-                            ImageSource = "StaticFiles/images/News/2.jfif",
-                            NewsContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea veritatis voluptates veniam sunt unde quibusdam modi laboriosam deleniti quod, minima vero nobis! Cumque natus ipsum ab incidunt qui corrupti quis, sit, voluptas, nisi reprehenderit itaque reiciendis. Quo optio itaque minima in numquam officiis odit minus tempora ut error cumque magni voluptate velit rem ullam quidem maiores esse, sint nostrum aliquid, explicabo at! Aspernatur quibusdam consequuntur officia quasi molestiae doloribus sed quaerat mollitia pariatur eius distinctio nesciunt ratione sunt vitae recusandae illum, voluptatibus sit atque consequatur facere aliquam. Itaque eos, atque excepturi illo soluta consectetur, amet minus reiciendis, ipsa velit dignissimos quidem quo doloremque adipisci sed ratione quae minima aut? Inventore est rerum libero, corrupti, id impedit molestiae excepturi omnis facere fugiat iste a amet, earum necessitatibus dolores delectus molestias voluptatem voluptates odio. Nulla, soluta! Quod ex veniam nihil nobis consequuntur repellendus expedita eligendi cumque rem, modi itaque asperiores incidunt eos velit placeat sint dolores. Incidunt cupiditate, alias dolor officia accusantium sed eius doloremque voluptatibus nesciunt nam, ipsum, soluta culpa quod quam possimus? Dolore quasi, dignissimos quam tenetur delectus unde velit, expedita excepturi laboriosam est, consectetur cumque reiciendis facilis nemo similique ea pariatur suscipit repellendus dolor? Pariatur libero cupiditate sint.",
-                            NewsTitle = "Childish Gambino официально опубликовал новый альбом",
-                            PublishTime = new DateTime(2020, 6, 15, 15, 56, 2, 555, DateTimeKind.Local).AddTicks(314)
+                            PreviewImage = "StaticFiles/images/News/2.jfif",
+                            PublishTime = new DateTime(2020, 6, 18, 21, 20, 30, 671, DateTimeKind.Local).AddTicks(8295),
+                            Title = "Childish Gambino официально опубликовал новый альбом"
                         },
                         new
                         {
-                            NewsId = 3,
+                            Id = 3,
                             AuthorId = 3,
+                            Content = "В Сети появился трейлер второго сезона анимационного сериала DС «Харли Квинн». В центре сюжета вновь окажется Харли Квинн и её команда антигероев. После того, как героиня... расстаётся с Джокером, она становится самостоятельной единицей преступного мира и наводит.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea veritatis voluptates veniam sunt unde quibusdam modi laboriosam deleniti quod, minima vero nobis! Cumque natus ipsum ab incidunt qui corrupti quis, sit, voluptas, nisi reprehenderit itaque reiciendis. Quo optio itaque minima in numquam officiis odit minus tempora ut error cumque magni voluptate velit rem ullam quidem maiores esse, sint nostrum aliquid, explicabo at! Aspernatur quibusdam consequuntur officia quasi molestiae doloribus sed quaerat mollitia pariatur eius distinctio nesciunt ratione sunt vitae recusandae illum, voluptatibus sit atque consequatur facere aliquam. Itaque eos, atque excepturi illo soluta consectetur, amet minus reiciendis, ipsa velit dignissimos quidem quo doloremque adipisci sed ratione quae minima aut? Inventore est rerum libero, corrupti, id impedit molestiae excepturi omnis facere fugiat iste a amet, earum necessitatibus dolores delectus molestias voluptatem voluptates odio. Nulla, soluta! Quod ex veniam nihil nobis consequuntur repellendus expedita eligendi cumque rem, modi itaque asperiores incidunt eos velit placeat sint dolores. Incidunt cupiditate, alias dolor officia accusantium sed eius doloremque voluptatibus nesciunt nam, ipsum, soluta culpa quod quam possimus? Dolore quasi, dignissimos quam tenetur delectus unde velit, expedita excepturi laboriosam est, consectetur cumque reiciendis facilis nemo similique ea pariatur suscipit repellendus dolor? Pariatur libero cupiditate sint.",
                             CountViews = 237,
-                            ImageSource = "StaticFiles/images/News/3.jfif",
-                            NewsContent = "В Сети появился трейлер второго сезона анимационного сериала DС «Харли Квинн». В центре сюжета вновь окажется Харли Квинн и её команда антигероев. После того, как героиня... расстаётся с Джокером, она становится самостоятельной единицей преступного мира и наводит.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea veritatis voluptates veniam sunt unde quibusdam modi laboriosam deleniti quod, minima vero nobis! Cumque natus ipsum ab incidunt qui corrupti quis, sit, voluptas, nisi reprehenderit itaque reiciendis. Quo optio itaque minima in numquam officiis odit minus tempora ut error cumque magni voluptate velit rem ullam quidem maiores esse, sint nostrum aliquid, explicabo at! Aspernatur quibusdam consequuntur officia quasi molestiae doloribus sed quaerat mollitia pariatur eius distinctio nesciunt ratione sunt vitae recusandae illum, voluptatibus sit atque consequatur facere aliquam. Itaque eos, atque excepturi illo soluta consectetur, amet minus reiciendis, ipsa velit dignissimos quidem quo doloremque adipisci sed ratione quae minima aut? Inventore est rerum libero, corrupti, id impedit molestiae excepturi omnis facere fugiat iste a amet, earum necessitatibus dolores delectus molestias voluptatem voluptates odio. Nulla, soluta! Quod ex veniam nihil nobis consequuntur repellendus expedita eligendi cumque rem, modi itaque asperiores incidunt eos velit placeat sint dolores. Incidunt cupiditate, alias dolor officia accusantium sed eius doloremque voluptatibus nesciunt nam, ipsum, soluta culpa quod quam possimus? Dolore quasi, dignissimos quam tenetur delectus unde velit, expedita excepturi laboriosam est, consectetur cumque reiciendis facilis nemo similique ea pariatur suscipit repellendus dolor? Pariatur libero cupiditate sint.",
-                            NewsTitle = "Больше, жестче, грубее: Вышел трейлер второго сезона «Харли Квинн»",
-                            PublishTime = new DateTime(2020, 6, 15, 15, 56, 2, 555, DateTimeKind.Local).AddTicks(359)
+                            PreviewImage = "StaticFiles/images/News/3.jfif",
+                            PublishTime = new DateTime(2020, 6, 18, 21, 20, 30, 671, DateTimeKind.Local).AddTicks(8340),
+                            Title = "Больше, жестче, грубее: Вышел трейлер второго сезона «Харли Квинн»"
                         },
                         new
                         {
-                            NewsId = 4,
+                            Id = 4,
                             AuthorId = 1,
+                            Content = "«Фильм Про» впервые обнародовал Абсолютный топ продаж российских онлайн-кинотеатров и видеосервисов. В условиях, когда из-за коронавируса домашний просмотр набирает популярность, «Фильм Про» первым среди профессиональных киноизданий ",
                             CountViews = 878,
-                            ImageSource = "StaticFiles/images/News/4.jfif",
-                            NewsContent = "«Фильм Про» впервые обнародовал Абсолютный топ продаж российских онлайн-кинотеатров и видеосервисов. В условиях, когда из-за коронавируса домашний просмотр набирает популярность, «Фильм Про» первым среди профессиональных киноизданий ",
-                            NewsTitle = "Фильмы онлайн: Абсолютный топ «Фильм Про»",
-                            PublishTime = new DateTime(2020, 6, 15, 15, 56, 2, 555, DateTimeKind.Local).AddTicks(364)
+                            PreviewImage = "StaticFiles/images/News/4.jfif",
+                            PublishTime = new DateTime(2020, 6, 18, 21, 20, 30, 671, DateTimeKind.Local).AddTicks(8345),
+                            Title = "Фильмы онлайн: Абсолютный топ «Фильм Про»"
                         });
                 });
 
-            modelBuilder.Entity("Entities.Models.NewsCategory", b =>
+            modelBuilder.Entity("Entities.Models.NewsAuthor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Authors");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            FirstName = "Мария",
+                            LastName = "Колосова"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            FirstName = "Пабло",
+                            LastName = "Мироненко"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            FirstName = "Мия",
+                            LastName = "Набу"
+                        });
+                });
+
+            modelBuilder.Entity("Entities.Models.NewsCategories", b =>
                 {
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
@@ -294,30 +300,30 @@ namespace Entities.Migrations
                         });
                 });
 
-            modelBuilder.Entity("WebAPI.Models.Category", b =>
+            modelBuilder.Entity("Entities.Models.NewsCategory", b =>
                 {
-                    b.Property<int>("CategoryId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CategoryName")
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("CategoryId");
+                    b.HasKey("Id");
 
                     b.ToTable("Categories");
 
                     b.HasData(
                         new
                         {
-                            CategoryId = 1,
-                            CategoryName = "Variety"
+                            Id = 1,
+                            Name = "Variety"
                         },
                         new
                         {
-                            CategoryId = 2,
-                            CategoryName = "FilmNews"
+                            Id = 2,
+                            Name = "FilmNews"
                         });
                 });
 
@@ -491,16 +497,16 @@ namespace Entities.Migrations
 
             modelBuilder.Entity("Entities.Models.News", b =>
                 {
-                    b.HasOne("Entities.Models.Author", "Author")
+                    b.HasOne("Entities.Models.NewsAuthor", "Author")
                         .WithMany("News")
                         .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Entities.Models.NewsCategory", b =>
+            modelBuilder.Entity("Entities.Models.NewsCategories", b =>
                 {
-                    b.HasOne("WebAPI.Models.Category", "Category")
+                    b.HasOne("Entities.Models.NewsCategory", "Category")
                         .WithMany("NewsCategories")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
