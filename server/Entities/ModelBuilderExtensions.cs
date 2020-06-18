@@ -21,20 +21,20 @@ namespace Entities
                 new JobTitle { JobTitleId = 6, JobName = "композитор" });
 
             modelBuilder.Entity<Genre>().HasData(
-                new Genre { GenreId = 1, GenreName = "фантастика" },
-                new Genre { GenreId = 2, GenreName = "драма" },
-                new Genre { GenreId = 3, GenreName = "триллер" },
-                new Genre { GenreId = 4, GenreName = "боевик" },
-                new Genre { GenreId = 5, GenreName = "приключения" },
-                new Genre { GenreId = 6, GenreName = "детектив" },
-                new Genre { GenreId = 7, GenreName = "комедия" },
-                new Genre { GenreId = 8, GenreName = "ужасы" });
+                new Genre { Id = 1, Name = "фантастика" },
+                new Genre { Id = 2, Name = "драма" },
+                new Genre { Id = 3, Name = "триллер" },
+                new Genre { Id = 4, Name = "боевик" },
+                new Genre { Id = 5, Name = "приключения" },
+                new Genre { Id = 6, Name = "детектив" },
+                new Genre { Id = 7, Name = "комедия" },
+                new Genre { Id = 8, Name = "ужасы" });
 
             modelBuilder.Entity<Serial>().HasData(
 
                 new Serial
                 {
-                    SerialId = 1,
+                    Id = 1,
                     Name = "Видоизменённый углерод (1-2 сезон)",
                     Rating = 3,
                     Year = 2018,
@@ -43,7 +43,7 @@ namespace Entities
 
                 new Serial
                 {
-                    SerialId = 2,
+                    Id = 2,
                     Name = "Викинги (1-6 сезон)",
                     Rating = 4,
                     Year = 2013,
@@ -52,7 +52,7 @@ namespace Entities
 
                 new Serial
                 {
-                    SerialId = 3,
+                    Id = 3,
                     Name = "Ведьмак (1 сезон)",
                     Rating = 5,
                     Year = 2019,
@@ -61,7 +61,7 @@ namespace Entities
 
                 new Serial
                 {
-                    SerialId = 4,
+                    Id = 4,
                     Name = "Чужак (1 сезон)",
                     Rating = 5,
                     Year = 2020,
@@ -70,7 +70,7 @@ namespace Entities
 
                 new Serial
                 {
-                    SerialId = 5,
+                    Id = 5,
                     Name = "Маленькая Америка (1 сезон)",
                     Rating = 5,
                     Year = 2020,
@@ -79,7 +79,7 @@ namespace Entities
 
                 new Serial
                 {
-                    SerialId = 6,
+                    Id = 6,
                     Name = "Пятая авеню (1 сезон)",
                     Rating = 5,
                     Year = 2020,
@@ -88,7 +88,7 @@ namespace Entities
 
                 new Serial
                 {
-                    SerialId = 7,
+                    Id = 7,
                     Name = "Звёздный путь: Пикар (1 сезон)",
                     Rating = 5,
                     Year = 2020,
@@ -97,7 +97,7 @@ namespace Entities
 
                 new Serial
                 {
-                    SerialId = 8,
+                    Id = 8,
                     Name = "Замок и ключ (1 сезон)",
                     Rating = 5,
                     Year = 2020,
@@ -106,7 +106,7 @@ namespace Entities
 
                 new Serial
                 {
-                    SerialId = 9,
+                    Id = 9,
                     Name = "Hi-Fi / Фанатик (1 сезон)",
                     Rating = 5,
                     Year = 2020,
@@ -115,7 +115,7 @@ namespace Entities
 
                 new Serial
                 {
-                    SerialId = 10,
+                    Id = 10,
                     Name = "Разрабы (1 сезон)",
                     Rating = 5,
                     Year = 2020,
@@ -124,7 +124,7 @@ namespace Entities
 
                 new Serial
                 {
-                    SerialId = 11,
+                    Id = 11,
                     Name = "Охотники (1 сезон)",
                     Rating = 5,
                     Year = 2020,

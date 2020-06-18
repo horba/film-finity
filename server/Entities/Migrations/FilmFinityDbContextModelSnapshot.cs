@@ -147,64 +147,64 @@ namespace Entities.Migrations
 
             modelBuilder.Entity("Entities.Models.Genre", b =>
                 {
-                    b.Property<int>("GenreId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("GenreName")
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("GenreId");
+                    b.HasKey("Id");
 
                     b.ToTable("Genres");
 
                     b.HasData(
                         new
                         {
-                            GenreId = 1,
-                            GenreName = "фантастика"
+                            Id = 1,
+                            Name = "фантастика"
                         },
                         new
                         {
-                            GenreId = 2,
-                            GenreName = "драма"
+                            Id = 2,
+                            Name = "драма"
                         },
                         new
                         {
-                            GenreId = 3,
-                            GenreName = "триллер"
+                            Id = 3,
+                            Name = "триллер"
                         },
                         new
                         {
-                            GenreId = 4,
-                            GenreName = "боевик"
+                            Id = 4,
+                            Name = "боевик"
                         },
                         new
                         {
-                            GenreId = 5,
-                            GenreName = "приключения"
+                            Id = 5,
+                            Name = "приключения"
                         },
                         new
                         {
-                            GenreId = 6,
-                            GenreName = "детектив"
+                            Id = 6,
+                            Name = "детектив"
                         },
                         new
                         {
-                            GenreId = 7,
-                            GenreName = "комедия"
+                            Id = 7,
+                            Name = "комедия"
                         },
                         new
                         {
-                            GenreId = 8,
-                            GenreName = "ужасы"
+                            Id = 8,
+                            Name = "ужасы"
                         });
                 });
 
             modelBuilder.Entity("Entities.Models.Serial", b =>
                 {
-                    b.Property<int>("SerialId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -221,14 +221,14 @@ namespace Entities.Migrations
                     b.Property<int>("Year")
                         .HasColumnType("int");
 
-                    b.HasKey("SerialId");
+                    b.HasKey("Id");
 
                     b.ToTable("Serials");
 
                     b.HasData(
                         new
                         {
-                            SerialId = 1,
+                            Id = 1,
                             ImageSource = "StaticFiles/images/11.jpg",
                             Name = "Видоизменённый углерод (1-2 сезон)",
                             Rating = 3.0,
@@ -236,7 +236,7 @@ namespace Entities.Migrations
                         },
                         new
                         {
-                            SerialId = 2,
+                            Id = 2,
                             ImageSource = "StaticFiles/images/12.jpg",
                             Name = "Викинги (1-6 сезон)",
                             Rating = 4.0,
@@ -244,7 +244,7 @@ namespace Entities.Migrations
                         },
                         new
                         {
-                            SerialId = 3,
+                            Id = 3,
                             ImageSource = "StaticFiles/images/13.jpg",
                             Name = "Ведьмак (1 сезон)",
                             Rating = 5.0,
@@ -252,7 +252,7 @@ namespace Entities.Migrations
                         },
                         new
                         {
-                            SerialId = 4,
+                            Id = 4,
                             ImageSource = "StaticFiles/images/14.jpg",
                             Name = "Чужак (1 сезон)",
                             Rating = 5.0,
@@ -260,7 +260,7 @@ namespace Entities.Migrations
                         },
                         new
                         {
-                            SerialId = 5,
+                            Id = 5,
                             ImageSource = "StaticFiles/images/15.jpg",
                             Name = "Маленькая Америка (1 сезон)",
                             Rating = 5.0,
@@ -268,7 +268,7 @@ namespace Entities.Migrations
                         },
                         new
                         {
-                            SerialId = 6,
+                            Id = 6,
                             ImageSource = "StaticFiles/images/16.jpg",
                             Name = "Пятая авеню (1 сезон)",
                             Rating = 5.0,
@@ -276,7 +276,7 @@ namespace Entities.Migrations
                         },
                         new
                         {
-                            SerialId = 7,
+                            Id = 7,
                             ImageSource = "StaticFiles/images/17.jpg",
                             Name = "Звёздный путь: Пикар (1 сезон)",
                             Rating = 5.0,
@@ -284,7 +284,7 @@ namespace Entities.Migrations
                         },
                         new
                         {
-                            SerialId = 8,
+                            Id = 8,
                             ImageSource = "StaticFiles/images/18.jpg",
                             Name = "Замок и ключ (1 сезон)",
                             Rating = 5.0,
@@ -292,7 +292,7 @@ namespace Entities.Migrations
                         },
                         new
                         {
-                            SerialId = 9,
+                            Id = 9,
                             ImageSource = "StaticFiles/images/19.jpg",
                             Name = "Hi-Fi / Фанатик (1 сезон)",
                             Rating = 5.0,
@@ -300,7 +300,7 @@ namespace Entities.Migrations
                         },
                         new
                         {
-                            SerialId = 10,
+                            Id = 10,
                             ImageSource = "StaticFiles/images/20.jpg",
                             Name = "Разрабы (1 сезон)",
                             Rating = 5.0,
@@ -308,7 +308,7 @@ namespace Entities.Migrations
                         },
                         new
                         {
-                            SerialId = 11,
+                            Id = 11,
                             ImageSource = "StaticFiles/images/21.jpg",
                             Name = "Охотники (1 сезон)",
                             Rating = 5.0,

@@ -10,20 +10,20 @@ namespace Entities.Migrations
                 name: "Genres",
                 columns: table => new
                 {
-                    GenreId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    GenreName = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Genres", x => x.GenreId);
+                    table.PrimaryKey("PK_Genres", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Serials",
                 columns: table => new
                 {
-                    SerialId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: true),
                     Rating = table.Column<double>(nullable: false),
@@ -32,7 +32,7 @@ namespace Entities.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Serials", x => x.SerialId);
+                    table.PrimaryKey("PK_Serials", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -55,7 +55,7 @@ namespace Entities.Migrations
                         name: "FK_SerialCelebrities_Serials_SerialId",
                         column: x => x.SerialId,
                         principalTable: "Serials",
-                        principalColumn: "SerialId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -73,19 +73,19 @@ namespace Entities.Migrations
                         name: "FK_SerialGenreTitles_Genres_GenreId",
                         column: x => x.GenreId,
                         principalTable: "Genres",
-                        principalColumn: "GenreId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_SerialGenreTitles_Serials_SerialId",
                         column: x => x.SerialId,
                         principalTable: "Serials",
-                        principalColumn: "SerialId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
                 table: "Genres",
-                columns: new[] { "GenreId", "GenreName" },
+                columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
                     { 1, "фантастика" },
@@ -100,7 +100,7 @@ namespace Entities.Migrations
 
             migrationBuilder.InsertData(
                 table: "Serials",
-                columns: new[] { "SerialId", "ImageSource", "Name", "Rating", "Year" },
+                columns: new[] { "Id", "ImageSource", "Name", "Rating", "Year" },
                 values: new object[,]
                 {
                     { 9, "StaticFiles/images/19.jpg", "Hi-Fi / Фанатик (1 сезон)", 5.0, 2020 },
