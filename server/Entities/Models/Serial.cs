@@ -6,7 +6,7 @@ namespace Entities.Models
 {
     public class Serial
     {
-        public int SerialId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public double Rating { get; set; }
         public int Year { get; set; }
