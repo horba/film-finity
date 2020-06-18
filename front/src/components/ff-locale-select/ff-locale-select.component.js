@@ -5,29 +5,31 @@ export default {
   components: {
     Select
   },
-  data () {
-    return {
-      options: [{
-        value: 'Option1',
-        label: 'Option1'
-      }, {
-        value: 'Option2',
-        label: 'Option2'
-      }, {
-        value: 'Option3',
-        label: 'Option3'
-      }, {
-        value: 'Option4',
-        label: 'Option4'
-      }],
-      value: this.$store.state.language
-    };
+  computed: {
+    language () {
+      return this.$store.state.language;
+    },
+    locales () {
+      return [
+        {
+          value: 'EN',
+          label: this.$t('locale.en')
+        },
+        {
+          value: 'RU',
+          label: this.$t('locale.ru')
+        },
+        {
+          value: 'UA',
+          label: this.$t('locale.ua')
+        }
+      ];
+    }
+  },
+  methods: {
+    changeLanguage (language) {
+      this.$store.commit('locale/CHANGE_LANGUAGE', language);
+    }
   }
-
-  // methods: {
-  //   changeLanguage (language) {
-  //     this.$store.commit('locale/CHANGE_LANGUAGE', language);
-  //   }
-  // }
 
 };
