@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using WebAPI.Repositories;
 using WebAPI.DTO;
 using Entities.Models;
-using AutoMapper;
+
 
 namespace WebAPI.Services
 {
