@@ -6,6 +6,7 @@ using Entities.DataAccess;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebAPI.DTO;
+using WebAPI.Services;
 
 namespace WebAPI.Controllers
 {
@@ -13,35 +14,16 @@ namespace WebAPI.Controllers
     [Route("api/[controller]")]
     public class SerialController : ControllerBase
     {
-        private readonly FilmFinityDbContext dbContext;
-        public SerialController(FilmFinityDbContext filmFinityDbContext)
+        private readonly ISerialsService serialsService;
+        public SerialController(ISerialsService serialsService)
         {
-            this.dbContext = filmFinityDbContext;
+            this.serialsService = serialsService;
         }
 
         [HttpGet]
         public IActionResult GetListCelebrities()
         {
-            List<SerialDTO> objectList = dbContext.Serials.Select(o => new SerialDTO
-            {
-                SerialId = o.SerialId,
-                Name = o.Name,
-                Rating = o.Rating,
-                Year = o.Year,
-                ImageSource = o.ImageSource,
-                GenreTitles = o.SerialGenreTitles.Select(j => j.GenreTitle).Select(j => new GenreDTO
-                { GenreId = j.GenreId, GenreName = j.GenreName }).ToList(),
-                Celebrities = o.SerialCelebrity.Select(j => j.Celebrity).Select(j => new CelebrityDTO
-                {
-                    CelebrityId = j.CelebrityId,
-                    FirstName = j.FirstName,
-                    CountViews = j.CountViews,
-                    LastName = j.LastName,
-                    ImageSource = j.ImageSource,
-                    JobTitles = j.CelebrityJobTitles.Select(g => g.JobTitle).Select(g => new JobTitleDTO
-                    { JobTitleId = g.JobTitleId, JobName = g.JobName }).ToList()
-                }).ToList()
-            }).ToList();
+            List<SerialDTO> objectList = serialsService.GetSerials();
             return Ok(objectList);
         }
     }
