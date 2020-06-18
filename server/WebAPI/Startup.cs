@@ -16,6 +16,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using WebAPI.Models;
+using WebAPI.Services;
 
 namespace WebAPI
 {
@@ -56,6 +57,7 @@ namespace WebAPI
             {
                 options.UseSqlServer(Configuration.GetConnectionString("FilmFinityMSSQL"));
             });
+            services.AddScoped<ISerialsService, SerialsService>();
         }
 
  
