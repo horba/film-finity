@@ -4,9 +4,20 @@
       <el-image fit ='cover' :src='newsList[0].previewImage'></el-image>
     </el-col>
       <el-col :span="15">
-        <div class = "main-information">
+        <div class = "main-information-wrap">
           <div class = "title">
             <h1>{{newsList[0].title}}</h1>
+          </div>
+          <div class = "main-information">
+            <div class = "info-element secondary"><p>{{newsList[0].publishTime}}</p></div>
+            <div class = "info-element secondary"><p>{{newsList[0].countViews}} просмотров</p></div>
+            <div class = "secondary"><p>{{newsList[0].author.firstName}} {{newsList[0].author.lastName}}</p></div>
+            <div class = "secondary"><p>, {{newsList[0].categories |modifyCategories}}</p></div>
+          </div>
+          <div class = "content">{{newsList[0].content}}</div>
+          <div class = "footer">
+            <div><p>{{newsList[0].countCommentaries}} комментариев</p></div>
+            <div><p>Читать полностью</p></div>
           </div>
         </div>
       </el-col>
