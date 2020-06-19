@@ -9,12 +9,12 @@ div.logo {
   margin-left: 80px;
 }
 
-div.button {
+div.actions {
   margin-right: 150px;
   display: flex;
 
 }
-.buttonEnter{
+.enter-button {
   padding: 0px 20px 0px;
 }
 

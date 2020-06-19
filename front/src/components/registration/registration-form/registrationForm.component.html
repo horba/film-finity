@@ -1,0 +1,38 @@
+  <div>      
+      <el-form :model="ruleForm"
+      :rules="rules"
+      >              
+        <el-form-item class="login" prop="userName">
+        <el-input placeholder="Имя пользователя"
+                  v-model="ruleForm.userName"
+        >
+        </el-input>
+        </el-form-item>
+        <el-form-item class="email" prop="email">
+        <el-input placeholder="Email"                  
+                  v-model="ruleForm.email"
+        >
+        </el-input>
+        </el-form-item>
+        <i class="el-icon-error color-massage-error" type="error" v-show="isEmailExist"> Данный e-mail уже зарегистрирован</i>
+        <br v-show="!isEmailExist">
+        <el-form-item class="password" prop="password">
+        <el-input type="password"
+                  placeholder="Пароль"
+                  v-model="ruleForm.password"
+        >
+        </el-input>
+        </el-form-item>
+      </el-form>
+      <div class="dialog-footer">
+        <el-button
+            class="registration-button"
+            type="primary"
+            @click="registration()"
+            :disabled='isFormFilled'
+          >Зарегистрироваться</el-button> 
+          <div class="entrance">
+            Уже есть аккаунт? <b>Вход</b>
+          </div>     
+      </div>
+  </div>

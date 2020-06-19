@@ -1,8 +1,8 @@
-import { FfLogo, FfRegistrationUser } from '@components';
+import { FfLogo, FfRegistrationDialog } from '@components';
 export default {
   name: 'ff-menu',
   components: {
-    FfLogo, FfRegistrationUser
+    FfLogo, FfRegistrationDialog
   },
   data () {
     return {
