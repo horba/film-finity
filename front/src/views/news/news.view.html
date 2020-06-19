@@ -1,3 +1,14 @@
-<div>    
-  This is a news page.
+<div id = "wrap">    
+  <el-row class = "row">
+    <el-col :span="9">
+      <el-image fit ='cover' :src='newsList[0].previewImage'></el-image>
+    </el-col>
+      <el-col :span="15">
+        <div class = "main-information">
+          <div class = "title">
+            <h1>{{newsList[0].title}}</h1>
+          </div>
+        </div>
+      </el-col>
+  </el-row>
 </div>

@@ -1,0 +1,20 @@
+#wrap {
+    padding-top: 20px;
+    width: 1100px;
+    margin: 0 auto;
+}
+.title h1{
+    font-size: 30px;
+    margin: 0;
+}
+.main-information{
+    padding: 10px 20px;
+}
+.el-image{
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+    border-radius: 5px 0 0  5px;
+}
+.row .el-col:last-of-type{
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+    border-radius: 0 5px 5px 0;
+}
