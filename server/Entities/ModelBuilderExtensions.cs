@@ -38,7 +38,7 @@ namespace Entities
                     Name = "Видоизменённый углерод (1-2 сезон)",
                     Rating = 3,
                     Year = 2018,
-                    ImageSource = "StaticFiles/images/11.jpg"
+                    PosterImageSource = "StaticFiles/images/11.jpg"
                 },
 
                 new Serial
@@ -47,7 +47,7 @@ namespace Entities
                     Name = "Викинги (1-6 сезон)",
                     Rating = 4,
                     Year = 2013,
-                    ImageSource = "StaticFiles/images/12.jpg"
+                    PosterImageSource = "StaticFiles/images/12.jpg"
                 },
 
                 new Serial
@@ -56,7 +56,7 @@ namespace Entities
                     Name = "Ведьмак (1 сезон)",
                     Rating = 5,
                     Year = 2019,
-                    ImageSource = "StaticFiles/images/13.jpg"
+                    PosterImageSource = "StaticFiles/images/13.jpg"
                 },
 
                 new Serial
@@ -65,7 +65,7 @@ namespace Entities
                     Name = "Чужак (1 сезон)",
                     Rating = 5,
                     Year = 2020,
-                    ImageSource = "StaticFiles/images/14.jpg"
+                    PosterImageSource = "StaticFiles/images/14.jpg"
                 },
 
                 new Serial
@@ -74,7 +74,7 @@ namespace Entities
                     Name = "Маленькая Америка (1 сезон)",
                     Rating = 5,
                     Year = 2020,
-                    ImageSource = "StaticFiles/images/15.jpg"
+                    PosterImageSource = "StaticFiles/images/15.jpg"
                 },
 
                 new Serial
@@ -83,7 +83,7 @@ namespace Entities
                     Name = "Пятая авеню (1 сезон)",
                     Rating = 5,
                     Year = 2020,
-                    ImageSource = "StaticFiles/images/16.jpg"
+                    PosterImageSource = "StaticFiles/images/16.jpg"
                 },
 
                 new Serial
@@ -92,7 +92,7 @@ namespace Entities
                     Name = "Звёздный путь: Пикар (1 сезон)",
                     Rating = 5,
                     Year = 2020,
-                    ImageSource = "StaticFiles/images/17.jpg"
+                    PosterImageSource = "StaticFiles/images/17.jpg"
                 },
 
                 new Serial
@@ -101,7 +101,7 @@ namespace Entities
                     Name = "Замок и ключ (1 сезон)",
                     Rating = 5,
                     Year = 2020,
-                    ImageSource = "StaticFiles/images/18.jpg"
+                    PosterImageSource = "StaticFiles/images/18.jpg"
                 },
 
                 new Serial
@@ -110,7 +110,7 @@ namespace Entities
                     Name = "Hi-Fi / Фанатик (1 сезон)",
                     Rating = 5,
                     Year = 2020,
-                    ImageSource = "StaticFiles/images/19.jpg"
+                    PosterImageSource = "StaticFiles/images/19.jpg"
                 },
 
                 new Serial
@@ -119,7 +119,7 @@ namespace Entities
                     Name = "Разрабы (1 сезон)",
                     Rating = 5,
                     Year = 2020,
-                    ImageSource = "StaticFiles/images/20.jpg"
+                    PosterImageSource = "StaticFiles/images/20.jpg"
                 },
 
                 new Serial
@@ -128,7 +128,7 @@ namespace Entities
                     Name = "Охотники (1 сезон)",
                     Rating = 5,
                     Year = 2020,
-                    ImageSource = "StaticFiles/images/21.jpg"
+                    PosterImageSource = "StaticFiles/images/21.jpg"
                 });
 
             modelBuilder.Entity<Celebrity>().HasData(

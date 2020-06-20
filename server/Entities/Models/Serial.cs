@@ -10,7 +10,7 @@ namespace Entities.Models
         public string Name { get; set; }
         public double Rating { get; set; }
         public int Year { get; set; }
-        public string ImageSource { get; set; }
+        public string PosterImageSource { get; set; }
         public ICollection<SerialGenreTitles> SerialGenreTitles { get; set; }
         public ICollection<SerialCelebrity> SerialCelebrity { get; set; }
     }

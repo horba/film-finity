@@ -10,6 +10,8 @@
     <Compile Remove="Migrations\20200603094133_InitialCreate.Designer.cs" />
     <Compile Remove="Migrations\20200606154510_CreateAndSeed.cs" />
     <Compile Remove="Migrations\20200606154510_CreateAndSeed.Designer.cs" />
+    <Compile Remove="Migrations\20200618105551_CreateAndSeed.cs" />
+    <Compile Remove="Migrations\20200618105551_CreateAndSeed.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

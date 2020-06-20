@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Entities.Migrations
 {
     [DbContext(typeof(FilmFinityDbContext))]
-    [Migration("20200618105551_CreateAndSeed")]
+    [Migration("20200619152004_CreateAndSeed")]
     partial class CreateAndSeed
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -211,10 +211,10 @@ namespace Entities.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ImageSource")
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("PosterImageSource")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Rating")
@@ -231,88 +231,88 @@ namespace Entities.Migrations
                         new
                         {
                             Id = 1,
-                            ImageSource = "StaticFiles/images/11.jpg",
                             Name = "Видоизменённый углерод (1-2 сезон)",
+                            PosterImageSource = "StaticFiles/images/11.jpg",
                             Rating = 3.0,
                             Year = 2018
                         },
                         new
                         {
                             Id = 2,
-                            ImageSource = "StaticFiles/images/12.jpg",
                             Name = "Викинги (1-6 сезон)",
+                            PosterImageSource = "StaticFiles/images/12.jpg",
                             Rating = 4.0,
                             Year = 2013
                         },
                         new
                         {
                             Id = 3,
-                            ImageSource = "StaticFiles/images/13.jpg",
                             Name = "Ведьмак (1 сезон)",
+                            PosterImageSource = "StaticFiles/images/13.jpg",
                             Rating = 5.0,
                             Year = 2019
                         },
                         new
                         {
                             Id = 4,
-                            ImageSource = "StaticFiles/images/14.jpg",
                             Name = "Чужак (1 сезон)",
+                            PosterImageSource = "StaticFiles/images/14.jpg",
                             Rating = 5.0,
                             Year = 2020
                         },
                         new
                         {
                             Id = 5,
-                            ImageSource = "StaticFiles/images/15.jpg",
                             Name = "Маленькая Америка (1 сезон)",
+                            PosterImageSource = "StaticFiles/images/15.jpg",
                             Rating = 5.0,
                             Year = 2020
                         },
                         new
                         {
                             Id = 6,
-                            ImageSource = "StaticFiles/images/16.jpg",
                             Name = "Пятая авеню (1 сезон)",
+                            PosterImageSource = "StaticFiles/images/16.jpg",
                             Rating = 5.0,
                             Year = 2020
                         },
                         new
                         {
                             Id = 7,
-                            ImageSource = "StaticFiles/images/17.jpg",
                             Name = "Звёздный путь: Пикар (1 сезон)",
+                            PosterImageSource = "StaticFiles/images/17.jpg",
                             Rating = 5.0,
                             Year = 2020
                         },
                         new
                         {
                             Id = 8,
-                            ImageSource = "StaticFiles/images/18.jpg",
                             Name = "Замок и ключ (1 сезон)",
+                            PosterImageSource = "StaticFiles/images/18.jpg",
                             Rating = 5.0,
                             Year = 2020
                         },
                         new
                         {
                             Id = 9,
-                            ImageSource = "StaticFiles/images/19.jpg",
                             Name = "Hi-Fi / Фанатик (1 сезон)",
+                            PosterImageSource = "StaticFiles/images/19.jpg",
                             Rating = 5.0,
                             Year = 2020
                         },
                         new
                         {
                             Id = 10,
-                            ImageSource = "StaticFiles/images/20.jpg",
                             Name = "Разрабы (1 сезон)",
+                            PosterImageSource = "StaticFiles/images/20.jpg",
                             Rating = 5.0,
                             Year = 2020
                         },
                         new
                         {
                             Id = 11,
-                            ImageSource = "StaticFiles/images/21.jpg",
                             Name = "Охотники (1 сезон)",
+                            PosterImageSource = "StaticFiles/images/21.jpg",
                             Rating = 5.0,
                             Year = 2020
                         });

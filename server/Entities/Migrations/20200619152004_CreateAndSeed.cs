@@ -28,7 +28,7 @@ namespace Entities.Migrations
                     Name = table.Column<string>(nullable: true),
                     Rating = table.Column<double>(nullable: false),
                     Year = table.Column<int>(nullable: false),
-                    ImageSource = table.Column<string>(nullable: true)
+                    PosterImageSource = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -100,20 +100,20 @@ namespace Entities.Migrations
 
             migrationBuilder.InsertData(
                 table: "Serials",
-                columns: new[] { "Id", "ImageSource", "Name", "Rating", "Year" },
+                columns: new[] { "Id", "Name", "PosterImageSource", "Rating", "Year" },
                 values: new object[,]
                 {
-                    { 9, "StaticFiles/images/19.jpg", "Hi-Fi / Фанатик (1 сезон)", 5.0, 2020 },
-                    { 8, "StaticFiles/images/18.jpg", "Замок и ключ (1 сезон)", 5.0, 2020 },
-                    { 7, "StaticFiles/images/17.jpg", "Звёздный путь: Пикар (1 сезон)", 5.0, 2020 },
-                    { 6, "StaticFiles/images/16.jpg", "Пятая авеню (1 сезон)", 5.0, 2020 },
-                    { 2, "StaticFiles/images/12.jpg", "Викинги (1-6 сезон)", 4.0, 2013 },
-                    { 4, "StaticFiles/images/14.jpg", "Чужак (1 сезон)", 5.0, 2020 },
-                    { 3, "StaticFiles/images/13.jpg", "Ведьмак (1 сезон)", 5.0, 2019 },
-                    { 10, "StaticFiles/images/20.jpg", "Разрабы (1 сезон)", 5.0, 2020 },
-                    { 1, "StaticFiles/images/11.jpg", "Видоизменённый углерод (1-2 сезон)", 3.0, 2018 },
-                    { 5, "StaticFiles/images/15.jpg", "Маленькая Америка (1 сезон)", 5.0, 2020 },
-                    { 11, "StaticFiles/images/21.jpg", "Охотники (1 сезон)", 5.0, 2020 }
+                    { 9, "Hi-Fi / Фанатик (1 сезон)", "StaticFiles/images/19.jpg", 5.0, 2020 },
+                    { 8, "Замок и ключ (1 сезон)", "StaticFiles/images/18.jpg", 5.0, 2020 },
+                    { 7, "Звёздный путь: Пикар (1 сезон)", "StaticFiles/images/17.jpg", 5.0, 2020 },
+                    { 6, "Пятая авеню (1 сезон)", "StaticFiles/images/16.jpg", 5.0, 2020 },
+                    { 2, "Викинги (1-6 сезон)", "StaticFiles/images/12.jpg", 4.0, 2013 },
+                    { 4, "Чужак (1 сезон)", "StaticFiles/images/14.jpg", 5.0, 2020 },
+                    { 3, "Ведьмак (1 сезон)", "StaticFiles/images/13.jpg", 5.0, 2019 },
+                    { 10, "Разрабы (1 сезон)", "StaticFiles/images/20.jpg", 5.0, 2020 },
+                    { 1, "Видоизменённый углерод (1-2 сезон)", "StaticFiles/images/11.jpg", 3.0, 2018 },
+                    { 5, "Маленькая Америка (1 сезон)", "StaticFiles/images/15.jpg", 5.0, 2020 },
+                    { 11, "Охотники (1 сезон)", "StaticFiles/images/21.jpg", 5.0, 2020 }
                 });
 
             migrationBuilder.InsertData(

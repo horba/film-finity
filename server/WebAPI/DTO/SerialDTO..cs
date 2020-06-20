@@ -11,7 +11,7 @@ namespace WebAPI.DTO
         public string Name { get; set; }
         public double Rating { get; set; }
         public int Year { get; set; }
-        public string ImageSource { get; set; }
+        public string PosterImageSource { get; set; }
         public List<GenreDTO> GenreTitles { get; set; }
         public List<CelebrityDTO> Celebrities { get; set; }
     }

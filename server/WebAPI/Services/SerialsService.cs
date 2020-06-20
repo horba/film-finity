@@ -27,7 +27,7 @@ namespace WebAPI.Services
                 Name = o.Name,
                 Rating = o.Rating,
                 Year = o.Year,
-                ImageSource = o.ImageSource,
+                PosterImageSource = o.PosterImageSource,
                 GenreTitles = o.SerialGenreTitles.Select(j => j.GenreTitle).Select(j => new GenreDTO
                 { Id = j.Id, Name = j.Name }).ToList(),
                 Celebrities = o.SerialCelebrity.Select(j => j.Celebrity).Select(j => new CelebrityDTO
