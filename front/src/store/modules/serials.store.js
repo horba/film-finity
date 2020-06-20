@@ -12,9 +12,9 @@ export default {
       state.serials = serials;
     }
   },
-  state: {
+  state: () => ({
     serials: []
-  },
+  }),
   getters: {
     getSerialsList (state) {
       return state.serials;
