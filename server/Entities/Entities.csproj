@@ -6,6 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200613074918_CreateAndInitializationCelebrityBiography.cs" />
+    <Compile Remove="Migrations\20200613074918_CreateAndInitializationCelebrityBiography.Designer.cs" />
+    <Compile Remove="Migrations\20200620113803_AddAndSeedCelebrityBiography.cs" />
+    <Compile Remove="Migrations\20200620113803_AddAndSeedCelebrityBiography.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

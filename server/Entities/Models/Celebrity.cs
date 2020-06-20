@@ -15,7 +15,7 @@ namespace WebAPI.Models
         public int CountViews { get; set; }
         public string ImageSource { get; set; }       
 
-        public DateTime Birthday { get; set; }
+        public string Birthday { get; set; }
         public string PlaceOfBirthday { get; set; }
         public string StarSing { get; set; }
         public string Height { get; set; }

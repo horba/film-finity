@@ -30,7 +30,7 @@ namespace Entities
                     CountViews = 134000,
                     ImageSource = "StaticFiles/images/1.jpg",
 
-                    Birthday = new DateTime(1968, 10, 12),
+                    Birthday = "12 октября 1968 г.",
                     FamilyStatus = "в гражданском браке с Деборра-Ли Фёрнесс",
                     Height = "188 см",
                     PlaceOfBirthday = "Сидней, Австралия",
@@ -45,7 +45,7 @@ namespace Entities
                     CountViews = 127000,
                     ImageSource = "StaticFiles/images/2.jpg",
 
-                    Birthday = new DateTime(1976, 10, 23),
+                    Birthday = "23 октября 1976 г.",
                     FamilyStatus = "в браке с Блейк Лайвли",
                     Height = "188 см",
                     PlaceOfBirthday = "Ванкувер, Канада",
@@ -60,7 +60,7 @@ namespace Entities
                     CountViews = 126000,
                     ImageSource = "StaticFiles/images/3.jpg",
 
-                    Birthday = new DateTime(1965, 4, 4),
+                    Birthday = "4 апреля 1965 г.",
                     FamilyStatus = "в браке с Сьюзан Дауни",
                     Height = "174 см",
                     PlaceOfBirthday = "Нью-Йорк, США",
@@ -75,7 +75,7 @@ namespace Entities
                     CountViews = 121000,
                     ImageSource = "StaticFiles/images/4.jpg",
 
-                    Birthday = new DateTime(1968, 9, 25),
+                    Birthday = "25 сентября 1968 г.",
                     FamilyStatus = "в  браке с Джада Пинкетт Смит",
                     Height = "188 см",
                     PlaceOfBirthday = "Филадельфия, США",
@@ -90,7 +90,7 @@ namespace Entities
                     CountViews = 120500,
                     ImageSource = "StaticFiles/images/5.jpg",
 
-                    Birthday = new DateTime(1963, 12, 18),
+                    Birthday = "18 декабря 1963 г.",
                     FamilyStatus = "в разводе с Анджелиной Джоли",
                     Height = "180 см",
                     PlaceOfBirthday = "Шони, Оклахома, США",
@@ -105,7 +105,7 @@ namespace Entities
                     CountViews = 120000,
                     ImageSource = "StaticFiles/images/6.jpg",
 
-                    Birthday = new DateTime(1974, 10, 11),
+                    Birthday = "11 ноября 1974 г.",
                     FamilyStatus = "в отношениях с Камилой Морроне",
                     Height = "183 см",
                     PlaceOfBirthday = "Лос-Анджелес, США",
@@ -120,7 +120,7 @@ namespace Entities
                     CountViews = 91000,
                     ImageSource = "StaticFiles/images/7.jpg",
 
-                    Birthday = new DateTime(1981, 6, 9),
+                    Birthday = "9 июня 1981 г.",
                     FamilyStatus = "в браке с Бенджамин Мильпье",
                     Height = "160 см",
                     PlaceOfBirthday = "Иерусалим, Израиль",
@@ -135,7 +135,7 @@ namespace Entities
                     CountViews = 20000,
                     ImageSource = "StaticFiles/images/8.jpg",
 
-                    Birthday = new DateTime(1949, 5, 24),
+                    Birthday = "24 мая 1949 г.",
                     FamilyStatus = "в браке с Изабелла Джеймс Пьюрфой Эллис",
                     Height = "178 см",
                     PlaceOfBirthday = "Торки, Великобритания",
@@ -150,7 +150,7 @@ namespace Entities
                     CountViews = 50000,
                     ImageSource = "StaticFiles/images/9.png",
 
-                    Birthday = new DateTime(1957, 9, 12),
+                    Birthday = "12 сентября 1959 г.",
                     FamilyStatus = "в браке с Сюзанна Циммер",
                     Height = "178 см",
                     PlaceOfBirthday = "Франкфурт-на-Майне, Германия",
@@ -165,7 +165,7 @@ namespace Entities
                     CountViews = 95000,
                     ImageSource = "StaticFiles/images/10.jpg",
 
-                    Birthday = new DateTime(1963, 3, 27),
+                    Birthday = "27 марта 1963 г.",
                     FamilyStatus = "в браке с Даниэла Пик",
                     Height = "185 см",
                     PlaceOfBirthday = "Ноксвилл, Теннесси, США",
@@ -180,7 +180,7 @@ namespace Entities
                     CountViews = 9050,
                     ImageSource = "StaticFiles/images/11.jpg",
 
-                    Birthday = new DateTime(1983, 9, 9),
+                    Birthday = "9 сентября 1983 г.",
                     FamilyStatus = "в браке с Пол Дано",
                     Height = "163 см",
                     PlaceOfBirthday = "Лос-Анджелес, США",
@@ -580,9 +580,9 @@ namespace Entities
                     "Сама Зои Казан, кстати, не считает, что причина её творческого склада ума кроется в наследственности. В интервью «Кинопоиску» актриса сказала:" +
                    "</p>" +
                    "<p>" +
-                    "<strong >«Думаю, наследственность — это лишь малая часть, в основном имеет значение твой интерес, " +
+                    "<strong>«Думаю, наследственность — это лишь малая часть, в основном имеет значение твой интерес, " +
                     "и насколько ты хочешь чего - то добиться.Мой стержень — это страсть, именно она заставляет меня просыпаться " +
-                    "каждое утро и работать не покладая рук».<strong>" +
+                    "каждое утро и работать не покладая рук».</strong>" +
                    "</p>" +
                    "<p>" +
                     "Интерес к творчеству в сестрах Казан проснулся рано.В детстве они часто ходили в музеи.Зои могла часами напролёт " +
@@ -608,7 +608,7 @@ namespace Entities
                     "что актриса беременная. И действительно — в августе того же года на свет появилась дочь Альма Бэй Дано." +
                    "</p>",
                    CareerInCinema = 
-                   "<h2>Карьера в кино<h2>" +
+                   "<h2>Карьера в кино</h2>" +
                    "<p>" +
                     "Свой путь в кино Зои Казан начала с драмы «Шпагоглататели и худые» (2003). Ирония в том, что актриса на 100 % " +
                     "соответствует названию фильма — при росте 163 см весит не больше 50 кг. " +
@@ -641,7 +641,7 @@ namespace Entities
                    "</p>" +
                    "<p>" +
                     "<strong>«Так что писательство — это не самодисциплина, а скорее необходимость для меня», — однажды сказала Зои Казан в " +
-                    "интервью.<strong>" +
+                    "интервью.</strong>" +
                    "</p>" +
                    "<p>" +
                     "В 2010-х годах одна из давних крупных задумок актрисы начала воплощаться на бумаге. " +
