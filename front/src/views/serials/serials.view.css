@@ -1,4 +1,4 @@
-#Wrap{
+.Wrap{
     margin: 0 150px;
 }
 
@@ -15,6 +15,7 @@
 
 .grid-content-wrap {
     box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
 }
 
 .grid-content-main {
@@ -31,18 +32,19 @@
 
     font-family: var(--txt-font);
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 18px;
-    color: #292C33;
+    color: var(--serial-name-color);
 }
 
 .el-image {
-    height: 339px;
+    height: 284px;
     width: 100%;
+    border-radius: 5px 5px 0px 0px;
 }
 .serial-rating {
-    margin-top: 7px;
-    height: 30px;
+    margin-bottom: 7px;
+    height: 20px;
 }
 
 .year {
@@ -50,40 +52,23 @@
     font-style: normal;
     font-size: 14px;
     font-weight: 300;
-    color: #8F96A3;
+    color: var(--serial-year-color);
     margin-top: 6px;
 }
 
 .rate >>> .el-rate__icon {
     font-size: 24px;
-
 }
 
-.rating {
-    vertical-align: middle;
-}
-
-.celebrities-name span {
-    width: 226.17px;
+.celebrities-list {
+    width: 226px;
     height: 29px;
     left: 19px;
-    bottom: 16.99px;  
+    bottom: 17px;  
     font-style: normal;
     font-weight: 300;
     font-size: 12px;
     font-family: var(--txt-font);  
-    color: #8F96A3;
-}
-
-.serial-list {
-    width: 226.17px;
-    height: 29px;
-    left: 19px;
-    bottom: 16.99px;  
-    font-style: normal;
-    font-weight: 300;
-    font-size: 12px;
-    font-family: var(--txt-font);  
-    color: #292C33;
+    color: var(--celebrities-name-color);
     padding-top: 5px;
 }

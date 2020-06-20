@@ -1,22 +1,17 @@
 
 export default {
   name: 'ff-serials',
+  data () {
+    return {
+      baseUrl: this.$store.state.baseUrl
+    };
+  },
   computed: {
     getSerialsList () {
-      return this.$store.getters.getSerialsList;
+      return this.$store.state.serials.serials;
     }
   },
   created () {
     this.$store.dispatch('getSerials');
-  },
-  methods: {
-    getImgSrc (imgPath) {
-      return this.$store.state.baseUrl + '/' + imgPath;
-    }
-  },
-  filters: {
-    spaceBetweenElement (titles) {
-      return titles.map(element => ' ' + element.firstName + ' ' + element.lastName).join();
-    }
   }
 };

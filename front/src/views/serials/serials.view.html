@@ -1,19 +1,23 @@
-<div id="Wrap">    
+<div class="Wrap">    
   <el-row class="el-row-wrap" :gutter="20" type="flex" justify="start">
     <el-col v-for="serial in getSerialsList" class="grid-col-wrap" :key = "serial.serialId">
       <div class="grid-content-wrap">
-        <el-image fit='cover' :src="getImgSrc(serial.imageSource)"></el-image>
+        <el-image fit='cover' :src="serial.posterImageSource | getImgSrc(baseUrl)"></el-image>
         <div class="grid-content-main">
           <div class="serial-name">
             <div><span>{{serial.name}}</span></div>
           </div>
             <el-row type="flex" justify="start" class ="serial-rating">
-              <el-col :span="24" class="stars">
-                <el-rate class="rate" v-model="serial.rating" disabled :colors="['var(--main-bg-color)', 'var(--main-bg-color)', 'var(--main-bg-color)']"></el-rate>
+              <el-col :span="24" class="rating">
+                <el-rate
+                 class="rate"
+                 v-model="serial.rating"
+                 disabled :colors="['var(--main-bg-color)', 'var(--main-bg-color)', 'var(--main-bg-color)']">
+                </el-rate>
               </el-col>
               <el-col :span="3" class="year">{{serial.year}}</el-col>
             </el-row>
-            <div class="serial-list">              
+            <div class="celebrities-list">              
               <span>{{serial.celebrities | spaceBetweenElement('FullName')}}</span>
             </div>
         </div>
