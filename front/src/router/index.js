@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import { Movies, Serials, Cartoons, News, FfCelebrities } from '@views';
+import { Movies, Serials, Cartoons, News, FfCelebrities, Celebrity } from '@views';
 
 Vue.use(VueRouter);
 
@@ -8,6 +8,10 @@ const routes = [
   {
     path: '/celebrities',
     component: FfCelebrities
+  },
+  {
+    path: '/celebrities/:id',
+    component: Celebrity
   },
   {
     path: '/movies',
