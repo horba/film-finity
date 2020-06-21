@@ -5,6 +5,11 @@ export default {
   components: {
     Select
   },
+  data () {
+    return {
+      value: ''
+    };
+  },
   computed: {
     language () {
       return this.$store.state.language;
@@ -12,15 +17,15 @@ export default {
     locales () {
       return [
         {
-          value: 'EN',
+          value: 'en',
           label: this.$t('locale.en')
         },
         {
-          value: 'RU',
+          value: 'ru',
           label: this.$t('locale.ru')
         },
         {
-          value: 'UA',
+          value: 'ua',
           label: this.$t('locale.ua')
         }
       ];
@@ -31,5 +36,4 @@ export default {
       this.$store.commit('locale/CHANGE_LANGUAGE', language);
     }
   }
-
 };
