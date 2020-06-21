@@ -9,6 +9,7 @@ module.exports = {
       .set('@router', path.resolve('src/router/'))
       .set('@store', path.resolve('src/store/'))
       .set('@styles', path.resolve('src/styles/'))
-      .set('@assets', path.resolve('src/assets/'));
+      .set('@assets', path.resolve('src/assets/'))
+      .set('@filters', path.resolve('src/filters/'));
   },
 };

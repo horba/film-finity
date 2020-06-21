@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebAPI.DTO;
 using Entities.DataAccess;
+using WebAPI.Validation;
 using Microsoft.EntityFrameworkCore;
 
 namespace WebAPI.Repositories

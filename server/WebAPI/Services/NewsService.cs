@@ -6,6 +6,8 @@ using WebAPI.Repositories;
 using WebAPI.DTO;
 using Entities.Models;
 using AutoMapper;
+using WebAPI.Validation;
+using FluentValidation;
 
 namespace WebAPI.Services
 {
@@ -22,6 +24,19 @@ namespace WebAPI.Services
         public IEnumerable<NewsDTO> GetAllNews()
         {
             var news = _newsRepository.GetAllNews();
+            var validator = new ValidateNews();
+            foreach (var newsElement in news)
+            {
+                try 
+                {
+                    validator.ValidateAndThrow(newsElement);
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    news = news.Where(el => el != newsElement);
+                }
+            }
             return _mapper.Map<IEnumerable<NewsDTO>>(news.ToList());
         }
     }

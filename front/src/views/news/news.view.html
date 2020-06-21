@@ -1,24 +1,24 @@
 <div id = "wrap">    
-  <el-row class = "row">
+  <el-row v-for="element in newsList.news" class = "row" :key = "element.Id">
     <el-col :span="9">
-      <el-image fit ='cover' :src='newsList[0].previewImage'></el-image>
+      <el-image fit ='cover' :src='getImgSrc(element.previewImage)'></el-image>
     </el-col>
       <el-col :span="15">
-        <div class = "main-information-wrap">
+        <div class = "main-block">
           <div class = "title">
-            <h1>{{newsList[0].title}}</h1>
+            <h1>{{element.title}}</h1>
           </div>
           <div class = "main-information">
-            <div class = "info-element secondary"><p>{{newsList[0].publishTime}}</p></div>
-            <div class = "info-element secondary"><p>{{newsList[0].countViews}} просмотров</p></div>
-            <div class = "secondary"><p>{{newsList[0].author.firstName}} {{newsList[0].author.lastName}}</p></div>
-            <div class = "secondary"><p>, {{newsList[0].categories |modifyCategories}}</p></div>
+            <div class = "info-element secondary"><p>{{element.publishTime |convertDateTimeToDD.MM.YY.HH:MM}}</p></div>
+            <div class = "info-element secondary"><p>{{element.countViews}} просмотров</p></div>
+            <div class = "secondary"><p>{{element.author.firstName}} {{element.author.lastName}}, </p></div>
+            <div class = "secondary"><p>{{element.categories |StringifyCategoriesByName}}</p></div>
           </div>
-          <div class = "content">{{newsList[0].content}}</div>
-          <div class = "footer">
-            <div><p>{{newsList[0].countCommentaries}} комментариев</p></div>
-            <div><p>Читать полностью</p></div>
-          </div>
+          <div class = "content">{{element.content}}</div>
+        </div>
+        <div class = "footer-block">
+          <div><span>{{element.countCommentaries}} комментариев</span></div>
+          <div><span>Читать полностью</span></div>
         </div>
       </el-col>
   </el-row>

@@ -13,6 +13,7 @@ namespace WebAPI.DTO
         public string Content { get; set; }
         public int CountViews { get; set; }
         public string PreviewImage { get; set; }
+        public int CountCommentaries { get; set; }
         public DateTime PublishTime { get; set; } 
         public NewsAuthorDTO Author { get; set; }
         public List<NewsCategoryDTO> Categories { get; set; }

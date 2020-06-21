@@ -1,5 +1,4 @@
 #wrap {
-    padding-top: 20px;
     width: 1000px;
     margin: 0 auto;
     font-family: var(--txt-font);
@@ -7,19 +6,17 @@
 
 .row {
     display: flex;
-    flex-direction: row;
+    margin-top: 30px;
     box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);   
 }
 
 .title h1 {
-    color: #000;
     font-size: 25px;
     margin: 0;
     font-weight: 600;
 }
 
 .content {
-    color: #000;
     font-weight: 300;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -28,18 +25,12 @@
     -webkit-box-orient: vertical;
 }
 
-.main-information-wrap {
-    box-sizing: border-box;
-    padding: 10px 20px;
-    border-radius: 0 5px 5px 0;
-}
-
 .main-information > div {
     display: inline-block;
 }
 
 .secondary {
-  color: #909399;
+  color: var(--secondary-color);
   font-size: 15px;
 }
 
@@ -47,30 +38,42 @@
     margin-right: 35px;
 }
 
+
 .el-image {
     box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
     border-radius: 5px 0 0 5px;
+    height: 240px;
 }
 
-.footer {
+
+.row .el-col:last-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+}
+
+.footer-block {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 
-.footer p {
+.footer-block span {
     margin-bottom: 0;
     margin-top: 30px;
     font-weight: 300;
     font-size: 20px;
-    color: #6663FF;
+    color: var(--main-bg-color);
 }
 
-.footer div:last-of-type p {
+.footer-block div:last-of-type span {
     font-weight: 600;
     font-size: 25px;
 }
 
-.footer div {
+.footer-block div {
     display: inline-block;
 }
