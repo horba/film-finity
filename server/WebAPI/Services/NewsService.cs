@@ -31,7 +31,7 @@ namespace WebAPI.Services
                 {
                     validator.ValidateAndThrow(newsElement);
                 }
-                catch(Exception ex)
+                catch(ValidationException ex)
                 {
                     Console.WriteLine(ex.Message);
                     news = news.Where(el => el != newsElement);
