@@ -1,6 +1,7 @@
 {
-  "appTitle": "FilmFinity",
-  "menu": {
+  "appTitle1": "Film",
+  "appTitle2": "Finity",
+  "locale": {
     "language": "Язык",
     "en": "Английский",
     "ru": "Русский",
