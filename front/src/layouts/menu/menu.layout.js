@@ -1,9 +1,10 @@
-import { FfLogo } from '@components';
+import { FfLocaleSelect, FfLogo } from '@components';
 
 export default {
   name: 'ff-menu',
   components: {
-    FfLogo
+    FfLogo,
+    FfLocaleSelect
   },
   data () {
     return {

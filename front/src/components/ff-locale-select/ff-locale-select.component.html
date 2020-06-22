@@ -1,0 +1,11 @@
+<div class="ff-locale-select">
+  <el-select v-model="value" placeholder="Select"
+  @change="changeLanguage">
+    <el-option
+      v-for="locale in locales"
+      :key="locale.value"
+      :label="locale.label"
+      :value="locale.value">
+    </el-option>
+  </el-select>
+</div>
