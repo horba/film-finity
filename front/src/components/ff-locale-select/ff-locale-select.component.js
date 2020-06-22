@@ -7,7 +7,7 @@ export default {
   },
   data () {
     return {
-      value: ''
+      value: this.$t('locale.language')
     };
   },
   computed: {
