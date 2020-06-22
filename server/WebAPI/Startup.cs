@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Entities.DataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -58,6 +59,7 @@ namespace WebAPI
                 options.UseSqlServer(Configuration.GetConnectionString("FilmFinityMSSQL"));
             });
             services.AddScoped<ISerialsService, SerialsService>();
+            services.AddAutoMapper(typeof(Startup));
         }
 
  
