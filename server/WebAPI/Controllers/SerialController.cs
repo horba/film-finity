@@ -14,16 +14,16 @@ namespace WebAPI.Controllers
     [Route("api/[controller]")]
     public class SerialController : ControllerBase
     {
-        private readonly ISerialsService serialsService;
+        private readonly ISerialsService _serialsService;
         public SerialController(ISerialsService serialsService)
         {
-            this.serialsService = serialsService;
+            this._serialsService = serialsService;
         }
 
         [HttpGet]
         public IActionResult GetListCelebrities()
         {
-            List<SerialDTO> objectList = serialsService.GetSerials();
+            List<SerialDTO> objectList = _serialsService.GetSerials();
             return Ok(objectList);
         }
     }
