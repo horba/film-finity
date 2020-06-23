@@ -9,15 +9,15 @@ namespace WebAPI.Repositories
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        protected readonly FilmFinityDbContext Context;
+        protected readonly FilmFinityDbContext _dbContext;
         public Repository(FilmFinityDbContext context)
         {
-            this.Context = context;
+            this._dbContext = context;
         }
 
         public List<TEntity> GetAll()
         {
-            return Context.Set<TEntity>().ToList();
+            return _dbContext.Set<TEntity>().ToList();
         }
     }
 }
