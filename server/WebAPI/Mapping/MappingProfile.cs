@@ -12,8 +12,25 @@ namespace WebAPI.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<Serial, SerialDTO>();
-            CreateMap<SerialDTO, Serial>();
+            CreateMap<Serial, SerialDTO>()
+                .ForMember(dto => dto.Celebrities, opt => opt.MapFrom(
+                    route => route.SerialCelebrity.ToList().Select(
+                        el => new CelebrityDTO {
+                            CelebrityId = el.Celebrity.CelebrityId,
+                            FirstName = el.Celebrity.FirstName,
+                            LastName = el.Celebrity.LastName,
+                            CountViews = el.Celebrity.CountViews,
+                            ImageSource = el.Celebrity.ImageSource,
+                            JobTitles = el.Celebrity.CelebrityJobTitles.Select(g => g.JobTitle).Select(g => new JobTitleDTO
+                            { JobTitleId = g.JobTitleId, JobName = g.JobName }).ToList()
+                        })
+                    )
+                )
+                .ForMember(dto => dto.GenreTitles, opt => opt.MapFrom(
+                    route => route.SerialGenreTitles.ToList().Select(
+                        el => new GenreDTO { Id = el.GenreTitle.Id, Name = el.GenreTitle.Name })
+                    )
+                );
         }
     }
 }
