@@ -1,14 +1,14 @@
-<div class="Wrap">    
+<div class="serial-view">    
   <el-row class="el-row-wrap" :gutter="20" type="flex" justify="start">
     <el-col v-for="serial in getSerialsList" class="grid-col-wrap" :key = "serial.serialId">
       <div class="grid-content-wrap">
-        <el-image fit='cover' :src="serial.posterImageSource | getImgSrc(baseUrl)"></el-image>
+        <el-image fit='cover' :src="serial.posterImageSource | imageServerPath"></el-image>
         <div class="grid-content-main">
           <div class="serial-name">
             <div><span>{{serial.name}}</span></div>
           </div>
             <el-row type="flex" justify="start" class ="serial-rating">
-              <el-col :span="24" class="rating">
+              <el-col :span="24">
                 <el-rate
                  class="rate"
                  v-model="serial.rating"
@@ -18,7 +18,7 @@
               <el-col :span="3" class="year">{{serial.year}}</el-col>
             </el-row>
             <div class="celebrities-list">              
-              <span>{{serial.celebrities | spaceBetweenElement('FullName')}}</span>
+              <span>{{serial.celebrities | fullName | listStringify}}</span>
             </div>
         </div>
       </div>

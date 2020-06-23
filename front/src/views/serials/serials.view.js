@@ -1,11 +1,6 @@
 
 export default {
-  name: 'ff-serials',
-  data () {
-    return {
-      baseUrl: this.$store.state.baseUrl
-    };
-  },
+  name: 'serials-view',
   computed: {
     getSerialsList () {
       return this.$store.state.serials.serials;
