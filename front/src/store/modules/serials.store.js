@@ -15,9 +15,5 @@ export default {
   state: () => ({
     serials: []
   }),
-  getters: {
-    getSerialsList (state) {
-      return state.serials;
-    }
-  }
+  getters: {}
 };
