@@ -1,9 +1,9 @@
 import Vue from 'vue';
-Vue.filter('convertDateTimeToDD.MM.YY.HH:MM', (DateTime) => {
-  const date = new Date(Date.parse(DateTime));
-  return ('0' + date.getDate()).slice(-2) + '.'
-  + ('0' + (date.getMonth() + 1)).slice(-2) + '.'
-  + date.getFullYear() + ' '
-  + date.getHours() + ':'
-  + date.getMinutes();
+import { format } from 'date-fns';
+
+Vue.filter('convertDateTime', (DateTime) => {
+  return format(new Date(DateTime), 'dd.MM.yyyy kk:mm');
+});
+Vue.filter('listStringify', (sourceList) => {
+  return sourceList.join(', ');
 });

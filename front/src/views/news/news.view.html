@@ -9,10 +9,10 @@
             <h1>{{element.title}}</h1>
           </div>
           <div class = "main-information">
-            <div class = "info-element secondary"><p>{{element.publishTime |convertDateTimeToDD.MM.YY.HH:MM}}</p></div>
+            <div class = "info-element secondary"><p>{{element.publishTime |convertDateTime}}</p></div>
             <div class = "info-element secondary"><p>{{element.countViews}} просмотров</p></div>
             <div class = "secondary"><p>{{element.author.firstName}} {{element.author.lastName}}, </p></div>
-            <div class = "secondary"><p>{{element.categories |StringifyCategoriesByName}}</p></div>
+            <div class = "secondary"><p>{{element.categories |getArrayOfCategoiresName |listStringify}}</p></div>
           </div>
           <div class = "content">{{element.content}}</div>
         </div>

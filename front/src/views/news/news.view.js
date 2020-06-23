@@ -12,6 +12,9 @@ export default {
   filters: {
     StringifyCategoriesByName (sourceListOfCategories) {
       return sourceListOfCategories.map(element => element.name).join(', ');
+    },
+    getArrayOfCategoiresName (sourceListOfCategories) {
+      return sourceListOfCategories.map(a => a.name);
     }
   },
   methods: {
