@@ -1,6 +1,6 @@
 
 export default function fullName (source) {
-  return source.length
+  return source && Array.isArray(source)
     ? source.map(({ firstName, lastName }) => `${firstName} ${lastName}`)
-    : null;
+    : `${source.firstName} ${source.lastName}`;
 };
