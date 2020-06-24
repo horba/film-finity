@@ -1,6 +1,6 @@
 <div class="serial-view">    
-  <el-row class="el-row-wrap" :gutter="20" type="flex" justify="start">
-    <el-col v-for="serial in getSerialsList" class="grid-col-wrap" :key = "serial.serialId">
+  <div class="el-row-wrap">
+    <div v-for="serial in getSerialsList" class="grid-col-wrap" :key = "serial.serialId">
       <div class="grid-content-wrap">
         <el-image fit='cover' :src="serial.posterImageSource | imageServerPath"></el-image>
         <div class="grid-content-main">
@@ -22,6 +22,6 @@
             </div>
         </div>
       </div>
-    </el-col>
-  </el-row>
+    </div>
+  </div>
 </div>

@@ -1,14 +1,18 @@
 .serial-view{
-    margin: 0 150px;
+    margin: 0;
 }
 
 .el-row-wrap {
+    display: flex;
     flex-flow: row wrap;
+    max-width: 1470px;
+    margin: 0 auto;
 }
   
 .grid-col-wrap {
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 20px;
     border-radius: 5px;
     width: 270px;
 }
