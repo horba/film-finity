@@ -1,23 +1,23 @@
-<div id = "wrap">    
-  <el-row v-for="element in newsList.news" class = "row" :key = "element.Id">
+<div class = "news-component">    
+  <el-row v-for="newsItem in newsList" class = "row" :key = "newsItem.Id">
     <el-col :span="9">
-      <el-image fit ='cover' :src='getImgSrc(element.previewImage)'></el-image>
+      <el-image fit ='cover' :src = 'newsItem.previewImage | imageFullPath'></el-image>
     </el-col>
       <el-col :span="15">
         <div class = "main-block">
           <div class = "title">
-            <h1>{{element.title}}</h1>
+            <h1>{{ newsItem.title }}</h1>
           </div>
           <div class = "main-information">
-            <div class = "info-element secondary"><p>{{element.publishTime |convertDateTime}}</p></div>
-            <div class = "info-element secondary"><p>{{element.countViews}} просмотров</p></div>
-            <div class = "secondary"><p>{{element.author.firstName}} {{element.author.lastName}}, </p></div>
-            <div class = "secondary"><p>{{element.categories |getArrayOfCategoiresName |listStringify}}</p></div>
+            <div class = "info-element secondary"><p>{{ newsItem.publishTime | convertDateTime('dd.MM.yyyy kk:mm') }}</p></div>
+            <div class = "info-element secondary"><p>{{ newsItem.countViews }} просмотров</p></div>
+            <div class = "secondary"><p>{{ newsItem.author.firstName }} {{ newsItem.author.lastName }}, </p></div>
+            <div class = "secondary"><p>{{ newsItem.categories | mapByProperty("name") | listStringify }}</p></div>
           </div>
-          <div class = "content">{{element.content}}</div>
+          <div class = "content">{{ newsItem.content }}</div>
         </div>
         <div class = "footer-block">
-          <div><span>{{element.countCommentaries}} комментариев</span></div>
+          <div><span>{{ newsItem.countCommentaries }} комментариев</span></div>
           <div><span>Читать полностью</span></div>
         </div>
       </el-col>
