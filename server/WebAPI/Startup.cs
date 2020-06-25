@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Entities.DataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -15,7 +16,10 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using WebAPI.Mapping;
 using WebAPI.Models;
+using WebAPI.Repositories;
+using WebAPI.Services;
 
 namespace WebAPI
 {
@@ -45,6 +49,14 @@ namespace WebAPI
                                   });
             });
 
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
+            services.AddScoped<UserRepository>();
+            services.AddScoped<UserService>();
             services.AddControllers();
             services.AddDirectoryBrowser();
 
@@ -58,7 +70,7 @@ namespace WebAPI
             });
         }
 
- 
+
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

@@ -10,6 +10,7 @@ export default {
       isRegistration: false,
       userRegistred: false,
       isEmailExist: false,
+      errorData: '',
       rules: {
         email: [
           { required: true, message: 'Введите email', trigger: 'blur' },
@@ -34,7 +35,7 @@ export default {
         && this.ruleForm.email.slice(this.ruleForm.email.indexOf('.')).length > 2) {
         return this.isDisabledButton;
       }
-      return !this.isDisabledButton;
+      return this.isDisabledButton;
     }
   },
   methods: {
@@ -48,9 +49,11 @@ export default {
           this.isEmailExist = false;
           this.$emit('complete');
           this.ruleForm.email = this.ruleForm.userName = this.ruleForm.password = '';
+          alert('then ', result);
         })
         .catch(result => {
-          this.isEmailExist = true;
+          // this.isEmailExist = true;
+          alert(result);
         });
     }
   }

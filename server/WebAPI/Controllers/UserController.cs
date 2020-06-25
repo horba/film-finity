@@ -3,42 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Entities.DataAccess;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebAPI.DTO;
-using WebAPI.Models;
+using WebAPI.Services;
 using Microsoft.EntityFrameworkCore;
-
+using WebAPI.Models;
 
 namespace WebAPI.Controllers
 {
-    
+
     [ApiController]
     [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
-        private readonly FilmFinityDbContext dbContext;
-        
-        public UserController(FilmFinityDbContext filmFinityDbContext)
+        private readonly UserService userService;
+        public UserController(UserService userService)
         {
-            this.dbContext = filmFinityDbContext;
+            this.userService = userService;
         }
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> Get()
+        public ActionResult<IEnumerable<UserDTO>> Get()
         {
-            return await dbContext.Users.ToListAsync();
+
+            IEnumerable<UserDTO> objectList = userService.GetUsers();
+            return Ok(objectList);
         }
         [HttpPost]
-        public async Task<ActionResult<User>> Post(User value)
+        //public void Post(UserDTO value)
+        //{
+        //    // userService.CreateUser(value);
+        //    // return Ok(ModelState);
+        //}
+
+        public ActionResult<User> Post(UserDTO user)
         {
-            User user = await dbContext.Users.FirstOrDefaultAsync(x => x.Email == value.Email);
-            if (user == null)
-            {
-                dbContext.Users.Add(value);
-                await dbContext.SaveChangesAsync();
-                return Ok(user);
-            }
-            return BadRequest();
-        }        
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(!ModelState.IsValid);
+        }
     }
 }

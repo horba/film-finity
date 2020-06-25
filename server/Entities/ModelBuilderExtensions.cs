@@ -14,13 +14,13 @@ namespace Entities
             modelBuilder.Entity<JobTitle>().HasData(
                 new JobTitle { JobTitleId = 1, JobName = "актер" },
                 new JobTitle { JobTitleId = 2, JobName = "режиссер" },
-                new JobTitle { JobTitleId = 3, JobName = "сценарист"},
+                new JobTitle { JobTitleId = 3, JobName = "сценарист" },
                 new JobTitle { JobTitleId = 4, JobName = "продюсер" },
                 new JobTitle { JobTitleId = 5, JobName = "оператор" },
                 new JobTitle { JobTitleId = 6, JobName = "композитор" });
 
             modelBuilder.Entity<Celebrity>().HasData(
-                
+
                 new Celebrity
                 {
                     CelebrityId = -1,
@@ -37,7 +37,7 @@ namespace Entities
                     CountViews = 127000,
                     ImageSource = "StaticFiles/images/2.jpg"
 
-                },new Celebrity
+                }, new Celebrity
                 {
                     CelebrityId = -3,
                     FirstName = "Роберт",
@@ -53,7 +53,7 @@ namespace Entities
                     CountViews = 121000,
                     ImageSource = "StaticFiles/images/4.jpg",
                 },
-                
+
                 new Celebrity
                 {
                     CelebrityId = -5,
