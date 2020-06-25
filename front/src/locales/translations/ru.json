@@ -1,0 +1,24 @@
+{
+  "appTitle1": "Film",
+  "appTitle2": "Finity",
+  "locale": {
+    "language": "Язык",
+    "en": "Английский",
+    "ru": "Русский",
+    "ua": "Украинский"
+  },
+  "header": {
+    "movies": "Фильмы",
+    "serials": "Сериалы",
+    "cartoons": "Мультфильмы",
+    "news": "Новости",
+    "actors": "Актеры",
+    "signIn": "Войти"
+  },
+  "footer": {
+    "socialNetworks": "Социальные сети",
+    "termsOfUse": "Пользовательское соглашение",
+    "privacyPolicy": "Политика конфиденциальности",
+    "copyRight": "Все права защищены"
+  }
+}

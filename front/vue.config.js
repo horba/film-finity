@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 
 module.exports = {
   chainWebpack: config => {
@@ -10,6 +10,7 @@ module.exports = {
       .set('@store', path.resolve('src/store/'))
       .set('@styles', path.resolve('src/styles/'))
       .set('@assets', path.resolve('src/assets/'))
-      .set('@filters', path.resolve('src/filters/'));
-  },
+      .set('@filters', path.resolve('src/filters/'))
+      .set('@locales', path.resolve('src/locales/'));
+  }
 };

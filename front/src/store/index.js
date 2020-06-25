@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import locale from './modules/locale.store.js';
 import сelebrities from './modules/celebrities.store.js';
 import news from './modules/news.store.js';
 
@@ -15,6 +16,7 @@ export default new Vuex.Store({
   },
   modules: {
     сelebrities,
-    news
+    news,
+    locale
   }
 });
