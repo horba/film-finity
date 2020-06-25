@@ -1,6 +1,7 @@
 :root {
     --main-bg-color:  #6663FF;
-    --secondary-color: #8F96A3;
+    --ff-secondary-variant-color: #8F96A3;
+    --ff-black-color: #292C33;
     --main-txt-color: white;
     --auxiliary-bg-color:  #FFA21C;
     --footer-bg-color:  #5956FF;

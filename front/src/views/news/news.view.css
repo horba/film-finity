@@ -14,6 +14,7 @@
     font-size: 25px;
     margin: 0;
     font-weight: 600;
+    color: var(--ff-black-color);
 }
 
 .content {
@@ -23,6 +24,7 @@
     display: -webkit-box;
     -webkit-line-clamp: 3; /* number of lines to show */
     -webkit-box-orient: vertical;
+    color: var(--ff-black-color);
 }
 
 .main-information > div {
@@ -30,7 +32,7 @@
 }
 
 .secondary {
-  color: var(--secondary-color);
+  color: var(--ff-secondary-variant-color);
   font-size: 15px;
 }
 
