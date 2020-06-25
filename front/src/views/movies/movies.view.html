@@ -10,14 +10,15 @@
             </div>
             <el-row type="flex" justify="space-between">
               <el-col :span="24">
-                <el-rate v-model="movie.rate" disabled :colors="['var(--main-bg-color)', 'var(--main-bg-color)', 'var(--main-bg-color)']"></el-rate>
+                <el-rate class="rate" v-model="movie.rate" disabled
+                  :colors="['var(--main-bg-color)', 'var(--main-bg-color)', 'var(--main-bg-color)']"></el-rate>
               </el-col>
               <el-col :span="6"><span>{{movie.releaseYear}}</span></el-col>
             </el-row>
             <div class="actors-list">
               <span>{{movie.actorsList | firstElement}}</span>
-              <span>{{movie.actorsList | withoutFirstElement | spaceBeforeElement('fullName')}}</span>
-            </div>            
+              <span>{{movie.actorsList | withoutFirstElement | listStringify('fullName')}}</span>
+            </div>
           </div>
         </el-card>
       </div>

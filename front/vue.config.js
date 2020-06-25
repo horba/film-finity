@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 
 module.exports = {
   chainWebpack: config => {
@@ -8,7 +8,8 @@ module.exports = {
       .set('@views', path.resolve('src/views/'))
       .set('@router', path.resolve('src/router/'))
       .set('@store', path.resolve('src/store/'))
+      .set('@filters', path.resolve('src/filters/'))
       .set('@styles', path.resolve('src/styles/'))
       .set('@assets', path.resolve('src/assets/'));
-  },
+  }
 };
