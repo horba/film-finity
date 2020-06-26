@@ -1,12 +1,11 @@
 export default {
   name: 'ff-news',
-  data: function () {
-    return {
-      newsList: []
-    };
+  computed: {
+    getNewsList () {
+      return this.$store.state.news.news;
+    }
   },
   created () {
     this.$store.dispatch('getNews');
-    this.newsList = this.$store.state.news.news;
   }
 };
