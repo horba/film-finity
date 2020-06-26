@@ -20,9 +20,39 @@ namespace Entities.DataAccess
         public DbSet<NewsAuthor> Authors { get; set; }
         public DbSet<NewsCategory> Categories { get; set; }
         public DbSet<NewsCategories> NewsCategories { get; set; }
+        public DbSet<Serial> Serials { get; set; }
+        public DbSet<Genre> Genres { get; set; }
+        public DbSet<SerialGenreTitles> SerialGenreTitles { get; set; }
+        public DbSet<SerialCelebrity> SerialCelebrities { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<SerialCelebrity>()
+                .HasKey(cj => new { cj.SerialId, cj.CelebrityId });
+
+            modelBuilder.Entity<SerialCelebrity>()
+                .HasOne(cj => cj.Celebrity)
+                .WithMany(j => j.SerialCelebrity)
+                .HasForeignKey(cjt => cjt.CelebrityId);
+
+            modelBuilder.Entity<SerialCelebrity>()
+               .HasOne(cj => cj.Serial)
+               .WithMany(j => j.SerialCelebrity)
+               .HasForeignKey(cjt => cjt.SerialId);
+
+            modelBuilder.Entity<SerialGenreTitles>()
+                .HasKey(cj => new { cj.SerialId, cj.GenreId });
+
+            modelBuilder.Entity<SerialGenreTitles>()
+                .HasOne(cj => cj.GenreTitle)
+                .WithMany(j => j.SerialGenreTitles)
+                .HasForeignKey(cjt => cjt.GenreId);
+
+            modelBuilder.Entity<SerialGenreTitles>()
+               .HasOne(cj => cj.Serial)
+               .WithMany(j => j.SerialGenreTitles)
+               .HasForeignKey(cjt => cjt.SerialId);
+
             modelBuilder.Entity<CelebrityJobTitles>()
                 .HasKey(cj => new { cj.CelebrityId, cj.JobTitleId });
 

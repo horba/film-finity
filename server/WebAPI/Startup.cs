@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Entities.DataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -15,13 +16,11 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using WebAPI.Mapping;
 using WebAPI.Models;
 using Entities.Models;
 using WebAPI.Services;
 using WebAPI.Repositories;
-using WebAPI.Mapping;
-using AutoMapper;
-
 namespace WebAPI
 {
     public class Startup
@@ -72,6 +71,9 @@ namespace WebAPI
             {
                 options.UseSqlServer(Configuration.GetConnectionString("FilmFinityMSSQL"));
             });
+
+            services.AddScoped<ISerialRepository, SerialRepository>();
+            services.AddScoped<ISerialsService, SerialsService>();
         }
 
  
