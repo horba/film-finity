@@ -1,6 +1,7 @@
+import { Cartoons, FfCelebrities, Movies, News, Serials } from '@views';
+
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import { Movies, Serials, Cartoons, News, FfCelebrities, Celebrity } from '@views';
 
 Vue.use(VueRouter);
 

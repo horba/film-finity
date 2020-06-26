@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Entities.DataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -15,7 +16,12 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using WebAPI.Mapping;
 using WebAPI.Models;
+<<<<<<< HEAD
+=======
+using WebAPI.Repositories;
+>>>>>>> dev
 using WebAPI.Services;
 
 namespace WebAPI
@@ -58,7 +64,20 @@ namespace WebAPI
                 options.UseSqlServer(Configuration.GetConnectionString("FilmFinityMSSQL"));
             });
 
+<<<<<<< HEAD
             services.AddScoped<ICelebrityService, CelebrityService>();
+=======
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
+            services.AddScoped<ISerialRepository, SerialRepository>();
+            services.AddScoped<ISerialsService, SerialsService>();
+            services.AddAutoMapper(typeof(Startup));
+>>>>>>> dev
         }
 
  

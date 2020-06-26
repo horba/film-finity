@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Text;
 using WebAPI.Models;
 
@@ -20,6 +21,7 @@ namespace Entities
                 new JobTitle { JobTitleId = 6, JobName = "композитор" },
                 new JobTitle { JobTitleId = 7, JobName = "актриса" });
 
+<<<<<<< HEAD
             modelBuilder.Entity<Celebrity>().HasData(
 
                 new Celebrity
@@ -36,9 +38,41 @@ namespace Entities
                     PlaceOfBirthday = "Сидней, Австралия",
                     StarSing = "Весы",
                     Achievement = "Известный по фильмам \"Люди Икс: Дни минувшего будущего\", \"Престиж\" и др."
-                },
-                new Celebrity
+=======
+            modelBuilder.Entity<Genre>().HasData(
+                new Genre { Id = 1, Name = "фантастика" },
+                new Genre { Id = 2, Name = "драма" },
+                new Genre { Id = 3, Name = "триллер" },
+                new Genre { Id = 4, Name = "боевик" },
+                new Genre { Id = 5, Name = "приключения" },
+                new Genre { Id = 6, Name = "детектив" },
+                new Genre { Id = 7, Name = "комедия" },
+                new Genre { Id = 8, Name = "ужасы" });
+
+            modelBuilder.Entity<Serial>().HasData(
+
+                new Serial
                 {
+                    Id = 1,
+                    Name = "Видоизменённый углерод (1-2 сезон)",
+                    Rating = 3,
+                    Year = 2018,
+                    PosterImageSource = "StaticFiles/images/11.jpg"
+                },
+
+                new Serial
+                {
+                    Id = 2,
+                    Name = "Викинги (1-6 сезон)",
+                    Rating = 4,
+                    Year = 2013,
+                    PosterImageSource = "StaticFiles/images/12.jpg"
+>>>>>>> dev
+                },
+
+                new Serial
+                {
+<<<<<<< HEAD
                     CelebrityId = -2,
                     FirstName = "Райан",
                     LastName = "Рейнольдс",
@@ -66,9 +100,27 @@ namespace Entities
                     PlaceOfBirthday = "Нью-Йорк, США",
                     StarSing = "Овен",
                     Achievement = "Известный по многосерийным фильмом \"Мстители\", \"Шерлок Холмс\" и др."
+=======
+                    Id = 3,
+                    Name = "Ведьмак (1 сезон)",
+                    Rating = 5,
+                    Year = 2019,
+                    PosterImageSource = "StaticFiles/images/13.jpg"
                 },
-                new Celebrity
+
+                new Serial
                 {
+                    Id = 4,
+                    Name = "Чужак (1 сезон)",
+                    Rating = 5,
+                    Year = 2020,
+                    PosterImageSource = "StaticFiles/images/14.jpg"
+>>>>>>> dev
+                },
+
+                new Serial
+                {
+<<<<<<< HEAD
                     CelebrityId = -4,
                     FirstName = "Уилл",
                     LastName = "Смит",
@@ -96,9 +148,27 @@ namespace Entities
                     PlaceOfBirthday = "Шони, Оклахома, США",
                     StarSing = "Стрелец",
                     Achievement = "Известный по фильмам \"Человек, который изменил всё\", \"Загадочная история Бенджамина Баттона\" и др."
+=======
+                    Id = 5,
+                    Name = "Маленькая Америка (1 сезон)",
+                    Rating = 5,
+                    Year = 2020,
+                    PosterImageSource = "StaticFiles/images/15.jpg"
                 },
-                new Celebrity
+
+                new Serial
                 {
+                    Id = 6,
+                    Name = "Пятая авеню (1 сезон)",
+                    Rating = 5,
+                    Year = 2020,
+                    PosterImageSource = "StaticFiles/images/16.jpg"
+>>>>>>> dev
+                },
+
+                new Serial
+                {
+<<<<<<< HEAD
                     CelebrityId = -6,
                     FirstName = "Леонардо",
                     LastName = "Ди Каприо",
@@ -111,9 +181,18 @@ namespace Entities
                     PlaceOfBirthday = "Лос-Анджелес, США",
                     StarSing = "Скорпион",
                     Achievement = "Известный по фильмам \"Начало\", \"Волк с Уолл-стрит\" и др."
+=======
+                    Id = 7,
+                    Name = "Звёздный путь: Пикар (1 сезон)",
+                    Rating = 5,
+                    Year = 2020,
+                    PosterImageSource = "StaticFiles/images/17.jpg"
+>>>>>>> dev
                 },
-                new Celebrity
+
+                new Serial
                 {
+<<<<<<< HEAD
                     CelebrityId = -7,
                     FirstName = "Натали",
                     LastName = "Портман",
@@ -126,9 +205,18 @@ namespace Entities
                     PlaceOfBirthday = "Иерусалим, Израиль",
                     StarSing = "Близнецы",
                     Achievement = "Известная по фильмам \"Леон\", \"V - значит вендетта\" и др."
+=======
+                    Id = 8,
+                    Name = "Замок и ключ (1 сезон)",
+                    Rating = 5,
+                    Year = 2020,
+                    PosterImageSource = "StaticFiles/images/18.jpg"
+>>>>>>> dev
                 },
-                new Celebrity
+
+                new Serial
                 {
+<<<<<<< HEAD
                     CelebrityId = -8,
                     FirstName = "Роджер",
                     LastName = "Дикинс",
@@ -141,9 +229,18 @@ namespace Entities
                     PlaceOfBirthday = "Торки, Великобритания",
                     StarSing = "Близнецы",
                     Achievement = "Известный по фильмам \"Побег из Шоушенка\", \"Игры разума\" и др."
+=======
+                    Id = 9,
+                    Name = "Hi-Fi / Фанатик (1 сезон)",
+                    Rating = 5,
+                    Year = 2020,
+                    PosterImageSource = "StaticFiles/images/19.jpg"
+>>>>>>> dev
                 },
-                new Celebrity
+
+                new Serial
                 {
+<<<<<<< HEAD
                     CelebrityId = -9,
                     FirstName = "Ханс",
                     LastName = "Циммер",
@@ -156,9 +253,18 @@ namespace Entities
                     PlaceOfBirthday = "Франкфурт-на-Майне, Германия",
                     StarSing = "Дева",
                     Achievement = "Известный по композициям в фильмах и мультфильмах \"Гладиатор\", \"Король Лев\" и др."
+=======
+                    Id = 10,
+                    Name = "Разрабы (1 сезон)",
+                    Rating = 5,
+                    Year = 2020,
+                    PosterImageSource = "StaticFiles/images/20.jpg"
+>>>>>>> dev
                 },
-                new Celebrity
+
+                new Serial
                 {
+<<<<<<< HEAD
                     CelebrityId = -10,
                     FirstName = "Квентин",
                     LastName = "Тарантино",
@@ -186,8 +292,178 @@ namespace Entities
                     PlaceOfBirthday = "Лос-Анджелес, США",
                     StarSing = "Дева",
                     Achievement = "Известная по фильмам \"Простые сложности\", \"Дорога перемен\" и др."
+=======
+                    Id = 11,
+                    Name = "Охотники (1 сезон)",
+                    Rating = 5,
+                    Year = 2020,
+                    PosterImageSource = "StaticFiles/images/21.jpg"
+>>>>>>> dev
                 });
 
+            modelBuilder.Entity<Celebrity>().HasData(
+
+                 new Celebrity
+                 {
+                     CelebrityId = -1,
+                     FirstName = "Хью",
+                     LastName = "Джекман",
+                     CountViews = 134000,
+                     ImageSource = "StaticFiles/images/1.jpg"
+                 },
+                 new Celebrity
+                 {
+                     CelebrityId = -2,
+                     FirstName = "Райан",
+                     LastName = "Рейнольдс",
+                     CountViews = 127000,
+                     ImageSource = "StaticFiles/images/2.jpg"
+
+                 }, new Celebrity
+                 {
+                     CelebrityId = -3,
+                     FirstName = "Роберт",
+                     LastName = "Дауни (младший)",
+                     CountViews = 126000,
+                     ImageSource = "StaticFiles/images/3.jpg"
+                 },
+                 new Celebrity
+                 {
+                     CelebrityId = -4,
+                     FirstName = "Уилл",
+                     LastName = "Смит",
+                     CountViews = 121000,
+                     ImageSource = "StaticFiles/images/4.jpg",
+                 },
+
+                 new Celebrity
+                 {
+                     CelebrityId = -5,
+                     FirstName = "Брэд",
+                     LastName = "Питт",
+                     CountViews = 120500,
+                     ImageSource = "StaticFiles/images/5.jpg"
+                 },
+                 new Celebrity
+                 {
+                     CelebrityId = -6,
+                     FirstName = "Леонардо",
+                     LastName = "Ди Каприо",
+                     CountViews = 120000,
+                     ImageSource = "StaticFiles/images/6.jpg"
+                 },
+                 new Celebrity
+                 {
+                     CelebrityId = -7,
+                     FirstName = "Натали",
+                     LastName = "Портман",
+                     CountViews = 91000,
+                     ImageSource = "StaticFiles/images/7.jpg"
+                 },
+                 new Celebrity
+                 {
+                     CelebrityId = -8,
+                     FirstName = "Роджер",
+                     LastName = "Дикинс",
+                     CountViews = 20000,
+                     ImageSource = "StaticFiles/images/8.jpg"
+                 },
+                 new Celebrity
+                 {
+                     CelebrityId = -9,
+                     FirstName = "Ханс",
+                     LastName = "Циммер",
+                     CountViews = 50000,
+                     ImageSource = "StaticFiles/images/9.png"
+                 },
+                 new Celebrity
+                 {
+                     CelebrityId = -10,
+                     FirstName = "Квентин",
+                     LastName = "Тарантино",
+                     CountViews = 95000,
+                     ImageSource = "StaticFiles/images/10.jpg"
+                 });
+
+            modelBuilder.Entity<SerialCelebrity>().HasData(
+                new SerialCelebrity { SerialId = 4, CelebrityId = -1 },
+                new SerialCelebrity { SerialId = 4, CelebrityId = -2 },
+                new SerialCelebrity { SerialId = 4, CelebrityId = -3 },
+
+                new SerialCelebrity { SerialId = 5, CelebrityId = -4 },
+                new SerialCelebrity { SerialId = 5, CelebrityId = -5 },
+                new SerialCelebrity { SerialId = 5, CelebrityId = -6 },
+
+                new SerialCelebrity { SerialId = 6, CelebrityId = -7 },
+                new SerialCelebrity { SerialId = 6, CelebrityId = -8 },
+                new SerialCelebrity { SerialId = 6, CelebrityId = -9 },
+
+                new SerialCelebrity { SerialId = 7, CelebrityId = -7 },
+                new SerialCelebrity { SerialId = 7, CelebrityId = -8 },
+                new SerialCelebrity { SerialId = 7, CelebrityId = -9 },
+
+                new SerialCelebrity { SerialId = 8, CelebrityId = -7 },
+                new SerialCelebrity { SerialId = 8, CelebrityId = -8 },
+                new SerialCelebrity { SerialId = 8, CelebrityId = -9 },
+
+                new SerialCelebrity { SerialId = 9, CelebrityId = -7 },
+                new SerialCelebrity { SerialId = 9, CelebrityId = -8 },
+                new SerialCelebrity { SerialId = 9, CelebrityId = -9 },
+
+                new SerialCelebrity { SerialId = 10, CelebrityId = -7 },
+                new SerialCelebrity { SerialId = 10, CelebrityId = -8 },
+                new SerialCelebrity { SerialId = 10, CelebrityId = -9 },
+
+                new SerialCelebrity { SerialId = 11, CelebrityId = -7 },
+                new SerialCelebrity { SerialId = 11, CelebrityId = -8 },
+                new SerialCelebrity { SerialId = 11, CelebrityId = -9 }
+                );
+
+            modelBuilder.Entity<SerialGenreTitles>().HasData(
+                new SerialGenreTitles { SerialId = 1, GenreId = 1 },
+                new SerialGenreTitles { SerialId = 1, GenreId = 2 },
+                new SerialGenreTitles { SerialId = 1, GenreId = 3 },
+
+                new SerialGenreTitles { SerialId = 2, GenreId = 2 },
+                new SerialGenreTitles { SerialId = 2, GenreId = 4 },
+                new SerialGenreTitles { SerialId = 2, GenreId = 5 },
+
+                new SerialGenreTitles { SerialId = 3, GenreId = 2 },
+                new SerialGenreTitles { SerialId = 3, GenreId = 4 },
+                new SerialGenreTitles { SerialId = 3, GenreId = 5 },
+
+                new SerialGenreTitles { SerialId = 4, GenreId = 2 },
+                new SerialGenreTitles { SerialId = 4, GenreId = 4 },
+                new SerialGenreTitles { SerialId = 4, GenreId = 5 },
+
+                new SerialGenreTitles { SerialId = 5, GenreId = 2 },
+                new SerialGenreTitles { SerialId = 5, GenreId = 4 },
+                new SerialGenreTitles { SerialId = 5, GenreId = 5 },
+
+                new SerialGenreTitles { SerialId = 6, GenreId = 2 },
+                new SerialGenreTitles { SerialId = 6, GenreId = 4 },
+                new SerialGenreTitles { SerialId = 6, GenreId = 5 },
+
+                new SerialGenreTitles { SerialId = 7, GenreId = 2 },
+                new SerialGenreTitles { SerialId = 7, GenreId = 4 },
+                new SerialGenreTitles { SerialId = 7, GenreId = 5 },
+
+                new SerialGenreTitles { SerialId = 8, GenreId = 2 },
+                new SerialGenreTitles { SerialId = 8, GenreId = 4 },
+                new SerialGenreTitles { SerialId = 8, GenreId = 5 },
+
+                new SerialGenreTitles { SerialId = 9, GenreId = 2 },
+                new SerialGenreTitles { SerialId = 9, GenreId = 4 },
+                new SerialGenreTitles { SerialId = 9, GenreId = 5 },
+
+                new SerialGenreTitles { SerialId = 10, GenreId = 2 },
+                new SerialGenreTitles { SerialId = 10, GenreId = 4 },
+                new SerialGenreTitles { SerialId = 10, GenreId = 5 },
+
+                new SerialGenreTitles { SerialId = 11, GenreId = 2 },
+                new SerialGenreTitles { SerialId = 11, GenreId = 4 },
+                new SerialGenreTitles { SerialId = 11, GenreId = 5 }
+                );
             modelBuilder.Entity<CelebrityJobTitles>().HasData(
                 new CelebrityJobTitles { CelebrityId = -1, JobTitleId = 1 },
                 new CelebrityJobTitles { CelebrityId = -1, JobTitleId = 4 },

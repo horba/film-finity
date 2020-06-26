@@ -9,7 +9,6 @@ namespace Entities.Models
     {
         public int CelebrityId { get; set; }
         public Celebrity Celebrity { get; set; }
-
         public int JobTitleId { get; set; }
         public JobTitle JobTitle { get; set; }
     }

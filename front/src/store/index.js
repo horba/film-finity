@@ -1,8 +1,13 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import locale from './modules/locale.store.js';
 import сelebrities from './modules/celebrities.store.js';
+<<<<<<< HEAD
 import сelebrity from './modules/celebrity.store.js';
 
+=======
+import serials from './modules/serials.store.js';
+>>>>>>> dev
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -15,6 +20,11 @@ export default new Vuex.Store({
   },
   modules: {
     сelebrities,
+<<<<<<< HEAD
     сelebrity
+=======
+    locale,
+    serials
+>>>>>>> dev
   }
 });
