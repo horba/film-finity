@@ -23,11 +23,8 @@ namespace WebAPI.Models
         public string Achievement { get; set; }
 
         public ICollection<CelebrityJobTitles> CelebrityJobTitles { get; set; }
-<<<<<<< HEAD
         public CelebrityNetworkingSites CelebrityNetworkingSites { get; set; }
         public CelebrityBiography CelebrityBiography { get; set; }
-=======
         public ICollection<SerialCelebrity> SerialCelebrity { get; set; }
->>>>>>> dev
     }
 }
