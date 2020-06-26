@@ -1,4 +1,4 @@
-import { Cartoons, FfCelebrities, Movies, News, Serials } from '@views';
+import { Cartoons, FfCelebrities, Movies, News, Serials, Login } from '@views';
 
 import Vue from 'vue';
 import VueRouter from 'vue-router';
@@ -25,6 +25,10 @@ const routes = [
   {
     path: '/news',
     component: News
+  },
+  {
+    path: '/login',
+    component: Login
   }
 ],
 
