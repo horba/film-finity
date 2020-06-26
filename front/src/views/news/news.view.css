@@ -14,7 +14,7 @@
     font-size: 25px;
     margin: 0;
     font-weight: 600;
-    color: var(--ff-black-color);
+    color: var(--ff-font-color);
 }
 
 .content {
@@ -24,7 +24,7 @@
     display: -webkit-box;
     -webkit-line-clamp: 3; /* number of lines to show */
     -webkit-box-orient: vertical;
-    color: var(--ff-black-color);
+    color: var(--ff-font-color);
 }
 
 .main-information > div {
@@ -32,7 +32,7 @@
 }
 
 .secondary {
-  color: var(--ff-secondary-variant-color);
+  color: var(--ff-dark-gray-color);
   font-size: 15px;
 }
 
@@ -68,7 +68,7 @@
     margin-top: 30px;
     font-weight: 300;
     font-size: 20px;
-    color: var(--main-bg-color);
+    color: var(--ff-primary-color);
 }
 
 .footer-block div:last-of-type span {
