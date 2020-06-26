@@ -1,0 +1,78 @@
+.serial-view{
+    margin: 0;
+}
+
+.el-row-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1470px;
+    margin: 0 auto;
+}
+  
+.grid-col-wrap {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+    width: 270px;
+}
+
+.grid-content-wrap {
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.grid-content-main {
+    padding: 20px;
+}
+
+.serial-name div {
+    display: flex;
+    justify-content: flex-start;
+    height: 46px;
+}
+
+.serial-name div span {
+
+    font-family: var(--txt-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--ff-font-color);
+}
+
+.el-image {
+    height: 284px;
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+}
+.serial-rating {
+    margin-bottom: 7px;
+    height: 20px;
+}
+
+.year {
+    font-family: var(--txt-font);
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--ff-font-year-color);
+    margin-top: 6px;
+}
+
+.rate >>> .el-rate__icon {
+    font-size: 26px;
+}
+
+.celebrities-list {
+    width: 226px;
+    height: 29px;
+    left: 19px;
+    bottom: 17px;  
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    font-family: var(--txt-font);  
+    color: var(--ff-font-color);
+    padding-top: 5px;
+}

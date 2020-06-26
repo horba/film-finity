@@ -10,7 +10,6 @@ namespace WebAPI.Models
     {
         public int JobTitleId { get; set; }
         public string JobName { get; set; }
-
         public ICollection<CelebrityJobTitles> CelebrityJobTitles { get; set; }
     }
 }
