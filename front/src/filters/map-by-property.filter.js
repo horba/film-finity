@@ -1,6 +1,5 @@
-import Vue from 'vue';
-Vue.filter('mapByProperty', (data, propertyName) => {
+export default function mapByProperty (data, propertyName) {
   return Array.isArray(data) && data.length
     ? data.map(x => x[propertyName])
     : data[propertyName];
-});
+};

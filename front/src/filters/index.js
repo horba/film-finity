@@ -1,7 +1,5 @@
-import './list-stringify.js';
-import './convert-datetime.js';
-import './map-by-property.js';
-import './image-full-path.js';
+import convertDateTime from './convert-datetime.filter.js';
+import mapByProperty from './map-by-property.filter.js';
 import imageServerPath from '@/filters/image-source.filter';
 import fullName from '@/filters/fullname.filter';
 import listStringify from '@/filters/list-stringify.filter';
@@ -11,5 +9,7 @@ export default {
     Vue.filter('imageServerPath', imageServerPath);
     Vue.filter('fullName', fullName);
     Vue.filter('listStringify', listStringify);
+    Vue.filter('convertDateTime', convertDateTime);
+    Vue.filter('mapByProperty', mapByProperty);
   }
 };

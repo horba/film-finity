@@ -1,7 +1,7 @@
 <div class = "news-component">    
   <el-row v-for="newsItem in newsList" class = "row" :key = "newsItem.Id">
     <el-col :span="9">
-      <el-image fit ='cover' :src = 'newsItem.previewImage | imageFullPath'></el-image>
+      <el-image fit ='cover' :src = 'newsItem.previewImage | imageServerPath'></el-image>
     </el-col>
       <el-col :span="15">
         <div class = "main-block">
