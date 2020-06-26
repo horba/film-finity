@@ -20,7 +20,7 @@ div.stores {
 }
 
 .footer-color-background {
-  background-color: var(--footer-bg-color);
+  background-color: var(--ff-primary-variant-color);
 }
 
 div.footer-color-background {
@@ -38,7 +38,7 @@ div.footer-color-background > div {
 }
 
 div.footer-color-background > a:hover {
-  color: var(--main-txt-color);
+  color: var(--ff-white-color);
 }
 
 a.privicy-police {

@@ -31,13 +31,13 @@ ul.main-color > li.main-color.is-active {
 }
 
 ul.main-color > li.main-color:hover {
-  background-color: var(--main-bg-color);
+  background-color: var(--ff-primary-color);
   color: var(--main-txt-color); 
   cursor: default;
 }
 
 .el-menu--horizontal > .el-menu-item > a:hover {
-  color: var(--main-bg-color); 
+  color: var(--ff-primary-color); 
 }
 
 .header {

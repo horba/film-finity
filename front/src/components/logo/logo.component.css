@@ -1,7 +1,7 @@
 div.logo { 
   font-style: normal;
   font-weight: 600;
-  font-size: 21px;     
+  font-size: 21px;
 }
 
 i.logo {
@@ -9,10 +9,10 @@ i.logo {
 }
 
 .first-color {
-  color: var(--main-txt-color);
+  color: var(--ff-white-color);
 }
 
 i.logo,
 .second-color {
-  color: var(--auxiliary-bg-color);
+  color: var(--ff-secondary-color);
 }

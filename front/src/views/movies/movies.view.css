@@ -21,7 +21,7 @@
 div.movie-title {
   height: 47px;
   font-size: 18px;
-  color: var(--color-black);  
+  color: var(--ff-black-color);  
 }
 
 .movie-title,
@@ -34,28 +34,29 @@ div.movie-title {
   text-overflow: ellipsis;
 }
 
-i.el-rate__icon {
-  font-size: 28px;  
+.rate >>> .el-rate__icon {
+  font-size: 24px;
 }
 
 .actors-list {
   font-size: 12px;
-  color: var(--color-neutral-secondary-dark); 
+  color: var(--ff-dark-gray-color); 
 }
 
 .actors-list :first-child {
-  color: var(--color-black);
+  color: var(--ff-black-color);
 }
 
 div.el-col-6 {
-  color: var(--color-neutral-secondary-dark);
+  color: var(--ff-dark-gray-color);
   font-size: 14px;
   display: flex;
   align-items: center;
 }
 
 div.el-col-6 > span {
-  height: 18px;
+  height: 24px;
+  padding-bottom: 5px;
 }
 
 .content {
