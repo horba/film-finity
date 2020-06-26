@@ -9,6 +9,8 @@
     --ff-font-color: var(--ff-black-color);
     --ff-dark-gray-color: #8F96A3;
     --ff-font-year-color: var(--ff-dark-gray-color);
+    --ff-font-primary-color: var(--ff-primary-color);
+    --ff-font-secondary-text: var(--ff-dark-gray-color);
     --header-height: 90px;
     --footer-height: 125px;
     --footer-bottom-height: 57px;

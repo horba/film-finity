@@ -1,25 +1,27 @@
 <div class = "news-component">    
-  <el-row v-for="newsItem in getNewsList" class = "row" :key = "newsItem.Id">
+  <el-row v-for="newsItem in getNewsList" class = "main-row" :key = "newsItem.Id">
     <el-col :span="9">
       <el-image fit ='cover' :src = 'newsItem.previewImage | imageServerPath'></el-image>
     </el-col>
-      <el-col :span="15">
-        <div class = "main-block">
-          <div class = "title">
-            <h1>{{ newsItem.title }}</h1>
-          </div>
-          <div class = "main-information">
-            <div class = "info-element secondary"><p>{{ newsItem.publishTime | convertDateTime('dd.MM.yyyy kk:mm') }}</p></div>
-            <div class = "info-element secondary"><p>{{ newsItem.countViews }} просмотров</p></div>
-            <div class = "secondary"><p>{{ newsItem.author.firstName }} {{ newsItem.author.lastName }}, </p></div>
-            <div class = "secondary"><p>{{ newsItem.categories | mapByProperty("name") | listStringify }}</p></div>
-          </div>
-          <div class = "content">{{ newsItem.content }}</div>
+    <el-col class = "information-col" :span="15">
+      <div class = "main-block">
+        <div class = "title">
+          <h1>{{ newsItem.title }}</h1>
         </div>
-        <div class = "footer-block">
-          <div><span>{{ newsItem.countCommentaries }} комментариев</span></div>
-          <div><span>Читать полностью</span></div>
-        </div>
-      </el-col>
+        <el-row class = "main-information" type="flex">
+          <el-col :span="6" class = "publish-date secondary-text">{{ newsItem.publishTime | convertDateTime('dd.MM.yyyy kk:mm') }}</el-col>
+          <el-col :span="5" class = "views-count secondary-text">{{ newsItem.countViews }} просмотров</el-col>
+          <el-col :span="13" class = "secondary-text">
+            {{ newsItem.author.firstName }} {{ newsItem.author.lastName }},
+            {{ newsItem.categories | mapByProperty("name") | listStringify }}
+          </el-col>
+        </el-row>
+        <div class = "content">{{ newsItem.content }}</div>
+      </div>
+      <div class = "footer-block">
+        <div><span>{{ newsItem.countCommentaries }} комментариев</span></div>
+        <div><span>Читать полностью</span></div>
+      </div>
+    </el-col>
   </el-row>
 </div>

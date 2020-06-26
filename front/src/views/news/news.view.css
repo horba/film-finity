@@ -4,7 +4,7 @@
     font-family: var(--txt-font);
 }
 
-.row {
+.main-row {
     display: flex;
     margin-top: 30px;
     box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);   
@@ -18,6 +18,7 @@
 }
 
 .content {
+    font-size: 18px;
     font-weight: 300;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -27,19 +28,10 @@
     color: var(--ff-font-color);
 }
 
-.main-information > div {
-    display: inline-block;
-}
-
-.secondary {
-  color: var(--ff-dark-gray-color);
+.secondary-text {
+  color: var(--ff-font-secondary-text);
   font-size: 15px;
 }
-
-.info-element {
-    margin-right: 35px;
-}
-
 
 .el-image {
     box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
@@ -47,8 +39,11 @@
     height: 240px;
 }
 
+.main-information {
+    margin: 10px 0;
+}
 
-.row .el-col:last-of-type {
+.information-col {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -68,7 +63,7 @@
     margin-top: 30px;
     font-weight: 300;
     font-size: 20px;
-    color: var(--ff-primary-color);
+    color: var(--ff-font-primary-color);
 }
 
 .footer-block div:last-of-type span {
@@ -78,4 +73,8 @@
 
 .footer-block div {
     display: inline-block;
+}
+
+.views-count {
+    margin: 0 12px;
 }
