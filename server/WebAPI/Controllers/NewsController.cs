@@ -15,14 +15,14 @@ namespace WebAPI.Controllers
     public class NewsController : ControllerBase
     {
 
-        private readonly NewsService _newsService;
-        public NewsController(NewsService newsService)
+        private readonly INewsService _newsService;
+        public NewsController(INewsService newsService)
         {
             this._newsService = newsService;
         }
         [HttpGet]
         [Route("News")]
-        public IActionResult GetListCelebrities()
+        public IActionResult GetListNews()
         {
             var objectList = _newsService.GetAllNews();
             return Ok(objectList);

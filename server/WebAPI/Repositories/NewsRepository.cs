@@ -5,23 +5,20 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebAPI.DTO;
 using Entities.DataAccess;
-using WebAPI.Validation;
 using Microsoft.EntityFrameworkCore;
 
 namespace WebAPI.Repositories
 {
-    public class NewsRepository
+    public class NewsRepository : Repository<NewsDTO>, INewsRepository
     {
-        private readonly FilmFinityDbContext dbContext;
 
-        public NewsRepository(FilmFinityDbContext dbContext)
-        {
-            this.dbContext = dbContext;
-        }
+        public NewsRepository(FilmFinityDbContext context)
+        : base(context)
+        { }
 
         public IQueryable<News> GetAllNews()
         {
-            return dbContext.News
+            return _dbContext.News
                 .Include(n => n.Author)
                 .Include(n => n.NewsCategories)
                     .ThenInclude(n => n.Category);

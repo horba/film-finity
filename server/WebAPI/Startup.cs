@@ -56,8 +56,6 @@ namespace WebAPI
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
 
-            services.AddScoped<NewsRepository>();
-            services.AddScoped<NewsService>();
 
             services.AddControllers();
             services.AddDirectoryBrowser();
@@ -74,6 +72,8 @@ namespace WebAPI
 
             services.AddScoped<ISerialRepository, SerialRepository>();
             services.AddScoped<ISerialsService, SerialsService>();
+            services.AddScoped<INewsRepository, NewsRepository>();
+            services.AddScoped<INewsService, NewsService>();
         }
 
  
