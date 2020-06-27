@@ -20,5 +20,10 @@
     "termsOfUse": "Terms of use",
     "privacyPolicy": "Privacy policy",
     "copyRight": "All right reserved"
+  },
+  "news": {
+    "commentaries": "comments",
+    "fullRead": "Read more",
+    "views": "views"
   }
 }

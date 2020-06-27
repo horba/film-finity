@@ -6,15 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20200603094133_InitialCreate.cs" />
-    <Compile Remove="Migrations\20200603094133_InitialCreate.Designer.cs" />
-    <Compile Remove="Migrations\20200606154510_CreateAndSeed.cs" />
-    <Compile Remove="Migrations\20200606154510_CreateAndSeed.Designer.cs" />
-    <Compile Remove="Migrations\20200618105551_CreateAndSeed.cs" />
-    <Compile Remove="Migrations\20200618105551_CreateAndSeed.Designer.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="9.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

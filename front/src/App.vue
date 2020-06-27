@@ -14,6 +14,7 @@
 
 <script>
 import { FfMenu, FfFooter } from '@layouts';
+import '@filters';
 
 export default {
   name: 'app',

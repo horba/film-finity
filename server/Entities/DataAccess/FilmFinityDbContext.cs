@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using System.Runtime.CompilerServices;
 using Entities.Models;
 
+
 namespace Entities.DataAccess
 {
     public class FilmFinityDbContext : DbContext
@@ -16,6 +17,10 @@ namespace Entities.DataAccess
         public DbSet<JobTitle> JobTitles { get; set; }
         public DbSet<Celebrity> Celebrities { get; set; }
         public DbSet<CelebrityJobTitles> CelebrityJobTitles { get; set; }
+        public DbSet<News> News { get; set; }
+        public DbSet<NewsAuthor> Authors { get; set; }
+        public DbSet<NewsCategory> Categories { get; set; }
+        public DbSet<NewsCategories> NewsCategories { get; set; }
         public DbSet<Serial> Serials { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<SerialGenreTitles> SerialGenreTitles { get; set; }
@@ -61,6 +66,15 @@ namespace Entities.DataAccess
                 .HasOne(cj => cj.Celebrity)
                 .WithMany(j => j.CelebrityJobTitles)
                 .HasForeignKey(cjt => cjt.CelebrityId);
+
+            modelBuilder
+             .ApplyConfiguration(new NewsConfiguration());
+
+            modelBuilder
+             .ApplyConfiguration(new NewsCategoryConfiguration());
+
+            modelBuilder
+              .ApplyConfiguration(new CategoriesConfiguration());
 
             modelBuilder.Seed();
         }
