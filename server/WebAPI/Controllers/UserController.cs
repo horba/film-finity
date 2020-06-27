@@ -27,20 +27,16 @@ namespace WebAPI.Controllers
 
             IEnumerable<UserDTO> objectList = userService.GetUsers();
             return Ok(objectList);
-        }
-        [HttpPost]
-        //public void Post(UserDTO value)
-        //{
-        //    // userService.CreateUser(value);
-        //    // return Ok(ModelState);
-        //}
-
+        }        
         public ActionResult<User> Post(UserDTO user)
         {
-            if (!ModelState.IsValid)
+            if (userService.isEmailInUse(user.Email))
+            {
+                ModelState.AddModelError("Email", "Данный e-mail уже зарегистрирован");
                 return BadRequest(ModelState);
-
-            return Ok(!ModelState.IsValid);
+            }
+            userService.CreateUser(user);
+            return Ok(ModelState);
         }
     }
 }

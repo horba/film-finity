@@ -21,6 +21,16 @@ namespace WebAPI.Repositories
             return dbContext.Users;
         }
 
+        public bool isEmailInUse(string email)
+        {
+            User user=dbContext.Users.FirstOrDefault(x => x.Email == email);
+            if (user == null)
+            {
+                return false;
+            }
+            return true;
+        }
+
         public void Create(User value)
         {
             User user = dbContext.Users.FirstOrDefault(x => x.Email == value.Email);

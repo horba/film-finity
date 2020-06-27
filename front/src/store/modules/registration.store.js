@@ -5,7 +5,7 @@ export default {
     AddUser ({ commit }, newUser) {
       return axios({
         method: 'post',
-        url: 'https://localhost:44333/api/user',
+        url: 'https://localhost:5001/api/user',
         data: {
           userName: newUser.userName,
           email: newUser.email,

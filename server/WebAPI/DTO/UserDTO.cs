@@ -9,13 +9,12 @@ namespace WebAPI.DTO
     public class UserDTO
     {
         public int Id { get; set; }
-        //[Required(ErrorMessage = "Укажите имя пользователя")]
-       //Required]
-       [MinLength(5)]
+        [Required(ErrorMessage = "Введите имя пользователя")]
         public string UserName { get; set; }
-      //  [Required(ErrorMessage = "Укажите Email")]
+        
+        [EmailAddress(ErrorMessage = "Введите email")]
         public string Email { get; set; }
-       // [Required(ErrorMessage = "Укажите пароль")]
+        [Required(ErrorMessage = "Введите пароль")]
         public string UserPassword { get; set; }
     }
 }

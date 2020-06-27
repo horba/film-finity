@@ -24,6 +24,10 @@ namespace WebAPI.Services
             var users = userRepository.GetAll();
             return mapper.Map<IEnumerable<UserDTO>>(users.ToList());
         }
+        public bool isEmailInUse(string email)
+        {            
+            return userRepository.isEmailInUse(email);
+        }
         public void CreateUser(UserDTO userDTO)
         {
             User user = mapper.Map<UserDTO, User>(userDTO);
