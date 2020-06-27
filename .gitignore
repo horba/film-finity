@@ -348,16 +348,4 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
-<<<<<<< HEAD
-
-# front/ .json
-front/package-lock.json
-front/package.json
-
-# server/ .json
-server/WebAPI/appsettings.json
 server/WebAPI/appsettings.Development.json
-
-=======
-server/WebAPI/appsettings.Development.json
->>>>>>> dev
