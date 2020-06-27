@@ -1,0 +1,103 @@
+<div id="Wrap">
+  <el-row class="el-row-wrap" type="flex">
+    <el-col :span="8" class="image">
+      <el-image
+        fit="cover"
+        :src="getImgSrc()"
+      ></el-image>
+    </el-col>
+    <el-col :span="9" class="content">
+      <h1>{{celebrity.firstName}} {{celebrity.lastName}}</h1>
+      <h3>{{celebrity.firstName}} {{celebrity.lastName}}</h3>
+      <div>
+        <div>
+          <div>Карьера:</div>
+          <div>{{celebrity.jobTitles |modifyJobTitles}}</div>
+        </div>
+        <div>
+          <div>Дата рождения:</div>
+          <div>{{celebrity.birthday}}</div>
+        </div>
+        <div>
+          <div>Место рождения:</div>
+          <div>{{celebrity.placeOfBirthday}}</div>
+        </div>
+        <div>
+          <div>Знак Зодиака:</div>
+          <div>{{celebrity.starSing}}</div>
+        </div>
+        <div>
+          <div>Рост:</div>
+          <div>{{celebrity.height}}</div>
+        </div>
+        <div>
+          <div>Семейное положение:</div>
+          <div>{{celebrity.familyStatus}}</div>
+        </div>
+        <div>
+          <div>Достижения:</div>
+          <div>{{celebrity.achievement}}</div>
+        </div>
+        <div>
+          <div>Соцсети:</div>
+          <div>
+            <a :href="celebrity.networkingSites.facebook">
+              <img
+                width="22"
+                height="22"
+                src="http://localhost:5001/StaticFiles/images/biography/facebook.png"
+              />
+            </a>
+            <a :href="celebrity.networkingSites.instagram">
+              <img
+                width="22"
+                height="22"
+                src="http://localhost:5001/StaticFiles/images/biography/instagram.png"
+              />
+            </a>
+            <a :href="celebrity.networkingSites.twitter">
+              <img
+                width="22"
+                height="22"
+                src="http://localhost:5001/StaticFiles/images/biography/twitter.png"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </el-col>
+    <el-col :span="4" class="rating">
+      <div>Актёр</div>
+      <div>
+        <el-rate
+          disabled
+          class="rate"
+          v-model="celebrity.rates.actoringRate"
+          :colors="['var(--auxiliary-bg-color)', 'var(--auxiliary-bg-color)', 'var(--auxiliary-bg-color)']"
+        ></el-rate>
+        <div>{{celebrity.rates.actoringRate}}</div>
+      </div>
+      <div>Продюсер</div>
+      <div>
+        <el-rate
+          disabled
+          class="rate"
+          v-model="celebrity.rates.productionRate"
+          :colors="['var(--auxiliary-bg-color)', 'var(--auxiliary-bg-color)', 'var(--auxiliary-bg-color)']"
+        ></el-rate>
+        <div>{{celebrity.rates.productionRate}}</div>
+      </div>
+      <div>Продюсер</div>
+      <div>
+        <el-rate
+          disabled
+          class="rate"
+          v-model="celebrity.rates.productionRate"
+          :colors="['var(--auxiliary-bg-color)', 'var(--auxiliary-bg-color)', 'var(--auxiliary-bg-color)']"
+        ></el-rate>
+        <div>{{celebrity.rates.productionRate}}</div>
+      </div>
+    </el-col>
+  </el-row>
+  <el-row v-html="celebrity.biography"></el-row>
+</div>

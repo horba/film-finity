@@ -6,12 +6,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
+    <Compile Remove="Migrations\20200613074918_CreateAndInitializationCelebrityBiography.cs" />
+    <Compile Remove="Migrations\20200613074918_CreateAndInitializationCelebrityBiography.Designer.cs" />
+    <Compile Remove="Migrations\20200620113803_AddAndSeedCelebrityBiography.cs" />
+    <Compile Remove="Migrations\20200620113803_AddAndSeedCelebrityBiography.Designer.cs" />
+=======
     <Compile Remove="Migrations\20200603094133_InitialCreate.cs" />
     <Compile Remove="Migrations\20200603094133_InitialCreate.Designer.cs" />
     <Compile Remove="Migrations\20200606154510_CreateAndSeed.cs" />
     <Compile Remove="Migrations\20200606154510_CreateAndSeed.Designer.cs" />
     <Compile Remove="Migrations\20200618105551_CreateAndSeed.cs" />
     <Compile Remove="Migrations\20200618105551_CreateAndSeed.Designer.cs" />
+>>>>>>> dev
   </ItemGroup>
 
   <ItemGroup>

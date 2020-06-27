@@ -16,7 +16,7 @@ export default {
   actions: {
     getCelebrities ({ state, commit, rootState }) {
       axios
-        .get(`${rootState.baseUrl}/api/Celebrity/Celebrities`)
+        .get(`${rootState.baseUrl}/api/Celebrity/Celebrity`)
         .then(response => { commit('initCelebrities', response.data); });
     }
   }

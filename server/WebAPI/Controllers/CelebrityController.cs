@@ -6,6 +6,7 @@ using Entities.DataAccess;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebAPI.DTO;
+using WebAPI.Services;
 using WebAPI.Models;
 
 namespace WebAPI.Controllers
@@ -15,30 +16,26 @@ namespace WebAPI.Controllers
     [Route("api/[controller]")]
     public class CelebrityController : ControllerBase
     {
-        private readonly FilmFinityDbContext dbContext;
-        
-        public CelebrityController(FilmFinityDbContext filmFinityDbContext)
+        private readonly ICelebrityService celebrityService;
+
+        public CelebrityController(ICelebrityService celebrityService)
         {
-            this.dbContext = filmFinityDbContext;
+            this.celebrityService = celebrityService;
         }
         
 
         [HttpGet]
-        [Route("Celebrities")]
+        [Route("Celebrity")]
         public IActionResult GetListCelebrities()
         {
-            List<CelebrityDTO> objectList = dbContext.Celebrities.Select(o => new CelebrityDTO
-            {
-                CelebrityId = o.CelebrityId,
-                FirstName = o.FirstName,
-                LastName = o.LastName,
-                CountViews = o.CountViews,
-                ImageSource = o.ImageSource,
-                JobTitles = o.CelebrityJobTitles.Select(j => j.JobTitle).Select( j => new JobTitleDTO 
-                { JobTitleId = j.JobTitleId, JobName = j.JobName }).ToList()
-            }).ToList();
+            return Ok(celebrityService.GetCelebrities());
+        }
 
-            return Ok(objectList);
+        [HttpGet]
+        [Route("{CelebrityId}")]
+        public IActionResult GetCelebrity(int CelebrityId)
+        {          
+            return Ok(celebrityService.GetCelebrity(CelebrityId));
         }
     }
 }

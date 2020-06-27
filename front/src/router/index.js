@@ -11,6 +11,10 @@ const routes = [
     component: FfCelebrities
   },
   {
+    path: '/celebrities/:id',
+    component: Celebrity
+  },
+  {
     path: '/movies',
     component: Movies
   },
