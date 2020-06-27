@@ -4,6 +4,7 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Entities.Models;
+using System.Data;
 
 namespace Entities.DataAccess
 {
@@ -17,12 +18,14 @@ namespace Entities.DataAccess
             modelBuilder
                 .HasOne(nc => nc.Category)
                 .WithMany(c => c.NewsCategories)
-                .HasForeignKey(nc => nc.CategoryId);
+                .HasForeignKey(nc => nc.CategoryId)
+                .IsRequired(true);
 
             modelBuilder
                 .HasOne(nc => nc.News)
                 .WithMany(n => n.NewsCategories)
-                .HasForeignKey(nc => nc.NewsId);
+                .HasForeignKey(nc => nc.NewsId)
+                .IsRequired(true);
         }
     }
 }

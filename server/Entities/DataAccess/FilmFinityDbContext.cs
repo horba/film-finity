@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using System.Runtime.CompilerServices;
 using Entities.Models;
 
+
 namespace Entities.DataAccess
 {
     public class FilmFinityDbContext : DbContext
@@ -66,12 +67,14 @@ namespace Entities.DataAccess
                 .WithMany(j => j.CelebrityJobTitles)
                 .HasForeignKey(cjt => cjt.CelebrityId);
 
-
             modelBuilder
              .ApplyConfiguration(new NewsConfiguration());
 
             modelBuilder
              .ApplyConfiguration(new NewsCategoryConfiguration());
+
+            modelBuilder
+              .ApplyConfiguration(new CategoriesConfiguration());
 
             modelBuilder.Seed();
         }
