@@ -10,7 +10,7 @@
         </div>
         <el-row class = "main-information" type="flex">
           <el-col :span="6" class = "publish-date secondary-text">{{ newsItem.publishTime | convertDateTime('dd.MM.yyyy kk:mm') }}</el-col>
-          <el-col :span="5" class = "views-count secondary-text">{{ newsItem.countViews }} просмотров</el-col>
+          <el-col :span="5" class = "views-count secondary-text">{{ newsItem.countViews }} {{ $t('news.views') }}</el-col>
           <el-col :span="13" class = "secondary-text">
             {{ newsItem.author.firstName }} {{ newsItem.author.lastName }},
             {{ newsItem.categories | mapByProperty("name") | listStringify }}
@@ -19,8 +19,8 @@
         <div class = "content">{{ newsItem.content }}</div>
       </div>
       <div class = "footer-block">
-        <div><span>{{ newsItem.countCommentaries }} комментариев</span></div>
-        <div><span>Читать полностью</span></div>
+        <div><span>{{ newsItem.countCommentaries }} {{ $t('news.commentaries') }}</span></div>
+        <div><span>{{ $t('news.fullRead') }}</span></div>
       </div>
     </el-col>
   </el-row>
