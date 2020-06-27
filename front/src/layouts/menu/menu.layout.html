@@ -13,7 +13,8 @@
   </div>
     <div class="buttons">    
       <el-button icon="el-icon-search" class="second-color"></el-button>
-      <el-button class="second-color"> {{ $t('header.signIn') }}</el-button> 
+      <el-button class="second-color" v-if="isLoggedIn"><a @click="logout">Logout</a></el-button>
+      <el-button class="second-color"><router-link to="/login">{{ $t('header.signIn') }}</router-link> </el-button>
     </div> 
     <div>
       <ff-locale-select />
