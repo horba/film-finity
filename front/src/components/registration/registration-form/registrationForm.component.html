@@ -7,7 +7,7 @@
         </el-input>
         </el-form-item>
 
-        <i class="el-icon-error color-massage-error" type="error" v-show="errors.UserName"> {{ errors.UserName[0] }}</i>
+        <i class="el-icon-error color-massage-error" type="error" v-show="errors.name"> {{ errors.name }}</i>
 
         <el-form-item class="email" prop="email">
         <el-input placeholder="Email"                  
@@ -16,7 +16,7 @@
         </el-input>
         </el-form-item>
 
-        <i class="el-icon-error color-massage-error" type="error" v-show="errors.Email"> {{ errors.Email[0] }}</i>
+        <i class="el-icon-error color-massage-error" type="error" v-show="errors.email"> {{ errors.email }}</i>
 
         <el-form-item class="password" prop="password">
         <el-input type="password"
@@ -26,7 +26,7 @@
         </el-input>
         </el-form-item>
 
-        <i class="el-icon-error color-massage-error" type="error" v-show="errors.UserPassword"> {{ errors.UserPassword[0] }}</i>
+        <i class="el-icon-error color-massage-error" type="error" v-show="errors.password"> {{ errors.password }}</i>
       </el-form>
       <div class="dialog-footer">
         <el-button

@@ -49,12 +49,6 @@ namespace WebAPI
                                   });
             });
 
-            var mappingConfig = new MapperConfiguration(mc =>
-            {
-                mc.AddProfile(new MappingProfile());
-            });
-            IMapper mapper = mappingConfig.CreateMapper();
-            services.AddSingleton(mapper);
             services.AddScoped<UserRepository>();
             services.AddScoped<UserService>();
             services.AddControllers();
@@ -68,6 +62,17 @@ namespace WebAPI
             {
                 options.UseSqlServer(Configuration.GetConnectionString("FilmFinityMSSQL"));
             });
+
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
+            services.AddScoped<ISerialRepository, SerialRepository>();
+            services.AddScoped<ISerialsService, SerialsService>();
+            services.AddAutoMapper(typeof(Startup));
         }
 
 

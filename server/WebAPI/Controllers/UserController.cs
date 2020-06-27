@@ -27,7 +27,8 @@ namespace WebAPI.Controllers
 
             IEnumerable<UserDTO> objectList = userService.GetUsers();
             return Ok(objectList);
-        }        
+        }
+        [HttpPost]
         public ActionResult<User> Post(UserDTO user)
         {
             if (userService.isEmailInUse(user.Email))

@@ -12,14 +12,14 @@
       </div>    
     </div>
     <div>
-      <el-button class="color-background main-color footer-button"><router-link class="footer-button" to="/movies">Фильмы</router-link></el-button>
-      <el-button class="color-background main-color footer-button"><router-link class="footer-button" to="/serials">Сериалы</router-link></el-button>
-      <el-button class="color-background main-color footer-button"><router-link class="footer-button" to="/cartoons">Мультфильмы</router-link></el-button>
-      <el-button class="color-background main-color footer-button"><router-link class="footer-button" to="/news">Новости</router-link></el-button>
-      <el-button class="color-background main-color footer-button"><router-link class="footer-button" to="/actors">Актеры</router-link></el-button>      
+      <el-button class="color-background main-color footer-button"><router-link class="footer-button" to="/movies">{{ $t('header.movies') }}</router-link></el-button>
+      <el-button class="color-background main-color footer-button"><router-link class="footer-button" to="/serials">{{ $t('header.serials') }}</router-link></el-button>
+      <el-button class="color-background main-color footer-button"><router-link class="footer-button" to="/cartoons">{{ $t('header.cartoons') }}</router-link></el-button>
+      <el-button class="color-background main-color footer-button"><router-link class="footer-button" to="/news">{{ $t('header.news') }}</router-link></el-button>
+      <el-button class="color-background main-color footer-button"><router-link class="footer-button" to="/actors">{{ $t('header.actors') }}</router-link></el-button>      
     </div>
     <div class="social-networks">
-      <div>Социальные сети</div>
+      <div>{{ $t('footer.socialNetworks') }}</div>
       <el-link>
         <img alt="Google" src="../../assets/google.png">
       </el-link>
@@ -33,10 +33,10 @@
   </div>
   <div class="footer-color-background">
     <div>
-      (с) Все права защищены
+      (с) {{ $t('footer.copyRight') }}
     </div>
-    <el-link class="main-color">Пользовательское соглашение</el-link>
-    <el-link class="main-color privicy-police">Privicy Police</el-link>
+    <el-link class="main-color">{{ $t('footer.termsOfUse') }}</el-link>
+    <el-link class="main-color privicy-police">{{ $t('footer.privacyPolicy') }}</el-link>
   </div> 
 </div>
 

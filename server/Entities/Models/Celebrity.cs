@@ -15,6 +15,6 @@ namespace WebAPI.Models
         public string ImageSource { get; set; }
 
         public ICollection<CelebrityJobTitles> CelebrityJobTitles { get; set; }
-
+        public ICollection<SerialCelebrity> SerialCelebrity { get; set; }
     }
 }

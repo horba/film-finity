@@ -3,7 +3,11 @@
     --main-txt-color: white;
     --auxiliary-bg-color:  #FFA21C;
     --footer-bg-color:  #5956FF;
+    --ff-black-color: #292C33;
+    --ff-font-color: var(--ff-black-color);
+    --ff-dark-gray-color: #8F96A3;
+    --ff-font-year-color: var(--ff-dark-gray-color);
     --header-height: 90px;
     --footer-height: 125px;
-    --footer-bottom-height: 57px;    
+    --footer-bottom-height: 57px;
   }

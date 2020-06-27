@@ -5,15 +5,15 @@ export default {
       email: '',
       password: '',
       errors: {
-        UserName: '',
-        Email: '',
-        UserPassword: ''
+        name: '',
+        email: '',
+        password: ''
       }
     };
   },
   methods: {
     registration () {
-      this.errors.UserName = this.errors.Email = this.errors.UserPassword = '';
+      this.errors.name = this.errors.email = this.errors.password = '';
       this.$store.dispatch('AddUser', {
         userName: this.name,
         email: this.email,
@@ -25,9 +25,11 @@ export default {
         })
         .catch(error => {
           try {
-            this.errors.Email = error.response.data.Email[0];
+            this.errors.email = error.response.data.Email[0];
           } catch {
-            this.errors = error.response.data.errors;
+            this.errors.name = error.response.data.errors.UserName[0];
+            this.errors.email = error.response.data.errors.Email[0];
+            this.errors.password = error.response.data.errors.UserPassword[0];
           }
         });
     }
