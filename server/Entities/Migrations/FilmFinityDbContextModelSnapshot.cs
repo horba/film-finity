@@ -789,7 +789,7 @@ namespace Entities.Migrations
                         new
                         {
                             Id = 1,
-                            ImageSource = "StaticFiles/images/11.jpg",
+                            ImageSource = "StaticFiles/images/Aeronauts.jpg",
                             Rate = 5,
                             ReleaseYear = 2019,
                             Title = "Аэронавты"
@@ -797,7 +797,7 @@ namespace Entities.Migrations
                         new
                         {
                             Id = 2,
-                            ImageSource = "StaticFiles/images/12.jpg",
+                            ImageSource = "StaticFiles/images/1917.jpg",
                             Rate = 5,
                             ReleaseYear = 2019,
                             Title = "1917"
@@ -805,7 +805,7 @@ namespace Entities.Migrations
                         new
                         {
                             Id = 3,
-                            ImageSource = "StaticFiles/images/13.jpg",
+                            ImageSource = "StaticFiles/images/JumanjiNL.jpg",
                             Rate = 5,
                             ReleaseYear = 2019,
                             Title = "Джуманджи: Новый уровень"
@@ -813,7 +813,7 @@ namespace Entities.Migrations
                         new
                         {
                             Id = 4,
-                            ImageSource = "StaticFiles/images/14.jpg",
+                            ImageSource = "StaticFiles/images/Banker.jpg",
                             Rate = 5,
                             ReleaseYear = 2020,
                             Title = "Банкир"
@@ -821,7 +821,7 @@ namespace Entities.Migrations
                         new
                         {
                             Id = 5,
-                            ImageSource = "StaticFiles/images/15.jpg",
+                            ImageSource = "StaticFiles/images/SonikH.jpg",
                             Rate = 5,
                             ReleaseYear = 2020,
                             Title = "Соник в кино"
@@ -829,7 +829,7 @@ namespace Entities.Migrations
                         new
                         {
                             Id = 6,
-                            ImageSource = "StaticFiles/images/16.jpg",
+                            ImageSource = "StaticFiles/images/PreyBirdsHQ.jpg",
                             Rate = 5,
                             ReleaseYear = 2020,
                             Title = "Хищные птицы: Потрясающая история Харли Квинн"
@@ -837,7 +837,7 @@ namespace Entities.Migrations
                         new
                         {
                             Id = 7,
-                            ImageSource = "StaticFiles/images/17.jpg",
+                            ImageSource = "StaticFiles/images/LittleWomen.jpg",
                             Rate = 5,
                             ReleaseYear = 2019,
                             Title = "Маленькие женщины"
@@ -845,7 +845,7 @@ namespace Entities.Migrations
                         new
                         {
                             Id = 8,
-                            ImageSource = "StaticFiles/images/18.jpg",
+                            ImageSource = "StaticFiles/images/Composer.jpg",
                             Rate = 5,
                             ReleaseYear = 2019,
                             Title = "Композитор"
