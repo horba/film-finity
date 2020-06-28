@@ -7,7 +7,7 @@
         </el-input>
         </el-form-item>
 
-        <i class="el-icon-error color-massage-error" type="error" v-show="errors.name"> {{ errors.name }}</i>
+        <i class="el-icon-error color-massage-error" type="error" v-show="isVisibleErrors.name"> {{ $t('registration.errorsName') }}</i>
 
         <el-form-item class="email" prop="email">
         <el-input placeholder="Email"                  
@@ -16,7 +16,8 @@
         </el-input>
         </el-form-item>
 
-        <i class="el-icon-error color-massage-error" type="error" v-show="errors.email"> {{ errors.email }}</i>
+        <i class="el-icon-error color-massage-error" type="error" v-show="isVisibleErrors.email"> {{ $t('registration.errorsEmail') }}</i>
+        <i class="el-icon-error color-massage-error" type="error" v-show="isVisibleErrors.emailRegistered"> {{ $t('registration.errorsEmailRegistered') }}</i>
 
         <el-form-item class="password" prop="password">
         <el-input type="password"
@@ -26,16 +27,16 @@
         </el-input>
         </el-form-item>
 
-        <i class="el-icon-error color-massage-error" type="error" v-show="errors.password"> {{ errors.password }}</i>
+        <i class="el-icon-error color-massage-error" type="error" v-show="isVisibleErrors.password"> {{ $t('registration.errorsPassword') }}</i>
       </el-form>
       <div class="dialog-footer">
         <el-button
             class="registration-button"
             type="primary"
             @click="registration()"
-          >Зарегистрироваться</el-button> 
+          >{{ $t('registration.signUp') }}</el-button> 
           <div class="entrance">
-            Уже есть аккаунт? <b>Вход</b>
+            {{ $t('registration.haveAccount') }} <b>{{ $t('registration.entrance') }}</b>
           </div>     
       </div>
   </div>

@@ -1,5 +1,5 @@
 <div>
-  <el-button class="second-color" @click="regisrationDialogVisible = true">ВОЙТИ</el-button>
+  <el-button class="second-color" @click="regisrationDialogVisible = true">{{ $t('registration.signIn') }}</el-button>
   <el-dialog 
   title="Создать аккаунт"
   :visible.sync="regisrationDialogVisible"

@@ -4,16 +4,18 @@ export default {
       name: '',
       email: '',
       password: '',
-      errors: {
-        name: '',
-        email: '',
-        password: ''
+      isVisibleErrors: {
+        name: false,
+        email: false,
+        emailRegistered: false,
+        password: false
       }
     };
   },
   methods: {
     registration () {
-      this.errors.name = this.errors.email = this.errors.password = '';
+      this.isVisibleErrors.name = this.isVisibleErrors.email
+      = this.isVisibleErrors.password = false;
       this.$store.dispatch('AddUser', {
         userName: this.name,
         email: this.email,
@@ -25,11 +27,11 @@ export default {
         })
         .catch(error => {
           try {
-            this.errors.email = error.response.data.Email[0];
+            this.isVisibleErrors.emailRegistered = error.response.data.Email[0];
           } catch {
-            this.errors.name = error.response.data.errors.UserName[0];
-            this.errors.email = error.response.data.errors.Email[0];
-            this.errors.password = error.response.data.errors.UserPassword[0];
+            this.isVisibleErrors.name = error.response.data.errors.UserName[0];
+            this.isVisibleErrors.email = error.response.data.errors.Email[0];
+            this.isVisibleErrors.password = error.response.data.errors.UserPassword[0];
           }
         });
     }
