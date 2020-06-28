@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Entities.DataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -15,8 +16,11 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using WebAPI.Mapping;
 using WebAPI.Models;
-
+using Entities.Models;
+using WebAPI.Services;
+using WebAPI.Repositories;
 namespace WebAPI
 {
     public class Startup
@@ -45,6 +49,14 @@ namespace WebAPI
                                   });
             });
 
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
+
             services.AddControllers();
             services.AddDirectoryBrowser();
 
@@ -52,10 +64,16 @@ namespace WebAPI
             {
                 c.SwaggerDoc("FilmFinity", new OpenApiInfo { Title = "FilmFinity API", Version = "v1" });
             });
+
             services.AddDbContext<FilmFinityDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("FilmFinityMSSQL"));
             });
+
+            services.AddScoped<ISerialRepository, SerialRepository>();
+            services.AddScoped<ISerialsService, SerialsService>();
+            services.AddScoped<INewsRepository, NewsRepository>();
+            services.AddScoped<INewsService, NewsService>();
         }
 
  
