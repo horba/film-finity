@@ -7,17 +7,16 @@ using Microsoft.AspNetCore.Mvc;
 using WebAPI.DTO;
 using WebAPI.Services;
 using Microsoft.EntityFrameworkCore;
-using WebAPI.Models;
+using Entities.Models;
 
 namespace WebAPI.Controllers
 {
-
     [ApiController]
     [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
-        private readonly UserService userService;
-        public UserController(UserService userService)
+        private readonly IUserService userService;
+        public UserController(IUserService userService)
         {
             this.userService = userService;
         }

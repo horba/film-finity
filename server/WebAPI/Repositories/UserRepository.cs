@@ -4,26 +4,26 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Threading.Tasks;
+using WebAPI.DTO;
 using WebAPI.Models;
 
 namespace WebAPI.Repositories
 {
-    public class UserRepository
+    public class UserRepository : Repository<UserDTO>, IUserRepository
     {
-        private readonly FilmFinityDbContext dbContext;
-        public UserRepository(FilmFinityDbContext dbContext)
+        public UserRepository(FilmFinityDbContext context)
+            : base(context)
+        { }
+
+        public IEnumerable<User> GetAllUsers()
         {
-            this.dbContext = dbContext;
-        }
-        public IEnumerable<User> GetAll()
-        {
-            return dbContext.Users;
+            return _dbContext.Users;
         }
 
         public bool isEmailInUse(string email)
         {
-            User user=dbContext.Users.FirstOrDefault(x => x.Email == email);
+            User user = _dbContext.Users.FirstOrDefault(x => x.Email == email);
             if (user == null)
             {
                 return false;
@@ -33,11 +33,11 @@ namespace WebAPI.Repositories
 
         public void Create(User value)
         {
-            User user = dbContext.Users.FirstOrDefault(x => x.Email == value.Email);
+            User user = _dbContext.Users.FirstOrDefault(x => x.Email == value.Email);
             if (user == null)
             {
-                dbContext.Users.Add(value);
-                dbContext.SaveChanges();
+                _dbContext.Users.Add(value);
+                _dbContext.SaveChanges();
             }
         }
     }

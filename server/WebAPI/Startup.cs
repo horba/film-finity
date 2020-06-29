@@ -49,8 +49,8 @@ namespace WebAPI
                                   });
             });
 
-            services.AddScoped<UserRepository>();
-            services.AddScoped<UserService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserService, UserService>();
             services.AddControllers();
             services.AddDirectoryBrowser();
 
