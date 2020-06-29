@@ -12,14 +12,27 @@
     "serials": "TV Shows",
     "cartoons": "Cartoons",
     "news": "News",
-    "actors": "Actors",
-    "signIn": "Sign In"
+    "actors": "Actors"
   },
   "footer": {
     "socialNetworks": "Social networks",
     "termsOfUse": "Terms of use",
     "privacyPolicy": "Privacy policy",
     "copyRight": "All right reserved"
+  },
+  "registration": {
+    "signIn": "Sign In",
+    "createAccount": "Create an account",
+    "signUp": "Sign up",
+    "haveAccount": "Already have an account?",
+    "entrance": "Login",
+    "accountСreated": "Account created!",
+    "firstSuccessMessage": "You have become part of a larger world where everyone can contribute to making the process of finding a movie, TV series or cartoon easier and more exciting.",
+    "secondSuccessMessage": "Go ahead for reviews, ratings and comments!",
+    "errorsName": "Enter the username",
+    "errorsEmail": "Enter your email",
+    "errorsEmailRegistered": "This email is already registered",
+    "errorsPassword": "Enter the password"
   },
   "news": {
     "commentaries": "comments",

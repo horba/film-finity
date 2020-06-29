@@ -1,0 +1,19 @@
+::v-deep .el-dialog__headerbtn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    width: 2.9em;
+    height: 2.9em;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #DCDFE6;
+    border-color: #DCDFE6;
+    color: #606266;
+  }
+  ::v-deep .el-dialog__headerbtn:hover {
+    background:#DCDFE6;
+
+  }

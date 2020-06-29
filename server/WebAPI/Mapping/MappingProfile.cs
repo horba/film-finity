@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebAPI.DTO;
+using WebAPI.Models;
 
 namespace WebAPI.Mapping
 {
@@ -31,6 +32,8 @@ namespace WebAPI.Mapping
                         el => new GenreDTO { Id = el.GenreTitle.Id, Name = el.GenreTitle.Name })
                     )
                 );
+            CreateMap<User, UserDTO>();
+            CreateMap<UserDTO, User>();
             CreateMap<News, NewsDTO>()
               .ForMember(dto => dto.Author, opt => opt.MapFrom(
                   route => new NewsAuthorDTO { Id = route.Author.Id, FirstName = route.Author.FirstName, LastName = route.Author.LastName })
