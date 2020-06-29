@@ -33,5 +33,10 @@
     "errorsEmail": "Enter your email",
     "errorsEmailRegistered": "This email is already registered",
     "errorsPassword": "Enter the password"
+  },
+  "news": {
+    "commentaries": "comments",
+    "fullRead": "Read more",
+    "views": "views"
   }
 }

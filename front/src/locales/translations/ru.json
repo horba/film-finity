@@ -33,5 +33,10 @@
     "errorsEmail": "Введите email",
     "errorsEmailRegistered": "Данный email уже зарегистрирован",
     "errorsPassword": "Введите пароль"
+  },
+  "news": {
+    "commentaries": "комментариев",
+    "fullRead": "Читать полностью",
+    "views": "просмотров"
   }
 }

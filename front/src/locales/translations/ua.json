@@ -33,5 +33,10 @@
     "errorsEmail": "Введіть email",
     "errorsEmailRegistered": "Даний email вже зареєстрований",
     "errorsPassword": "Введіть пароль"
+  },
+  "news": {
+    "commentaries": "коментарів",
+    "fullRead": "Читати повністю",
+    "views": "переглядів"
   }
 }

@@ -18,9 +18,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using WebAPI.Mapping;
 using WebAPI.Models;
-using WebAPI.Repositories;
+using Entities.Models;
 using WebAPI.Services;
-
+using WebAPI.Repositories;
 namespace WebAPI
 {
     public class Startup
@@ -49,19 +49,6 @@ namespace WebAPI
                                   });
             });
 
-            services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IUserService, UserService>();
-            services.AddControllers();
-            services.AddDirectoryBrowser();
-
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("FilmFinity", new OpenApiInfo { Title = "FilmFinity API", Version = "v1" });
-            });
-            services.AddDbContext<FilmFinityDbContext>(options =>
-            {
-                options.UseSqlServer(Configuration.GetConnectionString("FilmFinityMSSQL"));
-            });
 
             var mappingConfig = new MapperConfiguration(mc =>
             {
@@ -70,9 +57,26 @@ namespace WebAPI
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
 
+
+            services.AddControllers();
+            services.AddDirectoryBrowser();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("FilmFinity", new OpenApiInfo { Title = "FilmFinity API", Version = "v1" });
+            });
+
+            services.AddDbContext<FilmFinityDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("FilmFinityMSSQL"));
+            });
+
             services.AddScoped<ISerialRepository, SerialRepository>();
             services.AddScoped<ISerialsService, SerialsService>();
-            services.AddAutoMapper(typeof(Startup));
+            services.AddScoped<INewsRepository, NewsRepository>();
+            services.AddScoped<INewsService, NewsService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserService, UserService>();
         }
 
 
