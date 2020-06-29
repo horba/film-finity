@@ -10,18 +10,18 @@ using WebAPI.Models;
 
 namespace WebAPI.Controllers
 {
-    
+
     [ApiController]
     [Route("api/[controller]")]
     public class CelebrityController : ControllerBase
     {
         private readonly FilmFinityDbContext dbContext;
-        
+
         public CelebrityController(FilmFinityDbContext filmFinityDbContext)
         {
             this.dbContext = filmFinityDbContext;
         }
-        
+
 
         [HttpGet]
         [Route("Celebrities")]
@@ -34,7 +34,7 @@ namespace WebAPI.Controllers
                 LastName = o.LastName,
                 CountViews = o.CountViews,
                 ImageSource = o.ImageSource,
-                JobTitles = o.CelebrityJobTitles.Select(j => j.JobTitle).Select( j => new JobTitleDTO 
+                JobTitles = o.CelebrityJobTitles.Select(j => j.JobTitle).Select(j => new JobTitleDTO
                 { JobTitleId = j.JobTitleId, JobName = j.JobName }).ToList()
             }).ToList();
 

@@ -11,13 +11,14 @@
       <el-menu-item index="5" class="main-color"><router-link to="/celebrities">{{ $t('header.actors')}}</router-link></el-menu-item>
     </el-menu>
   </div>
-    <div class="buttons">    
-      <el-button icon="el-icon-search" class="second-color"></el-button>
-      <!--<el-button class="second-color" v-if="isLoggedIn"><a @click="logout">Logout</a></el-button>!-->
-      <el-button class="second-color"><router-link to="/login">{{ $t('header.signIn') }}</router-link> </el-button>
-    </div> 
-    <FfUserMenu></FfUserMenu>
+  <div class="actions">    
+    <el-button icon="el-icon-search" class="second-color"></el-button>
+    <ff-registration-dialog class="enter-button"/>
+    <el-button class="second-color"><router-link to="/login">{{ $t('header.signIn') }}</router-link> </el-button>
+  </div>    
+  <FfUserMenu></FfUserMenu>
     <div>
       <ff-locale-select />
     </div>
 </div>
+

@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import registration from './modules/registration.store.js';
 import locale from './modules/locale.store.js';
 import сelebrities from './modules/celebrities.store.js';
 import auth from './modules/auth.store.js';
@@ -21,6 +22,7 @@ export default new Vuex.Store({
     news,
     locale,
     auth,
+    registration,
     serials
   }
 });

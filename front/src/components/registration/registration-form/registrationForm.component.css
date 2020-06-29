@@ -1,0 +1,39 @@
+.close {
+  position: absolute;
+  left: 413px;
+  top: 11px;  
+}
+.dialog-footer{
+  padding-top: 80px;
+  text-align: center;
+}
+.registration-button {
+  width: 235px;
+  height: 46px;
+}
+.login {  
+  margin: 0px; 
+  padding: 33px 27px 0px;
+}
+.email { 
+  margin: 0px; 
+  padding: 58px 27px 0px;
+}
+.password { 
+  margin: 0px;  
+  padding: 58px 27px 0px;
+}
+.entrance {
+  padding: 40px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+.color-massage-error {
+  color: #EE4444;
+  padding: 0px 27px 0px;
+  font-size: 12px;
+  position: fixed;
+}
+.footer {
+  padding: 220px 0px 0px;
+}

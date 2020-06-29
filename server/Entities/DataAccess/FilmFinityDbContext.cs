@@ -17,6 +17,7 @@ namespace Entities.DataAccess
         public DbSet<JobTitle> JobTitles { get; set; }
         public DbSet<Celebrity> Celebrities { get; set; }
         public DbSet<CelebrityJobTitles> CelebrityJobTitles { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<News> News { get; set; }
         public DbSet<NewsAuthor> Authors { get; set; }
         public DbSet<NewsCategory> Categories { get; set; }
