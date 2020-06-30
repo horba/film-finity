@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Entities.Migrations
 {
     [DbContext(typeof(FilmFinityDbContext))]
-    [Migration("20200628161440_AddMoviesPage")]
+    [Migration("20200629120536_AddMoviesPage")]
     partial class AddMoviesPage
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -481,7 +481,7 @@ namespace Entities.Migrations
                             Content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea veritatis voluptates veniam sunt unde quibusdam modi laboriosam deleniti quod, minima vero nobis! Cumque natus ipsum ab incidunt qui corrupti quis, sit, voluptas, nisi reprehenderit itaque reiciendis. Quo optio itaque minima in numquam officiis odit minus tempora ut error cumque magni voluptate velit rem ullam quidem maiores esse, sint nostrum aliquid, explicabo at! Aspernatur quibusdam consequuntur officia quasi molestiae doloribus sed quaerat mollitia pariatur eius distinctio nesciunt ratione sunt vitae recusandae illum, voluptatibus sit atque consequatur facere aliquam. Itaque eos, atque excepturi illo soluta consectetur, amet minus reiciendis, ipsa velit dignissimos quidem quo doloremque adipisci sed ratione quae minima aut? Inventore est rerum libero, corrupti, id impedit molestiae excepturi omnis facere fugiat iste a amet, earum necessitatibus dolores delectus molestias voluptatem voluptates odio. Nulla, soluta! Quod ex veniam nihil nobis consequuntur repellendus expedita eligendi cumque rem, modi itaque asperiores incidunt eos velit placeat sint dolores. Incidunt cupiditate, alias dolor officia accusantium sed eius doloremque voluptatibus nesciunt nam, ipsum, soluta culpa quod quam possimus? Dolore quasi, dignissimos quam tenetur delectus unde velit, expedita excepturi laboriosam est, consectetur cumque reiciendis facilis nemo similique ea pariatur suscipit repellendus dolor? Pariatur libero cupiditate sint.",
                             CountViews = 233,
                             PreviewImage = "StaticFiles/images/News/1.jfif",
-                            PublishTime = new DateTime(2020, 6, 28, 19, 14, 39, 238, DateTimeKind.Local).AddTicks(7597),
+                            PublishTime = new DateTime(2020, 6, 29, 15, 5, 35, 505, DateTimeKind.Local).AddTicks(1925),
                             Title = "Сиквел «Чудо-женщины» перенесли из-за коронавируса"
                         },
                         new
@@ -491,7 +491,7 @@ namespace Entities.Migrations
                             Content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea veritatis voluptates veniam sunt unde quibusdam modi laboriosam deleniti quod, minima vero nobis! Cumque natus ipsum ab incidunt qui corrupti quis, sit, voluptas, nisi reprehenderit itaque reiciendis. Quo optio itaque minima in numquam officiis odit minus tempora ut error cumque magni voluptate velit rem ullam quidem maiores esse, sint nostrum aliquid, explicabo at! Aspernatur quibusdam consequuntur officia quasi molestiae doloribus sed quaerat mollitia pariatur eius distinctio nesciunt ratione sunt vitae recusandae illum, voluptatibus sit atque consequatur facere aliquam. Itaque eos, atque excepturi illo soluta consectetur, amet minus reiciendis, ipsa velit dignissimos quidem quo doloremque adipisci sed ratione quae minima aut? Inventore est rerum libero, corrupti, id impedit molestiae excepturi omnis facere fugiat iste a amet, earum necessitatibus dolores delectus molestias voluptatem voluptates odio. Nulla, soluta! Quod ex veniam nihil nobis consequuntur repellendus expedita eligendi cumque rem, modi itaque asperiores incidunt eos velit placeat sint dolores. Incidunt cupiditate, alias dolor officia accusantium sed eius doloremque voluptatibus nesciunt nam, ipsum, soluta culpa quod quam possimus? Dolore quasi, dignissimos quam tenetur delectus unde velit, expedita excepturi laboriosam est, consectetur cumque reiciendis facilis nemo similique ea pariatur suscipit repellendus dolor? Pariatur libero cupiditate sint.",
                             CountViews = 512,
                             PreviewImage = "StaticFiles/images/News/2.jfif",
-                            PublishTime = new DateTime(2020, 6, 28, 19, 14, 39, 247, DateTimeKind.Local).AddTicks(8229),
+                            PublishTime = new DateTime(2020, 6, 29, 15, 5, 35, 511, DateTimeKind.Local).AddTicks(5360),
                             Title = "Childish Gambino официально опубликовал новый альбом"
                         },
                         new
@@ -501,7 +501,7 @@ namespace Entities.Migrations
                             Content = "В Сети появился трейлер второго сезона анимационного сериала DС «Харли Квинн». В центре сюжета вновь окажется Харли Квинн и её команда антигероев. После того, как героиня... расстаётся с Джокером, она становится самостоятельной единицей преступного мира и наводит.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea veritatis voluptates veniam sunt unde quibusdam modi laboriosam deleniti quod, minima vero nobis! Cumque natus ipsum ab incidunt qui corrupti quis, sit, voluptas, nisi reprehenderit itaque reiciendis. Quo optio itaque minima in numquam officiis odit minus tempora ut error cumque magni voluptate velit rem ullam quidem maiores esse, sint nostrum aliquid, explicabo at! Aspernatur quibusdam consequuntur officia quasi molestiae doloribus sed quaerat mollitia pariatur eius distinctio nesciunt ratione sunt vitae recusandae illum, voluptatibus sit atque consequatur facere aliquam. Itaque eos, atque excepturi illo soluta consectetur, amet minus reiciendis, ipsa velit dignissimos quidem quo doloremque adipisci sed ratione quae minima aut? Inventore est rerum libero, corrupti, id impedit molestiae excepturi omnis facere fugiat iste a amet, earum necessitatibus dolores delectus molestias voluptatem voluptates odio. Nulla, soluta! Quod ex veniam nihil nobis consequuntur repellendus expedita eligendi cumque rem, modi itaque asperiores incidunt eos velit placeat sint dolores. Incidunt cupiditate, alias dolor officia accusantium sed eius doloremque voluptatibus nesciunt nam, ipsum, soluta culpa quod quam possimus? Dolore quasi, dignissimos quam tenetur delectus unde velit, expedita excepturi laboriosam est, consectetur cumque reiciendis facilis nemo similique ea pariatur suscipit repellendus dolor? Pariatur libero cupiditate sint.",
                             CountViews = 237,
                             PreviewImage = "StaticFiles/images/News/3.jfif",
-                            PublishTime = new DateTime(2020, 6, 28, 19, 14, 39, 247, DateTimeKind.Local).AddTicks(8334),
+                            PublishTime = new DateTime(2020, 6, 29, 15, 5, 35, 511, DateTimeKind.Local).AddTicks(5490),
                             Title = "Больше, жестче, грубее: Вышел трейлер второго сезона «Харли Квинн»"
                         },
                         new
@@ -511,7 +511,7 @@ namespace Entities.Migrations
                             Content = "«Фильм Про» впервые обнародовал Абсолютный топ продаж российских онлайн-кинотеатров и видеосервисов. В условиях, когда из-за коронавируса домашний просмотр набирает популярность, «Фильм Про» первым среди профессиональных киноизданий ",
                             CountViews = 878,
                             PreviewImage = "StaticFiles/images/News/4.jfif",
-                            PublishTime = new DateTime(2020, 6, 28, 19, 14, 39, 247, DateTimeKind.Local).AddTicks(8346),
+                            PublishTime = new DateTime(2020, 6, 29, 15, 5, 35, 511, DateTimeKind.Local).AddTicks(5506),
                             Title = "Фильмы онлайн: Абсолютный топ «Фильм Про»"
                         });
                 });
@@ -1470,7 +1470,7 @@ namespace Entities.Migrations
                         new
                         {
                             Id = 1,
-                            ImageSource = "StaticFiles/images/11.jpg",
+                            ImageSource = "StaticFiles/images/Aeronauts.jpg",
                             Rate = 5,
                             ReleaseYear = 2019,
                             Title = "Аэронавты"
@@ -1478,7 +1478,7 @@ namespace Entities.Migrations
                         new
                         {
                             Id = 2,
-                            ImageSource = "StaticFiles/images/12.jpg",
+                            ImageSource = "StaticFiles/images/1917.jpg",
                             Rate = 5,
                             ReleaseYear = 2019,
                             Title = "1917"
@@ -1486,7 +1486,7 @@ namespace Entities.Migrations
                         new
                         {
                             Id = 3,
-                            ImageSource = "StaticFiles/images/13.jpg",
+                            ImageSource = "StaticFiles/images/JumanjiNL.jpg",
                             Rate = 5,
                             ReleaseYear = 2019,
                             Title = "Джуманджи: Новый уровень"
@@ -1494,7 +1494,7 @@ namespace Entities.Migrations
                         new
                         {
                             Id = 4,
-                            ImageSource = "StaticFiles/images/14.jpg",
+                            ImageSource = "StaticFiles/images/Banker.jpg",
                             Rate = 5,
                             ReleaseYear = 2020,
                             Title = "Банкир"
@@ -1502,7 +1502,7 @@ namespace Entities.Migrations
                         new
                         {
                             Id = 5,
-                            ImageSource = "StaticFiles/images/15.jpg",
+                            ImageSource = "StaticFiles/images/SonikH.jpg",
                             Rate = 5,
                             ReleaseYear = 2020,
                             Title = "Соник в кино"
@@ -1510,7 +1510,7 @@ namespace Entities.Migrations
                         new
                         {
                             Id = 6,
-                            ImageSource = "StaticFiles/images/16.jpg",
+                            ImageSource = "StaticFiles/images/PreyBirdsHQ.jpg",
                             Rate = 5,
                             ReleaseYear = 2020,
                             Title = "Хищные птицы: Потрясающая история Харли Квинн"
@@ -1518,7 +1518,7 @@ namespace Entities.Migrations
                         new
                         {
                             Id = 7,
-                            ImageSource = "StaticFiles/images/17.jpg",
+                            ImageSource = "StaticFiles/images/LittleWomen.jpg",
                             Rate = 5,
                             ReleaseYear = 2019,
                             Title = "Маленькие женщины"
@@ -1526,7 +1526,7 @@ namespace Entities.Migrations
                         new
                         {
                             Id = 8,
-                            ImageSource = "StaticFiles/images/18.jpg",
+                            ImageSource = "StaticFiles/images/Composer.jpg",
                             Rate = 5,
                             ReleaseYear = 2019,
                             Title = "Композитор"

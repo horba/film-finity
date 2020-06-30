@@ -115,14 +115,14 @@ namespace Entities.Migrations
                 columns: new[] { "Id", "ImageSource", "Rate", "ReleaseYear", "Title" },
                 values: new object[,]
                 {
-                    { 8, "StaticFiles/images/18.jpg", 5, 2019, "Композитор" },
-                    { 7, "StaticFiles/images/17.jpg", 5, 2019, "Маленькие женщины" },
-                    { 6, "StaticFiles/images/16.jpg", 5, 2020, "Хищные птицы: Потрясающая история Харли Квинн" },
-                    { 5, "StaticFiles/images/15.jpg", 5, 2020, "Соник в кино" },
-                    { 2, "StaticFiles/images/12.jpg", 5, 2019, "1917" },
-                    { 3, "StaticFiles/images/13.jpg", 5, 2019, "Джуманджи: Новый уровень" },
-                    { 1, "StaticFiles/images/11.jpg", 5, 2019, "Аэронавты" },
-                    { 4, "StaticFiles/images/14.jpg", 5, 2020, "Банкир" }
+                    { 8, "StaticFiles/images/Composer.jpg", 5, 2019, "Композитор" },
+                    { 7, "StaticFiles/images/LittleWomen.jpg", 5, 2019, "Маленькие женщины" },
+                    { 6, "StaticFiles/images/PreyBirdsHQ.jpg", 5, 2020, "Хищные птицы: Потрясающая история Харли Квинн" },
+                    { 5, "StaticFiles/images/SonikH.jpg", 5, 2020, "Соник в кино" },
+                    { 2, "StaticFiles/images/1917.jpg", 5, 2019, "1917" },
+                    { 3, "StaticFiles/images/JumanjiNL.jpg", 5, 2019, "Джуманджи: Новый уровень" },
+                    { 1, "StaticFiles/images/Aeronauts.jpg", 5, 2019, "Аэронавты" },
+                    { 4, "StaticFiles/images/Banker.jpg", 5, 2020, "Банкир" }
                 });
 
             migrationBuilder.UpdateData(
@@ -130,28 +130,28 @@ namespace Entities.Migrations
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "PublishTime",
-                value: new DateTime(2020, 6, 28, 19, 14, 39, 238, DateTimeKind.Local).AddTicks(7597));
+                value: new DateTime(2020, 6, 29, 15, 5, 35, 505, DateTimeKind.Local).AddTicks(1925));
 
             migrationBuilder.UpdateData(
                 table: "News",
                 keyColumn: "Id",
                 keyValue: 2,
                 column: "PublishTime",
-                value: new DateTime(2020, 6, 28, 19, 14, 39, 247, DateTimeKind.Local).AddTicks(8229));
+                value: new DateTime(2020, 6, 29, 15, 5, 35, 511, DateTimeKind.Local).AddTicks(5360));
 
             migrationBuilder.UpdateData(
                 table: "News",
                 keyColumn: "Id",
                 keyValue: 3,
                 column: "PublishTime",
-                value: new DateTime(2020, 6, 28, 19, 14, 39, 247, DateTimeKind.Local).AddTicks(8334));
+                value: new DateTime(2020, 6, 29, 15, 5, 35, 511, DateTimeKind.Local).AddTicks(5490));
 
             migrationBuilder.UpdateData(
                 table: "News",
                 keyColumn: "Id",
                 keyValue: 4,
                 column: "PublishTime",
-                value: new DateTime(2020, 6, 28, 19, 14, 39, 247, DateTimeKind.Local).AddTicks(8346));
+                value: new DateTime(2020, 6, 29, 15, 5, 35, 511, DateTimeKind.Local).AddTicks(5506));
 
             migrationBuilder.InsertData(
                 table: "ActorsLists",
