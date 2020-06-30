@@ -11,7 +11,6 @@ module.exports = {
       .set('@filters', path.resolve('src/filters/'))
       .set('@styles', path.resolve('src/styles/'))
       .set('@assets', path.resolve('src/assets/'))
-      .set('@locales', path.resolve('src/locales/'))
-      .set('@filters', path.resolve('src/filters/'));
+      .set('@locales', path.resolve('src/locales/'));
   }
 };
