@@ -1,0 +1,27 @@
+<div class="serial-view">    
+  <div class="el-row-wrap">
+    <div v-for="serial in getSerialsList" class="grid-col-wrap" :key = "serial.serialId">
+      <div class="grid-content-wrap">
+        <el-image fit='cover' :src="serial.posterImageSource | imageServerPath"></el-image>
+        <div class="grid-content-main">
+          <div class="serial-name">
+            <div><span>{{serial.name}}</span></div>
+          </div>
+            <el-row type="flex" justify="start" class ="serial-rating">
+              <el-col :span="24">
+                <el-rate
+                 class="rate"
+                 v-model="serial.rating"
+                 disabled :colors="['var(--main-bg-color)', 'var(--main-bg-color)', 'var(--main-bg-color)']">
+                </el-rate>
+              </el-col>
+              <el-col :span="3" class="year">{{serial.year}}</el-col>
+            </el-row>
+            <div class="celebrities-list">              
+              <span>{{serial.celebrities | fullName | listStringify}}</span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
