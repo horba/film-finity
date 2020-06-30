@@ -17,7 +17,7 @@
             </el-row>
             <div class="actors-list">
               <span>{{movie.actorsList | firstElement}}</span>
-              <span>{{movie.actorsList | withoutFirstElement | listStringify('fullName')}}</span>
+              <span>{{movie.actorsList | withoutFirstElement | listOfString('fullName')}}</span>
             </div>
           </div>
         </el-card>
