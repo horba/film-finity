@@ -4,11 +4,11 @@
   </div>
   <div>
     <el-menu :default-active="activeIndex" class="el-menu-demo color-background main-color" mode="horizontal" @select="handleSelect">
-      <el-menu-item index="1" class="main-color"><router-link to="/movies">{{ $t('header.movies') }}</router-link></el-menu-item>
-      <el-menu-item index="2" class="main-color"><router-link to="/serials">{{ $t('header.serials') }}</router-link></el-menu-item>
-      <el-menu-item index="3" class="main-color"><router-link to="/cartoons">{{ $t('header.cartoons') }}</router-link></el-menu-item>
-      <el-menu-item index="4" class="main-color"><router-link to="/news">{{ $t('header.news') }}</router-link></el-menu-item>
-      <el-menu-item index="5" class="main-color"><router-link to="/celebrities">{{ $t('header.actors')}}</router-link></el-menu-item>
+      <el-menu-item index="1" class="main-color"><router-link class="menu-item header" to="/movies">{{ $t('header.movies') }}</router-link></el-menu-item>
+      <el-menu-item index="2" class="main-color"><router-link class="menu-item header" to="/serials">{{ $t('header.serials') }}</router-link></el-menu-item>
+      <el-menu-item index="3" class="main-color"><router-link class="menu-item header" to="/cartoons">{{ $t('header.cartoons') }}</router-link></el-menu-item>
+      <el-menu-item index="4" class="main-color"><router-link class="menu-item header" to="/news">{{ $t('header.news') }}</router-link></el-menu-item>
+      <el-menu-item index="5" class="main-color"><router-link class="menu-item header" to="/celebrities">{{ $t('header.actors')}}</router-link></el-menu-item>
     </el-menu>
   </div>
     <div class="buttons">    
