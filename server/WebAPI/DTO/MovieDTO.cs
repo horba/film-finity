@@ -14,6 +14,6 @@ namespace WebAPI.DTO
         public int ReleaseYear { get; set; }
         public string ImageSource { get; set; }
 
-        public ICollection<ActorDTO> ActorsList { get; set; }
+        public ICollection<MovieActorDTO> ActorsList { get; set; }
     }
 }
