@@ -13,7 +13,7 @@
                 <el-rate class="rate" v-model="movie.rate" disabled
                   :colors="['var(--ff-primary-color)', 'var(--ff-primary-color)', 'var(--ff-primary-color)']"></el-rate>
               </el-col>
-              <el-col :span="6"><span>{{movie.releaseYear}}</span></el-col>
+              <el-col :span="6"class="releaseYear">{{movie.releaseYear}}</el-col>
             </el-row>
             <div class="actors-list">
               <span>{{movie.actorsList | firstElement}}</span>

@@ -40,23 +40,18 @@ div.movie-title {
 
 .actors-list {
   font-size: 12px;
-  color: var(--ff-dark-gray-color); 
+  color: var(--ff-dark-gray-color);
+  margin-top: 7px;
 }
 
 .actors-list :first-child {
   color: var(--ff-black-color);
 }
 
-div.el-col-6 {
+.releaseYear {     
   color: var(--ff-dark-gray-color);
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-}
-
-div.el-col-6 > span {
-  height: 24px;
-  padding-bottom: 5px;
+  font-size: 14px;  
+  margin-top: 4px;
 }
 
 .content {
