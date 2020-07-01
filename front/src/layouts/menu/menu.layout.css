@@ -31,8 +31,8 @@ div.actions {
 }
 
 ul.main-color > li.main-color.is-active {
-  border-bottom: 3px solid var(--main-txt-color);
-  color: var(--auxiliary-bg-color);
+  border-bottom: 3px solid var(--ff-white-color);
+  color: var(--ff-secondary-color);
 }
 
 ul.main-color > li.main-color:hover {
