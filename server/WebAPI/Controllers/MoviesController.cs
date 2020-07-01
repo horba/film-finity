@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebAPI.DTO;
 using WebAPI.Models;
+using WebAPI.Services;
 
 namespace WebAPI.Controllers
 {
@@ -14,28 +15,16 @@ namespace WebAPI.Controllers
     [ApiController]
     public class MoviesController : ControllerBase
     {
-        private readonly FilmFinityDbContext dbContext;
-
-        public MoviesController(FilmFinityDbContext filmFinityDbContext)
+        private readonly MoviesService moviesService;
+        public MoviesController(MoviesService moviesService)
         {
-            this.dbContext = filmFinityDbContext;
+            this.moviesService = moviesService;
         }
-
 
         [HttpGet]        
         public IActionResult GetListMovies()
         {
-            List<MovieDTO> objectList = dbContext.Movies.Select(o => new MovieDTO
-            {
-                Id = o.Id,
-                Title = o.Title,
-                Rate = o.Rate,
-                ReleaseYear = o.ReleaseYear,
-                ImageSource = o.ImageSource,
-                ActorsList = o.ActorsList.Select(j => j.Actor).Select(j => new ActorDTO
-                { FullName = j.FullName }).ToList()
-            }).ToList();
-
+            var objectList = moviesService.GetAllMovies();
             return Ok(objectList);
         }
     }
