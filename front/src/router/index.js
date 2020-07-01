@@ -1,4 +1,4 @@
-import { Cartoons, FfCelebrities, Movies, News, Serials, Favorites } from '@views';
+import { Cartoons, FfCelebrities, MovieDetails, Movies, News, Serials, Favorites } from '@views';
 import store from '@store';
 
 import Vue from 'vue';
@@ -14,6 +14,10 @@ const routes = [
   {
     path: '/movies',
     component: Movies
+  },
+  {
+    path: '/movies/:id',
+    component: MovieDetails
   },
   {
     path: '/serials',
