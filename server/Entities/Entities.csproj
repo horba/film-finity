@@ -6,12 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20200628161440_AddMoviesPage.cs" />
-    <Compile Remove="Migrations\20200628161440_AddMoviesPage.Designer.cs" />
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <Compile Remove="Migrations\20200627132622_addValidationData.cs" />
+    <Compile Remove="Migrations\20200627132622_addValidationData.Designer.cs" />
+    <Compile Remove="Migrations\20200603094133_InitialCreate.cs" />
+    <Compile Remove="Migrations\20200603094133_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20200606154510_CreateAndSeed.cs" />
+    <Compile Remove="Migrations\20200606154510_CreateAndSeed.Designer.cs" />
+    <Compile Remove="Migrations\20200618105551_CreateAndSeed.cs" />
+    <Compile Remove="Migrations\20200618105551_CreateAndSeed.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
-      <PackageReference Include="AutoMapper" Version="9.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -22,6 +28,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
   </ItemGroup>
 
 </Project>

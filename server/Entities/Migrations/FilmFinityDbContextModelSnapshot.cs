@@ -1441,109 +1441,28 @@ namespace Entities.Migrations
                         });
                 });
 
-            modelBuilder.Entity("WebAPI.Models.Movie", b =>
+            modelBuilder.Entity("WebAPI.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ImageSource")
+                    b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Rate")
-                        .HasColumnType("int");
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ReleaseYear")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Title")
+                    b.Property<string>("UserPassword")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Movies");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ImageSource = "StaticFiles/images/Aeronauts.jpg",
-                            Rate = 5,
-                            ReleaseYear = 2019,
-                            Title = "Аэронавты"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            ImageSource = "StaticFiles/images/1917.jpg",
-                            Rate = 5,
-                            ReleaseYear = 2019,
-                            Title = "1917"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            ImageSource = "StaticFiles/images/JumanjiNL.jpg",
-                            Rate = 5,
-                            ReleaseYear = 2019,
-                            Title = "Джуманджи: Новый уровень"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            ImageSource = "StaticFiles/images/Banker.jpg",
-                            Rate = 5,
-                            ReleaseYear = 2020,
-                            Title = "Банкир"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            ImageSource = "StaticFiles/images/SonikH.jpg",
-                            Rate = 5,
-                            ReleaseYear = 2020,
-                            Title = "Соник в кино"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            ImageSource = "StaticFiles/images/PreyBirdsHQ.jpg",
-                            Rate = 5,
-                            ReleaseYear = 2020,
-                            Title = "Хищные птицы: Потрясающая история Харли Квинн"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            ImageSource = "StaticFiles/images/LittleWomen.jpg",
-                            Rate = 5,
-                            ReleaseYear = 2019,
-                            Title = "Маленькие женщины"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            ImageSource = "StaticFiles/images/Composer.jpg",
-                            Rate = 5,
-                            ReleaseYear = 2019,
-                            Title = "Композитор"
-                        });
-                });
-
-            modelBuilder.Entity("Entities.Models.ActorsList", b =>
-                {
-                    b.HasOne("WebAPI.Models.Actor", "Actor")
-                        .WithMany("ActorsList")
-                        .HasForeignKey("ActorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("WebAPI.Models.Movie", "Movie")
-                        .WithMany("ActorsList")
-                        .HasForeignKey("MovieId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("Entities.Models.CelebrityJobTitles", b =>

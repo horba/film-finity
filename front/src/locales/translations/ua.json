@@ -12,14 +12,27 @@
     "serials": "Серіали",
     "cartoons": "Мультфільми",
     "news": "Новини",
-    "actors": "Актори",
-    "signIn": "Увійти"
+    "actors": "Актори"
   },
   "footer": {
     "socialNetworks": "Соціальні мережі",
     "termsOfUse": "Угода користувача",
     "privacyPolicy": "Політика конфіденційності",
     "copyRight": "Всі права захищені"
+  },
+  "registration": {
+    "signIn": "УВІЙТИ",
+    "createAccount": "Створити аккаунт",
+    "signUp": "Зареєструватися",
+    "haveAccount": "Вже є аккаунт?",
+    "entrance": "Вхід",
+    "accountСreated": "Аккаунт створено!",
+    "firstSuccessMessage": "Ти став частиною великого світу, де кожен може внести лепту в те, щоб процес пошуку фільму, серіалу або мультфільму був простіше та більш захоплююче.",
+    "secondSuccessMessage": "Уперед за переглядами, оцінками та коментарями!",
+    "errorsName": "Введіть ім'я користувача",
+    "errorsEmail": "Введіть email",
+    "errorsEmailRegistered": "Даний email вже зареєстрований",
+    "errorsPassword": "Введіть пароль"
   },
   "news": {
     "commentaries": "коментарів",

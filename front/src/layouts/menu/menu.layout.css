@@ -9,8 +9,13 @@ div.logo {
   margin-left: 80px;
 }
 
-div.buttons {
+div.actions {
   margin-right: 150px;
+  display: flex;
+
+}
+.enter-button {
+  padding: 0px 20px 0px;
 }
 
 .el-menu.el-menu--horizontal {
