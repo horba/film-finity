@@ -23,6 +23,7 @@ export default new Vuex.Store({
     news,
     locale,
     registration,
-    serials
+    serials,
+    movies
   }
 });
