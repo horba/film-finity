@@ -79,6 +79,8 @@ namespace WebAPI
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IFavoriteRepository, FavoriteRepository>();
             services.AddScoped<IFavoriteService, FavoriteService>();
+            services.AddScoped<IMoviesRepository, MoviesRepository>();
+            services.AddScoped<IMoviesService, MoviesService>();
         }
 
 

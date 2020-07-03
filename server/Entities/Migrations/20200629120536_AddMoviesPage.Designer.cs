@@ -4,14 +4,16 @@ using Entities.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Entities.Migrations
 {
     [DbContext(typeof(FilmFinityDbContext))]
-    partial class FilmFinityDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200629120536_AddMoviesPage")]
+    partial class AddMoviesPage
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -376,27 +378,6 @@ namespace Entities.Migrations
                             CelebrityId = -10,
                             JobTitleId = 4
                         });
-                });
-
-            modelBuilder.Entity("Entities.Models.Favorite", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("AddedTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("ContentId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ContentType")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Favorites");
                 });
 
             modelBuilder.Entity("Entities.Models.Genre", b =>
@@ -1089,6 +1070,228 @@ namespace Entities.Migrations
 
                     b.HasKey("Id");
 
+                    b.ToTable("Actors");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            FullName = "Том Харпер"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            FullName = "Филисити Джонс"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            FullName = "Эдди Редмейн"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            FullName = "Химет Патель"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            FullName = "Режиссер"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            FullName = "Джордж Маккей"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            FullName = "Дин-Чарльз Чакман"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            FullName = "Ричард Мэдден"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            FullName = "Джордж Нолфи"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            FullName = "Энтони Маки"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            FullName = "Сэмюел Лерой Джексон"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            FullName = "Ниа Лонг"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            FullName = "Джейк Кэздан"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            FullName = "Дуэйн Джонсон"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            FullName = "Карен Гиллан"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            FullName = "Джейк Блэк"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            FullName = "Кевин Харт"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            FullName = "Джефф Фаулер"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            FullName = "Джим Керри"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            FullName = "Джеймс Марсден"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            FullName = "Тика Самптер"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            FullName = "Бен Шварц"
+                        },
+                        new
+                        {
+                            Id = 23,
+                            FullName = "Мэти Янь"
+                        },
+                        new
+                        {
+                            Id = 24,
+                            FullName = "Марго Робби"
+                        },
+                        new
+                        {
+                            Id = 25,
+                            FullName = "Джерни Смоллет-Белл"
+                        },
+                        new
+                        {
+                            Id = 26,
+                            FullName = "Мэри Элизабет Уинстэд"
+                        },
+                        new
+                        {
+                            Id = 27,
+                            FullName = "Грета Гервич"
+                        },
+                        new
+                        {
+                            Id = 28,
+                            FullName = "Сирта Ронан"
+                        },
+                        new
+                        {
+                            Id = 29,
+                            FullName = "Тимоти Шаламе"
+                        },
+                        new
+                        {
+                            Id = 30,
+                            FullName = "Флоренс Пью"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            FullName = "Эмма Уотсон"
+                        },
+                        new
+                        {
+                            Id = 32,
+                            FullName = "Сирзат Яхуп"
+                        },
+                        new
+                        {
+                            Id = 33,
+                            FullName = "Ху Цзюнь"
+                        },
+                        new
+                        {
+                            Id = 34,
+                            FullName = "Юань Цуань"
+                        },
+                        new
+                        {
+                            Id = 35,
+                            FullName = "Берик Айтжанов"
+                        },
+                        new
+                        {
+                            Id = 36,
+                            FullName = "Аружан Джазильбекова"
+                        },
+                        new
+                        {
+                            Id = 37,
+                            FullName = "Фиби Фокс"
+                        },
+                        new
+                        {
+                            Id = 38,
+                            FullName = "Левин Ллойд"
+                        },
+                        new
+                        {
+                            Id = 39,
+                            FullName = "Бенедикт Камбербэтч"
+                        },
+                        new
+                        {
+                            Id = 40,
+                            FullName = "Ник Джонас"
+                        },
+                        new
+                        {
+                            Id = 41,
+                            FullName = "Николас Холт"
+                        },
+                        new
+                        {
+                            Id = 42,
+                            FullName = "Наташа Ротуэлл"
+                        },
+                        new
+                        {
+                            Id = 43,
+                            FullName = "Элайза Сканлен"
+                        });
+                });
+
+            modelBuilder.Entity("WebAPI.Models.Celebrity", b =>
+                {
                     b.Property<int>("CelebrityId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
@@ -1193,7 +1396,6 @@ namespace Entities.Migrations
                         });
                 });
 
-
             modelBuilder.Entity("WebAPI.Models.JobTitle", b =>
                 {
                     b.Property<int>("JobTitleId")
@@ -1240,29 +1442,112 @@ namespace Entities.Migrations
                             JobName = "композитор"
                         });
                 });
-            modelBuilder.Entity("WebAPI.Models.User", b =>
+
+            modelBuilder.Entity("WebAPI.Models.Movie", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Email")
-                        .IsRequired()
+                    b.Property<string>("ImageSource")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Rate")
+                        .HasColumnType("int");
 
-                    b.Property<string>("UserPassword")
-                        .IsRequired()
+                    b.Property<int>("ReleaseYear")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Movies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ImageSource = "StaticFiles/images/Aeronauts.jpg",
+                            Rate = 5,
+                            ReleaseYear = 2019,
+                            Title = "Аэронавты"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ImageSource = "StaticFiles/images/1917.jpg",
+                            Rate = 5,
+                            ReleaseYear = 2019,
+                            Title = "1917"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ImageSource = "StaticFiles/images/JumanjiNL.jpg",
+                            Rate = 5,
+                            ReleaseYear = 2019,
+                            Title = "Джуманджи: Новый уровень"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            ImageSource = "StaticFiles/images/Banker.jpg",
+                            Rate = 5,
+                            ReleaseYear = 2020,
+                            Title = "Банкир"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            ImageSource = "StaticFiles/images/SonikH.jpg",
+                            Rate = 5,
+                            ReleaseYear = 2020,
+                            Title = "Соник в кино"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            ImageSource = "StaticFiles/images/PreyBirdsHQ.jpg",
+                            Rate = 5,
+                            ReleaseYear = 2020,
+                            Title = "Хищные птицы: Потрясающая история Харли Квинн"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            ImageSource = "StaticFiles/images/LittleWomen.jpg",
+                            Rate = 5,
+                            ReleaseYear = 2019,
+                            Title = "Маленькие женщины"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            ImageSource = "StaticFiles/images/Composer.jpg",
+                            Rate = 5,
+                            ReleaseYear = 2019,
+                            Title = "Композитор"
+                        });
                 });
+
+            modelBuilder.Entity("Entities.Models.ActorsList", b =>
+                {
+                    b.HasOne("WebAPI.Models.Actor", "Actor")
+                        .WithMany("ActorsList")
+                        .HasForeignKey("ActorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WebAPI.Models.Movie", "Movie")
+                        .WithMany("ActorsList")
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Entities.Models.CelebrityJobTitles", b =>
                 {
                     b.HasOne("WebAPI.Models.Celebrity", "Celebrity")

@@ -23,18 +23,29 @@ div.actions {
   height: var(--header-height);   
 }
 
-.el-menu--horizontal>.el-menu-item {  
+.el-menu--horizontal > .el-menu-item {  
   height: var(--header-height);
   padding: 15px 0px 0px;
-  margin: 0px 25px;  
+  margin: 0px 0px;  
   font-size: 18px;   
 }
 
 ul.main-color > li.main-color.is-active {
-  border-bottom: 3px solid var(--main-txt-color);
-  color: var(--auxiliary-bg-color);
+  border-bottom: 3px solid var(--ff-white-color);
+  color: var(--ff-secondary-color);
 }
 
-.el-menu-item > a { 
-  text-decoration: none;
-} 
+ul.main-color > li.main-color:hover {
+  background-color: var(--ff-primary-color);
+  color: var(--main-txt-color); 
+  cursor: default;
+}
+
+.el-menu--horizontal > .el-menu-item > a:hover {
+  color: var(--ff-primary-color); 
+}
+
+.header {
+  font-size: 18px;
+  padding: 10px 25px;
+}

@@ -27,6 +27,9 @@ namespace Entities.DataAccess
         public DbSet<SerialGenreTitles> SerialGenreTitles { get; set; }
         public DbSet<SerialCelebrity> SerialCelebrities { get; set; }
         public DbSet<Favorite> Favorites { get; set; }
+        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Actor> Actors { get; set; }
+        public DbSet<ActorsList> ActorsLists { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -77,6 +80,19 @@ namespace Entities.DataAccess
 
             modelBuilder
               .ApplyConfiguration(new CategoriesConfiguration());
+
+            modelBuilder.Entity<ActorsList>()
+                .HasKey(cj => new { cj.MovieId, cj.ActorId });
+
+            modelBuilder.Entity<ActorsList>()
+                .HasOne(cj => cj.Actor)
+                .WithMany(j => j.ActorsList)
+                .HasForeignKey(cjt => cjt.ActorId);
+
+            modelBuilder.Entity<ActorsList>()
+                .HasOne(cj => cj.Movie)
+                .WithMany(j => j.ActorsList)
+                .HasForeignKey(cjt => cjt.MovieId);
 
             modelBuilder.Seed();
         }
