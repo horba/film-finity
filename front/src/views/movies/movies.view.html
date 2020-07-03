@@ -16,8 +16,8 @@
               <el-col :span="6"class="releaseYear">{{movie.releaseYear}}</el-col>
             </el-row>
             <div class="actors-list">
-              <span>{{movie.actorsList | firstElement}}</span>
-              <span>{{movie.actorsList | withoutFirstElement | listOfString('fullName')}}</span>
+              <span>{{movie.actorsList[0].fullName}}, </span>
+              <span>{{movie.actorsList | withoutFirstElement | mapByProperty("fullName") | listStringify}}</span>
             </div>
           </div>
         </el-card>

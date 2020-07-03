@@ -1,13 +1,8 @@
 export default {
   name: 'ff-movies',
   filters: {
-    firstElement (titles) {
-      return titles[0].fullName + ',';
-    },
     withoutFirstElement (titles) {
-      const resultTitles = [];
-      for (let i = 0; i < titles.length - 1; i++) { resultTitles[i] = titles[i + 1]; }
-      return resultTitles;
+      return Array.isArray(titles) && titles.length ? titles.slice(1, -1) : [];
     }
   },
   methods: {
