@@ -6,9 +6,8 @@ using WebAPI.DTO;
 
 namespace WebAPI.Services
 {
-    public interface ISerialsService
+    public interface IFavoriteService
     {
-        List<SerialDTO> GetSerials();
-        SerialDTO GetSerialId(int id);
+        List<FavoriteDTO> GetFavorites();
     }
 }

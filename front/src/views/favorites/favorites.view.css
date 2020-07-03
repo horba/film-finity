@@ -1,4 +1,4 @@
-.serial-view{
+.favorite-view{
     margin: 0;
 }
 
@@ -26,13 +26,13 @@
     padding: 20px;
 }
 
-.serial-name div {
+.favorite-name div {
     display: flex;
     justify-content: flex-start;
     height: 46px;
 }
 
-.serial-name div span {
+.favorite-name div span {
 
     font-family: var(--txt-font);
     font-style: normal;
@@ -46,7 +46,7 @@
     width: 100%;
     border-radius: 5px 5px 0px 0px;
 }
-.serial-rating {
+.favorite-rating {
     margin-bottom: 7px;
     height: 20px;
 }

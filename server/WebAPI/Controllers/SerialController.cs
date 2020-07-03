@@ -26,5 +26,13 @@ namespace WebAPI.Controllers
             List<SerialDTO> objectList = _serialsService.GetSerials();
             return Ok(objectList);
         }
+
+        [HttpGet("{id}")]
+        public IActionResult GetSerial(int id)
+        {
+            SerialDTO objectList = _serialsService.GetSerialId(id);
+            return Ok(objectList);
+        }
+
     }
 }

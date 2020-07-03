@@ -1,12 +1,12 @@
 
 export default {
-  name: 'serials-view',
+  name: 'favorites-view',
   computed: {
-    getSerialsList () {
-      return this.$store.state.serials.serials;
+    getfavoritesList () {
+      return this.$store.state.favorites.favorites;
     }
   },
   created () {
-    this.$store.dispatch('getSerials');
+    this.$store.dispatch('getFavorites');
   }
 };

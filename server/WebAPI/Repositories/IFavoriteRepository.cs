@@ -7,9 +7,8 @@ using WebAPI.DTO;
 
 namespace WebAPI.Repositories
 {
-    public interface ISerialRepository : IRepository<SerialDTO>
+    public interface IFavoriteRepository : IRepository<FavoriteDTO>
     {
-        List<Serial> GetAllSerials();
-        public Serial GetSerialById(int id);
+        List<Favorite> GetAllFavorites();
     }
 }

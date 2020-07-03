@@ -1,19 +1,19 @@
 import axios from 'axios';
 export default {
   state: () => ({
-    serials: []
+    favorites: []
   }),
   getters: {},
   mutations: {
-    updateSerials (state, serials) {
-      state.serials = serials;
+    updateFavorites (state, favorites) {
+      state.favorites = favorites;
     }
   },
   actions: {
-    async getSerials ({ state, commit, rootState }) {
+    async getFavorites ({ state, commit, rootState }) {
       await axios
-        .get(`${rootState.baseUrl}/api/Serial`)
-        .then(response => { commit('updateSerials', response.data); });
+        .get(`${rootState.baseUrl}/api/Favorite`)
+        .then(response => { commit('updateFavorites', response.data); });
     }
   }
 };
