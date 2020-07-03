@@ -77,8 +77,8 @@ namespace WebAPI
             services.AddScoped<INewsService, NewsService>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();
-            services.AddScoped<MoviesRepository>();
-            services.AddScoped<MoviesService>();
+            services.AddScoped<IMoviesRepository, MoviesRepository>();
+            services.AddScoped<IMoviesService, MoviesService>();
         }
 
 

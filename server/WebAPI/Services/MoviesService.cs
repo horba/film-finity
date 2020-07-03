@@ -9,21 +9,15 @@ using WebAPI.Models;
 
 namespace WebAPI.Services
 {
-    public class MoviesService
+    public class MoviesService : IMoviesService
     {
         private readonly IMapper _mapper;
-        private readonly MoviesRepository _moviesRepository;
+        private readonly IMoviesRepository _moviesRepository;
 
-        public MoviesService(MoviesRepository moviesRepository)
+        public MoviesService(IMoviesRepository _moviesRepository, IMapper _mapper)
         {
-            var configMapper = new MapperConfiguration(cfg =>                
-                cfg.CreateMap<Movie, MovieDTO>()
-                    .ForMember(dto => dto.ActorsList, opt => opt.MapFrom(
-                        list => list.ActorsList.ToList().Select
-                        (item => new MovieActorDTO { FullName = item.Actor.FullName, Id = item.ActorId})))
-                );
-            _mapper = new Mapper(configMapper);
-            _moviesRepository = moviesRepository;
+            this._mapper = _mapper;
+            this._moviesRepository = _moviesRepository;
         }
         public IEnumerable<MovieDTO> GetAllMovies()
         {

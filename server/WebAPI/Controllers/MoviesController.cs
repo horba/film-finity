@@ -15,16 +15,16 @@ namespace WebAPI.Controllers
     [ApiController]
     public class MoviesController : ControllerBase
     {
-        private readonly MoviesService moviesService;
-        public MoviesController(MoviesService moviesService)
+        private readonly IMoviesService _moviesService;
+        public MoviesController(IMoviesService moviesService)
         {
-            this.moviesService = moviesService;
+            this._moviesService = moviesService;
         }
 
         [HttpGet]        
         public IActionResult GetListMovies()
         {
-            var objectList = moviesService.GetAllMovies();
+            var objectList = _moviesService.GetAllMovies();
             return Ok(objectList);
         }
     }

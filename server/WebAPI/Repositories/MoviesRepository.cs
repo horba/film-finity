@@ -9,17 +9,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WebAPI.Repositories
 {
-    public class MoviesRepository
+    public class MoviesRepository : Repository<MovieDTO>, IMoviesRepository
     {
-        private readonly FilmFinityDbContext dbContext;
-
-        public MoviesRepository(FilmFinityDbContext dbContext)
-        {
-            this.dbContext = dbContext;
-        }
+        
+        public MoviesRepository(FilmFinityDbContext context)
+            : base(context)
+        { }
+        
         public IQueryable<Movie> GetAllMovies()
         {
-           return dbContext.Movies.Include(c => c.ActorsList).ThenInclude(c => c.Actor);                
+           return _dbContext.Movies.Include(c => c.ActorsList).ThenInclude(c => c.Actor);                
         }
     }
 }
