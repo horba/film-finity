@@ -9,6 +9,6 @@ namespace WebAPI.Services
     public interface ISerialsService
     {
         List<SerialDTO> GetSerials();
-        SerialDTO GetSerialId(int id);
+        SerialDTO GetSerialById(int id);
     }
 }

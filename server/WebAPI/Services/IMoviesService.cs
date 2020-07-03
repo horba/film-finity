@@ -9,5 +9,7 @@ namespace WebAPI.Services
     public interface IMoviesService
     {
         IEnumerable<MovieDTO> GetAllMovies();
+        MovieDTO GetMovieById(int id);
+
     }
 }

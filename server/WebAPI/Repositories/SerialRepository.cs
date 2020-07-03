@@ -38,8 +38,6 @@ namespace WebAPI.Repositories
                     .ThenInclude(n => n.GenreTitle)
                     .Where(x => x.Id == id)
                     .First();
-
-                    //.SingleOrDefault(x => x.Id == id);
         }
     }
 }

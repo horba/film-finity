@@ -20,5 +20,14 @@ namespace WebAPI.Repositories
         {
            return _dbContext.Movies.Include(c => c.ActorsList).ThenInclude(c => c.Actor);                
         }
+        
+        public Movie GetMovieById(int id)
+        {
+            return _dbContext.Movies
+                .Include(c => c.ActorsList)
+                .ThenInclude(c => c.Actor)
+                .Where(x => x.Id == id)
+                .First();
+        }
     }
 }

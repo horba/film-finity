@@ -8,6 +8,6 @@ namespace WebAPI.Services
 {
     public interface IFavoriteService
     {
-        List<FavoriteDTO> GetFavorites();
+        IEnumerable<FavoriteDTO> GetFavorites();
     }
 }

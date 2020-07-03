@@ -30,7 +30,7 @@ namespace WebAPI.Controllers
         [HttpGet("{id}")]
         public IActionResult GetSerial(int id)
         {
-            SerialDTO objectList = _serialsService.GetSerialId(id);
+            SerialDTO objectList = _serialsService.GetSerialById(id);
             return Ok(objectList);
         }
 

@@ -13,8 +13,7 @@ namespace WebAPI.DTO
         public double Rating { get; set; }
         public int Year { get; set; }
         public string PosterImageSource { get; set; }
-        public List<GenreDTO> GenreTitles { get; set; }
-        public List<CelebrityDTO> Celebrities { get; set; }
+        public List<MovieActorDTO> Celebrities { get; set; }
     }
     //public enum ContentType
     //{

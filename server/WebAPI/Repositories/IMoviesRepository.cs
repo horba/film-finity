@@ -10,5 +10,6 @@ namespace WebAPI.Repositories
     public interface IMoviesRepository : IRepository<MovieDTO>
     {
         IQueryable<Movie> GetAllMovies();
+        Movie GetMovieById(int id);
     }
 }

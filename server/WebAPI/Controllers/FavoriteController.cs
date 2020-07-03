@@ -21,9 +21,9 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<FavoriteDTO>> GetListFavorites()
+        public ActionResult<IEnumerable<FavoriteDTO>> GetListFavorites()
         {
-            List<FavoriteDTO> objectList = favoriteService.GetFavorites();
+            IEnumerable<FavoriteDTO> objectList = favoriteService.GetFavorites();
             return Ok(objectList);
         }
     }

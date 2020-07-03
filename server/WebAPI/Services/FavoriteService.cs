@@ -13,23 +13,26 @@ namespace WebAPI.Services
     public class FavoriteService : IFavoriteService
     {
         private readonly ISerialRepository _serialRepository;
+        private readonly IMoviesRepository _movieRepository;
         private readonly IFavoriteRepository favoriteRepository;
         private readonly IMapper mapper;
 
-        public FavoriteService(IFavoriteRepository favoriteRepository, ISerialRepository _serialRepository, IMapper mapper)
+        public FavoriteService(IFavoriteRepository favoriteRepository, ISerialRepository _serialRepository, IMoviesRepository _movieRepository, IMapper mapper)
         {
             this.favoriteRepository = favoriteRepository;
             this._serialRepository = _serialRepository;
+            this._movieRepository = _movieRepository;
             this.mapper = mapper;
         }
-        public List<FavoriteDTO> GetFavorites()
+        public IEnumerable<FavoriteDTO> GetFavorites()
         {
-            var favorites = favoriteRepository.GetAllFavorites();         
-            var favoriteSerial = favorites.Where(s => s.ContentType == ContentType.Serial).Select(i => (_serialRepository.GetSerialById(i.ContentId)));
-            //var favoriteMovie = favorites.Where(s => s.ContentType == ContentType.Movie).Select(i => (_movieRepository.GetMoviebyId(i.ContentId)));
+            var favorites = favoriteRepository.GetAllFavorites();
+            var favoriteSerial = mapper.Map<IEnumerable<FavoriteDTO>>(favorites.Where(s => s.ContentType == ContentType.Serial).Select(i => (_serialRepository.GetSerialById(i.ContentId))));
+            var favoriteMovie = mapper.Map<IEnumerable<FavoriteDTO>>(favorites.Where(s => s.ContentType == ContentType.Movie).Select(i => (_movieRepository.GetMovieById(i.ContentId))));
+            IEnumerable<FavoriteDTO> union = favoriteSerial.Union(favoriteMovie);
 
- 
-            return mapper.Map<List<FavoriteDTO>>(favoriteSerial);
+
+            return union;
 
         }
         //public List<FavoriteDTO> GetFavorites()
