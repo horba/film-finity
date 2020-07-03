@@ -42,6 +42,11 @@ namespace WebAPI.Mapping
                   route => route.NewsCategories.ToList().Select
                   (el => new NewsCategoryDTO { Id = el.Category.Id, Name = el.Category.Name }))
               );
+            CreateMap<Movie, MovieDTO>()
+                .ForMember(dto => dto.ActorsList, opt => opt.MapFrom(
+                        list => list.ActorsList.ToList().Select
+                        (item => new MovieActorDTO { FullName = item.Actor.FullName, Id = item.ActorId }))
+                );
         }
     }
 }
