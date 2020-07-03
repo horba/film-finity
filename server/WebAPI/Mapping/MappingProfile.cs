@@ -47,6 +47,7 @@ namespace WebAPI.Mapping
                         list => list.ActorsList.ToList().Select
                         (item => new MovieActorDTO { FullName = item.Actor.FullName, Id = item.ActorId }))
                 );
+            CreateMap<Review, ReviewDTO>();
         }
     }
 }

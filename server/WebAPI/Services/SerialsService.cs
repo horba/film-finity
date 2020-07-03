@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Entities.DataAccess;
+using Entities.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,11 @@ namespace WebAPI.Services
         {
             var serials = _serialRepository.GetAllSerials();
             return _mapper.Map<List<SerialDTO>>(serials.ToList());
+        }
+        public SerialDTO GetSerialById(int Id)
+        {
+            var serial = _serialRepository.GetSerialById(Id).Single();
+            return _mapper.Map<Serial, SerialDTO>(serial);
         }
     }
 }

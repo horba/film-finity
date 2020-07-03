@@ -6,6 +6,7 @@ using Entities.DataAccess;
 using WebAPI.Models;
 using WebAPI.DTO;
 using Microsoft.EntityFrameworkCore;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace WebAPI.Repositories
 {
@@ -19,6 +20,11 @@ namespace WebAPI.Repositories
         public IQueryable<Movie> GetAllMovies()
         {
            return _dbContext.Movies.Include(c => c.ActorsList).ThenInclude(c => c.Actor);                
+        }
+
+        public IQueryable<Movie> GetMovieById(int Id)
+        {
+            return _dbContext.Movies.Where(m => m.Id == Id);
         }
     }
 }
