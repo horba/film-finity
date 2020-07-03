@@ -19,6 +19,7 @@ namespace Entities.DataAccess
         public DbSet<CelebrityJobTitles> CelebrityJobTitles { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<News> News { get; set; }
+        public DbSet<Review> Reviews { get; set; }
         public DbSet<NewsAuthor> Authors { get; set; }
         public DbSet<NewsCategory> Categories { get; set; }
         public DbSet<NewsCategories> NewsCategories { get; set; }
@@ -67,6 +68,11 @@ namespace Entities.DataAccess
                 .HasOne(cj => cj.Celebrity)
                 .WithMany(j => j.CelebrityJobTitles)
                 .HasForeignKey(cjt => cjt.CelebrityId);
+
+            modelBuilder.Entity<Review>()
+                .HasOne(cj => cj.User)
+                .WithMany(j => j.Reviews)
+                .HasForeignKey(cjt => cjt.UserId);
 
             modelBuilder
              .ApplyConfiguration(new NewsConfiguration());

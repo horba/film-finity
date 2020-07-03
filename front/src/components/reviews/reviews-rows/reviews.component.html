@@ -1,0 +1,103 @@
+<div class = "review-component-rows">
+    <div class = "review-row-element">
+        <el-row>
+            <el-col :span="7">
+            <el-image fit ='cover' :src = 'getImgSrc()'></el-image>
+                <div class = "marks">
+                    <div class = "likes">
+                    <span class = "icon-count">5</span>
+                    <i class="el-icon-thumb"></i>
+                    </div>
+                    <div class = "dislikes">
+                    <span class = "icon-count">5</span>
+                    <i class="el-icon-thumb"></i>
+                    </div>
+                    <div class = "count-comments">
+                    <span class = "icon-count">5</span>
+                    <i class="el-icon-chat-square"></i>
+                    </div>
+                </div>
+            </el-col>
+            <el-col class = "column-main-content" :span="13">
+                <h1 class = "review-title">Маленькие женщины</h1>
+                <div class = "review-txt-content">
+                    Фильм повествует о 4-х сестрах: Мег (Эмма Уотсон), Джо (Сирша Ронан), Бет 
+                    (Элайза Сканлен) и Эми (Флоренс Пью). Каждая из сестер имеет свой необычный 
+                    характер, и каждая мне полюбилась по своему. Самая старшая и женственная Мег, 
+                    видно какой она серьезной бывает, думая о своем будущем и заботясь о сестренках. 
+                    Джо — с мальчишеским характером и духом писателя, эта девушка прямолинейна и может 
+                    высказать своему собеседнику все что думает о нем. Явно отличается от своих сестер, 
+                    а что самое интересное, для того времени совсем не думает о замужестве) Считая, что 
+                    женщина вполне сама себя может обеспечить. Бет — скромная и тихая девушка, она любит 
+                    музыку и когда играет на фортепиано, все затихают, дабы послушать ее
+                </div>
+            </el-col>
+            <el-col class = "rate-col" :span="5">
+                <div class = "publish-date">
+                    <span>11.01.2020</span>
+                </div>
+                    <div class = "rate-content-main">
+                        <el-rate
+                            v-model='rateGeneral'
+                            class = "rate-general"
+                            :max = "1"
+                            disabled
+                            text-color="var(--ff-font-primary-color)"
+                            disabled-void-color = "#D2D5DA"
+                            show-score
+                            score-template = "{value}">
+                        </el-rate>
+                    </div>
+                    <div class = "rate-content-wrap">
+                        <div class = "rate-name">сюжет</div>
+                        <el-rate
+                            v-model='rate'
+                            class = "category-rate"
+                            disabled
+                            text-color="var(--ff-font-primary-color)"
+                            disabled-void-color = "#D2D5DA"
+                            show-score
+                            score-template = "{value},0">
+                        </el-rate>
+                    </div>
+                    <div class = "rate-content-wrap">
+                        <div class = "rate-name">сюжет</div>
+                        <el-rate
+                            v-model='rate'
+                            class = "category-rate"
+                            disabled
+                            text-color="var(--ff-font-primary-color)"
+                            disabled-void-color = "#D2D5DA"
+                            show-score
+                            score-template = "{value},0">
+                        </el-rate>
+                    </div>
+                    <div class = "rate-content-wrap">
+                        <div class = "rate-name">сюжет</div>
+                        <el-rate
+                            v-model='rate'
+                            class = "category-rate"
+                            disabled
+                            text-color="var(--ff-font-primary-color)"
+                            disabled-void-color = "#D2D5DA"
+                            show-score
+                            score-template = "{value},0">
+                        </el-rate>
+                    </div>
+                    <div class = "rate-content-wrap">
+                        <div class = "rate-name">сюжет</div>
+                        <el-rate
+                            v-model='rate'
+                            class = "category-rate"
+                            disabled
+                            text-color="var(--ff-font-primary-color)"
+                            disabled-void-color = "#D2D5DA"
+                            show-score
+                            score-template = "{value},0">
+                        </el-rate>
+                </div>
+            </el-col>
+        </el-row>
+    </div>
+</div>
+

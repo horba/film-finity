@@ -1,0 +1,137 @@
+.review-block-element {
+    width: 470px;
+    padding: 20px;
+    background: #F2F2FE;
+    border-radius: 10px;
+    font-family: var(--txt-font);
+}
+
+.el-row {
+    display: flex;
+}
+
+.el-image {
+    border-radius: 8px;
+}
+
+.column-main-content {
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.publish-date {
+    font-size: 16px;
+    line-height: 24px;
+    color: #8F96A3;
+}
+
+.publish-date span {
+    float: right;
+}
+
+.marks {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 18px;
+    border-radius: 10px;
+    background: var(--main-txt-color);
+    padding: 18px;
+}
+
+.icon-count {
+    margin-right: 3px;
+}
+
+.likes span {
+    color: #4ACD6F;
+}
+
+.likes i {
+    color: #4ACD6F;
+} 
+
+.dislikes span {
+    color: #FF5252;
+}
+
+.dislikes i {
+    color: #FF5252;
+    transform: rotate(180deg);
+}
+
+.count-comments span {
+    color: #6663FF;
+}
+
+.count-comments i {
+    color: #6663FF;
+}
+
+.review-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    color : var(--ff-font-primary-color);
+}
+
+.review-txt-content {
+    padding: 0;
+    margin: 0;
+    color: var(--ff-black-color);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.rate-name {
+    margin-bottom: 3px;
+    color: var(--ff-dark-gray-color);
+}
+
+.category-rate >>> .el-rate__icon {
+    font-size: 20px;
+}
+
+.category-rate >>> .el-rate__text {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 144%;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.rate-col {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+.rate-general {
+    margin-left: 45px;
+}
+
+.block {
+    margin: 0;
+}
+
+
+.rate-general >>> .el-rate__icon {
+    font-size: 35px;
+}
+
+.rate-general >>> .el-rate__text {
+    font-size: 36px;
+    font-weight: 600;
+    float: left;
+    margin-right: 10px;
+}

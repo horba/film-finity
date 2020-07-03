@@ -1,0 +1,16 @@
+.review-component-root {
+    margin: 100px;
+}
+
+.el-button-group {
+    margin: 20px 0;
+    width: 104px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.notactive {
+    background-color: #F2F2FE;
+    border-color: #F2F2FE;
+    color: var(--ff-font-primary-color);
+}

@@ -16,6 +16,6 @@ namespace Entities.Models
         public string Email { get; set; }
         [Required]
         public string UserPassword { get; set; }
-
+        public ICollection<Review> Reviews { get; set; }
     }
 }

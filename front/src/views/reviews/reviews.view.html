@@ -1,0 +1,9 @@
+<div class = "review-component-root">
+    <el-button-group>
+        <el-button :class="{ notactive : isRowView }" @click = "onClick" size="small" type="primary" icon="el-icon-s-grid"></el-button>
+        <el-button :class="{ notactive : !isRowView }" @click = "onClick" size="small" type="primary"><i class="el-icon-s-order"></i></el-button>
+    </el-button-group>
+    <ff-reviews-rows v-if = "isRowView"/>
+    <ff-reviews-blocks v-else/>
+</div>
+
