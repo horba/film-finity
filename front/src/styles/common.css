@@ -2,19 +2,38 @@
 button.main-color,
 a.main-color.el-link--default,
 ul.main-color > li.main-color {
-    color: var(--main-txt-color);
+    color: var(--ff-white-color);
 }
 
 .color-background,
 button.color-background,
 ul.color-background {
-    background-color: var(--main-bg-color);
+    background-color: var(--ff-primary-color);
+    font-family: var(--txt-font);    
 }
 
 button.second-color {
-    color: var(--main-bg-color);
+    color: var(--ff-primary-color);
+    font-family: var(--txt-font);
+    height: var(--menu-button-height);
 }
 
 .main-content {
     min-height: calc(100vh - (var(--header-height) + var(--footer-height) + var(--footer-bottom-height)));
-  }
+}
+
+@font-face {
+    font-family: Artegra Sans;
+    src: url(../fonts/ArtegraSans-Medium.otf);
+   }
+
+.menu-item {
+    color: var(--ff-white-color);
+    border-radius: 3px;
+    text-decoration: none; 
+}
+  
+a.menu-item:hover {
+    color: var(--ff-primary-color);
+    background-color: var(--ff-white-color);
+}
