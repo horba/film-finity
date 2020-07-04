@@ -1,0 +1,28 @@
+<div class="favorite-view">
+  <h1>Title</h1>     
+  <div class="el-row-wrap">
+    <div v-for="favorite in getfavoritesList" class="grid-col-wrap" :key = "favorite.favoriteId">
+      <div class="grid-content-wrap">
+        <el-image fit='cover' :src="favorite.posterImageSource | imageServerPath"></el-image>
+        <div class="grid-content-main">
+          <div class="favorite-name">
+            <div><span>{{favorite.name}}</span></div>
+          </div>
+            <el-row type="flex" justify="start" class ="favorite-rating">
+              <el-col :span="24">
+                <el-rate
+                 class="rate"
+                 v-model="favorite.rating"
+                 disabled :colors="['var(--main-bg-color)', 'var(--main-bg-color)', 'var(--main-bg-color)']">
+                </el-rate>
+              </el-col>
+              <el-col :span="3" class="year">{{favorite.year}}</el-col>
+            </el-row>
+            <div class="celebrities-list">
+              <span>{{favorite.celebrities | mapByProperty("fullName")}}</span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

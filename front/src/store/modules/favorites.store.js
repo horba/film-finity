@@ -12,7 +12,7 @@ export default {
   actions: {
     async getFavorites ({ state, commit, rootState }) {
       await axios
-        .get(`${rootState.baseUrl}/api/Favorite`)
+        .get(`${rootState.baseUrl}/api/Favorite/2`)
         .then(response => { commit('updateFavorites', response.data); });
     }
   }

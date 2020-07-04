@@ -1,12 +1,14 @@
 
+import { FavoritesTile, FavoritesList } from '@views/favorites';
 export default {
   name: 'favorites-view',
-  computed: {
-    getfavoritesList () {
-      return this.$store.state.favorites.favorites;
-    }
+  components: {
+    FavoritesTile, FavoritesList
   },
-  created () {
-    this.$store.dispatch('getFavorites');
+  data () {
+    return {
+      FavoritesTileVisible: true,
+      FavoritesListVisible: false
+    };
   }
 };
