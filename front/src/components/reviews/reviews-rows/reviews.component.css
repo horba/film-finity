@@ -1,17 +1,25 @@
 .review-row-element {
     width: 910px;
     padding: 20px;
-    background: #F2F2FE;
+    background: var(--ff-light-gray-color);
     border-radius: 10px;
     font-family: var(--txt-font);
+    margin-top: 20px;
 }
 
 .el-row {
     display: flex;
 }
 
+.el-col:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
 .el-image {
     border-radius: 8px;
+    max-height: 230px;
 }
 
 .column-main-content {
@@ -22,7 +30,7 @@
 .publish-date {
     font-size: 16px;
     line-height: 24px;
-    color: #8F96A3;
+    color: var(--ff-dark-gray-color);
 }
 
 .publish-date span {
@@ -31,10 +39,10 @@
 
 .marks {
     display: flex;
-    justify-content: space-around;
-    margin-top: 18px;
+    justify-content: space-between;
+    margin-top: 3px;
     border-radius: 10px;
-    background: var(--main-txt-color);
+    background: var(--ff-white-color);
     padding: 18px;
 }
 
@@ -60,11 +68,11 @@
 }
 
 .count-comments span {
-    color: #6663FF;
+    color: var(--ff-font-primary-color)F;
 }
 
 .count-comments i {
-    color: #6663FF;
+    color: var(--ff-font-primary-color);
 }
 
 .review-txt-content {

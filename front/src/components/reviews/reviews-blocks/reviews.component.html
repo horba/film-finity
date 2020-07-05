@@ -1,19 +1,19 @@
     <div class = "review-component-blocks">
-        <div class = "review-block-element">
+        <div v-for="reviewItem in reviews" class = "review-block-element">
             <el-row>
                 <el-col :span="12">
-                    <el-image fit ='cover' :src = 'getImgSrc()'></el-image>
+                    <el-image fit ='cover' :src = 'reviewItem.filmImage | imageServerPath'></el-image>
                     <div class = "marks">
                         <div class = "likes">
-                        <span class = "icon-count">5</span>
+                        <span class = "icon-count">{{reviewItem.countLikes}}</span>
                         <i class="el-icon-thumb"></i>
                         </div>
                         <div class = "dislikes">
-                        <span class = "icon-count">5</span>
+                        <span class = "icon-count">{{reviewItem.countDislikes}}</span>
                         <i class="el-icon-thumb"></i>
                         </div>
                         <div class = "count-comments">
-                        <span class = "icon-count">5</span>
+                        <span class = "icon-count">{{reviewItem.countComments}}</span>
                         <i class="el-icon-chat-square"></i>
                         </div>
                     </div>
@@ -21,27 +21,19 @@
                 <el-col class = "column-main-content" :span="12">
                     <div class = "rate-content-main">
                         <el-rate
-                            v-model='rateGeneral'
-                            class = "rate-general block"
-                            :max = "1"
-                            disabled
-                            text-color="var(--ff-font-primary-color)"
-                            disabled-void-color = "#D2D5DA"
-                            show-score
-                            score-template = "{value}">
+                        :value='getAverageFromArray([reviewItem.directingRating, reviewItem.plotRating, reviewItem.spectacleRating, reviewItem.actorsRating])/5'
+                        class = "rate-general"
+                        :max = "1"
+                        disabled
+                        text-color="var(--ff-font-primary-color)"
+                        disabled-void-color = "#D2D5DA"
+                        show-score
+                        score-template = "{value}">
                         </el-rate>
                     </div>
-                    <h1 class = "review-title">Маленькие женщины</h1>
+                    <h1 class = "review-title">{{reviewItem.reviewTitle}}</h1>
                     <div class = "review-txt-content">
-                        Фильм повествует о 4-х сестрах: Мег (Эмма Уотсон), Джо (Сирша Ронан), Бет 
-                        (Элайза Сканлен) и Эми (Флоренс Пью). Каждая из сестер имеет свой необычный 
-                        характер, и каждая мне полюбилась по своему. Самая старшая и женственная Мег, 
-                        видно какой она серьезной бывает, думая о своем будущем и заботясь о сестренках. 
-                        Джо — с мальчишеским характером и духом писателя, эта девушка прямолинейна и может 
-                        высказать своему собеседнику все что думает о нем. Явно отличается от своих сестер, 
-                        а что самое интересное, для того времени совсем не думает о замужестве) Считая, что 
-                        женщина вполне сама себя может обеспечить. Бет — скромная и тихая девушка, она любит 
-                        музыку и когда играет на фортепиано, все затихают, дабы послушать ее
+                        {{reviewItem.reviewContent}}
                     </div>
                 </el-col>
             </el-row>

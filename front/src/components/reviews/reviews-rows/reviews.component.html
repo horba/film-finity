@@ -2,7 +2,7 @@
     <div v-for="reviewItem in reviews" class = "review-row-element" :key = "reviewItem.Id">
         <el-row>
             <el-col :span="7">
-            <el-image fit ='cover' :src = 'getImgSrc()'></el-image>
+            <el-image fit ='cover' :src = 'reviewItem.filmImage | imageServerPath'></el-image>
                 <div class = "marks">
                     <div class = "likes">
                     <span class = "icon-count">{{reviewItem.countLikes}}</span>
@@ -30,7 +30,7 @@
                 </div>
                     <div class = "rate-content-main">
                         <el-rate
-                            v-model='rateGeneral'
+                            :value='getAverageFromArray([reviewItem.directingRating, reviewItem.plotRating, reviewItem.spectacleRating, reviewItem.actorsRating])/5'
                             class = "rate-general"
                             :max = "1"
                             disabled

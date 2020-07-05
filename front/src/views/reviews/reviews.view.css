@@ -10,7 +10,7 @@
 }
 
 .notactive {
-    background-color: #F2F2FE;
-    border-color: #F2F2FE;
+    background-color: var(--ff-light-gray-color);
+    border-color: var(--ff-light-gray-color);
     color: var(--ff-font-primary-color);
 }

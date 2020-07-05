@@ -1,9 +1,23 @@
 .review-block-element {
     width: 470px;
     padding: 20px;
-    background: #F2F2FE;
+    background: var(--ff-light-gray-color);
     border-radius: 10px;
     font-family: var(--txt-font);
+    margin-top: 20px;
+}
+
+.el-col:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.review-component-blocks {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .el-row {
@@ -12,6 +26,7 @@
 
 .el-image {
     border-radius: 8px;
+    max-height: 230px;
 }
 
 .column-main-content {
@@ -24,7 +39,7 @@
 .publish-date {
     font-size: 16px;
     line-height: 24px;
-    color: #8F96A3;
+    color: var(--ff-dark-gray-color);
 }
 
 .publish-date span {
@@ -36,7 +51,7 @@
     justify-content: space-around;
     margin-top: 18px;
     border-radius: 10px;
-    background: var(--main-txt-color);
+    background: var(--ff-white-color);
     padding: 18px;
 }
 
@@ -62,11 +77,11 @@
 }
 
 .count-comments span {
-    color: #6663FF;
+    color: var(--ff-font-primary-color);
 }
 
 .count-comments i {
-    color: #6663FF;
+    color: var(--ff-font-primary-color);
 }
 
 .review-title {
@@ -115,15 +130,10 @@
     flex-direction: column;
 }
 
-
 .rate-general {
     margin-left: 45px;
-}
-
-.block {
     margin: 0;
 }
-
 
 .rate-general >>> .el-rate__icon {
     font-size: 35px;
