@@ -6,6 +6,7 @@ import сelebrities from './modules/celebrities.store.js';
 import news from './modules/news.store.js';
 import serials from './modules/serials.store.js';
 import movies from './modules/movies.store.js';
+import reviews from './modules/reviews.store.js';
 import * as configurationData from '../../dev.config.json';
 
 Vue.use(Vuex);
@@ -24,6 +25,7 @@ export default new Vuex.Store({
     locale,
     registration,
     serials,
-    movies
+    movies,
+    reviews
   }
 });

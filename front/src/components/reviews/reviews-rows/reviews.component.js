@@ -5,6 +5,9 @@ export default {
       rateGeneral: 0.5
     };
   },
+  props: {
+    reviews: Array
+  },
   methods: {
     getImgSrc () {
       return 'https://localhost:5001/StaticFiles/images/20.jpg';

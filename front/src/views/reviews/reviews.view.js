@@ -2,18 +2,22 @@ import { FfReviewsBlocks, FfReviewsRows } from '@components/reviews';
 export default {
   data: function () {
     return {
-      rate: 4.0,
-      rateGeneral: 0.5,
       isRowView: true
     };
   },
   components: {
     FfReviewsBlocks, FfReviewsRows
   },
+  created () {
+    this.$store.dispatch('getReviews');
+    this.reviews = this.$store.state.reviews.reviews;
+  },
+  computed: {
+    getReviewsList () {
+      return this.$store.state.reviews.reviews;
+    }
+  },
   methods: {
-    getImgSrc () {
-      return 'https://localhost:5001/StaticFiles/images/20.jpg';
-    },
     onClick () {
       this.isRowView = !this.isRowView;
     }
