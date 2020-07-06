@@ -1,5 +1,20 @@
-.type-view {    
-    padding: 20px 150px 0px;
-    position: absolute;
-    right: 0;
+.el-button-group {    
+    padding-left: 40px;    
   }
+  div.action {    
+    padding: 20px 100px 0px 20px;
+    float: right;
+  }
+  ::v-deep .el-input__inner{
+    background-color: #ffffff;
+    border: 1px solid #6663ff;
+    color: #6663ff;
+  }
+  ::v-deep .el-select .el-input .el-select__caret {
+    color: #6663ff;
+    font-size: 16px;
+  }
+  .el-pagination {
+    padding: 40px 0px 40px;
+    text-align: center;
+}

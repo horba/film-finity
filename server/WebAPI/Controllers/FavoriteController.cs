@@ -20,10 +20,10 @@ namespace WebAPI.Controllers
             this.favoriteService = favoriteService;
         }
 
-        [HttpGet("{page}")]
-        public ActionResult<IEnumerable<FavoriteDTO>> GetListFavorites(int page=1)
+        [HttpGet("{page}/{sortOrder}")]
+                public ActionResult<IPagedResponse<FavoriteDTO>> GetListFavorites(int page=1, SortState sortOrder = SortState.NameAsc)
         {
-            IEnumerable<FavoriteDTO> objectList = favoriteService.GetFavorites(page);
+            IPagedResponse<FavoriteDTO> objectList = favoriteService.GetFavorites(page, sortOrder);
             return Ok(objectList);
         }
     }

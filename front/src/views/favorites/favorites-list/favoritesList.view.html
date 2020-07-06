@@ -1,5 +1,4 @@
 <div class="favorite-view">
-  <h1>List</h1>    
   <div class="el-row-wrap">
     <div v-for="favorite in getfavoritesList" class="grid-col-wrap" :key = "favorite.favoriteId">
       <div  class="grid-content-wrap">
@@ -19,16 +18,10 @@
               <el-col :span="3" class="year">{{favorite.year}}</el-col>
             </el-row>
             <div class="celebrities-list">
-              <span>{{favorite.celebrities | mapByProperty("fullName")}}</span>
+              <span>{{favorite.celebrities | mapByProperty("fullName") }}</span>
             </div>
         </div>
       </div>
     </div>
   </div>
-  <el-pagination 
-  @next-click = "handleCurrentChange"
-  layout="prev, pager, next"
-  :total="20"
-  :page-size="8">
-</el-pagination>
 </div>

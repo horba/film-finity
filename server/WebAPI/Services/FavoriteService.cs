@@ -24,17 +24,34 @@ namespace WebAPI.Services
             this._movieRepository = _movieRepository;
             this.mapper = mapper;
         }
-        public IEnumerable<FavoriteDTO> GetFavorites(int page)
+        public IPagedResponse<FavoriteDTO> GetFavorites(int page, SortState sortOrder)
         {
             int pageSize = 8;
             var favorites = favoriteRepository.GetAllFavorites();
             var count = favorites.Count();
-            var items = favorites.Skip((page - 1) * pageSize).Take(pageSize).ToList();
-            var favoriteSerial = mapper.Map<IEnumerable<FavoriteDTO>>(items.Where(s => s.ContentType == ContentType.Serial).Select(i => (_serialRepository.GetSerialById(i.ContentId))));
-            var favoriteMovie = mapper.Map<IEnumerable<FavoriteDTO>>(items.Where(s => s.ContentType == ContentType.Movie).Select(i => (_movieRepository.GetMovieById(i.ContentId))));
+            var pageNumber = (int)Math.Ceiling(count / (double)pageSize);
+            var favoriteSerial = mapper.Map<IEnumerable<FavoriteDTO>>(favorites.Where(s => s.ContentType == ContentType.Serial).Select(i => (_serialRepository.GetSerialById(i.ContentId))));
+            var favoriteMovie = mapper.Map<IEnumerable<FavoriteDTO>>(favorites.Where(s => s.ContentType == ContentType.Movie).Select(i => (_movieRepository.GetMovieById(i.ContentId))));
             IEnumerable<FavoriteDTO> union = favoriteSerial.Union(favoriteMovie);
+            union = sortOrder switch
+            {
+                SortState.NameDesc => union.OrderByDescending(s => s.Name),
+                SortState.RatingAsc => union.OrderBy(s => s.Rating),
+                SortState.RatingDesc => union.OrderByDescending(s => s.Rating),
+                SortState.YearAsc => union.OrderBy(s => s.Year),
+                SortState.YearDesc => union.OrderByDescending(s => s.Year),
+                _ => union.OrderBy(s => s.Name),
+            };
+            var items = union.Skip((page - 1) * pageSize).Take(pageSize).ToList();
 
-            return union;
+            IPagedResponse<FavoriteDTO> pagedResponse = new IPagedResponse<FavoriteDTO>
+            {
+                PageNumber = pageNumber,
+                PageSize = pageSize,
+                TotalCount = count,
+                Data = items
+            };
+            return pagedResponse;
 
         }
     }

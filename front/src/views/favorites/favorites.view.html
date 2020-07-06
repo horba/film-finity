@@ -1,9 +1,24 @@
 <div>
-  <el-button-group  class="type-view">
-    <el-button type="primary" @click="FavoritesTileVisible = true, FavoritesListVisible = false">Плитка</el-button>
-    <el-button type="primary" @click="FavoritesTileVisible = false, FavoritesListVisible = true">Список</el-button>
-  </el-button-group>
-
+  <div class="action">
+    <el-select v-model="value" placeholder="Select" @change="sortingContent">
+      <el-option
+        v-for="item in options"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value">        
+      </el-option>
+    </el-select>   
+    <el-button-group>
+      <el-button type="primary" @click="FavoritesTileVisible = true, FavoritesListVisible = false">{{ $t('favorite.tile') }}</el-button>
+      <el-button type="primary" @click="FavoritesTileVisible = false, FavoritesListVisible = true">{{ $t('favorite.list') }}</el-button>
+    </el-button-group>
+  </div>
     <favorites-tile v-if="FavoritesTileVisible" />
     <favorites-list v-if="FavoritesListVisible"/>
+    <el-pagination 
+    @current-change="getContentPage"
+    layout="prev, pager, next"
+    :total="getTotalCount"
+    :page-size="getPageSize">
+  </el-pagination>
 </div>

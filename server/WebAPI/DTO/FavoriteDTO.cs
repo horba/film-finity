@@ -15,20 +15,4 @@ namespace WebAPI.DTO
         public string PosterImageSource { get; set; }
         public List<MovieActorDTO> Celebrities { get; set; }
     }
-    //public enum ContentType
-    //{
-    //    Serial,
-    //    Movie
-    //}
-    //public class FavoriteDTO
-    //{
-    //    public int Id { get; set; }
-    //    [Required]
-    //    [Range(0, 1)]
-    //    public ContentType contentType { get; set; }
-    //    [Required]
-    //    public int ContentId { get; set; }
-    //    [Required]
-    //    public DateTime AddedTime { get; set; }
-    //}
 }

@@ -16,14 +16,12 @@
     border-radius: 5px;
     width: 1400px;
     height: 200px;
-    bodrder: 1px solid red;
 }
 
 .grid-content-wrap {
     box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     height: 200px;
-    bordder: 2px solid green; 
     display: flex;
 
 }
@@ -31,7 +29,6 @@
 .grid-content-main {
     width: 70%;
     padding: 20px 80px 0px;
-    boqrder: 1px solid orange;
 }
 
 .favorite-name div {
@@ -81,8 +78,4 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis; 
-}
-.el-pagination {
-    padding: 40px 0px 0px;
-    text-align: center
 }
