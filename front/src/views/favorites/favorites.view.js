@@ -11,25 +11,6 @@ export default {
       FavoritesListVisible: false,
       sortState: 0,
       currentPage: 1,
-      options: [{
-        value: '0',
-        label: this.$t('favorite.value0')
-      }, {
-        value: '1',
-        label: this.$t('favorite.value1')
-      }, {
-        value: '2',
-        label: this.$t('favorite.value2')
-      }, {
-        value: '3',
-        label: this.$t('favorite.value3')
-      }, {
-        value: '4',
-        label: this.$t('favorite.value4')
-      }, {
-        value: '5',
-        label: this.$t('favorite.value5')
-      }],
       value: this.$t('favorite.value6')
     };
   },
@@ -39,6 +20,34 @@ export default {
     },
     getPageSize () {
       return this.$store.state.favorites.pageSize;
+    },
+    options () {
+      return [
+        {
+          value: '0',
+          label: this.$t('favorite.value0')
+        },
+        {
+          value: '1',
+          label: this.$t('favorite.value1')
+        },
+        {
+          value: '2',
+          label: this.$t('favorite.value2')
+        },
+        {
+          value: '3',
+          label: this.$t('favorite.value3')
+        },
+        {
+          value: '4',
+          label: this.$t('favorite.value4')
+        },
+        {
+          value: '5',
+          label: this.$t('favorite.value5')
+        }
+      ];
     }
   },
   created () {
