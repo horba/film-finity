@@ -1,0 +1,262 @@
+*, *::after, *::before, ul {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.movie-main {
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.navigation {
+  margin: 30px 0 21px 0;
+  
+}
+
+.navigation a{
+  font-family: var(--txt-font-light);
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--ff-primary-variant-color);
+}
+
+.el-breadcrumb__item >>> .el-breadcrumb__separator{
+  font-family: var(--txt-font-light);
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--ff-primary-variant-color);
+  margin: 0 6px;
+}
+
+.navigation-film-title {
+  font-family: var(--txt-font-light);
+  color: var(--ff-dark-gray-color);
+}
+
+.poster {
+  max-width: 365px;
+}
+
+.poster >>> .poster-image {
+  border-radius: 8px;
+}
+
+.movie-info {
+  display: flex;
+}
+
+.movie-overview-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-left: 15px;
+}
+
+.movie-titles-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.original-title {
+  font-size: 16px;
+  color: var(--ff-dark-gray-color);
+}
+
+.country {
+  margin: 18px 0;
+}
+.country span{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.genres {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  margin: 10px 0;
+}
+
+.genre-card {
+  text-decoration: none;
+  font-size: 14px;
+  font-family: var(--txt-font-light);
+  font-weight: 600;
+  color: var(--ff-primary-color);
+  margin-right: 5px;
+  padding: 10px 12px;
+  border-radius: 22px;
+  background: var(--ff-primary-back-color);
+}
+
+.age-rate span{
+  font-family: var(--txt-font);
+  width: 600;
+  font-size: 16px;
+  color: #4ACD6F;
+  margin-top: 8px;
+  padding: 8px 14px 6px 14px;
+  border: 2px solid #4ACD6F;
+  border-radius: 10px;
+}
+
+.movie-creaters {
+  display: grid;
+  grid-template-columns: 120px auto;
+  gap: 14px 10px;
+}
+
+.movie-creaters span {
+  font-family: var(--txt-font-light);
+  font-size: 14px;
+}
+
+.creaters-job-title {
+  color: var(--ff-dark-gray-color);
+}
+
+.movie-overview-details{
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie-rate {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rate-main {
+  font-size: 34px;
+  font-family: var(--txt-font);
+  font-weight: 600;
+  color: var(--ff-primary-color);
+}
+
+.rate-main .icon {
+  font-size: 34px;
+  color: var(--ff-secondary-color);
+  position: relative;
+}
+
+.rate-title {
+  margin-top: 10px;
+}
+.rate-title span {
+  font-family: var(--txt-font-light);
+  font-weight: 300;
+  color: var(--ff-dark-gray-color);
+  font-size: 14px;
+}
+
+.rate >>> .el-rate__icon {
+  font-size: 24px;
+  margin: 0 4px 0 0;
+}
+
+.rate >>> .el-rate__text {
+  font-size: 20px;
+  margin-left: 8px;
+}
+
+.movie-overview-btns {
+  display: flex;
+  justify-content: space-between;
+  height: 46px;
+}
+
+.movie-overview-btns > div > button {
+  height: 100%;
+  font-family: var(--txt-font);
+  font-size: 16px;
+  color: #ffffff;
+
+  margin-right: 10px;
+  padding: 12px 16px;
+  background: var(--ff-primary-color);
+  border: 2px solid var(--ff-primary-color);
+  border-radius: 4px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.white-btn {
+  font-family: var(--txt-font);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--ff-primary-color);
+  padding: 12px 16px;
+  border: 2px solid var(--ff-primary-color);
+  border-radius: 4px;
+  background: var(--white-color);
+}
+
+.rate-btn {
+  width: 140px;
+}
+
+.icon {
+  font-size: 18px;
+  margin: 0 8px;
+}
+
+.movie-description {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  padding: 15px;
+  background: var(--ff-primary-back-color);
+  border-radius: 8px;
+}
+
+.description-text {
+  max-width: 50%;
+  font-size: 18;
+  color: var(--ff-black-color);
+  text-align: justify;
+}
+
+.description-text h2 {
+  color: var(--ff-secondary-color)
+}
+
+.slider {
+  border-radius: 8px;
+}
+
+.el-carousel >>> .el-carousel__container{
+  width: 540px;
+}
+
+.movie-screen {
+  border-radius: 8px;
+}
+
+.trailer {
+  display: inline;
+  font-family: var(--txt-font-light);
+  font-size: 16px;
+  color: var(--ff-white-color);
+  padding: 14px 24px;
+  background: var(--ff-primary-color);
+  border-radius: 8px ;
+}
+
+.player-block {
+  margin: 30px 0;
+}
+
+.player {
+  width: 100%;
+  height: 650px;
+  border: 4px solid var(--ff-primary-color);
+  border-radius: 8px;
+}
