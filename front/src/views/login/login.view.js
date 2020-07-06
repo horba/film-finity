@@ -1,3 +1,5 @@
+import FfAuthorization from '@/components/authorization/authorization.component.vue';
+
 export default {
   data () {
     return {
@@ -13,5 +15,8 @@ export default {
         .then(() => this.$router.push('/'))
         .catch(err => console.log(err));
     }
+  },
+  components: {
+    FfAuthorization
   }
 };
