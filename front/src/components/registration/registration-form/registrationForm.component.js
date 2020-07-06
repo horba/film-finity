@@ -1,3 +1,5 @@
+import FfAuthorization from '@/components/authorization/authorization.component.vue';
+
 export default {
   data () {
     return {
@@ -12,7 +14,14 @@ export default {
       }
     };
   },
+  components: {
+    FfAuthorization
+  },
   methods: {
+    changeRegisterVisible () {
+      this.$store.dispatch('ChangeRegisterVisible');
+      this.$store.dispatch('ChangeLoginVisible');
+    },
     registration () {
       this.isVisibleErrors.name = this.isVisibleErrors.email
       = this.isVisibleErrors.password = false;

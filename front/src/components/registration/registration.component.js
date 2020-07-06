@@ -6,16 +6,26 @@ export default {
   },
   data () {
     return {
-      regisrationDialogVisible: false,
       userRegistred: false
     };
   },
   computed: {
+    regisrationDialogVisible: {
+      get: function () {
+        return this.$store.state.registration.isRegistrationVisible;
+      },
+      set: function () {
+        this.$store.dispatch('ChangeRegisterVisible');
+      }
+    }
   },
   methods: {
     handleClose (done) {
       this.userRegistred = false;
       done();
+    },
+    changeRegisterVisible () {
+      this.$store.dispatch('ChangeRegisterVisible');
     }
   }
 };

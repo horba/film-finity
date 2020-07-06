@@ -1,5 +1,4 @@
 <div>
-  <el-button class="second-color" @click="regisrationDialogVisible = true">{{ $t('registration.signIn') }}</el-button>
   <el-dialog 
   title="Создать аккаунт"
   :visible.sync="regisrationDialogVisible"
@@ -7,7 +6,8 @@
   center
   width= "464px"
   >
-    <ff-registration-form v-if="!userRegistred" @complete="userRegistred= true"/>
+    <ff-registration-form v-if="!userRegistred" @complete="userRegistred= true" 
+    />
     <ff-registration-confirmation v-if="userRegistred"/>
   </el-dialog>
 </div>
