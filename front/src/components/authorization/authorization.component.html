@@ -1,0 +1,13 @@
+<div>
+  <el-button class="second-color" @click="visible()">{{ $t('registration.signIn') }}</el-button>
+    <el-dialog 
+    title="Выполните вход"
+    :visible.sync="loginDialogVisible"
+    :before-close="handleClose" 
+    center
+    width= "464px"
+    >
+      <FfAuthorizationForm v-if="!userLogin" @complete="userLogin = true"/>
+      <FfAuthorizationConfirmation v-if="userLogin"/>
+    </el-dialog>
+  </div>

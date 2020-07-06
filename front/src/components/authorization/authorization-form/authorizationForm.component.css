@@ -1,0 +1,41 @@
+.el-form {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+}
+.email {
+    margin-top:20px ;
+}
+.password {
+    margin-top:20px ;
+}
+.forget-password {
+    color: var(--ff-dark-gray-color);
+    margin-bottom: 30px;
+}
+.login-footer{
+    padding-top: 30px;
+    text-align: center;
+  }
+.entrance {
+    margin-top: 20px;
+}
+.register-button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+}
+.color-massage-error {
+    color: #EE4444;
+    text-align: left;
+    font-family: var(--txt-font);
+    font-style: normal;
+    padding: 0px 12px 0px;
+    margin-bottom: -15px ;
+  }
+  .uncorrectAcc {
+    text-align: center;
+  }
