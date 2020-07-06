@@ -12,7 +12,7 @@ div.logo {
 div.actions {
   margin-right: 150px;
   display: flex;
-
+  justify-content: space-between;
 }
 .enter-button {
   padding: 0px 20px 0px;
@@ -38,3 +38,11 @@ ul.main-color > li.main-color.is-active {
 .el-menu-item > a { 
   text-decoration: none;
 } 
+
+.ff-user-avatar {
+  margin :0 30px;
+}
+
+.second-color {
+  margin-right: 30px;
+}

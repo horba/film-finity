@@ -13,10 +13,10 @@
   </div>
   <div class="actions">    
     <el-button icon="el-icon-search" class="second-color"></el-button>
-    <ff-registration-dialog class="enter-button"/>
-    <el-button class="second-color"><router-link to="/login">{{ $t('header.signIn') }}</router-link> </el-button>
+    <ff-registration-dialog/>
+    <ff-auth-dialog v-if="!isLoggedIn || isConfirmationVisible" class="enter-button"/>
+    <ff-user-avatar v-if="isLoggedIn"/>
   </div>    
-  <FfUserMenu></FfUserMenu>
     <div>
       <ff-locale-select />
     </div>
