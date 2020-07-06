@@ -36,11 +36,11 @@ export default {
         })
         .catch(error => {
           try {
-            this.isVisibleErrors.emailRegistered = error.response.data.Email[0];
+            this.isVisibleErrors.emailRegistered = error.data.Email[0];
           } catch {
-            this.isVisibleErrors.name = error.response.data.errors.UserName[0];
-            this.isVisibleErrors.email = error.response.data.errors.Email[0];
-            this.isVisibleErrors.password = error.response.data.errors.UserPassword[0];
+            this.isVisibleErrors.name = error.data.errors.UserName[0];
+            this.isVisibleErrors.email = error.data.errors.Email[0];
+            this.isVisibleErrors.password = error.data.errors.UserPassword[0];
           }
         });
     }

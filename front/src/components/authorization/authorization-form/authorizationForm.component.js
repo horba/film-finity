@@ -30,10 +30,10 @@ export default {
         })
         .catch(error => {
           try {
-            this.password = '';
-            this.isVisibleErrors.uncorrectAcc = error.response.data.message;
-            this.isVisibleErrors.email = error.response.data.errors.Username[0];
-            this.isVisibleErrors.password = error.response.data.errors.Password[0];
+            console.log(error);
+            this.isVisibleErrors.uncorrectAcc = error.data.message;
+            this.isVisibleErrors.email = error.data.errors.Username[0];
+            this.isVisibleErrors.password = error.data.errors.Password[0];
           } catch {
           }
         });
