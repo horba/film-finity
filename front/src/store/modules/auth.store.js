@@ -1,10 +1,12 @@
-import axios from 'axios';
+import api from '@apiService';
 
 export default {
   state: () => ({
     status: '',
     token: localStorage.getItem('token') || '',
-    user: {}
+    user: localStorage.getItem('user') || '',
+    isLoginVisible: false,
+    isConfirmationVisible: false
   }),
   getters: {
     isLoggedIn: state => !!state.token,
@@ -14,10 +16,10 @@ export default {
     auth_request (state) {
       state.status = 'loading';
     },
-    auth_success (state, token, user) {
+    auth_success (state, obj) {
       state.status = 'success';
-      state.token = token;
-      state.user = user;
+      state.token = obj.token;
+      state.user = obj.user;
     },
     auth_error (state) {
       state.status = 'error';
@@ -25,19 +27,26 @@ export default {
     logout (state) {
       state.status = '';
       state.token = '';
+    },
+    ChangeLoginVisible (state) {
+      state.isLoginVisible = !state.isLoginVisible;
+    },
+    ChangeConfirmationVisible (state) {
+      state.isConfirmationVisible = !state.isConfirmationVisible;
     }
   },
   actions: {
     login ({ commit, rootState }, user) {
       return new Promise((resolve, reject) => {
         commit('auth_request');
-        axios({ url: `${rootState.baseUrl}/api/Login`, data: user, method: 'POST' })
+        api
+          .post('/user/authenticate', user)
           .then(resp => {
             const token = resp.data.token,
-                  user = resp.data.user;
+                  user = resp.data.username;
             localStorage.setItem('token', token);
-            axios.defaults.headers.common.Authorization = token;
-            commit('auth_success', token, user);
+            localStorage.setItem('user', user);
+            commit('auth_success', { token, user });
             resolve(resp);
           })
           .catch(err => {
@@ -51,9 +60,14 @@ export default {
       return new Promise((resolve, reject) => {
         commit('logout');
         localStorage.removeItem('token');
-        delete axios.defaults.headers.common.Authorization;
         resolve();
       });
+    },
+    ChangeLoginVisible ({ commit }) {
+      commit('ChangeLoginVisible');
+    },
+    ChangeConfirmationVisible ({ commit }) {
+      commit('ChangeConfirmationVisible');
     }
   }
 };
