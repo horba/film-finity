@@ -2,11 +2,10 @@
     padding-left: 40px;    
   }
   div.action {    
-    padding: 20px 100px 0px 20px;
-    float: right;
+    padding: 40px 100px 40px;
+    text-align: right;
   }
   ::v-deep .el-input__inner{
-    background-color: #ffffff;
     border: 1px solid #6663ff;
     color: #6663ff;
   }
@@ -17,4 +16,4 @@
   .el-pagination {
     padding: 40px 0px 40px;
     text-align: center;
-}
+  }

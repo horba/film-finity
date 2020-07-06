@@ -1,6 +1,6 @@
 <div>
   <div class="action">
-    <el-select v-model="value" placeholder="Select" @change="sortingContent">
+    <el-select v-model="value" @change="sortingContent">
       <el-option
         v-for="item in options"
         :key="item.value"

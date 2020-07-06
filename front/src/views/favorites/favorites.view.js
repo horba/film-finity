@@ -30,7 +30,7 @@ export default {
         value: '5',
         label: this.$t('favorite.value5')
       }],
-      value: '0'
+      value: this.$t('favorite.value6')
     };
   },
   computed: {
