@@ -19,9 +19,8 @@ div.stores {
   margin-left: 80px;   
 }
 
-.footer-color-background,
-button.footer-color-background {
-  background-color: var(--footer-bg-color);
+.footer-color-background {
+  background-color: var(--ff-primary-variant-color);
 }
 
 div.footer-color-background {
@@ -33,24 +32,13 @@ div.footer-color-background > div {
   font-size: 11px;
 }
 
-button.footer-button { 
-  border: 0px;
-  padding: 10px;
+.footer {
   font-size: 16px;
-}
-
-a.footer-button {
-  color: var(--main-txt-color);
-  text-decoration: none;
-  margin: 0px;
-}
-
-a.footer-button:hover {
-  color: var(--main-bg-color);
+  padding: 10px 15px;
 }
 
 div.footer-color-background > a:hover {
-  color: var(--main-txt-color);
+  color: var(--ff-white-color);
 }
 
 a.privicy-police {

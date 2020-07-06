@@ -48,6 +48,7 @@ export default {
 <style>
   body {
     margin: 0px;
+    font-family: var(--txt-font);
   }
   .main-content {
     display: flex;
