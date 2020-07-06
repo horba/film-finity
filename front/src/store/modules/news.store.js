@@ -1,4 +1,5 @@
-import axios from 'axios';
+import api from '@apiService';
+
 export default {
   state: () => ({
     news: []
@@ -10,8 +11,8 @@ export default {
   },
   actions: {
     getNews ({ state, commit, rootState }) {
-      axios
-        .get(`${rootState.baseUrl}/api/News/News`)
+      api
+        .get('/News/News')
         .then(response => { commit('initNews', response.data); });
     }
   }
