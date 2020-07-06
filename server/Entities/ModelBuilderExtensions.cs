@@ -461,7 +461,7 @@ namespace Entities
                     Title = "Аэронавты",
                     Rate = 5,
                     ReleaseYear = 2019,
-                    ImageSource = "StaticFiles/images/Aeronauts.jpg"
+                    PosterImageSource = "StaticFiles/images/Aeronauts.jpg"
                 },
 
                 new Movie
@@ -470,7 +470,7 @@ namespace Entities
                     Title = "1917",
                     Rate = 5,
                     ReleaseYear = 2019,
-                    ImageSource = "StaticFiles/images/1917.jpg"
+                    PosterImageSource = "StaticFiles/images/1917.jpg"
                 },
 
                 new Movie
@@ -479,7 +479,7 @@ namespace Entities
                     Title = "Джуманджи: Новый уровень",
                     Rate = 5,
                     ReleaseYear = 2019,
-                    ImageSource = "StaticFiles/images/JumanjiNL.jpg"
+                    PosterImageSource = "StaticFiles/images/JumanjiNL.jpg"
                 },
 
                 new Movie
@@ -488,7 +488,7 @@ namespace Entities
                     Title = "Банкир",
                     Rate = 5,
                     ReleaseYear = 2020,
-                    ImageSource = "StaticFiles/images/Banker.jpg"
+                    PosterImageSource = "StaticFiles/images/Banker.jpg"
                 },
 
                 new Movie
@@ -497,7 +497,7 @@ namespace Entities
                     Title = "Соник в кино",
                     Rate = 5,
                     ReleaseYear = 2020,
-                    ImageSource = "StaticFiles/images/SonikH.jpg"
+                    PosterImageSource = "StaticFiles/images/SonikH.jpg"
                 },
 
                 new Movie
@@ -506,7 +506,7 @@ namespace Entities
                     Title = "Хищные птицы: Потрясающая история Харли Квинн",
                     Rate = 5,
                     ReleaseYear = 2020,
-                    ImageSource = "StaticFiles/images/PreyBirdsHQ.jpg"
+                    PosterImageSource = "StaticFiles/images/PreyBirdsHQ.jpg"
                 },
 
                 new Movie
@@ -515,7 +515,7 @@ namespace Entities
                     Title = "Маленькие женщины",
                     Rate = 5,
                     ReleaseYear = 2019,
-                    ImageSource = "StaticFiles/images/LittleWomen.jpg"
+                    PosterImageSource = "StaticFiles/images/LittleWomen.jpg"
                 },
 
                 new Movie
@@ -524,7 +524,7 @@ namespace Entities
                     Title = "Композитор",
                     Rate = 5,
                     ReleaseYear = 2019,
-                    ImageSource = "StaticFiles/images/Composer.jpg"
+                    PosterImageSource = "StaticFiles/images/Composer.jpg"
                 });
 
             modelBuilder.Entity<ActorsList>().HasData(
