@@ -11,7 +11,7 @@ export default {
   data () {
     return {
       isCollapse: true,
-      userName: this.$store.state.auth.user
+      user: this.$store.state.auth.user
     };
   },
   methods: {
