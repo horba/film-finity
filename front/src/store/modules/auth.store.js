@@ -4,7 +4,7 @@ export default {
   state: () => ({
     status: '',
     token: localStorage.getItem('token') || '',
-    user: localStorage.getItem('user') || '',
+    user: JSON.parse(localStorage.getItem('user')) || '',
     isLoginVisible: false,
     isConfirmationVisible: false
   }),
@@ -43,9 +43,15 @@ export default {
           .post('/user/authenticate', user)
           .then(resp => {
             const token = resp.data.token,
-                  user = resp.data.username;
+                  user = {
+                    name: resp.data.username,
+                    id: resp.data.id,
+                    email: resp.data.email
+                  };
+            console.log(user);
             localStorage.setItem('token', token);
-            localStorage.setItem('user', user);
+            localStorage.setItem('user', JSON.stringify(user));
+            console.log(localStorage.getItem('user'));
             commit('auth_success', { token, user });
             resolve(resp);
           })
