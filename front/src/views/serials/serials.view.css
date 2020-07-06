@@ -63,6 +63,10 @@
     font-size: 26px;
 }
 
+.rate {
+    color: var(--ff-primary-color); 
+}
+
 .celebrities-list {
     width: 226px;
     height: 29px;
