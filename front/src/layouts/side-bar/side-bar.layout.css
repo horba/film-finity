@@ -1,0 +1,117 @@
+.side-bar-layout {
+  min-width: 260px;
+  min-height: 400px;
+  display: flex;
+  background-color: var(--main-bg-color);
+  font-family: var(--txt-font);
+  font-style: normal;
+}
+
+.el-menu-vertical {
+  background-color: var(--main-bg-color);
+  margin: 0 auto;
+  border: none;
+  max-width: 150px;
+}
+
+.el-submenu>>>.el-submenu__icon-arrow {
+  display: none;
+}
+hr {
+  border: 1px solid #ECECFE;
+  margin: 30px 22px;
+}
+
+.el-image {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  margin: 30px auto;
+}
+
+.menu-item {
+  border-radius: 13px;
+  margin: 5px auto;
+}
+
+.menu-item:hover .icons {
+  color: var(--main-bg-color);
+}
+.menu-item:hover {
+  color: var(--main-bg-color);
+}
+
+.is-opened>>>.el-submenu__title {
+  background-color: white;
+  border-radius: 13px;
+}
+.is-opened>>>.submenu {
+  color: var(--main-bg-color);
+}
+.is-opened>>>.icons {
+  color: var(--main-bg-color);
+}
+.sub-menu-item{
+  border-radius: 13px;
+  margin: 5px 7px;
+  margin-bottom: 0;
+}
+.sub-menu-item:hover {
+  background-color: #918FFF;
+  color: white;
+  border-radius: 13px;
+}
+.el-submenu {
+  overflow: hidden;
+}
+
+.el-submenu__icon-arrow {
+  display: none;
+}
+
+.icons {
+  color: var(--main-txt-color);
+}
+.user-icons {
+  font-size: 20px;
+  color: #FFA21C;
+}
+
+.username {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.user-avatar {
+  text-align: center;
+}
+
+.submenu {
+  color: white;
+}
+
+.el-submenu:hover .submenu {
+  color: var(--main-bg-color);
+}
+
+.el-menu-item-group {
+  background-color: var(--main-bg-color);
+}
+
+.sub-menu-item :hover {
+  background-color: #918FFF;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  font-size: 22px;
+}
+.user-location {
+  text-align: center;
+  margin-top: 30px;
+}
+.el-submenu .el-menu-item {
+   min-width: 100px;
+}

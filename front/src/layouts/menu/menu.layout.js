@@ -1,12 +1,14 @@
-import { FfLocaleSelect, FfLogo, FfRegistrationDialog, FfUserMenu } from '@components';
+import { FfLocaleSelect, FfLogo, FfRegistrationDialog, FfUserAvatar, FfAuthDialog }
+  from '@components';
 
 export default {
   name: 'ff-menu',
   components: {
     FfLogo,
     FfLocaleSelect,
-    FfUserMenu,
-    FfRegistrationDialog
+    FfRegistrationDialog,
+    FfUserAvatar,
+    FfAuthDialog
   },
   data () {
     return {
@@ -16,5 +18,13 @@ export default {
   },
   methods: {
     handleSelect (key, keyPath) { }
+  },
+  computed: {
+    isLoggedIn: function () {
+      return this.$store.getters.isLoggedIn;
+    },
+    isConfirmationVisible: function () {
+      return this.$store.state.auth.isConfirmationVisible;
+    }
   }
 };
