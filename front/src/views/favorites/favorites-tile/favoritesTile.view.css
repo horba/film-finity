@@ -61,11 +61,10 @@
     margin-top: 6px;
 }
 
-.rate >>> .el-rate__icon {
-    font-size: 26px;
+.rate {
     color: var(--ff-primary-color);
+    font-size: 26px; 
 }
-
 .celebrities-list {
     font-size: 12px;
     display: -webkit-box;
