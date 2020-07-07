@@ -32,7 +32,9 @@
     "errorsName": "Введіть ім'я користувача",
     "errorsEmail": "Введіть email",
     "errorsEmailRegistered": "Даний email вже зареєстрований",
-    "errorsPassword": "Введіть пароль"
+    "errorsPassword": "Введіть пароль",  
+    "userName": "Им`я користувача",
+    "password": "Пароль"
   },
   "news": {
     "commentaries": "коментарів",
