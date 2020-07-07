@@ -20,6 +20,13 @@ export default {
     visible () {
       this.isComfirmationVisible = true;
       this.loginDialogVisible = true;
+    },
+    titleData: function (data) {
+      if (!this.isLoggedIn) {
+        return data;
+      } else {
+        return '';
+      }
     }
   },
   computed: {
@@ -40,13 +47,6 @@ export default {
       },
       set: function () {
         this.$store.dispatch('ChangeConfirmationVisible');
-      }
-    },
-    titleData: function () {
-      if (!this.isLoggedIn) {
-        return 'Выполните вход';
-      } else {
-        return '';
       }
     }
   }

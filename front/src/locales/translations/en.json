@@ -38,5 +38,31 @@
     "commentaries": "comments",
     "fullRead": "Read more",
     "views": "views"
+  },
+  "authorization": {
+    "signIn": "Sign in",
+    "enterLogin": "Enter login or email",
+    "enterPassword": "Enter password",
+    "forgetPassword": "Forget your password?",
+    "firstErrorMessage": "Wow, it seems we could not find information about you",
+    "secondErrorMessage": "But there is a way!  Check the correctness of the entered data",
+    "firstUserAgreement": "Clicking the Login button, you accept the conditions",
+    "secondUserAgreement": "User agreement",
+    "haveAccount": " No account?",
+    "signUp": "Sign up",
+    "SignedIn": "Signed in",
+    "firstCofnirmMessage": "Oh God, we are so glad to see you!!",
+    "secondConfirmMessage": "Thousands of movies are waiting for your",
+    "thirdConfirmMessage": "View, evaluate  and comments"
+  },
+  "sideBar": {
+    "movies": "My films",
+    "favorites": "Favorite",
+    "сollections": "Collection",
+    "reviews": "Reviews",
+    "notifications": "Notification",
+    "myFriends": "My friends",
+    "settings": "Settings",
+    "logOut": "Log out"
   }
 }

@@ -3,27 +3,27 @@
         <i class="color-massage-error" type="error" v-show="isVisibleErrors.email || isVisibleErrors.uncorrectAcc">
             {{ $t('registration.errorsEmail') }}</i>
         <el-form-item class="email" prop="email">
-            <el-input placeholder="Введите логин или email" v-model="email" type="email">
+            <el-input :placeholder="$t('authorization.enterLogin')" v-model="email" type="email">
             </el-input>
         </el-form-item>
         <i class="color-massage-error" type="error" v-show="isVisibleErrors.password || isVisibleErrors.uncorrectAcc">
             {{ $t('registration.errorsPassword') }}</i>
         <el-form-item class="password" prop="password">
-            <el-input type="password" placeholder="Введите пароль" v-model="password">
+            <el-input type="password" :placeholder="$t('authorization.enterPassword')" v-model="password">
             </el-input>
         </el-form-item>
-        <span class="forget-password">Забыли пароль?</span>
+        <span class="forget-password">{{$t('authorization.forgetPassword')}}</span>
         <i class="color-massage-error uncorrectAcc" type="error" v-show="isVisibleErrors.uncorrectAcc">
-            Вот это да, кажется мы не смогли найти твои данные.
-            <br> Но выход есть! Проверь правильность введенных данных.</i>
-        <span v-show="!isVisibleErrors.uncorrectAcc">Нажимая Кнопку входа, вы принимаете условия</span>
-        <span v-show="!isVisibleErrors.uncorrectAcc">Пользовательского соглашения</span>
+            {{$t('authorization.firstErrorMessage')}}
+            {{$t('authorization.secondErrorMessage')}}.</i>
+        <span v-show="!isVisibleErrors.uncorrectAcc">{{$t('authorization.firstUserAgreement')}}</span>
+        <span v-show="!isVisibleErrors.uncorrectAcc">{{$t('authorization.secondUserAgreement')}}</span>
     </el-form>
     <div class="login-footer">
         <el-button class="login-button" type="primary" @click="login()">{{ $t('registration.signIn') }}</el-button>
         <div class="entrance">
-            Нет аккаунта?
-            <button class="register-button second-color" @click="changeRegisterVisible()">Регистрация</button>
+            {{$t('authorization.haveAccount')}}
+            <button class="register-button second-color" @click="changeRegisterVisible()">{{$t('authorization.signUp')}}</button>
         </div>
     </div>
 </div>

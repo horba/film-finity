@@ -24,32 +24,32 @@
     <el-submenu class="menu-item" index="1">
       <template slot="title">
         <i class="el-icon-video-camera icons "></i>
-        <span slot="title" class="submenu">Мои фильмы</span>
+        <span slot="title" class="submenu">{{$t('sideBar.movies')}}</span>
       </template>
       <el-menu-item-group>
-        <el-menu-item class="sub-menu-item main-color" index="1-1">Избранное</el-menu-item>
-        <el-menu-item class="sub-menu-item main-color" index="1-2">Подборки</el-menu-item>
+        <el-menu-item class="sub-menu-item main-color" index="1-1">{{$t('sideBar.favorites')}}</el-menu-item>
+        <el-menu-item class="sub-menu-item main-color" index="1-2">{{$t('sideBar.сollections')}}</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
     <el-menu-item class="menu-item main-color" index="2">
       <i class="el-icon-edit icons"></i>
-      <span slot="title">Рецензии</span>
+      <span slot="title">{{$t('sideBar.reviews')}}</span>
     </el-menu-item>
     <el-menu-item class="menu-item main-color" index="3">
       <i class="el-icon-bell icons"></i>
-      <span slot="title">Уведомления</span>
+      <span slot="title">{{$t('sideBar.notifications')}}</span>
     </el-menu-item>
     <el-menu-item class="menu-item main-color" index="4">
       <i class="el-icon-user icons"></i>
-      <span slot="title">Мои друзья</span>
+      <span slot="title">{{$t('sideBar.myFriends')}}</span>
     </el-menu-item>
     <el-menu-item class="menu-item main-color" index="5">
       <i class="el-icon-setting icons"></i>
-      <span slot="title">Настройки</span>
+      <span slot="title">{{$t('sideBar.settings')}}</span>
     </el-menu-item>
     <el-menu-item class="menu-item main-color" index="6" @click="logout">
       <i class="el-icon-right icons"></i>
-      <span slot="title">Выйти</span>
+      <span slot="title">{{$t('sideBar.logOut')}}</span>
     </el-menu-item>
   </el-menu>
 </div>
