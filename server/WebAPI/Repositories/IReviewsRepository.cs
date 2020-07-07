@@ -8,6 +8,6 @@ namespace WebAPI.Repositories
 {
     public interface IReviewsRepository : IRepository<Review>
     {
-        IQueryable<Review> GetAllReviewsByUserId(int UserId);
+        IQueryable<Review> GetAllReviews(int UserId);
     }
 }

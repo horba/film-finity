@@ -16,7 +16,7 @@ namespace WebAPI.Repositories
          : base(context)
         { }
 
-        public IQueryable<Review> GetAllReviewsByUserId(int UserId)
+        public IQueryable<Review> GetAllReviews(int UserId)
         {
             return _dbContext.Reviews
                 .Where(r => r.UserId == UserId);

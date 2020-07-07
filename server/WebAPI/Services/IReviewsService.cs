@@ -9,6 +9,6 @@ namespace WebAPI.Services
 {
     public interface IReviewsService
     {
-        IEnumerable<ReviewDTO> GetReviewsByUserId(int UserId);
+        IPagedResponse<ReviewDTO> GetReviews(int UserId, int PageNumber, int PageSize);
     }
 }

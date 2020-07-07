@@ -20,11 +20,11 @@ namespace WebAPI.Controllers
         {
             this._reviewsService = reviewsService;
         }
-        [HttpGet]
+        [HttpPost]
         [Route("Reviews")]
-        public IActionResult GetReviewsByUserId(int UserId)
+        public IActionResult GetReviewsByUserId(ReviewPagedRequest reviewPaged)
         {
-            var objectList = _reviewsService.GetReviewsByUserId(UserId);
+            var objectList = _reviewsService.GetReviews(reviewPaged.UserId, reviewPaged.PageNumber, reviewPaged.PageSize);
             return Ok(objectList);
         }
     }

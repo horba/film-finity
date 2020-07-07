@@ -7,6 +7,12 @@
     margin-top: 20px;
 }
 
+.review-component-rows {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
 .el-row {
     display: flex;
 }
@@ -122,6 +128,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    vertical-align: center;
 }
 
 .rate-general {

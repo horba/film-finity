@@ -23,9 +23,17 @@ namespace WebAPI.Services
             this._serialsService = _serialsRepository;
             this._mapper = _mapper;
         }
-        public IEnumerable<ReviewDTO> GetReviewsByUserId(int UserId)
+        public IPagedResponse<ReviewDTO> GetReviews(int UserId, int PageNumber, int PageSize)
         {
-            var reviewsList = _mapper.Map<IEnumerable<Review>, IEnumerable<ReviewDTO>>(_reviewsRepository.GetAllReviewsByUserId(UserId).ToList());
+            var reviewsList = _mapper.Map<IEnumerable<Review>, IEnumerable<ReviewDTO>>(_reviewsRepository.GetAllReviews(UserId));
+            var reviewsListPaged = reviewsList.Skip((PageNumber - 1) * PageSize)
+                .Take(PageSize);
+            if(reviewsListPaged.Count() == 0)
+            {
+                PageNumber = 1;
+                reviewsListPaged = reviewsList.Skip((PageNumber - 1) * PageSize)
+                .Take(PageSize);
+            }
             foreach (var item in reviewsList)
             {
                 if(item.ContentType == ContentType.Movie)
@@ -37,7 +45,12 @@ namespace WebAPI.Services
                     item.FilmImage = _serialsService.GetSerialById(item.FilmId).PosterImageSource;
                 }
             }
-            return reviewsList;
+            return new IPagedResponse<ReviewDTO>(reviewsListPaged)
+            {
+                PageSize = PageSize,
+                TotalCount = reviewsList.Count(),
+                PageNumber = PageNumber
+            };
         }
     }
 }

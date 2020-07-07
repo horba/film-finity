@@ -14,3 +14,12 @@
     border-color: var(--ff-light-gray-color);
     color: var(--ff-font-primary-color);
 }
+
+.pagination >>> .el-pager li {
+    font-size: 18px;
+}
+
+.pagination {
+    margin: auto;
+    margin-top: 20px;
+}
