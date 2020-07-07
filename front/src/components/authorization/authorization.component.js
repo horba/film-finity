@@ -23,6 +23,9 @@ export default {
     }
   },
   computed: {
+    isLoggedIn: function () {
+      return this.$store.getters.isLoggedIn;
+    },
     loginDialogVisible: {
       get: function () {
         return this.$store.state.auth.isLoginVisible;
@@ -37,6 +40,13 @@ export default {
       },
       set: function () {
         this.$store.dispatch('ChangeConfirmationVisible');
+      }
+    },
+    titleData: function () {
+      if (!this.isLoggedIn) {
+        return 'Выполните вход';
+      } else {
+        return '';
       }
     }
   }
