@@ -20,6 +20,26 @@ export default {
     },
     getCurrentPageNumber () {
       return this.$store.state.reviews.PageNumber;
+    },
+    options () {
+      return [
+        {
+          value: '0',
+          label: 'Option1'
+        },
+        {
+          value: '1',
+          label: 'Option2'
+        },
+        {
+          value: '2',
+          label: 'Option3'
+        },
+        {
+          value: '3',
+          label: 'Option4'
+        }
+      ];
     }
   },
   beforeCreate () {

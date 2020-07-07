@@ -3,6 +3,14 @@
         <el-button :class="{ notactive : isRowView }" @click = "onClick" size="small" type="primary" icon="el-icon-s-grid"></el-button>
         <el-button :class="{ notactive : !isRowView }" @click = "onClick" size="small" type="primary"><i class="el-icon-s-order"></i></el-button>
     </el-button-group>
+     <el-select v-model="value" placeholder="Select">
+    <el-option
+      v-for="item in options"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
+  </el-select>
     <ff-reviews-rows ref="reviews" :reviews="getReviewsList" v-if = "isRowView"/>
     <ff-reviews-blocks ref="reviews" :reviews="getReviewsList" v-else/>
     <el-pagination
