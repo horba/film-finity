@@ -32,7 +32,9 @@
     "errorsName": "Введіть ім'я користувача",
     "errorsEmail": "Введіть email",
     "errorsEmailRegistered": "Даний email вже зареєстрований",
-    "errorsPassword": "Введіть пароль"
+    "errorsPassword": "Введіть пароль",  
+    "userName": "Им`я користувача",
+    "password": "Пароль"
   },
   "news": {
     "commentaries": "коментарів",
@@ -64,5 +66,16 @@
     "myFriends": "Мої друзі",
     "settings": "Налаштування",
     "logOut": "Вийти"
+  },
+  "favorite": {
+    "tile": "Плитка",
+    "list": "Список",
+    "value0": "Назва від А до Я",
+    "value1": "Назва від Я до А",
+    "value2": "Рейтинг по зростанню",
+    "value3": "Рейтинг по зменшенню",
+    "value4": "Рік по зростанню",
+    "value5": "Рік по зменшенню",
+    "value6": "Сортувати за"
   }
 }

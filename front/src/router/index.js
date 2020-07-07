@@ -1,4 +1,4 @@
-import { Cartoons, FfCelebrities, Movies, News, Serials } from '@views';
+import { Cartoons, FfCelebrities, Movies, News, Serials, Favorites } from '@views';
 import store from '@store';
 
 import Vue from 'vue';
@@ -30,6 +30,10 @@ const routes = [
     //  meta: {
     //   requiresAuth: true
     // }
+  },
+  {
+    path: '/favorites',
+    component: Favorites
   }
 ],
 

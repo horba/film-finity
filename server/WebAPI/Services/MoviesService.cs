@@ -24,5 +24,11 @@ namespace WebAPI.Services
             var movies = _moviesRepository.GetAllMovies();
             return _mapper.Map<IEnumerable<Movie>, IEnumerable < MovieDTO >> (movies.ToList());
         }
+
+        public MovieDTO GetMovieById(int id)
+        {
+            var movie = _moviesRepository.GetMovieById(id);
+            return _mapper.Map<MovieDTO>(movie);
+        }
     }
 }
