@@ -36,7 +36,8 @@
             @click="registration()"
           >{{ $t('registration.signUp') }}</el-button> 
           <div class="entrance">
-            {{ $t('registration.haveAccount') }} <b>{{ $t('registration.entrance') }}</b>
+            {{ $t('registration.haveAccount') }}
+            <button class="login-button second-color" @click="changeRegisterVisible()">{{ $t('registration.entrance') }}</button>
           </div>     
       </div>
   </div>

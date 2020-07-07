@@ -1,4 +1,5 @@
 import { Cartoons, FfCelebrities, Movies, News, Serials, Favorites } from '@views';
+import store from '@store';
 
 import Vue from 'vue';
 import VueRouter from 'vue-router';
@@ -25,6 +26,10 @@ const routes = [
   {
     path: '/news',
     component: News
+    // if you want to secure view
+    //  meta: {
+    //   requiresAuth: true
+    // }
   },
   {
     path: '/favorites',
@@ -37,5 +42,16 @@ const routes = [
         base: process.env.BASE_URL,
         routes
       });
-
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (store.getters.isLoggedIn) {
+      next();
+      return;
+    }
+    store.state.auth.isLoginVisible = true;
+    next('/');
+  } else {
+    next();
+  }
+});
 export default router;

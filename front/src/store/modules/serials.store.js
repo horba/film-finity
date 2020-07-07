@@ -1,4 +1,5 @@
-import axios from 'axios';
+import api from '@apiService';
+
 export default {
   state: () => ({
     serials: []
@@ -11,8 +12,7 @@ export default {
   },
   actions: {
     async getSerials ({ state, commit, rootState }) {
-      await axios
-        .get(`${rootState.baseUrl}/api/Serial`)
+      await api.get('/Serial')
         .then(response => { commit('updateSerials', response.data); });
     }
   }

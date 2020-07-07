@@ -41,6 +41,32 @@
     "fullRead": "Читати повністю",
     "views": "переглядів"
   },
+  "authorization": {
+    "signIn": "Увійдіть",
+    "enterLogin": "Введіть логін або email",
+    "enterPassword": "Введіть пароль",
+    "forgetPassword": "Забули пароль?",
+    "firstErrorMessage": "Дивно, здається ми не змогли знайти твої дан",
+    "secondErrorMessage": "Але вихід є!  Перевір правильність введених даних",
+    "firstUserAgreement": "Натискаючи Кнопку входу, ви приймаєте умови",
+    "secondUserAgreement": "Користувальницької угоди",
+    "haveAccount": "Немає облікового запису?",
+    "signUp": "Реєстрація",
+    "SignedIn": "Вхід виконано",
+    "firstCofnirmMessage": "Боже, як ми раді тебе бачити!",
+    "secondConfirmMessage": "Тисячі фільмів вже чекають твого",
+    "thirdConfirmMessage": "Перегляду, оцінки та коментарів"
+  },
+  "sideBar": {
+    "movies": "Мої фільми",
+    "favorites": "Вибране",
+    "сollections": "Збірки",
+    "reviews": "Рецензії",
+    "notifications": "Сповіщення",
+    "myFriends": "Мої друзі",
+    "settings": "Налаштування",
+    "logOut": "Вийти"
+  },
   "favorite": {
     "tile": "Плитка",
     "list": "Список",

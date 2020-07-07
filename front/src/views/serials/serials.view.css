@@ -1,5 +1,5 @@
 .serial-view{
-    margin: 0;
+    margin: 0 auto;
 }
 
 .el-row-wrap {
@@ -33,7 +33,6 @@
 }
 
 .serial-name div span {
-
     font-family: var(--txt-font);
     font-style: normal;
     font-weight: 700;

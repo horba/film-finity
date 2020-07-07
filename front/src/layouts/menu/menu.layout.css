@@ -12,7 +12,7 @@ div.logo {
 div.actions {
   margin-right: 150px;
   display: flex;
-
+  justify-content: space-between;
 }
 .enter-button {
   padding: 0px 20px 0px;
@@ -35,12 +35,22 @@ ul.main-color > li.main-color.is-active {
   color: var(--ff-secondary-color);
 }
 
-ul.main-color > li.main-color:hover {
-  background-color: var(--ff-primary-color);
+.el-menu-item > a { 
+  text-decoration: none;
+} 
+
+.ff-user-avatar {
+  margin :0 30px;
+}
+
+.second-color {
+  margin-right: 30px;
   color: var(--main-txt-color); 
   cursor: default;
 }
-
+ul.main-color > li.main-color:hover {
+  background-color: var(--ff-primary-color);
+}
 .el-menu--horizontal > .el-menu-item > a:hover {
   color: var(--ff-primary-color); 
 }
