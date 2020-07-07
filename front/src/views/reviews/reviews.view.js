@@ -2,7 +2,8 @@ import { FfReviewsBlocks, FfReviewsRows } from '@components/reviews';
 export default {
   data: function () {
     return {
-      isRowView: true
+      isRowView: true,
+      value: 'Сортировать по'
     };
   },
   components: {
