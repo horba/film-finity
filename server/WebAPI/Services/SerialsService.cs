@@ -24,5 +24,11 @@ namespace WebAPI.Services
             var serials = _serialRepository.GetAllSerials();
             return _mapper.Map<List<SerialDTO>>(serials.ToList());
         }
+
+        public SerialDTO GetSerialById(int id)
+        {
+            var serial = _serialRepository.GetSerialById(id);
+            return _mapper.Map<SerialDTO>(serial);
+        }
     }
 }

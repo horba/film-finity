@@ -1,0 +1,19 @@
+.el-button-group {    
+    padding: 0px 20px 0px;
+  }
+  div.action {    
+    padding: 40px 130px 40px;
+    text-align: right;
+  }
+  ::v-deep .el-input__inner{
+    border: 1px solid #6663ff;
+    color: #6663ff;
+  }
+  ::v-deep .el-select .el-input .el-select__caret {
+    color: #6663ff;
+    font-size: 16px;
+  }
+  .el-pagination {
+    padding: 40px 0px 40px;
+    text-align: center;
+  }

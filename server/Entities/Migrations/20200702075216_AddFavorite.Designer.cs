@@ -4,252 +4,22 @@ using Entities.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Entities.Migrations
 {
     [DbContext(typeof(FilmFinityDbContext))]
-    partial class FilmFinityDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200702075216_AddFavorite")]
+    partial class AddFavorite
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("Entities.Models.ActorsList", b =>
-                {
-                    b.Property<int>("MovieId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ActorId")
-                        .HasColumnType("int");
-
-                    b.HasKey("MovieId", "ActorId");
-
-                    b.HasIndex("ActorId");
-
-                    b.ToTable("ActorsLists");
-
-                    b.HasData(
-                        new
-                        {
-                            MovieId = 1,
-                            ActorId = 1
-                        },
-                        new
-                        {
-                            MovieId = 1,
-                            ActorId = 2
-                        },
-                        new
-                        {
-                            MovieId = 1,
-                            ActorId = 3
-                        },
-                        new
-                        {
-                            MovieId = 1,
-                            ActorId = 4
-                        },
-                        new
-                        {
-                            MovieId = 1,
-                            ActorId = 37
-                        },
-                        new
-                        {
-                            MovieId = 1,
-                            ActorId = 38
-                        },
-                        new
-                        {
-                            MovieId = 2,
-                            ActorId = 5
-                        },
-                        new
-                        {
-                            MovieId = 2,
-                            ActorId = 6
-                        },
-                        new
-                        {
-                            MovieId = 2,
-                            ActorId = 7
-                        },
-                        new
-                        {
-                            MovieId = 2,
-                            ActorId = 8
-                        },
-                        new
-                        {
-                            MovieId = 2,
-                            ActorId = 39
-                        },
-                        new
-                        {
-                            MovieId = 3,
-                            ActorId = 9
-                        },
-                        new
-                        {
-                            MovieId = 3,
-                            ActorId = 10
-                        },
-                        new
-                        {
-                            MovieId = 3,
-                            ActorId = 11
-                        },
-                        new
-                        {
-                            MovieId = 3,
-                            ActorId = 12
-                        },
-                        new
-                        {
-                            MovieId = 3,
-                            ActorId = 40
-                        },
-                        new
-                        {
-                            MovieId = 4,
-                            ActorId = 13
-                        },
-                        new
-                        {
-                            MovieId = 4,
-                            ActorId = 14
-                        },
-                        new
-                        {
-                            MovieId = 4,
-                            ActorId = 15
-                        },
-                        new
-                        {
-                            MovieId = 4,
-                            ActorId = 16
-                        },
-                        new
-                        {
-                            MovieId = 4,
-                            ActorId = 17
-                        },
-                        new
-                        {
-                            MovieId = 4,
-                            ActorId = 41
-                        },
-                        new
-                        {
-                            MovieId = 5,
-                            ActorId = 18
-                        },
-                        new
-                        {
-                            MovieId = 5,
-                            ActorId = 19
-                        },
-                        new
-                        {
-                            MovieId = 5,
-                            ActorId = 20
-                        },
-                        new
-                        {
-                            MovieId = 5,
-                            ActorId = 21
-                        },
-                        new
-                        {
-                            MovieId = 5,
-                            ActorId = 22
-                        },
-                        new
-                        {
-                            MovieId = 5,
-                            ActorId = 42
-                        },
-                        new
-                        {
-                            MovieId = 6,
-                            ActorId = 23
-                        },
-                        new
-                        {
-                            MovieId = 6,
-                            ActorId = 24
-                        },
-                        new
-                        {
-                            MovieId = 6,
-                            ActorId = 25
-                        },
-                        new
-                        {
-                            MovieId = 6,
-                            ActorId = 26
-                        },
-                        new
-                        {
-                            MovieId = 7,
-                            ActorId = 27
-                        },
-                        new
-                        {
-                            MovieId = 7,
-                            ActorId = 28
-                        },
-                        new
-                        {
-                            MovieId = 7,
-                            ActorId = 29
-                        },
-                        new
-                        {
-                            MovieId = 7,
-                            ActorId = 30
-                        },
-                        new
-                        {
-                            MovieId = 7,
-                            ActorId = 31
-                        },
-                        new
-                        {
-                            MovieId = 7,
-                            ActorId = 43
-                        },
-                        new
-                        {
-                            MovieId = 8,
-                            ActorId = 32
-                        },
-                        new
-                        {
-                            MovieId = 8,
-                            ActorId = 33
-                        },
-                        new
-                        {
-                            MovieId = 8,
-                            ActorId = 34
-                        },
-                        new
-                        {
-                            MovieId = 8,
-                            ActorId = 35
-                        },
-                        new
-                        {
-                            MovieId = 8,
-                            ActorId = 36
-                        });
-                });
 
             modelBuilder.Entity("Entities.Models.CelebrityJobTitles", b =>
                 {
@@ -500,7 +270,7 @@ namespace Entities.Migrations
                             Content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea veritatis voluptates veniam sunt unde quibusdam modi laboriosam deleniti quod, minima vero nobis! Cumque natus ipsum ab incidunt qui corrupti quis, sit, voluptas, nisi reprehenderit itaque reiciendis. Quo optio itaque minima in numquam officiis odit minus tempora ut error cumque magni voluptate velit rem ullam quidem maiores esse, sint nostrum aliquid, explicabo at! Aspernatur quibusdam consequuntur officia quasi molestiae doloribus sed quaerat mollitia pariatur eius distinctio nesciunt ratione sunt vitae recusandae illum, voluptatibus sit atque consequatur facere aliquam. Itaque eos, atque excepturi illo soluta consectetur, amet minus reiciendis, ipsa velit dignissimos quidem quo doloremque adipisci sed ratione quae minima aut? Inventore est rerum libero, corrupti, id impedit molestiae excepturi omnis facere fugiat iste a amet, earum necessitatibus dolores delectus molestias voluptatem voluptates odio. Nulla, soluta! Quod ex veniam nihil nobis consequuntur repellendus expedita eligendi cumque rem, modi itaque asperiores incidunt eos velit placeat sint dolores. Incidunt cupiditate, alias dolor officia accusantium sed eius doloremque voluptatibus nesciunt nam, ipsum, soluta culpa quod quam possimus? Dolore quasi, dignissimos quam tenetur delectus unde velit, expedita excepturi laboriosam est, consectetur cumque reiciendis facilis nemo similique ea pariatur suscipit repellendus dolor? Pariatur libero cupiditate sint.",
                             CountViews = 233,
                             PreviewImage = "StaticFiles/images/News/1.jfif",
-                            PublishTime = new DateTime(2020, 6, 29, 15, 5, 35, 505, DateTimeKind.Local).AddTicks(1925),
+                            PublishTime = new DateTime(2020, 7, 2, 10, 52, 16, 21, DateTimeKind.Local).AddTicks(2783),
                             Title = "Сиквел «Чудо-женщины» перенесли из-за коронавируса"
                         },
                         new
@@ -510,7 +280,7 @@ namespace Entities.Migrations
                             Content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea veritatis voluptates veniam sunt unde quibusdam modi laboriosam deleniti quod, minima vero nobis! Cumque natus ipsum ab incidunt qui corrupti quis, sit, voluptas, nisi reprehenderit itaque reiciendis. Quo optio itaque minima in numquam officiis odit minus tempora ut error cumque magni voluptate velit rem ullam quidem maiores esse, sint nostrum aliquid, explicabo at! Aspernatur quibusdam consequuntur officia quasi molestiae doloribus sed quaerat mollitia pariatur eius distinctio nesciunt ratione sunt vitae recusandae illum, voluptatibus sit atque consequatur facere aliquam. Itaque eos, atque excepturi illo soluta consectetur, amet minus reiciendis, ipsa velit dignissimos quidem quo doloremque adipisci sed ratione quae minima aut? Inventore est rerum libero, corrupti, id impedit molestiae excepturi omnis facere fugiat iste a amet, earum necessitatibus dolores delectus molestias voluptatem voluptates odio. Nulla, soluta! Quod ex veniam nihil nobis consequuntur repellendus expedita eligendi cumque rem, modi itaque asperiores incidunt eos velit placeat sint dolores. Incidunt cupiditate, alias dolor officia accusantium sed eius doloremque voluptatibus nesciunt nam, ipsum, soluta culpa quod quam possimus? Dolore quasi, dignissimos quam tenetur delectus unde velit, expedita excepturi laboriosam est, consectetur cumque reiciendis facilis nemo similique ea pariatur suscipit repellendus dolor? Pariatur libero cupiditate sint.",
                             CountViews = 512,
                             PreviewImage = "StaticFiles/images/News/2.jfif",
-                            PublishTime = new DateTime(2020, 6, 29, 15, 5, 35, 511, DateTimeKind.Local).AddTicks(5360),
+                            PublishTime = new DateTime(2020, 7, 2, 10, 52, 16, 29, DateTimeKind.Local).AddTicks(3029),
                             Title = "Childish Gambino официально опубликовал новый альбом"
                         },
                         new
@@ -520,7 +290,7 @@ namespace Entities.Migrations
                             Content = "В Сети появился трейлер второго сезона анимационного сериала DС «Харли Квинн». В центре сюжета вновь окажется Харли Квинн и её команда антигероев. После того, как героиня... расстаётся с Джокером, она становится самостоятельной единицей преступного мира и наводит.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea veritatis voluptates veniam sunt unde quibusdam modi laboriosam deleniti quod, minima vero nobis! Cumque natus ipsum ab incidunt qui corrupti quis, sit, voluptas, nisi reprehenderit itaque reiciendis. Quo optio itaque minima in numquam officiis odit minus tempora ut error cumque magni voluptate velit rem ullam quidem maiores esse, sint nostrum aliquid, explicabo at! Aspernatur quibusdam consequuntur officia quasi molestiae doloribus sed quaerat mollitia pariatur eius distinctio nesciunt ratione sunt vitae recusandae illum, voluptatibus sit atque consequatur facere aliquam. Itaque eos, atque excepturi illo soluta consectetur, amet minus reiciendis, ipsa velit dignissimos quidem quo doloremque adipisci sed ratione quae minima aut? Inventore est rerum libero, corrupti, id impedit molestiae excepturi omnis facere fugiat iste a amet, earum necessitatibus dolores delectus molestias voluptatem voluptates odio. Nulla, soluta! Quod ex veniam nihil nobis consequuntur repellendus expedita eligendi cumque rem, modi itaque asperiores incidunt eos velit placeat sint dolores. Incidunt cupiditate, alias dolor officia accusantium sed eius doloremque voluptatibus nesciunt nam, ipsum, soluta culpa quod quam possimus? Dolore quasi, dignissimos quam tenetur delectus unde velit, expedita excepturi laboriosam est, consectetur cumque reiciendis facilis nemo similique ea pariatur suscipit repellendus dolor? Pariatur libero cupiditate sint.",
                             CountViews = 237,
                             PreviewImage = "StaticFiles/images/News/3.jfif",
-                            PublishTime = new DateTime(2020, 6, 29, 15, 5, 35, 511, DateTimeKind.Local).AddTicks(5490),
+                            PublishTime = new DateTime(2020, 7, 2, 10, 52, 16, 29, DateTimeKind.Local).AddTicks(3098),
                             Title = "Больше, жестче, грубее: Вышел трейлер второго сезона «Харли Квинн»"
                         },
                         new
@@ -530,7 +300,7 @@ namespace Entities.Migrations
                             Content = "«Фильм Про» впервые обнародовал Абсолютный топ продаж российских онлайн-кинотеатров и видеосервисов. В условиях, когда из-за коронавируса домашний просмотр набирает популярность, «Фильм Про» первым среди профессиональных киноизданий ",
                             CountViews = 878,
                             PreviewImage = "StaticFiles/images/News/4.jfif",
-                            PublishTime = new DateTime(2020, 6, 29, 15, 5, 35, 511, DateTimeKind.Local).AddTicks(5506),
+                            PublishTime = new DateTime(2020, 7, 2, 10, 52, 16, 29, DateTimeKind.Local).AddTicks(3109),
                             Title = "Фильмы онлайн: Абсолютный топ «Фильм Про»"
                         });
                 });
@@ -1077,18 +847,32 @@ namespace Entities.Migrations
                         });
                 });
 
-            modelBuilder.Entity("WebAPI.Models.Actor", b =>
+            modelBuilder.Entity("Entities.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("FullName")
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserPassword")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("WebAPI.Models.Celebrity", b =>
+                {
                     b.Property<int>("CelebrityId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
@@ -1193,7 +977,6 @@ namespace Entities.Migrations
                         });
                 });
 
-
             modelBuilder.Entity("WebAPI.Models.JobTitle", b =>
                 {
                     b.Property<int>("JobTitleId")
@@ -1240,29 +1023,7 @@ namespace Entities.Migrations
                             JobName = "композитор"
                         });
                 });
-            modelBuilder.Entity("WebAPI.Models.User", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserPassword")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Users");
-                });
             modelBuilder.Entity("Entities.Models.CelebrityJobTitles", b =>
                 {
                     b.HasOne("WebAPI.Models.Celebrity", "Celebrity")

@@ -27,5 +27,12 @@ namespace WebAPI.Controllers
             var objectList = _moviesService.GetAllMovies();
             return Ok(objectList);
         }
+
+        [HttpGet("{id}")]
+        public IActionResult GetMovieById(int id)
+        {
+            MovieDTO objectList = _moviesService.GetMovieById(id);
+            return Ok(objectList);
+        }
     }
 }
