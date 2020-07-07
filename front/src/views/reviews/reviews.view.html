@@ -3,7 +3,17 @@
         <el-button :class="{ notactive : isRowView }" @click = "onClick" size="small" type="primary" icon="el-icon-s-grid"></el-button>
         <el-button :class="{ notactive : !isRowView }" @click = "onClick" size="small" type="primary"><i class="el-icon-s-order"></i></el-button>
     </el-button-group>
-    <ff-reviews-rows :reviews="getReviewsList" v-if = "isRowView"/>
-    <ff-reviews-blocks :reviews="getReviewsList" v-else/>
+    <ff-reviews-rows ref="reviews" :reviews="getReviewsList" v-if = "isRowView"/>
+    <ff-reviews-blocks ref="reviews" :reviews="getReviewsList" v-else/>
+    <el-pagination
+    class = "pagination"
+    :page-size="getPageSize"
+    :pager-count="11"
+    :current-page = "getCurrentPageNumber"
+    @next-click = "nextPageClicked()"
+    @prev-click = "previousPageClicked()"
+    layout="prev, pager, next"
+    :total="getTotalElements">
+    </el-pagination>
 </div>
 
