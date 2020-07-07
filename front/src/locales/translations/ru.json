@@ -32,7 +32,9 @@
     "errorsName": "Введите имя пользователя",
     "errorsEmail": "Введите email",
     "errorsEmailRegistered": "Данный email уже зарегистрирован",
-    "errorsPassword": "Введите пароль"
+    "errorsPassword": "Введите пароль",  
+    "userName": "Имя пользователя",
+    "password": "Пароль"
   },
   "news": {
     "commentaries": "комментариев",

@@ -32,7 +32,9 @@
     "errorsName": "Enter the username",
     "errorsEmail": "Enter your email",
     "errorsEmailRegistered": "This email is already registered",
-    "errorsPassword": "Enter the password"
+    "errorsPassword": "Enter the password",  
+    "userName": "User name",
+    "password": "Password"
   },
   "news": {
     "commentaries": "comments",
