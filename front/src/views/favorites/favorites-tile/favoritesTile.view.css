@@ -63,6 +63,7 @@
 
 .rate >>> .el-rate__icon {
     font-size: 26px;
+    color: var(--ff-primary-color);
 }
 
 .celebrities-list {
