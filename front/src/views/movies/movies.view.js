@@ -8,6 +8,9 @@ export default {
   methods: {
     getImgSrc (imgPath) {
       return `${this.$store.state.baseUrl}/${imgPath}`;
+    },
+    goMovie (id) {
+      this.$router.push('/movies/' + id);
     }
   },
   computed: {

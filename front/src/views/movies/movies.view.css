@@ -58,3 +58,6 @@ div.movie-title {
   margin: var(--context-margin-top-bottom) auto;  
 }
 
+.poster-image:hover {
+  cursor: pointer;
+}
