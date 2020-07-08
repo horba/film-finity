@@ -10,6 +10,5 @@ namespace WebAPI.Services
     {
         IEnumerable<MovieDTO> GetAllMovies();
         MovieDTO GetMovieById(int id);
-
     }
 }

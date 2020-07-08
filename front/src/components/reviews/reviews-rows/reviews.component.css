@@ -1,0 +1,169 @@
+.review-row-element {
+    width: 910px;
+    padding: 20px;
+    background: var(--ff-light-gray-color);
+    border-radius: 10px;
+    font-family: var(--txt-font);
+    margin-top: 20px;
+}
+
+.rate-content-main {
+    align-self: center;
+}
+
+.review-component-rows {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.el-row {
+    display: flex;
+}
+
+.el-col:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.el-image {
+    border-radius: 8px;
+    max-height: 230px;
+}
+
+.column-main-content {
+    margin: 0 20px;
+}
+
+
+.publish-date {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--ff-dark-gray-color);
+}
+
+.publish-date span {
+    float: right;
+}
+
+.marks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3px;
+    border-radius: 10px;
+    background: var(--ff-white-color);
+    padding: 18px;
+}
+
+.icon-count {
+    margin-right: 3px;
+}
+
+.likes span {
+    color: #4ACD6F;
+}
+
+.likes i {
+    color: #4ACD6F;
+} 
+
+.dislikes span {
+    color: #FF5252;
+}
+
+.dislikes i {
+    color: #FF5252;
+    transform: rotate(180deg);
+}
+
+.count-comments span {
+    color: var(--ff-font-primary-color)F;
+}
+
+.count-comments i {
+    color: var(--ff-font-primary-color);
+}
+
+.review-txt-content {
+    padding: 0;
+    margin: 0;
+}
+
+.review-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    color : var(--ff-font-primary-color);
+}
+
+.review-txt-content {
+    color: var(--ff-black-color);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 11; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.rate-name {
+    margin-bottom: 3px;
+    color: var(--ff-dark-gray-color);
+}
+
+.category-rate >>> .el-rate__icon {
+    font-size: 20px;
+}
+
+.rate-col {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    vertical-align: center;
+}
+
+.rate-general {
+    margin-left: 45px;
+}
+
+.rate-general >>> .el-rate__icon {
+    font-size: 35px;
+}
+
+
+.rate-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rate-wrap span {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 144%;
+    margin-left: 10px;
+    color : var(--ff-font-primary-color);
+}
+
+.rate-general-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.rate-general-wrap span {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 144%;
+    color : var(--ff-font-primary-color);
+}
+
+.rate-general-wrap .el-rate {
+    margin-top: 5px;
+}

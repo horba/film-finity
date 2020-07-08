@@ -5,3 +5,4 @@ export { default as Cartoons } from './cartoons/cartoons.view.vue';
 export { default as News } from './news/news.view.vue';
 export { default as Login } from './login/login.view.vue';
 export { default as Favorites } from './favorites/favorites.view.vue';
+export { default as Reviews } from './reviews/reviews.view.vue';
