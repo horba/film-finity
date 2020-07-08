@@ -5,7 +5,7 @@
 .el-row-wrap {
     display: flex;
     flex-flow: row wrap;
-    max-width: 1270px;
+    max-width: 1180px;
     margin: 0 auto;
 }
   
