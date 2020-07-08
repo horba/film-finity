@@ -22,9 +22,17 @@ namespace WebAPI.Repositories
            return _dbContext.Movies.Include(c => c.ActorsList).ThenInclude(c => c.Actor);                
         }
 
-        public IQueryable<Movie> GetMovieById(int Id)
+        public IQueryable<Movie> GetMovieByUserId(int Id)
         {
             return _dbContext.Movies.Where(m => m.Id == Id);
+        }
+        public Movie GetMovieById(int id)
+        {
+            return _dbContext.Movies
+                .Include(c => c.ActorsList)
+                .ThenInclude(c => c.Actor)
+                .Where(x => x.Id == id)
+                .First();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace Entities.Models
         [Required]
         public string Email { get; set; }
         [Required]
+        [JsonIgnore]
         public string UserPassword { get; set; }
         [JsonIgnore]
         public ICollection<Review> Reviews { get; set; }

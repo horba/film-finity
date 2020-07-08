@@ -27,9 +27,21 @@ namespace WebAPI.Repositories
                     .ThenInclude(n => n.GenreTitle)
                     .ToList();
         }
-        public IQueryable<Serial> GetSerialById(int Id)
+        public IQueryable<Serial> GetSerialByUserId(int Id)
         {
             return _dbContext.Serials.Where(s => s.Id == Id);
+        }
+        public Serial GetSerialById(int id)
+        {
+            return _dbContext.Serials
+                .Include(n => n.SerialCelebrity)
+                    .ThenInclude(n => n.Celebrity)
+                    .ThenInclude(n => n.CelebrityJobTitles)
+                    .ThenInclude(n => n.JobTitle)
+                .Include(n => n.SerialGenreTitles)
+                    .ThenInclude(n => n.GenreTitle)
+                    .Where(x => x.Id == id)
+                    .First();
         }
     }
 }

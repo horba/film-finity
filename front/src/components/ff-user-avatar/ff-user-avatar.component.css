@@ -1,0 +1,12 @@
+.user-avatar {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+  }
+.state {
+  position: fixed;
+  margin-top: 25px;
+  margin-left: -12px;
+  background-color: greenyellow;
+  border: 2px solid white;
+}

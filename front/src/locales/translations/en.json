@@ -32,11 +32,50 @@
     "errorsName": "Enter the username",
     "errorsEmail": "Enter your email",
     "errorsEmailRegistered": "This email is already registered",
-    "errorsPassword": "Enter the password"
+    "errorsPassword": "Enter the password",  
+    "userName": "User name",
+    "password": "Password"
   },
   "news": {
     "commentaries": "comments",
     "fullRead": "Read more",
     "views": "views"
+  },
+  "authorization": {
+    "signIn": "Sign in",
+    "enterLogin": "Enter login or email",
+    "enterPassword": "Enter password",
+    "forgetPassword": "Forget your password?",
+    "firstErrorMessage": "Wow, it seems we could not find information about you",
+    "secondErrorMessage": "But there is a way!  Check the correctness of the entered data",
+    "firstUserAgreement": "Clicking the Login button, you accept the conditions",
+    "secondUserAgreement": "User agreement",
+    "haveAccount": " No account?",
+    "signUp": "Sign up",
+    "SignedIn": "Signed in",
+    "firstCofnirmMessage": "Oh God, we are so glad to see you!!",
+    "secondConfirmMessage": "Thousands of movies are waiting for your",
+    "thirdConfirmMessage": "View, evaluate  and comments"
+  },
+  "sideBar": {
+    "movies": "My films",
+    "favorites": "Favorite",
+    "сollections": "Collection",
+    "reviews": "Reviews",
+    "notifications": "Notification",
+    "myFriends": "My friends",
+    "settings": "Settings",
+    "logOut": "Log out"
+  },
+  "favorite": {
+    "tile": "Tile",
+    "list": "List",
+    "value0": "Name from A to Z",
+    "value1": "Name from Z to A",
+    "value2": "Ascending rating",
+    "value3": "Decrease rating",
+    "value4": "Year of growth",
+    "value5": "Year of decline",
+    "value6": "Sort by"
   }
 }

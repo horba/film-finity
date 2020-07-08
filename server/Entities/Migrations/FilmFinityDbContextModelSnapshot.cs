@@ -378,6 +378,27 @@ namespace Entities.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Entities.Models.Favorite", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("AddedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ContentId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ContentType")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Favorites");
+                });
+
             modelBuilder.Entity("Entities.Models.Genre", b =>
                 {
                     b.Property<int>("Id")
@@ -1212,228 +1233,6 @@ namespace Entities.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Actors");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            FullName = "Том Харпер"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            FullName = "Филисити Джонс"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            FullName = "Эдди Редмейн"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            FullName = "Химет Патель"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            FullName = "Режиссер"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            FullName = "Джордж Маккей"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            FullName = "Дин-Чарльз Чакман"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            FullName = "Ричард Мэдден"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            FullName = "Джордж Нолфи"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            FullName = "Энтони Маки"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            FullName = "Сэмюел Лерой Джексон"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            FullName = "Ниа Лонг"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            FullName = "Джейк Кэздан"
-                        },
-                        new
-                        {
-                            Id = 14,
-                            FullName = "Дуэйн Джонсон"
-                        },
-                        new
-                        {
-                            Id = 15,
-                            FullName = "Карен Гиллан"
-                        },
-                        new
-                        {
-                            Id = 16,
-                            FullName = "Джейк Блэк"
-                        },
-                        new
-                        {
-                            Id = 17,
-                            FullName = "Кевин Харт"
-                        },
-                        new
-                        {
-                            Id = 18,
-                            FullName = "Джефф Фаулер"
-                        },
-                        new
-                        {
-                            Id = 19,
-                            FullName = "Джим Керри"
-                        },
-                        new
-                        {
-                            Id = 20,
-                            FullName = "Джеймс Марсден"
-                        },
-                        new
-                        {
-                            Id = 21,
-                            FullName = "Тика Самптер"
-                        },
-                        new
-                        {
-                            Id = 22,
-                            FullName = "Бен Шварц"
-                        },
-                        new
-                        {
-                            Id = 23,
-                            FullName = "Мэти Янь"
-                        },
-                        new
-                        {
-                            Id = 24,
-                            FullName = "Марго Робби"
-                        },
-                        new
-                        {
-                            Id = 25,
-                            FullName = "Джерни Смоллет-Белл"
-                        },
-                        new
-                        {
-                            Id = 26,
-                            FullName = "Мэри Элизабет Уинстэд"
-                        },
-                        new
-                        {
-                            Id = 27,
-                            FullName = "Грета Гервич"
-                        },
-                        new
-                        {
-                            Id = 28,
-                            FullName = "Сирта Ронан"
-                        },
-                        new
-                        {
-                            Id = 29,
-                            FullName = "Тимоти Шаламе"
-                        },
-                        new
-                        {
-                            Id = 30,
-                            FullName = "Флоренс Пью"
-                        },
-                        new
-                        {
-                            Id = 31,
-                            FullName = "Эмма Уотсон"
-                        },
-                        new
-                        {
-                            Id = 32,
-                            FullName = "Сирзат Яхуп"
-                        },
-                        new
-                        {
-                            Id = 33,
-                            FullName = "Ху Цзюнь"
-                        },
-                        new
-                        {
-                            Id = 34,
-                            FullName = "Юань Цуань"
-                        },
-                        new
-                        {
-                            Id = 35,
-                            FullName = "Берик Айтжанов"
-                        },
-                        new
-                        {
-                            Id = 36,
-                            FullName = "Аружан Джазильбекова"
-                        },
-                        new
-                        {
-                            Id = 37,
-                            FullName = "Фиби Фокс"
-                        },
-                        new
-                        {
-                            Id = 38,
-                            FullName = "Левин Ллойд"
-                        },
-                        new
-                        {
-                            Id = 39,
-                            FullName = "Бенедикт Камбербэтч"
-                        },
-                        new
-                        {
-                            Id = 40,
-                            FullName = "Ник Джонас"
-                        },
-                        new
-                        {
-                            Id = 41,
-                            FullName = "Николас Холт"
-                        },
-                        new
-                        {
-                            Id = 42,
-                            FullName = "Наташа Ротуэлл"
-                        },
-                        new
-                        {
-                            Id = 43,
-                            FullName = "Элайза Сканлен"
-                        });
-                });
-
-            modelBuilder.Entity("WebAPI.Models.Celebrity", b =>
-                {
                     b.Property<int>("CelebrityId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
@@ -1538,6 +1337,7 @@ namespace Entities.Migrations
                         });
                 });
 
+
             modelBuilder.Entity("WebAPI.Models.JobTitle", b =>
                 {
                     b.Property<int>("JobTitleId")
@@ -1584,8 +1384,7 @@ namespace Entities.Migrations
                             JobName = "композитор"
                         });
                 });
-
-            modelBuilder.Entity("WebAPI.Models.Movie", b =>
+            modelBuilder.Entity("WebAPI.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1689,7 +1488,6 @@ namespace Entities.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
-
             modelBuilder.Entity("Entities.Models.CelebrityJobTitles", b =>
                 {
                     b.HasOne("WebAPI.Models.Celebrity", "Celebrity")
