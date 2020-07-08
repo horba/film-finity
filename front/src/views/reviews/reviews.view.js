@@ -59,7 +59,7 @@ export default {
     onClick () {
       this.isRowView = !this.isRowView;
     },
-    nextPageClicked () {
+    nextPageClick () {
       this.$store.commit('incrementCurrentPage');
       this.$refs.reviews.pageChanged();
     },
