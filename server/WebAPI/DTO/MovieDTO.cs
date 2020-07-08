@@ -12,7 +12,7 @@ namespace WebAPI.DTO
         public string Title { get; set; }
         public int Rate { get; set; }
         public int ReleaseYear { get; set; }
-        public string ImageSource { get; set; }
+        public string PosterImageSource { get; set; }
 
         public ICollection<MovieActorDTO> ActorsList { get; set; }
     }

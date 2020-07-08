@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using WebAPI.Models;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Entities.Models
+namespace WebAPI.DTO
 {
-    public class VideoFile
+    public class VideoFileDTO
     {
         public int Id { get; set; }
         public string TrailerLink { get; set; }
         public int MovieId { get; set; }
-        public Movie Movie { get; set; }
     }
 }

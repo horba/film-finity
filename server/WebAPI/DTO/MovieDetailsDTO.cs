@@ -1,38 +1,31 @@
 ﻿using Entities.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using WebAPI.Models;
 
-namespace WebAPI.Models
+namespace WebAPI.DTO
 {
-    public class Movie
+    public class MovieDetailsDTO
     {
         public int Id { get; set; }
         public string Title { get; set; }
         public string OriginalTitle { get; set; }
-        [NotMapped]
-        public ICollection<string> Countries { get; set; }
+        public List<string> Countries { get; set; }
         public int DurationMinutes { get; set; }
-        public int Rate { get; set; }
+        public float Rate { get; set; }
+        public Dictionary<string, double> Rates { get; set; }
         public int ReleaseYear { get; set; }
         public string PosterImageSource { get; set; }
         public string Description { get; set; }
-        public ICollection<MovieGenreTitles> Genres { get; set; }
-        [NotMapped]
+        public ICollection<GenreDTO> Genres { get; set; }
         public ICollection<string> Directors { get; set; }
-        [NotMapped]
         public ICollection<string> Produsers { get; set; }
-        [NotMapped]
         public ICollection<string> Writers { get; set; }
         public string ProductionDesigner { get; set; }
-        public int FilmAgeRatingId { get; set; }
-        public FilmAgeRating FilmAgeRating { get; set; }
-        public VideoFile VideoFile { get; set; }
-        [NotMapped]
+        public FilmAgeRatingDTO FilmAgeRating { get; set; }
+        public VideoFileDTO VideoFile { get; set; }
         public ICollection<string> FramesImageSource { get; set; }
-        public ICollection<Celebrity> Actors { get; set; }
-        public ICollection<ActorsList> ActorsList { get; set; }
     }
 }

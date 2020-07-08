@@ -21,7 +21,7 @@ namespace WebAPI.Controllers
             this._moviesService = moviesService;
         }
 
-        [HttpGet]        
+        [HttpGet]
         public IActionResult GetListMovies()
         {
             var objectList = _moviesService.GetAllMovies();
@@ -32,7 +32,15 @@ namespace WebAPI.Controllers
         public IActionResult GetMovieById(int id)
         {
             MovieDTO objectList = _moviesService.GetMovieById(id);
-            return Ok(objectList);
-        }
+
+	}
+
+        //[HttpGet]
+        //[Route("{id}")]
+        //public IActionResult GetMovie(int id)
+        //{
+            //var objectList = _moviesService.GetMovieDetails(id);
+            //return Ok(objectList);
+        //}
     }
 }

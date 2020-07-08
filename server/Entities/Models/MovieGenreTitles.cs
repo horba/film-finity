@@ -5,7 +5,7 @@ using WebAPI.Models;
 
 namespace Entities.Models
 {
-    public class MovieGenre
+    public class MovieGenreTitles
     {
         public int MovieId { get; set; }
         public Movie Movie { get; set; }

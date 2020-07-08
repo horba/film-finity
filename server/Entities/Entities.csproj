@@ -23,6 +23,12 @@
     <Compile Remove="Migrations\20200701201638_addFavoritesValidation.Designer.cs" />
     <Compile Remove="Migrations\20200701204231_addFavoritesValidation.cs" />
     <Compile Remove="Migrations\20200701204231_addFavoritesValidation.Designer.cs" />
+    <Compile Remove="Migrations\20200629120536_AddMoviesPage.cs" />
+    <Compile Remove="Migrations\20200629120536_AddMoviesPage.Designer.cs" />
+    <Compile Remove="Migrations\20200707221644_Update Movie and add new tables.cs" />
+    <Compile Remove="Migrations\20200707221644_Update Movie and add new tables.Designer.cs" />
+    <Compile Remove="Migrations\20200708014755_update Movie.cs" />
+    <Compile Remove="Migrations\20200708014755_update Movie.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

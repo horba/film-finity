@@ -8,7 +8,7 @@ namespace Entities.Models
     public class FilmAgeRating
     {
         public int Id { get; set; }
-        public string Age { get; set; }
-        public ICollection<Movie> Movies { get; set; }
+        public string AgeName { get; set; }
+        public ICollection<Movie> Movie { get; set; }
     }
 }
