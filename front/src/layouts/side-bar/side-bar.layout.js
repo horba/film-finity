@@ -29,6 +29,9 @@ export default {
     },
     pushToFavorites () {
       this.$router.push('/favorites');
+    },
+    pushtoReviews () {
+      this.$router.push('/reviews');
     }
   }
 };
