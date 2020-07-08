@@ -77,5 +77,14 @@
     "value4": "Year of growth",
     "value5": "Year of decline",
     "value6": "Sort by"
+  },
+  "reviews":{
+    "value0": "Name A to Z",
+    "value1": "Name from Z to A",
+    "value2": "Rating ascending",
+    "value3": "Rating descending",
+    "value4": "Date ascending",
+    "value5": "Date ascending",
+    "value6": "Sort by"
   }
 }

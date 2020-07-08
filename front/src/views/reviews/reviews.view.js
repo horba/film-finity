@@ -3,7 +3,7 @@ export default {
   data: function () {
     return {
       isRowView: true,
-      sortValue: 'Сортировать по',
+      sortValue: this.$t('favorite.value6'),
       inputString: null
     };
   },

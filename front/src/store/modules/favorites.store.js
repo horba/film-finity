@@ -1,4 +1,4 @@
-import axios from 'axios';
+import api from '@apiService';
 export default {
   state: () => ({
     favorites: [],
@@ -20,8 +20,8 @@ export default {
   },
   actions: {
     async getFavorites ({ state, commit, rootState }, request) {
-      await axios
-        .get(`${rootState.baseUrl}/api/Favorite/${request.currentPage}/${request.sortState}`)
+      await api
+        .get(`/Favorite/${request.currentPage}/${request.sortState}`)
         .then(response => {
           commit('updateFavorites', response.data.data);
           commit('updateTotalCount', response.data.totalCount);
