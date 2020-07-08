@@ -107,6 +107,8 @@ namespace WebAPI
             services.AddScoped<IFavoriteService, FavoriteService>();
             services.AddScoped<IMoviesRepository, MoviesRepository>();
             services.AddScoped<IMoviesService, MoviesService>();
+            services.AddScoped<IReviewsRepository, ReviewsRepository>();
+            services.AddScoped<IReviewsService, ReviewsService>();
         }
 
 

@@ -1,0 +1,45 @@
+    <div class = "review-component-blocks">
+        <div v-for="reviewItem in reviews" :key="reviewItem.Id" class = "review-block-element">
+            <el-row>
+                <el-col :span="12">
+                    <el-image fit ='cover' :src = 'reviewItem.filmImage | imageServerPath'></el-image>
+                    <div class = "marks">
+                        <div class = "likes">
+                        <span class = "icon-count">{{reviewItem.countLikes}}</span>
+                        <i class="el-icon-thumb"></i>
+                        </div>
+                        <div class = "dislikes">
+                        <span class = "icon-count">{{reviewItem.countDislikes}}</span>
+                        <i class="el-icon-thumb"></i>
+                        </div>
+                        <div class = "count-comments">
+                        <span class = "icon-count">{{reviewItem.countComments}}</span>
+                        <i class="el-icon-chat-square"></i>
+                        </div>
+                    </div>
+                </el-col>
+                <el-col class = "column-main-content" :span="12">
+                    <div class = "rate-content-main">
+                        <div class = "rate-wrap">
+                        <span>{{getAverageFromArray([reviewItem.directingRating, reviewItem.plotRating, reviewItem.spectacleRating, reviewItem.actorsRating])}}</span>
+                        <el-rate
+                        :value='(getAverageFromArray([reviewItem.directingRating, reviewItem.plotRating, reviewItem.spectacleRating, reviewItem.actorsRating]))/5'
+                        class = "rate-general"
+                        :max = "1"
+                        disabled
+                        text-color="var(--ff-font-primary-color)"
+                        disabled-void-color = "#D2D5DA"
+                        >
+                        </el-rate>
+                        </div>
+                    </div>
+                    <h1 class = "review-title">{{reviewItem.reviewTitle}}</h1>
+                    <div class = "review-txt-content">
+                        {{reviewItem.reviewContent}}
+                    </div>
+                </el-col>
+            </el-row>
+        </div>
+    </div>
+</div>
+

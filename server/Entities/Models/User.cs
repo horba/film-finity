@@ -18,6 +18,8 @@ namespace Entities.Models
         [Required]
         [JsonIgnore]
         public string UserPassword { get; set; }
+        [JsonIgnore]
+        public ICollection<Review> Reviews { get; set; }
 
     }
 }
