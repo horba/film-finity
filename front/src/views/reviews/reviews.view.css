@@ -9,6 +9,15 @@
     justify-content: space-between;
 }
 
+.input-field {
+    width: 273px;
+    margin-left: 5px;
+}
+
+.find-button, .sort-select {
+    margin-left: 30px;
+} 
+
 .notactive {
     background-color: var(--ff-light-gray-color);
     border-color: var(--ff-light-gray-color);

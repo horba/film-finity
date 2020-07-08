@@ -3,7 +3,8 @@ export default {
   data: function () {
     return {
       isRowView: true,
-      value: 'Сортировать по'
+      sortValue: 'Сортировать по',
+      inputString: null
     };
   },
   components: {
@@ -20,7 +21,7 @@ export default {
       return this.$store.state.reviews.reviews.pageSize;
     },
     getCurrentPageNumber () {
-      return this.$store.state.reviews.PageNumber;
+      return Number(this.$store.state.reviews.PageNumber);
     },
     options () {
       return [
@@ -39,6 +40,14 @@ export default {
         {
           value: '3',
           label: 'Option4'
+        },
+        {
+          value: '4',
+          label: 'Option5'
+        },
+        {
+          value: '5',
+          label: 'Option6'
         }
       ];
     }
@@ -57,6 +66,12 @@ export default {
     previousPageClicked () {
       this.$store.commit('decrementCurrentPage');
       this.$refs.reviews.pageChanged();
+    },
+    sortContent (value) {
+      this.$refs.reviews.sortContent(value);
+    },
+    findReviewPage () {
+      this.$refs.reviews.FindReviewPage(this.inputString);
     }
   },
   name: 'ff-review'

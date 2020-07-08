@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using WebAPI.DTO;
 using Entities.Models;
 using WebAPI.Services;
+using WebAPI.HelpModels;
 
 namespace WebAPI.Controllers
 {
@@ -24,8 +25,19 @@ namespace WebAPI.Controllers
         [Route("Reviews")]
         public IActionResult GetReviewsByUserId(ReviewPagedRequest reviewPaged)
         {
-            var objectList = _reviewsService.GetReviews(reviewPaged.UserId, reviewPaged.PageNumber, reviewPaged.PageSize);
+            var objectList = _reviewsService.GetReviews(reviewPaged.UserId, reviewPaged.PageNumber, reviewPaged.PageSize, reviewPaged.SortOrder);
             return Ok(objectList);
+        }
+        [HttpPost]
+        [Route("FindReview")]
+        public IActionResult FindReviewPage (ReviewPagedRequest reviewPaged)
+        {
+            var pageNumber = _reviewsService.getReviewPage(reviewPaged.UserId, reviewPaged.PageNumber, reviewPaged.PageSize, reviewPaged.SortOrder, reviewPaged.TitleName);
+            if(pageNumber != null)
+            {
+                return Ok(pageNumber);
+            }
+            return BadRequest(pageNumber);
         }
     }
 }

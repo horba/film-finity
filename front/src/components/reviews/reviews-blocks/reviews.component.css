@@ -118,7 +118,7 @@
 
 .category-rate >>> .el-rate__text {
     font-weight: 600;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 144%;
     margin-left: 10px;
     font-weight: 600;
@@ -139,9 +139,14 @@
     font-size: 35px;
 }
 
-.rate-general >>> .el-rate__text {
-    font-size: 36px;
+.rate-wrap span {
+    font-size: 30px;
     font-weight: 600;
-    float: left;
     margin-right: 10px;
+    color: var(--ff-font-primary-color);
+}
+
+.rate-wrap {
+    display: flex;
+    flex-direction: row;
 }

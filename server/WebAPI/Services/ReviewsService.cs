@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
 using Entities.Models;
+using Microsoft.EntityFrameworkCore.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using WebAPI.DTO;
+using WebAPI.HelpModels;
 using WebAPI.Repositories;
 
 namespace WebAPI.Services
@@ -23,17 +24,23 @@ namespace WebAPI.Services
             this._serialsService = _serialsRepository;
             this._mapper = _mapper;
         }
-        public IPagedResponse<ReviewDTO> GetReviews(int UserId, int PageNumber, int PageSize)
+
+        public int? getReviewPage(int UserId, int PageNumber, int PageSize, ReviewSortState sortState, string titleName)
+        {
+            if(titleName == null) return null;
+            var reviewsList = _mapper.Map<IEnumerable<Review>, IEnumerable<ReviewDTO>>(_reviewsRepository.GetAllReviews(UserId));
+            reviewsList = sortQuery(reviewsList, sortState);
+            var foundElement = reviewsList.FirstOrDefault(s => s.ReviewTitle.Contains(titleName));
+            if (foundElement == null) return null;
+            int index = reviewsList.IndexOf(foundElement)+1;
+            if (index <= PageSize) return 1;
+            var remaining = ((double)index / (double)PageSize);
+            return (int)Math.Round(remaining, 0, MidpointRounding.AwayFromZero);
+        }
+
+        public IPagedResponse<ReviewDTO> GetReviews(int UserId, int PageNumber, int PageSize, ReviewSortState sortState)
         {
             var reviewsList = _mapper.Map<IEnumerable<Review>, IEnumerable<ReviewDTO>>(_reviewsRepository.GetAllReviews(UserId));
-            var reviewsListPaged = reviewsList.Skip((PageNumber - 1) * PageSize)
-                .Take(PageSize);
-            if(reviewsListPaged.Count() == 0)
-            {
-                PageNumber = 1;
-                reviewsListPaged = reviewsList.Skip((PageNumber - 1) * PageSize)
-                .Take(PageSize);
-            }
             foreach (var item in reviewsList)
             {
                 if(item.ContentType == ContentType.Movie)
@@ -45,11 +52,44 @@ namespace WebAPI.Services
                     item.FilmImage = _serialsService.GetSerialById(item.FilmId).PosterImageSource;
                 }
             }
+            var reviewsListPaged = paginateQuery(reviewsList, sortState, PageNumber, PageSize);
             return new IPagedResponse<ReviewDTO>(reviewsListPaged)
             {
                 PageSize = PageSize,
                 TotalCount = reviewsList.Count(),
                 PageNumber = PageNumber
+            };
+        }
+
+        float getFilmRating (ReviewDTO model)
+        {
+            return (model.DirectingRating + model.PlotRating + model.SpectacleRating + model.ActorsRating) / 4;
+        }
+
+        IEnumerable<ReviewDTO> paginateQuery (IEnumerable<ReviewDTO> reviewsList, ReviewSortState sortState, int PageNumber, int PageSize)
+        {
+            reviewsList = sortQuery(reviewsList, sortState);
+            var reviewsListPaged = reviewsList.Skip((PageNumber - 1) * PageSize)
+            .Take(PageSize);
+            if (reviewsListPaged.Count() == 0)
+            {
+                PageNumber = 1;
+                reviewsListPaged = reviewsList.Skip((PageNumber - 1) * PageSize)
+                .Take(PageSize);
+            }
+            return reviewsListPaged;
+        }
+
+        IEnumerable<ReviewDTO> sortQuery(IEnumerable<ReviewDTO> reviewsList, ReviewSortState sortState)
+        {
+            return reviewsList = sortState switch
+            {
+                ReviewSortState.NameDesc => reviewsList.OrderByDescending(s => s.ReviewTitle),
+                ReviewSortState.RatingAsc => reviewsList.OrderBy(s => getFilmRating(s)),
+                ReviewSortState.RatingDesc => reviewsList.OrderByDescending(s => getFilmRating(s)),
+                ReviewSortState.YearAsc => reviewsList.OrderBy(s => s.PublishTime),
+                ReviewSortState.YearDesc => reviewsList.OrderByDescending(s => s.PublishTime),
+                _ => reviewsList.OrderBy(s => s.ReviewTitle),
             };
         }
     }
