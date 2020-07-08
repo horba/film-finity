@@ -66,8 +66,8 @@
     margin-top: 6px;
 }
 
-.rate >>> .el-rate__icon {
-    font-size: 26px;
+::v-deep .el-rate__icon{
+    font-size: 24px;
 }
 
 .celebrities-list {
@@ -78,4 +78,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis; 
+}
+.rate {
+    color: var(--ff-primary-color);
 }
