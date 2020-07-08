@@ -1,14 +1,12 @@
 .favorite-view{
     margin: 0;
-    padding: 0px 4%;
 }
 
 .el-row-wrap {
     display: flex;
     flex-flow: row wrap;
-    max-width: 1370px;
+    max-width: 1270px;
     margin: 0 auto;
-    border: 1px solid red;
 }
   
 .grid-col-wrap {
