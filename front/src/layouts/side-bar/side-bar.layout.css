@@ -115,6 +115,3 @@ hr {
 .el-submenu .el-menu-item {
    min-width: 100px;
 }
-.menu-item:hover {
-color: var(--ff-white-color);
-}
