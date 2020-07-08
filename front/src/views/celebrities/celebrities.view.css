@@ -43,6 +43,7 @@
   font-weight: 300;
   font-size: 12px;
   float: left;
+  color: var(--ff-font-primary-color);
 }
 
 .person-views .el-col span {
