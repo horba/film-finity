@@ -38,7 +38,7 @@ namespace Entities.Models
         [Range(0.0,5.0)]
         public float ActorsRating { get; set; }
     }
-    public enum ContentType
+    public enum ReviewContentType
     {
         Serial,
         Movie

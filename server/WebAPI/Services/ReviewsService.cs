@@ -45,11 +45,12 @@ namespace WebAPI.Services
                     item.FilmImage = _serialsService.GetSerialById(item.FilmId).PosterImageSource;
                 }
             }
-            return new IPagedResponse<ReviewDTO>(reviewsListPaged)
+            return new IPagedResponse<ReviewDTO>
             {
                 PageSize = PageSize,
                 TotalCount = reviewsList.Count(),
-                PageNumber = PageNumber
+                PageNumber = PageNumber,
+                Data = reviewsListPaged
             };
         }
     }
