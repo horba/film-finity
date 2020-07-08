@@ -1,4 +1,4 @@
-import axios from 'axios';
+import api from '@apiService';
 export default {
   state: () => ({
     reviews: Object,
@@ -26,29 +26,25 @@ export default {
   },
   actions: {
     getReviews ({ state, commit, rootState }, pagedRequest) {
-      axios({
-        method: 'post',
-        url: `${rootState.baseUrl}/api/Reviews/Reviews`,
-        data: {
+      api.post('/Reviews/Reviews',
+        {
           UserId: state.User.id,
           SortOrder: pagedRequest.SortOrder ? Number(pagedRequest.SortOrder) : 0,
           PageNumber: Number(state.PageNumber),
           PageSize: pagedRequest.PageSize
         }
-      })
+      )
         .then(response => { commit('initReviews', response.data); });
     },
     getReviewPage ({ state, commit, rootState }, pagedRequest) {
-      axios({
-        method: 'post',
-        url: `${rootState.baseUrl}/api/Reviews/FindReview`,
-        data: {
+      api.post('/Reviews/FindReview',
+        {
           UserId: state.User.id,
           SortOrder: state.SortOrder,
           PageSize: pagedRequest.PageSize,
           TitleName: pagedRequest.TitleName
         }
-      })
+      )
         .then(response => { commit('initPageNumber', response.data); })
         .then(() => {
           this.dispatch('getReviews', {
