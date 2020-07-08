@@ -29,14 +29,10 @@ const routes = [
   },
   {
     path: '/favorites',
-<<<<<<< HEAD
-    component: Favorites
-=======
     component: Favorites,
     meta: {
       requiresAuth: true
     }
->>>>>>> a76728fce267b810ef00be4507dbbef07a316852
   },
   {
     path: '/reviews',
