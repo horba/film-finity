@@ -10,7 +10,7 @@
   <div class="movie-info">
     <div class="poster">
       <el-image fit="cover" class="poster-image"
-        src="https://s3-alpha-sig.figma.com/img/4162/097d/d2aeecd9f0a6edb49dea292ca624f472?Expires=1594598400&Signature=eyB9OQ-5psxg8qeR2ZRzH5eX2wnXcfu~vcqhB1aT-2FFqoIiomlxFYYXaunidmP~9MpZ9nJbcsr9q9JFzytdc207anv~4BnEpNKxgH2jTc5FT3Oxjo51-HkQN~4wXaD2Jb-Ejpo5dTIN2zNJJzZhzHs4THwVno23f7~MNGyBTr5Y7W7QA7z2icaXsLMLec7DhcV1KAh~tAonjM8t3XX7UjKK00KldV6kEExfJQt3X8zDpCEM-DMS~CFEFeW~C6PvfhvSrDkzBFCrvZrZHrJPuj9jlSRYrUv7ttg4R-jH0q9OrInSQrAP~vpKHBqepqTP9gXZKCo4~JRcSTpxwp7tyQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA">
+        :src="getImgSrc(getMovie.posterImageSource)">
         <div slot="error" class="image-slot">
           <i class="el-icon-picture-outline"></i>
         </div>
@@ -23,7 +23,7 @@
           <span class="original-title">Little Women</span>
           <div class="country"><span>США</span></div>
           <div class="genres">
-            <a class="genre-card" v-for="genre in genres" href="">{{ genre }}</a>
+            <a class="genre-card" v-for="genre in getMovie.genres" href="">{{ genre.name }}</a>
           </div>
         </div>
         <div class="age-rate"><span>18+</span></div>
@@ -45,7 +45,7 @@
         </div>
         <div class="movie-rate">
           <div class="rate-main">
-            {{ rate }}
+            {{ getMovie.rate + 0.1 }}
             <i class="el-icon-star-on icon">
               </i>
           </div>
@@ -55,7 +55,7 @@
               disabled
               show-score text-color="var(--ff-primary-color)"
               class="rate"
-              v-model="rate"
+              v-model="4.4"
               :colors="['#99A9BF', '#F7BA2A', '#FF9900']"></el-rate>
           </div>
           <div class="rate-title">
@@ -64,16 +64,16 @@
               disabled
               show-score text-color="var(--ff-primary-color)"
               class="rate"
-              v-model="rate"
+              v-model="4.3"
               :colors="['#99A9BF', '#F7BA2A', '#FF9900']"></el-rate>
           </div>
           <div class="rate-title">
-            <span>зрелижность</span>
+            <span>зрелищность</span>
             <el-rate
               disabled
               show-score text-color="var(--ff-primary-color)"
               class="rate"
-              v-model="rate"
+              v-model="4.1"
               :colors="['#99A9BF', '#F7BA2A', '#FF9900']"></el-rate>
           </div>
           <div class="rate-title">
@@ -82,7 +82,7 @@
               disabled
               show-score text-color="var(--ff-primary-color)"
               class="rate"
-              v-model="rate"
+              v-model="4.5"
               :colors="['#99A9BF', '#F7BA2A', '#FF9900']"></el-rate>
           </div>
         </div>
@@ -101,15 +101,12 @@
   <div class="movie-description">
     <div class="description-text">
       <h2>Описание фильма:</h2><br>
-      <span>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit eius corrupti maiores? Aut optio saepe facilis reiciendis ea, commodi quibusdam. Voluptatum consequuntur natus quidem dolore neque voluptatem ratione quisquam! Aperiam.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident repellendus reiciendis vitae quidem at ipsum eaque incidunt molestiae culpa rem! Harum asperiores at itaque placeat iusto earum, natus est iure.
-      </span>
+      <span>{{ getMovie.description}}</span>
     </div>
     <div class="slider">
       <el-carousel height="" indicator-position="outside" :interval="6000">
-        <el-carousel-item v-for="item in slider" :key="item">
-          <el-image class="movie-screen" fit="cover" :src="item"></el-image>
+        <el-carousel-item v-for="item in getMovie.framesImageSource" :key="item">
+          <el-image class="movie-screen" fit="cover" :src="getImgSrc(item)"></el-image>
         </el-carousel-item>
       </el-carousel>
     </div>
