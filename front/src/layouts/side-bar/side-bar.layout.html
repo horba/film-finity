@@ -27,7 +27,7 @@
         <span slot="title" class="submenu">{{$t('sideBar.movies')}}</span>
       </template>
       <el-menu-item-group>
-        <el-menu-item class="sub-menu-item main-color" index="1-1"><router-link class="menu-item" to="/favorites">{{$t('sideBar.favorites')}}</router-link></el-menu-item>
+        <el-menu-item class="sub-menu-item main-color" index="1-1" @click="pushToFavorites()">{{$t('sideBar.favorites')}}</el-menu-item>
         <el-menu-item class="sub-menu-item main-color" index="1-2">{{$t('sideBar.сollections')}}</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
