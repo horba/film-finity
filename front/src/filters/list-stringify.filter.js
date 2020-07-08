@@ -1,4 +1,4 @@
 
 export default function listStringify (sourceList) {
-  return sourceList.join(', ');
+  return sourceList ? sourceList.join(', ') : null;
 };
