@@ -10,6 +10,7 @@ using WebAPI.Services;
 
 namespace WebAPI.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class FavoriteController : ControllerBase

@@ -26,14 +26,13 @@ const routes = [
   {
     path: '/news',
     component: News
-    // if you want to secure view
-    //  meta: {
-    //   requiresAuth: true
-    // }
   },
   {
     path: '/favorites',
-    component: Favorites
+    component: Favorites,
+    meta: {
+      requiresAuth: true
+    }
   }
 ],
 
