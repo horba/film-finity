@@ -1,5 +1,6 @@
 .grid-content-wrap {
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+  min-height: 469px;
 }
 
 .grid-content-main {
@@ -43,7 +44,7 @@
   font-weight: 300;
   font-size: 12px;
   float: left;
-  color: var(--ff-font-primary-color);
+  color: var(--ff-dark-gray-color);
 }
 
 .person-views .el-col span {
@@ -51,6 +52,14 @@
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
+}
+
+i {
+  color: var(--ff-font-primary-color);
+}
+
+.count-views {
+  color: var(--ff-font-primary-color);
 }
 
 #Wrap{
