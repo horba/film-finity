@@ -32,30 +32,6 @@ namespace WebAPI.Mapping
                         el => new GenreDTO { Id = el.GenreTitle.Id, Name = el.GenreTitle.Name })
                     )
                 );
-            CreateMap<Serial, FavoriteDTO>()
-                .ForMember(x => x.Celebrities,
-                     x => x.MapFrom(list => list.SerialCelebrity.ToList()
-                     .Select(item => new MovieActorDTO
-                        {
-                            Id = item.Celebrity.CelebrityId,
-                            FullName = item.Celebrity.FirstName + " " + item.Celebrity.LastName
-                        })
-                    )
-                );
-            CreateMap<Movie, FavoriteDTO>()
-                 .ForMember(x => x.Name,
-                      x => x.MapFrom(m => m.Title))
-                 .ForMember(x => x.Rating,
-                      x => x.MapFrom(m => m.Rate))
-                 .ForMember(x => x.Year,
-                      x => x.MapFrom(m => m.ReleaseYear))
-                 .ForMember(x => x.PosterImageSource,
-                      x => x.MapFrom(m => m.ImageSource))
-                 .ForMember(x => x.Celebrities,
-                      x => x.MapFrom(list => list.ActorsList.ToList()
-                      .Select(item => new MovieActorDTO { FullName = item.Actor.FullName, Id = item.ActorId }))
-                );
-
             CreateMap<User, UserDTO>();
             CreateMap<UserDTO, User>();
             CreateMap<News, NewsDTO>()
@@ -72,19 +48,6 @@ namespace WebAPI.Mapping
                         (item => new MovieActorDTO { FullName = item.Actor.FullName, Id = item.ActorId }))
                 );
             CreateMap<Review, ReviewDTO>();
-            CreateMap<Movie, FavoriteDTO>()
-                 .ForMember(x => x.Name,
-                      x => x.MapFrom(m => m.Title))
-                 .ForMember(x => x.Rating,
-                      x => x.MapFrom(m => m.Rate))
-                 .ForMember(x => x.Year,
-                      x => x.MapFrom(m => m.ReleaseYear))
-                 .ForMember(x => x.PosterImageSource,
-                      x => x.MapFrom(m => m.ImageSource))
-                 .ForMember(x => x.Celebrities, 
-                      x => x.MapFrom(list => list.ActorsList.ToList()
-                      .Select(item => new MovieActorDTO { FullName = item.Actor.FullName, Id = item.ActorId }))
-                );
         }
     }
 }

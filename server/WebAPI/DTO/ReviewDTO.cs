@@ -36,7 +36,7 @@ namespace WebAPI.DTO
         public float DirectingRating { get; set; }
         [Required]
         [Range(0.0, 5.0)]
-        public float PlotRating { get; set; }
+        public float PlotRating { get; set; } 
         [Required]
         [Range(0.0, 5.0)]
         public float SpectacleRating { get; set; }

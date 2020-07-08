@@ -2,7 +2,9 @@ import { FfReviewsBlocks, FfReviewsRows } from '@components/reviews';
 export default {
   data: function () {
     return {
-      isRowView: true
+      isRowView: true,
+      sortValue: 'Сортировать по',
+      inputString: null
     };
   },
   components: {
@@ -19,7 +21,35 @@ export default {
       return this.$store.state.reviews.reviews.pageSize;
     },
     getCurrentPageNumber () {
-      return this.$store.state.reviews.PageNumber;
+      return Number(this.$store.state.reviews.PageNumber);
+    },
+    options () {
+      return [
+        {
+          value: '0',
+          label: 'Option1'
+        },
+        {
+          value: '1',
+          label: 'Option2'
+        },
+        {
+          value: '2',
+          label: 'Option3'
+        },
+        {
+          value: '3',
+          label: 'Option4'
+        },
+        {
+          value: '4',
+          label: 'Option5'
+        },
+        {
+          value: '5',
+          label: 'Option6'
+        }
+      ];
     }
   },
   beforeCreate () {
@@ -29,13 +59,19 @@ export default {
     onClick () {
       this.isRowView = !this.isRowView;
     },
-    nextPageClicked () {
+    nextPageClick () {
       this.$store.commit('incrementCurrentPage');
       this.$refs.reviews.pageChanged();
     },
     previousPageClicked () {
       this.$store.commit('decrementCurrentPage');
       this.$refs.reviews.pageChanged();
+    },
+    sortContent (value) {
+      this.$refs.reviews.sortContent(value);
+    },
+    findReviewPage () {
+      this.$refs.reviews.FindReviewPage(this.inputString);
     }
   },
   name: 'ff-review'

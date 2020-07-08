@@ -32,50 +32,11 @@
     "errorsName": "Введите имя пользователя",
     "errorsEmail": "Введите email",
     "errorsEmailRegistered": "Данный email уже зарегистрирован",
-    "errorsPassword": "Введите пароль",  
-    "userName": "Имя пользователя",
-    "password": "Пароль"
+    "errorsPassword": "Введите пароль"
   },
   "news": {
     "commentaries": "комментариев",
     "fullRead": "Читать полностью",
     "views": "просмотров"
-  },
-  "authorization": {
-    "signIn": "Выполните вход",
-    "enterLogin": "Введите логин или email",
-    "enterPassword": "Введите пароль",
-    "forgetPassword": "Забыли пароль?",
-    "firstErrorMessage": "Вот это да, кажется мы не смогли найти твои данные",
-    "secondErrorMessage": "Но выход есть! Проверь правильность введенных данных",
-    "firstUserAgreement": "Нажимая Кнопку входа, вы принимаете условия",
-    "secondUserAgreement": "Пользовательского соглашения",
-    "haveAccount": "Нет аккаунта?",
-    "signUp": "Регистрация",
-    "SignedIn": "Вход выполнен",
-    "firstCofnirmMessage": "Боже, как мы рады тебя видеть!",
-    "secondConfirmMessage": "Тысячи фильмов уже ждут твоего",
-    "thirdConfirmMessage": "Просмотра, оценки и комметариев"
-  },
-  "sideBar": {
-    "movies": "Мои фильми",
-    "favorites": "Избранное",
-    "сollections": "Коллекции",
-    "reviews": "Рецензии",
-    "notifications": "Уведомления",
-    "myFriends": "Мои друзья",
-    "settings": "Настройки",
-    "logOut": "Выйти"
-  },
-  "favorite": {
-    "tile": "Плитка",
-    "list": "Список",
-    "value0": "Название от А до Я",
-    "value1": "Название от Я до А",
-    "value2": "Рейтинг по возрастанию",
-    "value3": "Рейтинг по убыванию",
-    "value4": "Год по возрастанию",
-    "value5": "Год по возрастанию",
-    "value6": "Сортировать по"
   }
 }

@@ -1,7 +1,7 @@
   <div>      
       <el-form>              
         <el-form-item class="login" prop="name">
-        <el-input :placeholder="$t('registration.userName')"
+        <el-input placeholder="Имя пользователя"
                   v-model="name"
         >
         </el-input>
@@ -21,7 +21,7 @@
 
         <el-form-item class="password" prop="password">
         <el-input type="password"
-                  :placeholder="$t('registration.password')"
+                  placeholder="Пароль"
                   v-model="password"
         >
         </el-input>
@@ -36,8 +36,7 @@
             @click="registration()"
           >{{ $t('registration.signUp') }}</el-button> 
           <div class="entrance">
-            {{ $t('registration.haveAccount') }}
-            <button class="login-button second-color" @click="changeRegisterVisible()">{{ $t('registration.entrance') }}</button>
+            {{ $t('registration.haveAccount') }} <b>{{ $t('registration.entrance') }}</b>
           </div>     
       </div>
   </div>

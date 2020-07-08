@@ -13,9 +13,7 @@
   </div>
   <div class="actions">    
     <el-button icon="el-icon-search" class="second-color"></el-button>
-    <ff-registration-dialog/>
-    <ff-auth-dialog v-if="!isLoggedIn || isConfirmationVisible" class="enter-button"/>
-    <ff-user-avatar v-if="isLoggedIn"/>
+    <ff-registration-dialog class="enter-button"/>
   </div>    
     <div>
       <ff-locale-select />

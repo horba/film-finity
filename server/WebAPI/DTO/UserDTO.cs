@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -15,7 +14,6 @@ namespace WebAPI.DTO
         [EmailAddress]
         public string Email { get; set; }
         [Required]
-        [JsonIgnore]
         public string UserPassword { get; set; }
     }
 }

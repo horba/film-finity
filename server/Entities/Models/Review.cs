@@ -27,16 +27,16 @@ namespace Entities.Models
         public DateTime PublishTime { get; set; }
         [Required]
         [Range(0.0, 5.0)]
-        public float DirectingRating { get; set; }
+        public float DirectingRating { get; set; } = new Random().Next(0, 6);
         [Required]
         [Range(0.0, 5.0)]
-        public float PlotRating { get; set; }
+        public float PlotRating { get; set; } = new Random().Next(0, 6);
         [Required]
         [Range(0.0, 5.0)]
-        public float SpectacleRating { get; set; }
+        public float SpectacleRating { get; set; } = new Random().Next(0, 6);
         [Required]
         [Range(0.0,5.0)]
-        public float ActorsRating { get; set; }
+        public float ActorsRating { get; set; } = new Random().Next(0, 6);
     }
     public enum ReviewContentType
     {

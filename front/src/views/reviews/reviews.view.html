@@ -1,4 +1,20 @@
 <div class = "review-component-root">
+  <div class = "button-wrap">
+  <el-input class = "input-field"
+      placeholder="Please input"
+      v-model="inputString"
+      clearable>
+  </el-input>
+  <el-button class = "find-button" type="primary" @click="findReviewPage" icon="el-icon-position"></el-button>
+  <el-select class = "sort-select" @change="sortContent" v-model="sortValue" placeholder="Select">
+    <el-option
+      v-for="item in options"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
+  </el-select>
+  </div>
     <el-button-group>
         <el-button :class="{ notactive : isRowView }" @click = "onClick" size="small" type="primary" icon="el-icon-s-grid"></el-button>
         <el-button :class="{ notactive : !isRowView }" @click = "onClick" size="small" type="primary"><i class="el-icon-s-order"></i></el-button>
@@ -10,7 +26,7 @@
     :page-size="getPageSize"
     :pager-count="11"
     :current-page = "getCurrentPageNumber"
-    @next-click = "nextPageClicked()"
+    @next-click = "nextPageClick()"
     @prev-click = "previousPageClicked()"
     layout="prev, pager, next"
     :total="getTotalElements">

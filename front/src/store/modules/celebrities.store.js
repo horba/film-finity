@@ -1,4 +1,4 @@
-import api from '@apiService';
+import axios from 'axios';
 export default {
   state: () => ({
     celebrities: []
@@ -15,8 +15,8 @@ export default {
   },
   actions: {
     getCelebrities ({ state, commit, rootState }) {
-      api
-        .get('/Celebrity/Celebrities')
+      axios
+        .get(`${rootState.baseUrl}/api/Celebrity/Celebrities`)
         .then(response => { commit('initCelebrities', response.data); });
     }
   }

@@ -15,14 +15,6 @@
     <Compile Remove="Migrations\20200606154510_CreateAndSeed.Designer.cs" />
     <Compile Remove="Migrations\20200618105551_CreateAndSeed.cs" />
     <Compile Remove="Migrations\20200618105551_CreateAndSeed.Designer.cs" />
-    <Compile Remove="Migrations\20200701194412_addFavoritesValidation.cs" />
-    <Compile Remove="Migrations\20200701194412_addFavoritesValidation.Designer.cs" />
-    <Compile Remove="Migrations\20200701195009_addFavoritesValidation.cs" />
-    <Compile Remove="Migrations\20200701195009_addFavoritesValidation.Designer.cs" />
-    <Compile Remove="Migrations\20200701201638_addFavoritesValidation.cs" />
-    <Compile Remove="Migrations\20200701201638_addFavoritesValidation.Designer.cs" />
-    <Compile Remove="Migrations\20200701204231_addFavoritesValidation.cs" />
-    <Compile Remove="Migrations\20200701204231_addFavoritesValidation.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

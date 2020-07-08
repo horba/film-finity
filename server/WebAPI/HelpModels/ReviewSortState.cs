@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebAPI.DTO
+namespace WebAPI.HelpModels
 {
-    public enum SortState
+    public enum ReviewSortState
     {
         NameAsc,
         NameDesc,
@@ -13,5 +13,5 @@ namespace WebAPI.DTO
         RatingDesc,
         YearAsc,
         YearDesc
-}
+    }
 }

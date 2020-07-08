@@ -27,7 +27,6 @@ namespace Entities.DataAccess
         public DbSet<Genre> Genres { get; set; }
         public DbSet<SerialGenreTitles> SerialGenreTitles { get; set; }
         public DbSet<SerialCelebrity> SerialCelebrities { get; set; }
-        public DbSet<Favorite> Favorites { get; set; }
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Actor> Actors { get; set; }
         public DbSet<ActorsList> ActorsLists { get; set; }

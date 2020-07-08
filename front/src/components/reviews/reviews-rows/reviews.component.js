@@ -10,6 +10,19 @@ export default {
       this.$store.dispatch('getReviews', {
         PageSize: 2
       });
+    },
+    sortContent (value) {
+      this.$store.commit('initSortOrder', value);
+      this.$store.dispatch('getReviews', {
+        PageSize: 2,
+        SortOrder: value
+      });
+    },
+    FindReviewPage (substring) {
+      this.$store.dispatch('getReviewPage', {
+        PageSize: 2,
+        TitleName: substring
+      });
     }
   },
   created () {

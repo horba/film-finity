@@ -21,11 +21,6 @@ using WebAPI.Models;
 using Entities.Models;
 using WebAPI.Services;
 using WebAPI.Repositories;
-using WebAPI.Helpers;
-using System.Text;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-
 namespace WebAPI
 {
     public class Startup
@@ -53,28 +48,7 @@ namespace WebAPI
                                         .WithOrigins("http://localhost:8080");
                                   });
             });
-            var appSettingsSection = Configuration.GetSection("AppSettings");
-            services.Configure<AppSettings>(appSettingsSection);
 
-            var appSettings = appSettingsSection.Get<AppSettings>();
-            var key = Encoding.ASCII.GetBytes(appSettings.Secret);
-            services.AddAuthentication(x =>
-            {
-                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-            .AddJwtBearer(x =>
-            {
-                x.RequireHttpsMetadata = false;
-                x.SaveToken = true;
-                x.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(key),
-                    ValidateIssuer = false,
-                    ValidateAudience = false
-                };
-            });
 
             var mappingConfig = new MapperConfiguration(mc =>
             {
@@ -103,8 +77,6 @@ namespace WebAPI
             services.AddScoped<INewsService, NewsService>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IFavoriteRepository, FavoriteRepository>();
-            services.AddScoped<IFavoriteService, FavoriteService>();
             services.AddScoped<IMoviesRepository, MoviesRepository>();
             services.AddScoped<IMoviesService, MoviesService>();
             services.AddScoped<IReviewsRepository, ReviewsRepository>();
@@ -129,11 +101,10 @@ namespace WebAPI
 
             app.UseHttpsRedirection();
 
-            app.UseCors(VueCorsPolicy);
-            
             app.UseRouting();
 
-            app.UseAuthentication();
+            app.UseCors(VueCorsPolicy);
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
