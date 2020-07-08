@@ -10,6 +10,6 @@ namespace WebAPI.Repositories
     public interface ISerialRepository : IRepository<SerialDTO>
     {
         List<Serial> GetAllSerials();
-        IQueryable<Serial> GetSerialById(int Id);
+        IQueryable<Serial> GetSerialByUserId(int Id);
     }
 }

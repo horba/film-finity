@@ -45,11 +45,11 @@ namespace WebAPI.Services
             {
                 if(item.ContentType == ContentType.Movie)
                 {
-                    item.FilmImage = _moviesService.GetMovieById(item.FilmId).ImageSource;
+                    item.FilmImage = _moviesService.GetMovieByUserId(item.FilmId).ImageSource;
                 }
                 else if(item.ContentType == ContentType.Serial)
                 {
-                    item.FilmImage = _serialsService.GetSerialById(item.FilmId).PosterImageSource;
+                    item.FilmImage = _serialsService.GetSerialByUserId(item.FilmId).PosterImageSource;
                 }
             }
             var reviewsListPaged = paginateQuery(reviewsList, sortState, PageNumber, PageSize);

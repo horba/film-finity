@@ -25,9 +25,9 @@ namespace WebAPI.Services
             var serials = _serialRepository.GetAllSerials();
             return _mapper.Map<List<SerialDTO>>(serials.ToList());
         }
-        public SerialDTO GetSerialById(int Id)
+        public SerialDTO GetSerialByUserId(int Id)
         {
-            var serial = _serialRepository.GetSerialById(Id).Single();
+            var serial = _serialRepository.GetSerialByUserId(Id).Single();
             return _mapper.Map<Serial, SerialDTO>(serial);
         }
     }
