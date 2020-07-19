@@ -13,7 +13,7 @@ export default {
   actions: {
     async getMovieDetails ({ state, commit, rootState }) {
       await axios
-        .get(`${rootState.baseUrl}/api/movies/7`)
+        .get(`${rootState.baseUrl}/api/movies/m/7`)
         .then(response => { commit('updateMovie', response.data); });
     }
   }

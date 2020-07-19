@@ -10,7 +10,7 @@ export default {
       return `${this.$store.state.baseUrl}/${imgPath}`;
     },
     goMovie (id) {
-      this.$router.push('/movies/' + id);
+      this.$router.push('/movies/m/' + id);
     }
   },
   computed: {

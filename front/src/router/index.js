@@ -1,8 +1,8 @@
-import { Cartoons, FfCelebrities, MovieDetails, Movies, News, Serials, Favorites } from '@views';
-import store from '@store';
+import { Cartoons, Favorites, FfCelebrities, MovieDetails, Movies, News, Serials } from '@views';
 
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import store from '@store';
 
 Vue.use(VueRouter);
 
@@ -16,7 +16,7 @@ const routes = [
     component: Movies
   },
   {
-    path: '/movies/:id',
+    path: '/movies/m/:id',
     component: MovieDetails
   },
   {

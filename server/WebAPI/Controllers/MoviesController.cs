@@ -35,12 +35,11 @@ namespace WebAPI.Controllers
             return Ok(objectList);
         }
 
-        //[HttpGet]
-        //[Route("{id}")]
-        //public IActionResult GetMovie(int id)
-        //{
-        //var objectList = _moviesService.GetMovieDetails(id);
-        //return Ok(objectList);
-        //}
+        [HttpGet("m/{id}")]
+        public IActionResult GetMovie(int id)
+        {
+            var objectList = _moviesService.GetMovieDetails(id);
+            return Ok(objectList);
+        }
     }
 }

@@ -11,6 +11,6 @@ namespace WebAPI.Repositories
     {
         IQueryable<Movie> GetAllMovies();
         Movie GetMovieById(int id);
-        //Movie GetMovie(int MovieId);
+        Movie GetMovie(int MovieId);
     }
 }
