@@ -24,7 +24,7 @@ namespace WebAPI.Services
             this._movieRepository = _movieRepository;
             this.mapper = mapper;
         }
-        public IPagedResponse<FavoriteDTO> GetFavorites(int page, SortState sortOrder)
+        public WebAPI.DTO.IPagedResponse<FavoriteDTO> GetFavorites(int page, SortState sortOrder)
         {
             int pageSize = 8;
             var favorites = favoriteRepository.GetAllFavorites();
@@ -44,7 +44,7 @@ namespace WebAPI.Services
             };
             var items = union.Skip((page - 1) * pageSize).Take(pageSize).ToList();
 
-            IPagedResponse<FavoriteDTO> pagedResponse = new IPagedResponse<FavoriteDTO>
+            WebAPI.DTO.IPagedResponse<FavoriteDTO> pagedResponse = new WebAPI.DTO.IPagedResponse<FavoriteDTO>
             {
                 PageNumber = pageNumber,
                 PageSize = pageSize,

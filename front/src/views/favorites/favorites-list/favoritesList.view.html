@@ -18,7 +18,7 @@
               <el-col :span="3" class="year">{{favorite.year}}</el-col>
             </el-row>
             <div class="celebrities-list">
-              <span>{{favorite.celebrities | mapByProperty("fullName") }}</span>
+              <span>{{favorite.celebrities | mapByProperty("fullName") |  listStringify}}</span>
             </div>
         </div>
       </div>

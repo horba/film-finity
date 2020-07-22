@@ -26,6 +26,12 @@ export default {
         .then(() => {
           this.$router.go();
         });
+    },
+    pushToFavorites () {
+      this.$router.push('/favorites');
+    },
+    pushtoReviews () {
+      this.$router.push('/reviews');
     }
   }
 };

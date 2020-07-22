@@ -58,6 +58,7 @@ namespace WebAPI.Mapping
 
             CreateMap<User, UserDTO>();
             CreateMap<UserDTO, User>();
+            CreateMap<Review, ReviewDTO>();
             CreateMap<News, NewsDTO>()
               .ForMember(dto => dto.Author, opt => opt.MapFrom(
                   route => new NewsAuthorDTO { Id = route.Author.Id, FirstName = route.Author.FirstName, LastName = route.Author.LastName })

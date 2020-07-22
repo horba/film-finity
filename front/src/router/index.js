@@ -1,4 +1,13 @@
-import { Cartoons, Favorites, FfCelebrities, MovieDetails, Movies, News, Serials } from '@views';
+import {
+  Cartoons,
+  Favorites,
+  FfCelebrities,
+  MovieDetails,
+  Movies,
+  News,
+  Reviews,
+  Serials
+} from '@views';
 
 import Vue from 'vue';
 import VueRouter from 'vue-router';
@@ -30,14 +39,20 @@ const routes = [
   {
     path: '/news',
     component: News
-    // if you want to secure view
-    //  meta: {
-    //   requiresAuth: true
-    // }
   },
   {
     path: '/favorites',
-    component: Favorites
+    component: Favorites,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/reviews',
+    component: Reviews,
+    meta: {
+      requiresAuth: true
+    }
   }
 ],
 

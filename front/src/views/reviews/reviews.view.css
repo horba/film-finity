@@ -1,0 +1,34 @@
+.review-component-root {
+    margin: 100px;
+}
+
+.el-button-group {
+    margin: 20px 0;
+    width: 104px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-field {
+    width: 273px;
+    margin-left: 5px;
+}
+
+.find-button, .sort-select {
+    margin-left: 30px;
+} 
+
+.notactive {
+    background-color: var(--ff-light-gray-color);
+    border-color: var(--ff-light-gray-color);
+    color: var(--ff-font-primary-color);
+}
+
+.pagination >>> .el-pager li {
+    font-size: 18px;
+}
+
+.pagination {
+    margin: auto;
+    margin-top: 20px;
+}

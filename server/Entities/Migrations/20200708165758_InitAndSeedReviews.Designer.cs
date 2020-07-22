@@ -4,14 +4,16 @@ using Entities.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Entities.Migrations
 {
     [DbContext(typeof(FilmFinityDbContext))]
-    partial class FilmFinityDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200708165758_InitAndSeedReviews")]
+    partial class InitAndSeedReviews
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -500,7 +502,7 @@ namespace Entities.Migrations
                             Content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea veritatis voluptates veniam sunt unde quibusdam modi laboriosam deleniti quod, minima vero nobis! Cumque natus ipsum ab incidunt qui corrupti quis, sit, voluptas, nisi reprehenderit itaque reiciendis. Quo optio itaque minima in numquam officiis odit minus tempora ut error cumque magni voluptate velit rem ullam quidem maiores esse, sint nostrum aliquid, explicabo at! Aspernatur quibusdam consequuntur officia quasi molestiae doloribus sed quaerat mollitia pariatur eius distinctio nesciunt ratione sunt vitae recusandae illum, voluptatibus sit atque consequatur facere aliquam. Itaque eos, atque excepturi illo soluta consectetur, amet minus reiciendis, ipsa velit dignissimos quidem quo doloremque adipisci sed ratione quae minima aut? Inventore est rerum libero, corrupti, id impedit molestiae excepturi omnis facere fugiat iste a amet, earum necessitatibus dolores delectus molestias voluptatem voluptates odio. Nulla, soluta! Quod ex veniam nihil nobis consequuntur repellendus expedita eligendi cumque rem, modi itaque asperiores incidunt eos velit placeat sint dolores. Incidunt cupiditate, alias dolor officia accusantium sed eius doloremque voluptatibus nesciunt nam, ipsum, soluta culpa quod quam possimus? Dolore quasi, dignissimos quam tenetur delectus unde velit, expedita excepturi laboriosam est, consectetur cumque reiciendis facilis nemo similique ea pariatur suscipit repellendus dolor? Pariatur libero cupiditate sint.",
                             CountViews = 233,
                             PreviewImage = "StaticFiles/images/News/1.jfif",
-                            PublishTime = new DateTime(2020, 7, 8, 20, 38, 14, 343, DateTimeKind.Local).AddTicks(5085),
+                            PublishTime = new DateTime(2020, 7, 8, 19, 57, 57, 967, DateTimeKind.Local).AddTicks(8679),
                             Title = "Сиквел «Чудо-женщины» перенесли из-за коронавируса"
                         },
                         new
@@ -510,7 +512,7 @@ namespace Entities.Migrations
                             Content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea veritatis voluptates veniam sunt unde quibusdam modi laboriosam deleniti quod, minima vero nobis! Cumque natus ipsum ab incidunt qui corrupti quis, sit, voluptas, nisi reprehenderit itaque reiciendis. Quo optio itaque minima in numquam officiis odit minus tempora ut error cumque magni voluptate velit rem ullam quidem maiores esse, sint nostrum aliquid, explicabo at! Aspernatur quibusdam consequuntur officia quasi molestiae doloribus sed quaerat mollitia pariatur eius distinctio nesciunt ratione sunt vitae recusandae illum, voluptatibus sit atque consequatur facere aliquam. Itaque eos, atque excepturi illo soluta consectetur, amet minus reiciendis, ipsa velit dignissimos quidem quo doloremque adipisci sed ratione quae minima aut? Inventore est rerum libero, corrupti, id impedit molestiae excepturi omnis facere fugiat iste a amet, earum necessitatibus dolores delectus molestias voluptatem voluptates odio. Nulla, soluta! Quod ex veniam nihil nobis consequuntur repellendus expedita eligendi cumque rem, modi itaque asperiores incidunt eos velit placeat sint dolores. Incidunt cupiditate, alias dolor officia accusantium sed eius doloremque voluptatibus nesciunt nam, ipsum, soluta culpa quod quam possimus? Dolore quasi, dignissimos quam tenetur delectus unde velit, expedita excepturi laboriosam est, consectetur cumque reiciendis facilis nemo similique ea pariatur suscipit repellendus dolor? Pariatur libero cupiditate sint.",
                             CountViews = 512,
                             PreviewImage = "StaticFiles/images/News/2.jfif",
-                            PublishTime = new DateTime(2020, 7, 8, 20, 38, 14, 345, DateTimeKind.Local).AddTicks(9663),
+                            PublishTime = new DateTime(2020, 7, 8, 19, 57, 57, 970, DateTimeKind.Local).AddTicks(994),
                             Title = "Childish Gambino официально опубликовал новый альбом"
                         },
                         new
@@ -520,7 +522,7 @@ namespace Entities.Migrations
                             Content = "В Сети появился трейлер второго сезона анимационного сериала DС «Харли Квинн». В центре сюжета вновь окажется Харли Квинн и её команда антигероев. После того, как героиня... расстаётся с Джокером, она становится самостоятельной единицей преступного мира и наводит.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea veritatis voluptates veniam sunt unde quibusdam modi laboriosam deleniti quod, minima vero nobis! Cumque natus ipsum ab incidunt qui corrupti quis, sit, voluptas, nisi reprehenderit itaque reiciendis. Quo optio itaque minima in numquam officiis odit minus tempora ut error cumque magni voluptate velit rem ullam quidem maiores esse, sint nostrum aliquid, explicabo at! Aspernatur quibusdam consequuntur officia quasi molestiae doloribus sed quaerat mollitia pariatur eius distinctio nesciunt ratione sunt vitae recusandae illum, voluptatibus sit atque consequatur facere aliquam. Itaque eos, atque excepturi illo soluta consectetur, amet minus reiciendis, ipsa velit dignissimos quidem quo doloremque adipisci sed ratione quae minima aut? Inventore est rerum libero, corrupti, id impedit molestiae excepturi omnis facere fugiat iste a amet, earum necessitatibus dolores delectus molestias voluptatem voluptates odio. Nulla, soluta! Quod ex veniam nihil nobis consequuntur repellendus expedita eligendi cumque rem, modi itaque asperiores incidunt eos velit placeat sint dolores. Incidunt cupiditate, alias dolor officia accusantium sed eius doloremque voluptatibus nesciunt nam, ipsum, soluta culpa quod quam possimus? Dolore quasi, dignissimos quam tenetur delectus unde velit, expedita excepturi laboriosam est, consectetur cumque reiciendis facilis nemo similique ea pariatur suscipit repellendus dolor? Pariatur libero cupiditate sint.",
                             CountViews = 237,
                             PreviewImage = "StaticFiles/images/News/3.jfif",
-                            PublishTime = new DateTime(2020, 7, 8, 20, 38, 14, 345, DateTimeKind.Local).AddTicks(9723),
+                            PublishTime = new DateTime(2020, 7, 8, 19, 57, 57, 970, DateTimeKind.Local).AddTicks(1036),
                             Title = "Больше, жестче, грубее: Вышел трейлер второго сезона «Харли Квинн»"
                         },
                         new
@@ -530,7 +532,7 @@ namespace Entities.Migrations
                             Content = "«Фильм Про» впервые обнародовал Абсолютный топ продаж российских онлайн-кинотеатров и видеосервисов. В условиях, когда из-за коронавируса домашний просмотр набирает популярность, «Фильм Про» первым среди профессиональных киноизданий ",
                             CountViews = 878,
                             PreviewImage = "StaticFiles/images/News/4.jfif",
-                            PublishTime = new DateTime(2020, 7, 8, 20, 38, 14, 345, DateTimeKind.Local).AddTicks(9729),
+                            PublishTime = new DateTime(2020, 7, 8, 19, 57, 57, 970, DateTimeKind.Local).AddTicks(1041),
                             Title = "Фильмы онлайн: Абсолютный топ «Фильм Про»"
                         });
                 });
@@ -690,92 +692,6 @@ namespace Entities.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Reviews");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ActorsRating = 1.5f,
-                            ContentType = 1,
-                            DirectingRating = 2f,
-                            FilmId = 1,
-                            PlotRating = 1f,
-                            PublishTime = new DateTime(2020, 7, 8, 20, 38, 14, 347, DateTimeKind.Local).AddTicks(1026),
-                            ReviewContent = "Фильм повествует о 4-х сестрах: Мег (Эмма Уотсон), Джо (Сирша Ронан), Бет (Элайза Сканлен) и Эми(Флоренс Пью).Каждая из сестер имеет свой необычныйхарактер,и каждая мне полюбилась по своему.Самая старшая и женственная Мег, видно какой она серьезной бывает, думая о своем будущем и заботясь о сестренках. Джо — с мальчишеским характером и духом писателя,эта девушка прямолинейна и может  высказать своему собеседнику все что думает о нем.Явно отличается от своих сестер, а что самое интересное, для того времени совсем не думает о замужестве) Считая, чтоженщина вполне сама себя может обеспечить.Бет — скромная и тихая девушка, она любитмузыку и когда играет на фортепиано, все затихают, дабы послушать ее",
-                            ReviewTitle = "Очень черное зеркало",
-                            SpectacleRating = 4f,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            ActorsRating = 1.3f,
-                            ContentType = 1,
-                            DirectingRating = 3f,
-                            FilmId = 2,
-                            PlotRating = 4f,
-                            PublishTime = new DateTime(2020, 7, 8, 20, 38, 14, 347, DateTimeKind.Local).AddTicks(2995),
-                            ReviewContent = "Для меня сериал стал неким открытием в мире современного кинематографа. Необычный сюжет, неожиданный поворот событий, умение держать зрителя в напряжении, экскурсы в историю - всё это, безусловно, дополняется шикарным актёрским составом, качественной картинкой и идеально подобранной музыкой. Из минусов, пожалуй тот факт что сериал будет тяжелым для некоторых людей, особенно для впечатлительных и оптимистов, а так же смерть некоторых основных персонажей. Лично меня больше всего в этом продукте привлекает две вещи: жестокий реализм,так как сейчас выпускают по сути розовое говно (извините за выражение), где много чего",
-                            ReviewTitle = "Острые козырьки",
-                            SpectacleRating = 1f,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 3,
-                            ActorsRating = 0.5f,
-                            ContentType = 0,
-                            DirectingRating = 2f,
-                            FilmId = 3,
-                            PlotRating = 1f,
-                            PublishTime = new DateTime(2020, 7, 8, 20, 38, 14, 347, DateTimeKind.Local).AddTicks(3097),
-                            ReviewContent = "Фильм повествует о 4-х сестрах: Мег (Эмма Уотсон), Джо (Сирша Ронан), Бет (Элайза Сканлен) и Эми(Флоренс Пью).Каждая из сестер имеет свой необычныйхарактер,и каждая мне полюбилась по своему.Самая старшая и женственная Мег, видно какой она серьезной бывает, думая о своем будущем и заботясь о сестренках. Джо — с мальчишеским характером и духом писателя,эта девушка прямолинейна и может  высказать своему собеседнику все что думает о нем.Явно отличается от своих сестер, а что самое интересное, для того времени совсем не думает о замужестве) Считая, чтоженщина вполне сама себя может обеспечить.Бет — скромная и тихая девушка, она любитмузыку и когда играет на фортепиано, все затихают, дабы послушать ее",
-                            ReviewTitle = "Безумный профессор",
-                            SpectacleRating = 1f,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 4,
-                            ActorsRating = 2.6f,
-                            ContentType = 0,
-                            DirectingRating = 1.6f,
-                            FilmId = 4,
-                            PlotRating = 3f,
-                            PublishTime = new DateTime(2020, 7, 8, 20, 38, 14, 347, DateTimeKind.Local).AddTicks(3166),
-                            ReviewContent = "Фильм повествует о 4-х сестрах: Мег (Эмма Уотсон), Джо (Сирша Ронан), Бет (Элайза Сканлен) и Эми(Флоренс Пью).Каждая из сестер имеет свой необычныйхарактер,и каждая мне полюбилась по своему.Самая старшая и женственная Мег, видно какой она серьезной бывает, думая о своем будущем и заботясь о сестренках. Джо — с мальчишеским характером и духом писателя,эта девушка прямолинейна и может  высказать своему собеседнику все что думает о нем.Явно отличается от своих сестер, а что самое интересное, для того времени совсем не думает о замужестве) Считая, чтоженщина вполне сама себя может обеспечить.Бет — скромная и тихая девушка, она любитмузыку и когда играет на фортепиано, все затихают, дабы послушать ее",
-                            ReviewTitle = "Безумный профессор",
-                            SpectacleRating = 5f,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 5,
-                            ActorsRating = 2.6f,
-                            ContentType = 0,
-                            DirectingRating = 1.6f,
-                            FilmId = 5,
-                            PlotRating = 3f,
-                            PublishTime = new DateTime(2020, 7, 8, 20, 38, 14, 347, DateTimeKind.Local).AddTicks(3231),
-                            ReviewContent = "Фильм повествует о 4-х сестрах: Мег (Эмма Уотсон), Джо (Сирша Ронан), Бет (Элайза Сканлен) и Эми(Флоренс Пью).Каждая из сестер имеет свой необычныйхарактер,и каждая мне полюбилась по своему.Самая старшая и женственная Мег, видно какой она серьезной бывает, думая о своем будущем и заботясь о сестренках. Джо — с мальчишеским характером и духом писателя,эта девушка прямолинейна и может  высказать своему собеседнику все что думает о нем.Явно отличается от своих сестер, а что самое интересное, для того времени совсем не думает о замужестве) Считая, чтоженщина вполне сама себя может обеспечить.Бет — скромная и тихая девушка, она любитмузыку и когда играет на фортепиано, все затихают, дабы послушать ее",
-                            ReviewTitle = "Аэронафтика как смысл жизни",
-                            SpectacleRating = 5f,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 6,
-                            ActorsRating = 2.6f,
-                            ContentType = 0,
-                            DirectingRating = 1.6f,
-                            FilmId = 5,
-                            PlotRating = 3f,
-                            PublishTime = new DateTime(2020, 7, 8, 20, 38, 14, 347, DateTimeKind.Local).AddTicks(3295),
-                            ReviewContent = "Фильм повествует о 4-х сестрах: Мег (Эмма Уотсон), Джо (Сирша Ронан), Бет (Элайза Сканлен) и Эми(Флоренс Пью).Каждая из сестер имеет свой необычныйхарактер,и каждая мне полюбилась по своему.Самая старшая и женственная Мег, видно какой она серьезной бывает, думая о своем будущем и заботясь о сестренках. Джо — с мальчишеским характером и духом писателя,эта девушка прямолинейна и может  высказать своему собеседнику все что думает о нем.Явно отличается от своих сестер, а что самое интересное, для того времени совсем не думает о замужестве) Считая, чтоженщина вполне сама себя может обеспечить.Бет — скромная и тихая девушка, она любитмузыку и когда играет на фортепиано, все затихают, дабы послушать ее",
-                            ReviewTitle = "Очень черное зеркало",
-                            SpectacleRating = 5f,
-                            UserId = 1
-                        });
                 });
 
             modelBuilder.Entity("Entities.Models.Serial", b =>

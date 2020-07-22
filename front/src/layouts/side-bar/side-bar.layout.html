@@ -27,11 +27,11 @@
         <span slot="title" class="submenu">{{$t('sideBar.movies')}}</span>
       </template>
       <el-menu-item-group>
-        <el-menu-item class="sub-menu-item main-color" index="1-1">{{$t('sideBar.favorites')}}</el-menu-item>
-        <el-menu-item class="sub-menu-item main-color" index="1-2">{{$t('sideBar.сollections')}}</el-menu-item>
+        <el-menu-item class="sub-menu-item main-color" index="1-1" @click="pushToFavorites()">{{$t('sideBar.favorites')}}</el-menu-item>
+        <el-menu-item class="sub-menu-item main-color" index="1-2" >{{$t('sideBar.сollections')}}</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
-    <el-menu-item class="menu-item main-color" index="2">
+    <el-menu-item class="menu-item main-color" @click="pushtoReviews()" index="2">
       <i class="el-icon-edit icons"></i>
       <span slot="title">{{$t('sideBar.reviews')}}</span>
     </el-menu-item>

@@ -48,10 +48,8 @@ export default {
                     id: resp.data.id,
                     email: resp.data.email
                   };
-            console.log(user);
             localStorage.setItem('token', token);
             localStorage.setItem('user', JSON.stringify(user));
-            console.log(localStorage.getItem('user'));
             commit('auth_success', { token, user });
             resolve(resp);
           })
