@@ -45,7 +45,7 @@ namespace WebAPI.Services
             {
                 if(item.ContentType == ContentType.Movie)
                 {
-                    item.FilmImage = _moviesService.GetMovieById(item.FilmId).ImageSource;
+                    item.FilmImage = _moviesService.GetMovieById(item.FilmId).PosterImageSource;
                 }
                 else if(item.ContentType == ContentType.Serial)
                 {

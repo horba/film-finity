@@ -3,7 +3,7 @@
     <el-col :span="6" v-for="movie in getMoviesList" class="grid-col-wrap" :key="movie.id">
       <div class="grid-content-wrap">
         <el-card :body-style="{ padding: '0px' }">
-          <el-image fit='cover' :src="getImgSrc(movie.imageSource)"></el-image>
+          <el-image class="poster-image" fit='cover' :src="getImgSrc(movie.posterImageSource)" @click="goMovie(movie.id)"></el-image>
           <div class="grid-content-main">
             <div class="movie-title">
               <span>{{movie.title}}</span>

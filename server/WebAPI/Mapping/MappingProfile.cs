@@ -50,7 +50,7 @@ namespace WebAPI.Mapping
                  .ForMember(x => x.Year,
                       x => x.MapFrom(m => m.ReleaseYear))
                  .ForMember(x => x.PosterImageSource,
-                      x => x.MapFrom(m => m.ImageSource))
+                      x => x.MapFrom(m => m.PosterImageSource))
                  .ForMember(x => x.Celebrities,
                       x => x.MapFrom(list => list.ActorsList.ToList()
                       .Select(item => new MovieActorDTO { FullName = item.Actor.FullName, Id = item.ActorId }))
@@ -81,7 +81,7 @@ namespace WebAPI.Mapping
                  .ForMember(x => x.Year,
                       x => x.MapFrom(m => m.ReleaseYear))
                  .ForMember(x => x.PosterImageSource,
-                      x => x.MapFrom(m => m.ImageSource))
+                      x => x.MapFrom(m => m.PosterImageSource))
                  .ForMember(x => x.Celebrities, 
                       x => x.MapFrom(list => list.ActorsList.ToList()
                       .Select(item => new MovieActorDTO { FullName = item.Actor.FullName, Id = item.ActorId }))

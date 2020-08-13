@@ -4,6 +4,7 @@
     --ff-secondary-color:  #FFA21C;
     --ff-light-gray-color: #F4F6FA;
     --ff-primary-variant-color:  #5956FF;
+    --ff-primary-back-color: #F2F2FE;
     --ff-black-color: #292C33;    
     --ff-font-color: var(--ff-black-color);
     --ff-dark-gray-color: #8F96A3;
@@ -17,5 +18,6 @@
     --movie-card-height: 440px;
     --movie-card-width: 270px;
     --context-margin-top-bottom: 30px;
-    --txt-font: Artegra Sans;    
+    --txt-font: 'Artegra Sans', sans-serif;
+    --txt-font-light: 'Artegra Sans Light', sans-serif;
   }

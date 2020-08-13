@@ -23,9 +23,16 @@ button.second-color {
 }
 
 @font-face {
-    font-family: Artegra Sans;
+    font-family: 'Artegra Sans';
     src: url(../fonts/ArtegraSans-Medium.otf);
    }
+
+@font-face {
+  font-family: 'Artegra Sans Light';
+  src: url(../fonts/ArtegraSans-Light.ttf);
+  font-style: normal;
+  font-weight: 300;
+}
 
 .menu-item {
     color: var(--ff-white-color);

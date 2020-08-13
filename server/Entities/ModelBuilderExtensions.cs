@@ -453,79 +453,253 @@ namespace Entities
                new Actor { Id = 43, FullName = "Элайза Сканлен" }
                );
 
+            modelBuilder.Entity<FilmAgeRating>().HasData(
+                new FilmAgeRating { Id = 1, AgeName = "18" },
+                new FilmAgeRating { Id = 2, AgeName = "16" },
+                new FilmAgeRating { Id = 3, AgeName = "12" },
+                new FilmAgeRating { Id = 4, AgeName = "6" }
+                );
+
+            modelBuilder.Entity<VideoFile>().HasData(
+                new VideoFile { Id = 1, TrailerLink = "youtu.be/aUVa83oklX4", MovieId = 7}
+                );
+
+
             modelBuilder.Entity<Movie>().HasData(
 
                 new Movie
                 {
                     Id = 1,
                     Title = "Аэронавты",
+                    Countries = new List<string>
+                    {
+                        { "США" }
+                    },
+                    DurationMinutes = 135,
                     Rate = 5,
                     ReleaseYear = 2019,
-                    ImageSource = "StaticFiles/images/Aeronauts.jpg"
+                    PosterImageSource = "StaticFiles/images/Aeronauts.jpg",
+                    Description =
+                    "Авторы драматического фильма «Маленькие женщины» предлагают своим " +
+                    "зрителям увидеть новую версию знаменитого романа Луизы Мэй Олкотт, " +
+                    "ставшего центральным произведением в ее творчестве. События развиваются " +
+                    "в шестидесятых годах XIX века, когда США переживает серьезные социальные " +
+                    "изменения. Гражданская война приносит за собой сильнейшие перемены в " +
+                    "жизни практически всех жителей страны. Именно на этом фоне находятся " +
+                    "сестры Марч, живущие в Новой Англии.",
+                    Directors = new List<string> { { "Грета Гервиг" } },
+                    Produsers = new List<string> { { "Арнон Милчэн" }, { "Денис Ди Нови" }, { "Эми Паскаль" } },
+                    Writers = new List<string> { { "Грета Гервиг" } },
+                    ProductionDesigner = "Джесс Гончар",
+                    FilmAgeRatingId = 1,
+                    FramesImageSource = new List<string>
+                    {
+                        { "StaticFiles/images/Movies/LittleWomenSrceen1.jpg" },
+                        { "StaticFiles/images/Movies/LittleWomenSrceen2.jpg" },
+                        { "StaticFiles/images/Movies/LittleWomenSrceen3.jpg" }
+                    }
                 },
 
                 new Movie
                 {
                     Id = 2,
                     Title = "1917",
+                    Countries = new List<string>
+                    {
+                        { "США" }
+                    },
+                    DurationMinutes = 135,
                     Rate = 5,
                     ReleaseYear = 2019,
-                    ImageSource = "StaticFiles/images/1917.jpg"
+                    PosterImageSource = "StaticFiles/images/1917.jpg",
+                    Description =
+                    "Авторы драматического фильма «Маленькие женщины» предлагают своим " +
+                    "зрителям увидеть новую версию знаменитого романа Луизы Мэй Олкотт, " +
+                    "ставшего центральным произведением в ее творчестве. События развиваются " +
+                    "в шестидесятых годах XIX века, когда США переживает серьезные социальные " +
+                    "изменения. Гражданская война приносит за собой сильнейшие перемены в " +
+                    "жизни практически всех жителей страны. Именно на этом фоне находятся " +
+                    "сестры Марч, живущие в Новой Англии.",
+                    Directors = new List<string> { { "Грета Гервиг" } },
+                    Produsers = new List<string> { { "Арнон Милчэн" }, { "Денис Ди Нови" }, { "Эми Паскаль" } },
+                    Writers = new List<string> { { "Грета Гервиг" } },
+                    ProductionDesigner = "Джесс Гончар",
+                    FilmAgeRatingId = 1,
+                    FramesImageSource = new List<string>
+                    {
+                        { "StaticFiles/images/Movies/LittleWomenSrceen1.jpg" },
+                        { "StaticFiles/images/Movies/LittleWomenSrceen2.jpg" },
+                        { "StaticFiles/images/Movies/LittleWomenSrceen3.jpg" }
+                    }
                 },
 
                 new Movie
                 {
                     Id = 3,
                     Title = "Джуманджи: Новый уровень",
+                    Countries = new List<string>
+                    {
+                        { "США" }
+                    },
+                    DurationMinutes = 135,
                     Rate = 5,
                     ReleaseYear = 2019,
-                    ImageSource = "StaticFiles/images/JumanjiNL.jpg"
+                    PosterImageSource = "StaticFiles/images/JumanjiNL.jpg",
+                    Description =
+                    "Авторы драматического фильма «Маленькие женщины» предлагают своим " +
+                    "зрителям увидеть новую версию знаменитого романа Луизы Мэй Олкотт, " +
+                    "ставшего центральным произведением в ее творчестве. События развиваются " +
+                    "в шестидесятых годах XIX века, когда США переживает серьезные социальные " +
+                    "изменения. Гражданская война приносит за собой сильнейшие перемены в " +
+                    "жизни практически всех жителей страны. Именно на этом фоне находятся " +
+                    "сестры Марч, живущие в Новой Англии.",
+                    Directors = new List<string> { { "Грета Гервиг" } },
+                    Produsers = new List<string> { { "Арнон Милчэн" }, { "Денис Ди Нови" }, { "Эми Паскаль" } },
+                    Writers = new List<string> { { "Грета Гервиг" } },
+                    ProductionDesigner = "Джесс Гончар",
+                    FilmAgeRatingId = 1,
+                    FramesImageSource = new List<string>
+                    {
+                        { "StaticFiles/images/Movies/LittleWomenSrceen1.jpg" },
+                        { "StaticFiles/images/Movies/LittleWomenSrceen2.jpg" },
+                        { "StaticFiles/images/Movies/LittleWomenSrceen3.jpg" }
+                    }
                 },
 
                 new Movie
                 {
                     Id = 4,
                     Title = "Банкир",
+                    Countries = new List<string>
+                    {
+                        { "США" }
+                    },
+                    DurationMinutes = 135,
                     Rate = 5,
                     ReleaseYear = 2020,
-                    ImageSource = "StaticFiles/images/Banker.jpg"
+                    PosterImageSource = "StaticFiles/images/Banker.jpg",
+                    Description =
+                    "Авторы драматического фильма «Маленькие женщины» предлагают своим " +
+                    "зрителям увидеть новую версию знаменитого романа Луизы Мэй Олкотт, " +
+                    "ставшего центральным произведением в ее творчестве. События развиваются " +
+                    "в шестидесятых годах XIX века, когда США переживает серьезные социальные " +
+                    "изменения. Гражданская война приносит за собой сильнейшие перемены в " +
+                    "жизни практически всех жителей страны. Именно на этом фоне находятся " +
+                    "сестры Марч, живущие в Новой Англии.",
+                    Directors = new List<string> { { "Грета Гервиг" } },
+                    Produsers = new List<string> { { "Арнон Милчэн" }, { "Денис Ди Нови" }, { "Эми Паскаль" } },
+                    Writers = new List<string> { { "Грета Гервиг" } },
+                    ProductionDesigner = "Джесс Гончар",
+                    FilmAgeRatingId = 1,
+                    FramesImageSource = new List<string>
+                    {
+                        { "StaticFiles/images/Movies/LittleWomenSrceen1.jpg" },
+                        { "StaticFiles/images/Movies/LittleWomenSrceen2.jpg" },
+                        { "StaticFiles/images/Movies/LittleWomenSrceen3.jpg" }
+                    }
                 },
 
                 new Movie
                 {
                     Id = 5,
                     Title = "Соник в кино",
+                    Countries = new List<string> { { "США" } },
+                    DurationMinutes = 135,
                     Rate = 5,
                     ReleaseYear = 2020,
-                    ImageSource = "StaticFiles/images/SonikH.jpg"
+                    PosterImageSource = "StaticFiles/images/SonikH.jpg",
+                    Description =
+                    "Авторы драматического фильма «Маленькие женщины» предлагают своим " +
+                    "зрителям увидеть новую версию знаменитого романа Луизы Мэй Олкотт, " +
+                    "ставшего центральным произведением в ее творчестве. События развиваются " +
+                    "в шестидесятых годах XIX века, когда США переживает серьезные социальные " +
+                    "изменения. Гражданская война приносит за собой сильнейшие перемены в " +
+                    "жизни практически всех жителей страны. Именно на этом фоне находятся " +
+                    "сестры Марч, живущие в Новой Англии.",
+                    Directors = new List<string> { { "Грета Гервиг" } },
+                    Produsers = new List<string> { { "Арнон Милчэн" }, { "Денис Ди Нови" }, { "Эми Паскаль" } },
+                    Writers = new List<string> { { "Грета Гервиг" } },
+                    ProductionDesigner = "Джесс Гончар",
+                    FilmAgeRatingId = 1,
+                    FramesImageSource = new List<string>
+                    {
+                        { "StaticFiles/images/Movies/LittleWomenSrceen1.jpg" },
+                        { "StaticFiles/images/Movies/LittleWomenSrceen2.jpg" },
+                        { "StaticFiles/images/Movies/LittleWomenSrceen3.jpg" }
+                    }
                 },
 
                 new Movie
                 {
                     Id = 6,
                     Title = "Хищные птицы: Потрясающая история Харли Квинн",
+                    Countries = new List<string>
+                    {
+                        { "США" }
+                    },
+                    DurationMinutes = 135,
                     Rate = 5,
                     ReleaseYear = 2020,
-                    ImageSource = "StaticFiles/images/PreyBirdsHQ.jpg"
+                    PosterImageSource = "StaticFiles/images/PreyBirdsHQ.jpg",
+                    Description =
+                    "Авторы драматического фильма «Маленькие женщины» предлагают своим " +
+                    "зрителям увидеть новую версию знаменитого романа Луизы Мэй Олкотт, " +
+                    "ставшего центральным произведением в ее творчестве. События развиваются " +
+                    "в шестидесятых годах XIX века, когда США переживает серьезные социальные " +
+                    "изменения. Гражданская война приносит за собой сильнейшие перемены в " +
+                    "жизни практически всех жителей страны. Именно на этом фоне находятся " +
+                    "сестры Марч, живущие в Новой Англии.",
+                    Directors = new List<string> { { "Грета Гервиг" } },
+                    Produsers = new List<string> { { "Арнон Милчэн" }, { "Денис Ди Нови" }, { "Эми Паскаль" } },
+                    Writers = new List<string> { { "Грета Гервиг" } },
+                    ProductionDesigner = "Джесс Гончар",
+                    FilmAgeRatingId = 1,
+                    FramesImageSource = new List<string>
+                    {
+                        { "StaticFiles/images/Movies/LittleWomenSrceen1.jpg" },
+                        { "StaticFiles/images/Movies/LittleWomenSrceen2.jpg" },
+                        { "StaticFiles/images/Movies/LittleWomenSrceen3.jpg" }
+                    }
                 },
 
-                new Movie
-                {
-                    Id = 7,
-                    Title = "Маленькие женщины",
-                    Rate = 5,
-                    ReleaseYear = 2019,
-                    ImageSource = "StaticFiles/images/LittleWomen.jpg"
-                },
 
                 new Movie
                 {
                     Id = 8,
                     Title = "Композитор",
+                    Countries = new List<string>
+                    {
+                        { "США" }
+                    },
+                    DurationMinutes = 135,
                     Rate = 5,
                     ReleaseYear = 2019,
-                    ImageSource = "StaticFiles/images/Composer.jpg"
+                    PosterImageSource = "StaticFiles/images/Composer.jpg",
+                    Description =
+                    "Авторы драматического фильма «Маленькие женщины» предлагают своим " +
+                    "зрителям увидеть новую версию знаменитого романа Луизы Мэй Олкотт, " +
+                    "ставшего центральным произведением в ее творчестве. События развиваются " +
+                    "в шестидесятых годах XIX века, когда США переживает серьезные социальные " +
+                    "изменения. Гражданская война приносит за собой сильнейшие перемены в " +
+                    "жизни практически всех жителей страны. Именно на этом фоне находятся " +
+                    "сестры Марч, живущие в Новой Англии.",
+                    Directors = new List<string> { { "Грета Гервиг" } },
+                    Produsers = new List<string> { { "Арнон Милчэн" }, { "Денис Ди Нови" }, { "Эми Паскаль" } },
+                    Writers = new List<string> { { "Грета Гервиг" } },
+                    ProductionDesigner = "Джесс Гончар",
+                    FilmAgeRatingId = 1,
+                    FramesImageSource = new List<string>
+                    {
+                        { "StaticFiles/images/Movies/LittleWomenSrceen1.jpg" },
+                        { "StaticFiles/images/Movies/LittleWomenSrceen2.jpg" },
+                        { "StaticFiles/images/Movies/LittleWomenSrceen3.jpg" }
+                    }
                 });
+
+            modelBuilder.Entity<MovieGenreTitles>().HasData(
+               new MovieGenreTitles { MovieId = 7, GenreId = 1 },
+               new MovieGenreTitles { MovieId = 7, GenreId = 2 },
+               new MovieGenreTitles { MovieId = 7, GenreId = 3 });
 
             modelBuilder.Entity<ActorsList>().HasData(
                 new ActorsList { MovieId = 1, ActorId = 1 },
